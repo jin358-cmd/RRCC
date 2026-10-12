@@ -22,8 +22,10 @@ node preview/server.mjs
 驗證：
 
 ```powershell
-node scripts/verify-local.mjs
+node scripts/verify-local.mjs --output=preview/revisions/v1.10/owner-review-local-01.json
 ```
+
+Evidence 採新增不覆寫；再次執行請將輸出檔名尾碼改為 `02`、`03` 等尚未存在的名稱。
 
 資料：兩版原始 JSON 留在 `v1.0/`、`v2.0/`，合併檔位於 `data/demo/`，欄位來源、去重及限制見 [JSON Merge Report](docs/verification/json-merge-report.md)。預設採獨立合成展示資料；頁尾可切回原始來源模式。v1.4 將缺少營運來源的 KPI 改為明確命名的公開產業參考卡，標示台積電／2024／非平台值；原業務缺口仍在追溯紀錄保留，沒有虛構帳號或案件列。三種資料不混稱、不加總。詳見 [公開參考依據](docs/verification/public-reference-values-v1.4.md)。
 

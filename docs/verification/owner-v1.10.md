@@ -59,3 +59,11 @@
 5. [v1.7 已取消 Production-target incident](vercel-preview-v1.7.md) 與部署 NOT PASS 保留。本輪無新增 Vercel 部署、Production Domain 變更或 main 合併；後續部署等待既有 incident 的 Owner 方向。
 
 Owner Verification：PENDING。Online Deployment：NOT PASS / NOT RETRIED。本輪技術改動僅走既有 Feature PR。
+
+## GitHub Readback
+
+Implementation Commit：`3657b673c3418c1c2cb188e52f7ec84d9697ac72`。已推送 `feature/rrcc-hantang-ui-refinement-20261013` 至 [PR #1](https://github.com/jin358-cmd/RRCC/pull/1)，PR OPEN／unmerged。
+
+[Implementation 讀回證據](github-readback-v1.10-implementation.json)：248 個受追蹤檔案與遠端 Git blob 的 SHA-256 全部一致；Repository、寫入權限、Branch、PR、main 等 11 個檔案／版本 Gate 皆通過。Main 維持 README-only `5e722c043c2164da5795e5a6523a6b3dfd946d59`。
+
+讀回腳本整體仍為 FAIL；唯一失敗 `githubDeploymentRecordsPreviewOnly:false` 是原 v1.7 已取消的 Production-target 歷史紀錄，非本輪新增部署。沒有刪除、忽略或放寬此 Gate；本機功能及 Git 檔案讀回通過不能代表線上部署 PASS。
