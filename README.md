@@ -6,6 +6,8 @@ Enterprise Management Platform · 4-Center Demonstration Preview.
 
 開啟 `preview/RRCC-Hantang-4-Center-Preview-v1.7.html` 可操作最新版：品牌藍色 × 微幅上移，並加入僅限 Vercel Preview 的靜態包裝。[v1.7 Review Guide](preview/revisions/v1.7/README.md) 說明本輪範圍與部署界線。[v1.6 Review Guide](preview/revisions/v1.6/README.md) 保留最新動態工作列、左側 KPI 卡片櫃、圓角中心導覽與綠色環境背景說明；原完整資料視窗、19 槽位卡片櫃、每中心配置及 Genie 互動不變。[v1.5 Review Guide](preview/revisions/v1.5/README.md)、[v1.4 Review Guide](preview/revisions/v1.4/README.md)、[v1.3 正常數值預覽](preview/revisions/v1.3/README.md) 與 [v1.2 原始來源交付](preview/revisions/v1.2/README.md) 保留，不覆寫歷史。
 
+Vercel Preview：**NOT PASS／暫停重試**。部署工具回傳非預期 Production target 後已立即取消；目前沒有完成驗證的線上 Preview。[完整 Owner／Deployment Report](docs/verification/vercel-preview-v1.7.md) 保留事故與 Recovery Queue，不以本機 PASS 冒充線上驗收。
+
 開發預覽（Node.js，無第三方套件）：
 
 ```powershell

@@ -2,7 +2,7 @@
 
 The blue brand × moves up 0.06em only (about 3.6px at the observed 1920 desktop viewport). No redesign, business data change or Library definition change. The v1.6 artifact and evidence are retained.
 
-Offline review: `preview/RRCC-Hantang-4-Center-Preview-v1.7.html`. Online deployment result and Owner review status will be recorded separately in `docs/verification/vercel-preview-v1.7.md`.
+Offline review: `preview/RRCC-Hantang-4-Center-Preview-v1.7.html`. [Deployment / Owner report](../../../docs/verification/vercel-preview-v1.7.md): Preview NOT PASS; an unexpected Production-target attempt was immediately canceled and not retried. A usable online Preview is not available. Local regression PASS does not imply online acceptance.
 
 ## Hosting boundary
 
