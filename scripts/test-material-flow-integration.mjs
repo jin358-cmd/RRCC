@@ -28,10 +28,10 @@ const details = section(app, 'function openDetail(', 'function openSidebar(');
 const sourceDialog = section(app, 'function sourceDialog(', 'function openDetail(');
 const exportCSV = section(app, 'function exportCSV(', 'function openActivity(');
 
-test('Only Material Center replaces the trend; the other three retain the original renderer', () => {
-  assert.match(renderApp, /if\(state\.center==='material'&&window\.RRCC_MATERIAL_FLOW\)renderMaterialFlow\(\);\s*else\s*\{/);
+test('Only RRCC Material Center replaces the trend; public annual scope retains its own renderer', () => {
+  assert.match(renderApp, /if\(state\.center==='material'&&!isTsmc\(\)&&window\.RRCC_MATERIAL_FLOW\)renderMaterialFlow\(\);\s*else\s*\{/);
   assert.match(renderApp, /\$\('trend-chart'\)\.innerHTML=renderTrend\(data\.trend\)/);
-  assert.match(renderFlow, /if\(state\.center!=='material'\|\|!flow\)return/);
+  assert.match(renderFlow, /if\(state\.center!=='material'\|\|isTsmc\(\)\|\|!flow\)return/);
   assert.match(renderFlow, /工程物料流向圖/);
 });
 
@@ -39,7 +39,7 @@ test('Main and detail flow share period/project/mode but use distinct accessible
   for (const idPrefix of ['material-main', 'material-detail']) {
     assert.ok(app.includes(`flow.render({period:state.period,project:state.project,mode:state.materialFlowMode,idPrefix:'${idPrefix}'})`));
   }
-  assert.match(details, /kind==='trend'&&state\.center==='material'&&window\.RRCC_MATERIAL_FLOW/);
+  assert.match(details, /kind==='trend'&&state\.center==='material'&&!isTsmc\(\)&&window\.RRCC_MATERIAL_FLOW/);
   assert.match(details, /data-material-flow-detail data-chart-motion/);
   assert.match(flow, /aria-labelledby="\$\{prefix\}-title \$\{prefix\}-description"/);
 });
@@ -62,7 +62,7 @@ test('Unrelated KPI rendering preserves identical flow nodes; a changed mode/sco
     'dialog-content': {querySelector: selector => { assert.equal(selector, '[data-material-flow-detail]'); return detail; }}
   };
   const context = vm.createContext({
-    state, $: id => elements[id], window: {
+    state, isTsmc: () => state.project === 'tsmc-public', $: id => elements[id], window: {
       RRCC_MATERIAL_FLOW: {render: options => { calls.push({...options}); return JSON.stringify(options); }},
       RRCC_CHART_MOTION: {refresh: host => refreshed.push(host)}
     }
@@ -94,6 +94,10 @@ test('Unrelated KPI rendering preserves identical flow nodes; a changed mode/sco
   context.renderMaterialFlow();
   assert.equal(calls.length, 6);
   assert.equal(refreshed.length, count, 'other Centers do not touch the material-flow hosts');
+  state.center = 'material'; state.project = 'tsmc-public'; state.period = '2025';
+  context.renderMaterialFlow();
+  assert.equal(calls.length, 6, 'public annual data never receives an RRCC kg material flow');
+  assert.equal(refreshed.length, count);
 });
 
 test('Full flow detail uses complete-table rows, summary and a source-specific provenance view', () => {
@@ -190,8 +194,8 @@ test('Authored and self-contained artifacts load identical ordered flow dependen
   assert.ok(scripts.indexOf('demo-data.js') < scripts.indexOf('material-flow.js'));
   assert.ok(scripts.indexOf('material-flow.js') < scripts.indexOf('chart-motion.js'));
   assert.ok(scripts.indexOf('chart-motion.js') < scripts.indexOf('preview.js'));
-  assert.deepEqual(styles.slice(-3), ['material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css']);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.9\.html/);
+  assert.deepEqual(styles.slice(-4), ['material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css']);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.10\.html/);
 });
 
 const failed = results.filter(result => result.status === 'FAIL');

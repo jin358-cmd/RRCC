@@ -26,8 +26,8 @@ function declaredFiles(variable) {
 }
 const scripts = [...html.matchAll(/<script\s+src="([^"]+)"\s+defer><\/script>/g)].map(item => item[1]);
 const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)">/g)].map(item => item[1]);
-const expectedScripts = ['center-data.js', 'demo-data.js', 'presentation-data.js', 'merged-center-data.js', 'presentation-center-data.js', 'reference-data.js', 'kpi-catalog.js', 'kpi-settings.js', 'kpi-library-data.js', 'kpi-library-binding.js', 'kpi-library.js', 'full-data-view.js', 'material-flow.js', 'chart-motion.js', 'genie.js', 'panel-motion.js', 'preview.js', 'sidebar.js'];
-const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css'];
+const expectedScripts = ['center-data.js', 'demo-data.js', 'presentation-data.js', 'merged-center-data.js', 'presentation-center-data.js', 'reference-data.js', 'kpi-catalog.js', 'kpi-settings.js', 'kpi-library-data.js', 'kpi-library-binding.js', 'tsmc-reference-data.js', 'tsmc-sustainability.js', 'kpi-library.js', 'full-data-view.js', 'material-flow.js', 'chart-motion.js', 'genie.js', 'panel-motion.js', 'preview.js', 'sidebar.js'];
+const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css'];
 
 test('Deferred script order binds canonical/demo/reference data before catalog and UI consumers', () => {
   assert.deepEqual(scripts, expectedScripts);
@@ -40,7 +40,7 @@ test('Stylesheet order retains baseline then applies responsive, green selection
 test('Offline packaging embeds exactly the same ordered scripts and styles as index.html', () => {
   assert.deepEqual(declaredFiles('scriptNames'), scripts);
   assert.deepEqual(declaredFiles('stylesheetNames'), styles);
-  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.9\.html/);
+  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.10\.html/);
 });
 test('Right-panel tab content has one complete wrapper after the persistent tab navigation', () => {
   const right = section(app, 'function renderRight()', 'function applyMetricComparison()');
@@ -84,7 +84,7 @@ test('Main and right regions explicitly refresh chart lifecycle after rendering/
 });
 test('Accessible KPI entry opens the current Center/mode Library instead of the legacy settings dialog', () => {
   assert.match(html, /<button id="kpi-settings-button"[^>]*aria-label="設定 KPI 卡片"[^>]*aria-haspopup="dialog"/);
-  assert.match(app, /RRCC_KPI_LIBRARY\.open\(state\.center,current\(\)\.kpis,\{mode:window\.RRCC_DATA_MODE/);
+  assert.match(app, /RRCC_KPI_LIBRARY\.open\(state\.center,current\(\)\.kpis,\{mode:layoutMode\(\)/);
   assert.doesNotMatch(app, /RRCC_KPI_SETTINGS\.open\(/);
   assert.match(app, /\$\('kpi-settings-button'\)\.setAttribute\('aria-label','開啟 KPI 卡片櫃'\)/);
   assert.match(app, /\$\('kpi-settings-button'\)\.addEventListener\('click',openLibrary\)/);
@@ -96,7 +96,7 @@ test('Legacy six-card settings implementation remains retained, not overwritten 
 test('Default six-card presentation catalog remains retained while visible cards use stable saved IDs', () => {
   assert.match(source['kpi-catalog.js'], /maxVisible:\s*6,\s*availablePerCenter:\s*8/);
   assert.match(source['kpi-settings.js'], /const limit=6/);
-  assert.match(app, /visibleMetrics=window\.RRCC_KPI_SETTINGS\?\.visible\(state\.center,data\.kpis,window\.RRCC_DATA_MODE\)/);
+  assert.match(app, /visibleMetrics=window\.RRCC_KPI_SETTINGS\?\.visible\(state\.center,data\.kpis,layoutMode\(\)\)/);
   assert.match(app, /\$\('kpis'\)\.innerHTML=visibleMetrics\.map\(i=>/);
   assert.match(app, /data-metric-id="\$\{escape\(k\.metricId\|\|i\)\}"/);
 });
@@ -198,7 +198,7 @@ test('KPI requests and restore only open metrics still present in the saved Cent
   const request = section(app, 'if(b.dataset.metric!==undefined)', 'if(b.dataset.sidebar!==undefined)');
   const restore = section(app, "if(b.hasAttribute('data-restore-right'))", "if(b.hasAttribute('data-open-activity'))");
   for (const [branch, metric] of [[request, 'metric'], [restore, 'state.metric']]) {
-    assert.match(branch, /RRCC_KPI_SETTINGS\.visible\(state\.center,\s*current\(\)\.kpis,\s*window\.RRCC_DATA_MODE\)/);
+    assert.match(branch, /RRCC_KPI_SETTINGS\.visible\(state\.center,\s*current\(\)\.kpis,\s*layoutMode\(\)\)/);
     const escaped = metric.replace('.', '\\.');
     assert.match(branch, new RegExp(`\\.includes\\(${escaped}\\)\\)\\s*panelMotion\\.request\\(${escaped},`));
   }

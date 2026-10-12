@@ -8,7 +8,8 @@ const test=(name,run)=>{try{run();checks.push({name,status:'PASS'});}catch(error
 test('Library previews and rollback refresh the actual Dashboard while saved preferences remain central',()=>{
   const body=section('function openLibrary(){',"$('search-button').innerHTML");
   assert.match(body,/preview:\(\)=>render\(true\),finish:\(\)=>render\(true\)/);
-  assert.match(body,/RRCC_KPI_LIBRARY\.open\(state\.center,current\(\)\.kpis,\{mode:window\.RRCC_DATA_MODE/);
+  assert.match(body,/RRCC_KPI_LIBRARY\.open\(state\.center,current\(\)\.kpis,\{mode:layoutMode\(\)/);
+  assert.match(app,/function layoutMode\(\).*isTsmc\(\)\?`\$\{window\.RRCC_TSMC\.mode\}-\$\{state\.period\}`:window\.RRCC_DATA_MODE/);
   assert.match(section('function render(resetPanel=false)', 'function switchCenter('),/RRCC_KPI_LIBRARY\?\.refreshDashboard\(\)/);
 });
 test('Center, mode and new modal workflows discard an unsaved editor before changing context',()=>{

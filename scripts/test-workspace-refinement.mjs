@@ -53,9 +53,9 @@ await test('Latest activity is one top toolbar block before the Dashboard grid',
   assert.doesNotMatch(html, /<section class="activity-strip panel"/);
   assert.match(app, /\$\('activity-strip'\)\.innerHTML=data\.activity\.map/);
 });
-await test('Date, project, export retain unique IDs and their order in the same toolbar', () => {
+await test('Project, date, export retain unique IDs in the Owner v1.10 requested order', () => {
   const toolbar = section(html, '<section class="workspace-toolbar panel"', '</section>');
-  const ids = ['period-select', 'scope-button', 'export-button'];
+  const ids = ['scope-button', 'period-select', 'export-button'];
   let previous = -1;
   for (const id of ids) {
     const position = toolbar.indexOf(`id="${id}"`);
@@ -67,10 +67,10 @@ await test('Date, project, export retain unique IDs and their order in the same 
 });
 await test('Workspace CSS remains before versioned overrides in index and offline packaging', () => {
   const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-4), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css']);
+  assert.deepEqual(styles.slice(-5), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css']);
   const declared = [...packaging.match(/const stylesheetNames=\[([^\]]+)\]/)[1].matchAll(/'([^']+)'/g)].map(match => match[1]);
   assert.deepEqual(declared, styles);
-  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.9\.html/);
+  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.10\.html/);
   assert.match(html, /src="genie\.js" defer/);
   assert.match(html, /src="panel-motion\.js" defer/);
   assert.match(html, /src="sidebar\.js" defer/);
