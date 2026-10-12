@@ -46,3 +46,9 @@ Do not count a simplified snapshot-failure fallback as mesh rendering. Local tim
 - Low-end hardware performance and universal 60 FPS: NOT VERIFIED.
 - Data semantics DATA-001 through DATA-006: OPEN or NO DATA as identified in the merge report; no fabricated units, totals, workflow cases or users.
 - Production deployment: NOT_AUTHORIZED; no live backend or real business/compliance acceptance is asserted.
+
+## Appended final verification
+
+The ledger is now saved with **79 actual-browser PASS checks**, including month/project filtering, full table rows, source hashes/pointers, scoped CSV, search routing, four-center quick actions and the exact self-contained artifact served over HTTP. Shared fixed-region geometry is identical across all four final 2560×1440 captures; no right-panel overflow was observed.
+
+The final source-adapter review corrected derived-row and all-month series provenance; 12 scope regressions were rerun and passed, original data was unchanged. The initial GitHub pending gate is resolved by [readback evidence](../verification/github-readback-v1.2.json): all 65 code-commit files match, PR #1 is OPEN/unmerged and main stays README-only at its original SHA. Current technical Preview delivery is **PASS within stated scope**, not physical-device or Owner acceptance. Final evidence-only branch head is checked again after its push; no merge/deployment follows.

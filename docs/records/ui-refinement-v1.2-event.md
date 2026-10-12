@@ -32,3 +32,7 @@ The accepted `New/RRCC範疇三永續管理儀表板-1C.png` remains the only vi
 - Prepare review documents, then complete explicit-path Git staging, sensitive-data review, feature upload and readback as a separate gate.
 
 At creation of this event record, the final GitHub gate remains **PENDING**. This sequence does not imply that an unrecorded PR, upload, Owner acceptance or Production event has occurred.
+
+## Appended upload event
+
+Feature code commit `8d8f43d3039abcc192354a75a687af9c7f9dc7d7` was pushed to `feature/rrcc-hantang-ui-refinement-20261013`; [PR #1](https://github.com/jin358-cmd/RRCC/pull/1) was created and attached to this chat. Authenticated readback verified all 65 published files and unchanged README-only main. The initial pending entry is retained above as history. No merge or deployment was performed. Current gate: technical Preview PASS, Owner AWAITING_REVIEW, Production NOT_AUTHORIZED.

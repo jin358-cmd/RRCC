@@ -30,3 +30,7 @@ Status: Local implementation resolved within stated limits; GitHub/Owner gates p
 ## Evidence and next action
 
 Use the [Owner Verification Report](../verification/owner-verification-report-v1.2.md), [Merge Report](../verification/json-merge-report.md), [Evidence Index](ui-refinement-v1.2-evidence.md) and revision browser ledger to review the current incremental preview. Complete remote feature readback and PR evidence, then obtain Owner Review. Preserve existing raw data and all historical evidence when appending further records.
+
+## Appended resolution
+
+GitHub upload/readback is resolved for code commit `8d8f43d3039abcc192354a75a687af9c7f9dc7d7`: 65/65 remote file hashes match, main unchanged/readme-only, [PR #1](https://github.com/jin358-cmd/RRCC/pull/1) OPEN/unmerged. The adapter provenance finding from final review is also resolved and retested, with no numerical/layout change. Current technical Preview PASS does not resolve the Owner/device/data-definition items listed above. Next authorized gate is Owner Review only.

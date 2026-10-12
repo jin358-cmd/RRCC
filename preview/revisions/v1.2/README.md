@@ -52,3 +52,13 @@ Each center keeps the shared header/layout/card language while its business side
 Deterministic checks cover 10 synthetic merge cases, 12 source-bound month/project scopes, 17 panel cases and 17 sidebar cases. Node VM event tests are not physical touchscreen or visual acceptance. Browser-local WebGL/forced Canvas and forced reduced-motion paths do not establish universal FPS, an actual OS preference change or all low-end devices.
 
 Current gate: **LOCAL VERIFIED / GitHub readback PENDING / Owner AWAITING_REVIEW / Production NOT_AUTHORIZED**. Remote feature/PR evidence must be completed separately before overall technical delivery can be called PASS. Never merge main or deploy based on this preview alone.
+
+## Appended handoff status
+
+**Technical Preview PASS / Owner AWAITING_REVIEW / Merge and Production NOT_AUTHORIZED.** The initial pending line above is retained history. [PR #1](https://github.com/jin358-cmd/RRCC/pull/1) contains the code and review evidence. [GitHub readback](../../../docs/verification/github-readback-v1.2.json) verifies code commit `8d8f43d3039abcc192354a75a687af9c7f9dc7d7`, all 65 code files, unchanged README-only main and the OPEN/unmerged PR. A later evidence-only commit is rechecked with the read-only command below.
+
+```powershell
+node scripts/verify-github.mjs --check
+```
+
+Browser ledger: **79 checks PASS**. Local suite results and original-file preservation are in [local-test-evidence.json](local-test-evidence.json). The separate versioned review ZIP is `preview/RRCC-Hantang-4-Center-Demonstration-v1.2.zip`; no previous ZIP was replaced. It contains the single-file preview, screens, current reports, source JSON and source/authorization notes, not a production installer.

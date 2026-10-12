@@ -21,6 +21,6 @@ for(const file of files){
  for(const [type,pattern] of rules)if(pattern.test(bytes.toString('utf8')))findings.push({file,type});
 }
 const result={verifiedAt:new Date().toISOString(),scope:'Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted',status:findings.length?'REVIEW_REQUIRED':'PASS',fileCount:files.length,textFiles,findings,manifest};
-await writeFile('preview/revisions/v1.2/publication-audit.json',JSON.stringify(result,null,2)+'\n');
+if(!process.argv.includes('--check'))await writeFile('preview/revisions/v1.2/publication-audit.json',JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({status:result.status,fileCount:files.length,textFiles,findings},null,2));
 if(findings.length)process.exitCode=1;

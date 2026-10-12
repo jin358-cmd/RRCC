@@ -47,3 +47,12 @@ Screenshots support visual review, while observed motion, source-target coordina
 Prior `preview/QA.md`, `preview/qa-results.json`, original offline HTML, original demonstration ZIP and original screenshots remain historical artifacts. Pre-change source/README/QA copies are retained in `preview/revisions/v1.2/before/`. Their old mock values and earlier behavior are not current source-bound acceptance evidence.
 
 This new v1.2 evidence index does not overwrite earlier evidence or reuse Eva deployment acceptance as RRCC acceptance. It contains no protection-bypass credentials, session cookies or external animation-service uploads. GitHub branch SHA, PR and remote hash readback must be appended as their own evidence after upload; they are **PENDING** here.
+
+## Appended final evidence
+
+- [Browser ledger](../../preview/revisions/v1.2/browser-evidence.json): 79 PASS checks, four identical shell/grid geometries, full-context screenshots and declared test limits.
+- [Local checks / preservation](../../preview/revisions/v1.2/local-test-evidence.json): all suites and nine original-file digest checks PASS.
+- [Publication audit](../../preview/revisions/v1.2/publication-audit.json): scoped common-secret pattern scan, 53 text assets, zero findings; not a comprehensive security certification.
+- [GitHub readback](../verification/github-readback-v1.2.json): code commit `8d8f43d3039abcc192354a75a687af9c7f9dc7d7`, all 65 file SHA-256 comparisons PASS, main unchanged/readme-only, [PR #1](https://github.com/jin358-cmd/RRCC/pull/1) OPEN/unmerged, zero GitHub deployment records at readback time. Final documentation commit is separately rechecked without mutating this evidence.
+
+This appended closeout resolves the initial pending upload gate; Owner acceptance and Production remain separate.

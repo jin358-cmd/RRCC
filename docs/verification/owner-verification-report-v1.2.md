@@ -4,7 +4,15 @@ Document ID: RRCC-NOVA-UI-20261013-002
 Report date: 2026-10-13 · Asia/Taipei  
 Scope: Incremental 4-Center Demonstration Preview; not Production development
 
-## Gate status
+## Current closeout status
+
+**Technical delivery: PASS within the declared Preview scope. Owner acceptance: AWAITING_REVIEW. Main merge / Production: NOT_AUTHORIZED.**
+
+79 actual-browser checks, 10 merge cases, 12 binding scopes, 17 panel cases, 17 sidebar cases and original-file preservation checks passed. The final packaged artifact was tested over HTTP with no external script/style dependency. All 65 files in code commit `8d8f43d3039abcc192354a75a687af9c7f9dc7d7` were fetched back from GitHub and their SHA-256 matched local publication bytes. PR [#1](https://github.com/jin358-cmd/RRCC/pull/1) is OPEN and unmerged; README-only main remains `5e722c043c2164da5795e5a6523a6b3dfd946d59`.
+
+See [GitHub Readback](github-readback-v1.2.json), [Local Evidence](../../preview/revisions/v1.2/local-test-evidence.json), [Browser Evidence](../../preview/revisions/v1.2/browser-evidence.json), and [Publication Audit](../../preview/revisions/v1.2/publication-audit.json). This documentation/evidence follow-up does not change tested UI/data. Its final branch head is checked again using `node scripts/verify-github.mjs --check` after upload; that read-only check deliberately does not rewrite a self-referential commit digest into this report.
+
+## Gate status at initial report preparation (retained history)
 
 | Gate | Status | Meaning |
 | --- | --- | --- |
@@ -80,7 +88,7 @@ node scripts/test-sidebar.mjs
 
 At report preparation, the JSON suite passed 10 synthetic cases plus a read-only reproducibility/source-hash check; the adapter passed all 12 month/project scopes; the panel and sidebar each passed 17 deterministic cases. The latter two use Node VM fake DOM and controlled events/animations: they are not physical-device or browser-renderer acceptance. Actual browser work is recorded separately, including four-center basic/rapid switching, original-entry coordinates, real WebGL mesh, forced Canvas mesh, resize cleanup, sidebar mouse/keyboard behavior and forced reduced-motion code path. The final ledger may append more checks.
 
-## Explicit remaining limits and Owner review items
+## Explicit remaining limits and Owner review items (initial preparation snapshot)
 
 1. **GitHub readback pending:** do not call upload or complete technical delivery verified until remote SHA, unchanged main, files/hashes and the feature PR have been read back.
 2. **Owner visual acceptance pending:** confirm the preserved baseline, right/main proportions, typography and Genie feel in the supplied preview. No engineering test grants that approval.
@@ -96,3 +104,7 @@ At report preparation, the JSON suite passed 10 synthetic cases plus a read-only
 The original V1/V2 inputs, accepted baseline, prior offline HTML/ZIP and prior QA evidence are retained. Changed preview source snapshots live in `preview/revisions/v1.2/before/`; new screenshots and evidence use the v1.2 revision directory. Previous demo numbers remain historical evidence, not values to reuse in this source-bound revision.
 
 After local verification, record the GitHub feature commit/readback and PR, then submit this report and the preview for Owner Review. Do not merge main or deploy Production without a separate explicit authorization.
+
+## Appended closeout and review request
+
+The pending upload item in the initial snapshot above is resolved by the code-commit readback and feature PR. All other declared limits remain in force. A final adapter review also extended provenance for derived project-row quantities and all displayed trend/sparkline months; no source values or layout changed. Repackaging and the four final screenshots use that corrected adapter. Owner should review the shared baseline, Genie feel, source-data limitations and physical-device behaviors; no automatic test is recorded as Owner approval.
