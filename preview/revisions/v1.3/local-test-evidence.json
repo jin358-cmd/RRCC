@@ -1,0 +1,147 @@
+{
+  "revision": "RRCC presentation values v1.3",
+  "verifiedAt": "2026-10-12T19:07:13.894Z",
+  "scope": "Node VM/unit and source preservation; browser evidence is separate",
+  "results": [
+    {
+      "command": "node scripts/merge-demo-data.mjs --test",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"tests\": [\n    \"Exact duplicates deduplicated, not summed\",\n    \"Null preserved separately from absent fields\",\n    \"Conflicting numeric candidates retained; no canonical value selected\",\n    \"One-source fields and added entities retained\",\n    \"Every field carries source pointer and SHA-256\",\n    \"Exact numeric JSON tokens retained\",\n    \"JSON Pointer escaping verified\",\n    \"Composite-key collision resistance verified\",\n    \"Duplicate source-local identity fails closed\",\n    \"Potential binary64 serialization precision loss fails closed before merging\"\n  ]\n}\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/merge-demo-data.mjs --check",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS_READ_ONLY_REPRODUCIBILITY_CHECK\",\n  \"merged\": \"data/demo/rrcc-hantang-merged-v1-v2.json\",\n  \"sha256\": \"c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d\",\n  \"total\": {\n    \"inputRecords\": 144,\n    \"uniqueRecords\": 72,\n    \"duplicatesRemoved\": 72\n  },\n  \"conflicts\": 0,\n  \"checkedSourceFields\": 2394,\n  \"checkedMetadataNodes\": 14,\n  \"sourcesUnmodified\": true,\n  \"tests\": 10\n}\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-center-bindings.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"test\": \"RRCC source-bound center adapter\",\n  \"status\": \"PASS\",\n  \"scopeCases\": 12,\n  \"metadataSha256\": \"e492f89a20098efe3dca9f9278a6c475e38d0dc53e2aaa87b8aaabeb39332f39\",\n  \"canonicalSourceUnchanged\": true,\n  \"originalSourceHashesVerified\": true,\n  \"derivedProjectRowProvenanceVerified\": true,\n  \"allDisplayedTrendMonthsProvenanceVerified\": true,\n  \"cases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 210860,\n      \"usedKg\": 173988,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 86110,\n      \"usedKg\": 70813,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 67180,\n      \"usedKg\": 55337,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 57570,\n      \"usedKg\": 47838,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 242390,\n      \"usedKg\": 201454,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 97880,\n      \"usedKg\": 81680,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 79220,\n      \"usedKg\": 65831,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 65290,\n      \"usedKg\": 53943,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 267530,\n      \"usedKg\": 221338,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 109260,\n      \"usedKg\": 90102,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 88480,\n      \"usedKg\": 73150,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 69790,\n      \"usedKg\": 58086,\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-presentation-demo.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"test\": \"RRCC explicit synthetic presentation demo\",\n  \"status\": \"PASS\",\n  \"demoScopeCases\": 36,\n  \"preservedSourceScopeCases\": 12,\n  \"syntheticFile\": \"data/demo/rrcc-hantang-presentation-demo.json\",\n  \"syntheticSha256\": \"6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732\",\n  \"mergedSourceSha256\": \"c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d\",\n  \"inputsUnchanged\": true,\n  \"originalSourceHashesVerified\": true,\n  \"scopeCases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"materials\": 2148,\n      \"declarations\": 2148,\n      \"suppliers\": 40,\n      \"users\": 152,\n      \"verificationCases\": 390,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"D\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 48,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"E\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"F\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"G\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 48,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"H\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"materials\": 2240,\n      \"declarations\": 2240,\n      \"suppliers\": 42,\n      \"users\": 160,\n      \"verificationCases\": 420,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 6,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 6,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"D\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"E\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"F\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"G\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"H\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"materials\": 2360,\n      \"declarations\": 2360,\n      \"suppliers\": 45,\n      \"users\": 174,\n      \"verificationCases\": 448,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"D\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"E\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"F\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"G\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 21,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"H\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 21,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"all\",\n      \"materials\": 2486,\n      \"declarations\": 2486,\n      \"suppliers\": 48,\n      \"users\": 186,\n      \"verificationCases\": 469,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"A\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 24,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"B\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 24,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"C\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"D\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"E\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"F\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"G\",\n      \"materials\": 310,\n      \"declarations\": 310,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"H\",\n      \"materials\": 310,\n      \"declarations\": 310,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    }\n  ],\n  \"sourceCases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-panel-motion.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"Node VM deterministic lifecycle tests with fake DOM and manually controlled animation adapter; browser, rendering quality and Owner acceptance not covered\",\n  \"tests\": 17,\n  \"passed\": 17,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Initial panel is closed and main area is released\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A open → blank close → Genie returns to actual A card\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B preserves A content until return finishes, then opens B automatically\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → C retains last C intent with only one old-A return\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → A cancels obsolete B, keeps A open, rejects stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → close cancels queued B and finishes closed\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Opening B → C returns to B source, not previous A source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Same KPI during opening and while open never replays slide or commits\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Fixed right trigger is tracked as the actual opening/return source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Return target uses live source geometry after resize, not opening coordinates\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Resize during A → B settles B, cleans old return and ignores stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Resize during opening or closing settles without any residual layers\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center reset cancels in-flight return, clears queued intent and stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reduced Motion produces a zero-duration opening and consistent close lifecycle\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unavailable Genie module still closes; no interaction lock remains\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Renderer exception still closes and records diagnostic instead of blocking user\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Many rapid KPI requests never overlap returns/slides and final intent wins\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-sidebar.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC Sidebar v1.2 deterministic event regression\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE\",\n  \"total\": 17,\n  \"passed\": 17,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Initial state is a 64px collapsed rail with an inert project selector\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse hover opens without changing Center or navigation selection\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse leave waits 140ms before collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Re-entry cancels stale close and does not flicker during internal movement\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard Tab/focus opens and retains menu after pointer leaves\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Escape collapses, returns focus, and does not re-open from that focus\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A modal retains ownership of Escape\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Touch does not rely on hover; tapping the trigger opens and pins\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A second touch tap closes and clears the pinned state\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse-click focus on a business item does not prevent leave collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Explicit toggle collapse remains closed until the pointer leaves and re-enters\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard trigger focus opens, and keyboard activation can collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center and rebuilt business labels update via the MutationObserver\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Collapsed controls retain Chinese accessible names\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Business controls still bubble their original click to the application\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Destroy clears timers/listeners/observer and prevents later expansion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"CSS keeps workspace at 64px for both states and provides reduced-motion handling\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/preview.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/merged-center-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/presentation-center-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/panel-motion.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/genie.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/sidebar.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "preservation": [
+    {
+      "file": "v1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json",
+      "expected": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "actual": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/RRCC_Hantang_Embedded_Demo_Data.json",
+      "expected": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "actual": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "status": "PASS"
+    },
+    {
+      "file": "v1.0/rrcc_hantang_demo_v1_OFFLINE.html",
+      "expected": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "actual": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/rrcc_hantang_dashboard_v2_OFFLINE.html",
+      "expected": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "actual": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "status": "PASS"
+    },
+    {
+      "file": "New/RRCC範疇三永續管理儀表板-1C.png",
+      "expected": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "actual": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/QA.md",
+      "expected": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "actual": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/qa-results.json",
+      "expected": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "actual": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview.html",
+      "expected": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "actual": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Demonstration.zip",
+      "expected": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "actual": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "status": "PASS"
+    }
+  ]
+}

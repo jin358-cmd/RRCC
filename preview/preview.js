@@ -54,6 +54,7 @@
     $('stage').style.top=`${Math.max(0,(window.innerHeight-1080*scale)/2)}px`;
   }
   function current() { return window.CENTER_DATA[state.center]; }
+  function isPresentation() {return window.RRCC_DATA_MODE==='demo';}
   function cell(value) {
     if (typeof value !== 'object' || value === null) return `<span title="${escape(value)}">${escape(value)}</span>`;
     if (value.type==='progress') return `<span class="progress-cell"><span class="progress-track"><i class="${value.value>=60?'good':''}" style="width:${value.value}%"></i></span>${value.value}%</span>`;
@@ -76,7 +77,7 @@
     const allRows=filteredRows(table),rows=preview?allRows.slice(0,table.previewLimit||5):allRows;
     const widths={overview:{table:[22,22,23,19,14],secondary:[18,22,41,19],tertiary:[44,18,18,20]},material:{table:[36,20,17,12,15],secondary:[33,17,31,19],tertiary:[31,35,15,19]},verification:{table:[38,18,16,13,15],secondary:[24,42,17,17],tertiary:[26,40,17,17]},management:{table:[34,16,22,14,14],secondary:[16,43,23,18],tertiary:[42,24,17,17]}};
     const cols=table.widths||widths[state.center][kind]||(table.columns.length===5?[36,20,17,12,15]:[30,25,25,20]);
-    return `<table aria-label="${escape(table.title)}"><thead><tr>${table.columns.map((c,i)=>`<th scope="col" style="width:${cols[i]}%">${escape(c)}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.map(r=>`<tr tabindex="0" data-row="${kind}" data-row-index="${table.rows.indexOf(r)}" aria-label="查看${escape(typeof r[0]==='string'?r[0]:table.title)}">${r.map(v=>`<td>${cell(v)}</td>`).join('')}</tr>`).join(''):`<tr><td colspan="${table.columns.length}" style="text-align:center;color:#8ba2bc;height:65px">NO DATA</td></tr>`}</tbody></table>`;
+    return `<table aria-label="${escape(table.title)}"><thead><tr>${table.columns.map((c,i)=>`<th scope="col" style="width:${cols[i]}%">${escape(c)}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.map(r=>`<tr tabindex="0" data-row="${kind}" data-row-index="${table.rows.indexOf(r)}" aria-label="查看${escape(typeof r[0]==='string'?r[0]:table.title)}">${r.map(v=>`<td>${cell(v)}</td>`).join('')}</tr>`).join(''):`<tr><td colspan="${table.columns.length}" style="text-align:center;color:#8ba2bc;height:65px">${isPresentation()?'本範圍目前無待處理項目':'NO DATA'}</td></tr>`}</tbody></table>`;
   }
   function renderTrend(data, highlight=true) {
     const w=640,h=200,x0=57,x1=622,y0=15,y1=173;
@@ -121,12 +122,17 @@
     else if(active==='exceptions') {const kind=state.center==='overview'?'secondary':'tertiary';body=`<div class="right-tab-content"><h3>${escape(r.alert.title)}</h3><p>${escape(r.alert.body)}</p><h3>${escape(data[kind].title)}</h3><div class="data-table compact">${tableMarkup(data[kind],kind)}</div><h3>處理重點</h3><ul class="right-notes">${r.notes.map(n=>`<li>${escape(n)}</li>`).join('')}</ul></div>`;}
     else body=`<div class="right-tab-content"><h3>${escape(centers.find(c=>c.id===state.center).label)}關聯文件</h3>${['本期管理摘要.pdf','案件與材料明細.xlsx','審查與異常追蹤紀錄.pdf','資料來源與版本索引'].map((n,i)=>`<button class="evidence-link" data-evidence="${i}">${icon(i===1?'report':'file')}<span>${escape(state.period)} ${escape(n)}</span>${icon('external')}</button>`).join('')}<div class="audit-banner">展示文件索引可查看內容與關聯資訊。</div></div>`;
     $('right-panel').innerHTML=`<div class="right-heading"><h2>${escape(r.title)}</h2><button data-collapse-right aria-label="收合詳細資訊">${icon('close')}</button></div><div class="right-body"><div class="right-kpi-label">${icon(data.kpis[state.metric].icon)}${escape(r.kpiLabel)}</div><nav class="right-tabs" aria-label="詳細資訊分頁">${[['summary','摘要'],['distribution',state.center==='management'?'角色分布':'分類分布'],['exceptions',state.center==='management'?'管理提醒':'異常分析'],['evidence','證據文件']].map(([id,label])=>`<button data-right-tab="${id}" class="${id===active?'active':''}" aria-selected="${id===active}">${label}</button>`).join('')}</nav>${body}</div><div class="right-collapsed-message">${escape(centers.find(c=>c.id===state.center).label)}<br>選擇上方 KPI 以查看詳細資訊<button class="primary-button" data-restore-right>展開詳細資訊</button></div>`;
-    if(window.RRCC_MERGED){
+    if(window.RRCC_MERGED&&!isPresentation()){
       const tabs=$('right-panel').querySelectorAll('[data-right-tab]');tabs[1].textContent='來源分布';tabs[2].textContent='資料限制';tabs[3].textContent='來源索引';
       if(active==='evidence')$('right-panel').querySelector('.right-body').lastElementChild.innerHTML=`<h3>原始 JSON 與欄位追溯</h3>${window.RRCC_MERGED.sources.map((s,i)=>`<button class="evidence-link" data-evidence="${i}">${icon('file')}<span>${escape(s.path)}<br>SHA256 ${escape(s.sha256.slice(0,20))}…</span>${icon('external')}</button>`).join('')}<div class="audit-banner">${escape(r.sourceTitle)}<br>來源索引可查看原始欄位與完整 SHA256，沒有虛構 PDF 文件。</div>`;
       const foot=$('right-panel').querySelector('.right-delta small');if(foot)foot.textContent='來源標記，非同比';
       const target=$('right-panel').querySelector('.right-targets>div:first-child strong');if(target)target.textContent='NO DATA';
       $('right-panel').dataset.sourceTitle=r.sourceTitle;
+    }
+    if(isPresentation()){
+      const tabs=$('right-panel').querySelectorAll('[data-right-tab]');tabs[3].textContent='展示資料來源';
+      if(active==='evidence')$('right-panel').querySelector('.right-body').lastElementChild.innerHTML=`<h3>合成展示資料集</h3><button class="evidence-link" data-evidence="0">${icon('database')}<span>RRCC 四中心展示資料 v1.3<br>非實際營運、申報或合規結果</span>${icon('external')}</button><div class="audit-banner">KPI、圖表與表格由同一份合成資料計算；原始 V1／V2 JSON 未修改。可用頁尾按鈕切回原始來源模式。</div>`;
+      $('right-panel').dataset.sourceTitle=r.sourceTitle||'合成展示資料';
     }
   }
   function applyMetricComparison() {
@@ -136,17 +142,21 @@
     box.querySelector('small').textContent=r.comparisonLabel;
     box.querySelector('strong').textContent=r.comparisonValue;
     const bar=box.querySelector('.right-progress i');bar.style.width=r.comparisonColor?`${r.completion}%`:parseFloat(r.value)>0?'100%':'0';bar.style.background=r.comparisonColor||'#f3a25c';
-    if(window.RRCC_MERGED)box.querySelector('.right-progress').hidden=true;
-    if(r.comparisonColor)$('right-panel').querySelector('.right-delta small').textContent='服務狀態';
+    if(window.RRCC_MERGED&&!isPresentation())box.querySelector('.right-progress').hidden=true;
+    if(r.comparisonColor&&(!isPresentation()||(state.center==='management'&&state.metric===3)))$('right-panel').querySelector('.right-delta small').textContent='服務狀態';
   }
   let panelMotion;
   function metricSource(metric=state.metric) {return {id:`kpi-${state.center}-${metric}`};}
   function render(resetPanel=false) {
     if(!resetPanel)panelMotion?.settle();
     window.RRCC_BIND_DATA?.(state.period,state.project);
+    if(window.RRCC_DATA_CONTEXT){state.period=window.RRCC_DATA_CONTEXT.period;state.project=window.RRCC_DATA_CONTEXT.project;}
     const data=current(),meta=centers.find(c=>c.id===state.center);
     document.title=`${meta.label}｜RRCC × 漢唐集成 4-Center Preview`;
     $('stage').dataset.center=state.center;
+    $('stage').dataset.dataMode=isPresentation()?'demo':'source';
+    $('period-select').value=state.period;$('project-select').value=state.project;
+    const modeButton=$('data-mode-toggle');if(modeButton){modeButton.textContent=isPresentation()?'DEMO 合成展示資料 · 切換來源':'V1／V2 原始來源 · 切換展示';modeButton.setAttribute('aria-pressed',String(isPresentation()));}
     $('center-nav').innerHTML=centers.map(c=>`<a href="#${c.id}" class="center-tab ${c.id===state.center?'active':''}" data-center="${c.id}" aria-current="${c.id===state.center?'page':'false'}" aria-label="${c.label} ${window.CENTER_DATA[c.id].en}">${icon(c.icon)}<span>${c.label}</span></a>`).join('');
     $('center-number').textContent=meta.number;
     $('center-title').innerHTML=`${escape(data.en)} <span class="zh-title">${escape(data.title)}</span>`;
@@ -178,8 +188,9 @@
   }
   function sourceDialog(prov=current().kpis[state.metric].provenance) {
     const refs=prov?.sourceReferences||[],pointers=prov?.canonicalPointers||[];
-    const lookup=pointer=>pointer.split('/').slice(1).reduce((value,key)=>value?.[key.replace(/~1/g,'/').replace(/~0/g,'~')],window.RRCC_MERGED);
-    dialog('JSON 來源與欄位追溯',`<h3>${escape(prov?.collection||'來源未提供')}</h3>${window.RRCC_MERGED.sources.map(s=>`<div class="source-reference"><strong>${escape(s.id)} · ${escape(s.path)}</strong><code>${escape(s.sha256)}</code></div>`).join('')}<p>唯一實體合併去重；相同數值未跨版相加。以下列出前 8 個欄位，完整 provenance 保存在合併 JSON。</p>${pointers.slice(0,8).map(p=>`<div class="source-reference"><strong>${escape(p)}</strong><pre>${escape(JSON.stringify(lookup(p),null,2)??'NO DATA')}</pre></div>`).join('')||'<div class="source-empty">NO DATA · 來源無此業務實體</div>'}<div class="audit-banner">${refs.length} 個原始來源參照 · ${pointers.length} 個合併欄位位置 · 展示資料，非實際營運資料</div>`);
+    const dataset=isPresentation()?window.RRCC_ACTIVE_DATASET:window.RRCC_MERGED;
+    const lookup=pointer=>pointer.split('/').slice(1).reduce((value,key)=>value?.[key.replace(/~1/g,'/').replace(/~0/g,'~')],dataset);
+    dialog(isPresentation()?'合成展示資料與欄位追溯':'JSON 來源與欄位追溯',`<h3>${escape(prov?.collection||'資料集')}</h3>${(dataset.sources||[]).map(s=>`<div class="source-reference"><strong>${escape(s.id)} · ${escape(s.path)}</strong><code>${escape(s.sha256||(isPresentation()?'SYNTHETIC DEMO · 非實際營運資料':'來源識別'))}</code></div>`).join('')}<p>${isPresentation()?'本頁為 Owner 要求的正常數值展示情境，獨立合成資料不屬於 V1／V2 實際來源。以下列出前 8 個資料位置。':'唯一實體合併去重；相同數值未跨版相加。以下列出前 8 個欄位，完整 provenance 保存在合併 JSON。'}</p>${pointers.slice(0,8).map(p=>`<div class="source-reference"><strong>${escape(p)}</strong><pre>${escape(JSON.stringify(lookup(p),null,2)??'NO DATA')}</pre></div>`).join('')||'<div class="source-empty">資料集層級摘要；計算定義見展示資料檔。</div>'}<div class="audit-banner">${isPresentation()?'合成展示資料':`${refs.length} 個原始來源參照`} · ${pointers.length} 個資料位置 · 非實際營運資料</div>`);
   }
   function openDetail(kind, rowIndex) {
     const data=current();
@@ -191,13 +202,19 @@
         dialog(typeof row[0]==='string'?row[0]:t.title,`<h3>${escape(t.title)} · 案件詳情</h3>${t.columns.map((c,i)=>`<div class="action-step"><strong style="width:155px">${escape(c)}</strong><div>${cell(row[i])}</div></div>`).join('')}<div class="audit-banner">${escape(centers.find(c=>c.id===state.center).label)} / ${escape(state.period)} / ${escape(projectNames[state.project])}</div>`);
         if(detailProvenance)$('dialog-content').insertAdjacentHTML('beforeend','<button class="primary-button" data-row-provenance>查看此列原始 JSON 來源</button>');
       } else dialog(t.title,`<div class="data-table">${tableMarkup(t,kind)}</div><div class="dialog-notice">${escape(state.period)} · ${escape(projectNames[state.project])} · 展示資料</div>`);
-    } else if(kind==='trend') dialog(data.trend.title,`<div class="chart-legend">${data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':'legend-line'}"></i>${escape(l)}</span>`).join('')}</div><div class="metric-detail-chart">${renderTrend(data.trend)}</div><div class="dialog-notice">僅呈現原始 JSON 的 2026-07、08、09 來源月份，不補造其他月份。</div>`);
+    } else if(kind==='trend') dialog(data.trend.title,`<div class="chart-legend">${data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':'legend-line'}"></i>${escape(l)}</span>`).join('')}</div><div class="metric-detail-chart">${renderTrend(data.trend)}</div><div class="dialog-notice">${isPresentation()?'合成展示情境 · '+window.RRCC_DATA_MONTHS.join('、')+' · 非實際營運趨勢':'僅呈現原始 JSON 的 2026-07、08、09 來源月份，不補造其他月份。'}</div>`);
     else if(kind==='distribution') dialog(data.distribution.title,`<div class="distribution-chart" style="height:250px;justify-content:center;gap:60px">${renderDonut(data.distribution)}</div>`);
   }
   function openSidebar(index) {
     state.sidebar=index;
     document.querySelectorAll('[data-sidebar]').forEach(b=>{b.classList.toggle('active',Number(b.dataset.sidebar)===index);b.setAttribute('aria-current',Number(b.dataset.sidebar)===index?'page':'false');});
     const data=current(),item=data.sidebar[index];
+    if(isPresentation()){
+      const view=data.sidebarViews?.[index]||'table';
+      if(typeof view==='object'){externalTable=view;openDetail('external');}
+      else openDetail(view);
+      return;
+    }
     if(window.RRCC_MERGED){
       const routes={overview:{0:'table',1:'table',2:'material',6:'trend'},material:{0:'table',4:'distribution',6:'trend'},verification:{6:'trend'},management:{6:'trend'}};
       const route=routes[state.center][index];
@@ -215,11 +232,12 @@
     if(kind==='trend'||kind==='distribution') {openDetail(kind);return;}
     dialog(item.label,`<h3>${escape(data[kind].title)}</h3><div class="data-table">${tableMarkup(data[kind],kind)}</div><div class="dialog-notice">${escape(data.en)} · ${escape(item.label)} · ${escape(state.period)}</div>`);
   }
-  function exportCSV() {
+  function exportCSV(selectedTable) {
     const data=current(),flat=(v)=>typeof v==='object'?(v.text??v.name??`${v.value}%`):v;
-    const lines=[data.table.columns,...filteredRows(data.table).map(r=>r.map(flat))].map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');
+    const table=selectedTable?.columns?selectedTable:data.table;
+    const lines=[table.columns,...filteredRows(table).map(r=>r.map(flat))].map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');
     const url=URL.createObjectURL(new Blob(['\ufeff'+lines],{type:'text/csv;charset=utf-8;'}));
-    const a=document.createElement('a');a.href=url;a.download=`RRCC_${state.center}_${state.project}_${state.period}_DEMO.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast(`${data.table.title}已匯出為 CSV（展示資料）`);
+    const a=document.createElement('a');a.href=url;a.download=`RRCC_${state.center}_${state.project}_${state.period}_${isPresentation()?'SYNTHETIC':'SOURCE'}_DEMO.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast(`${table.title}已匯出為 CSV（展示資料）`);
   }
   function openActivity() {
     const r=current().right;
@@ -227,7 +245,14 @@
   }
   function quickAction(index) {
     const data=current(),a=data.right.actions[index],label=a.label;
-    if(label.includes('匯出')){exportCSV();return;}
+    if(label.includes('匯出')){exportCSV(isPresentation()&&state.center==='verification'&&label.includes('紀錄')?data.secondary:undefined);return;}
+    if(isPresentation()){
+      const view=data.quickViews?.[index]||'table';
+      if(view==='source'){sourceDialog();return;}
+      if(view==='verification'){switchCenter('verification');openDetail('table');return;}
+      if(typeof view==='object'){externalTable=view;openDetail('external');return;}
+      openDetail(view);return;
+    }
     if(window.RRCC_MERGED){
       if(label.includes('來源索引')||(state.center==='management'&&index===0)){sourceDialog();return;}
       if(state.center==='overview'&&index===2){switchCenter('verification');openDetail('table');return;}
@@ -275,7 +300,7 @@
     if(b.hasAttribute('data-open-alert')){openDetail(state.center==='overview'?'secondary':'tertiary');return;}
     if(b.dataset.evidence!==undefined){sourceDialog();return;}
     if(b.dataset.searchResult!==undefined){const r=results[Number(b.dataset.searchResult)];$('search-dialog').close();switchCenter(r.center);if(r.index!==undefined)openSidebar(r.index);if(r.row!==undefined)openDetail('table',r.row);return;}
-    if(b.dataset.common){if(b.dataset.common==='通知訊息')openActivity();else if(b.dataset.common==='我的任務')dialog('我的任務', '<div class="source-empty">NO DATA · 原始 JSON 未提供待辦資料</div>');else sourceDialog();}
+    if(b.dataset.common){if(b.dataset.common==='通知訊息')openActivity();else if(b.dataset.common==='我的任務'){if(isPresentation()){externalTable=window.CENTER_DATA.overview.tertiary;openDetail('external');}else dialog('我的任務', '<div class="source-empty">NO DATA · 原始 JSON 未提供待辦資料</div>');}else sourceDialog();}
   });
   document.addEventListener('click',e=>{const r=e.target.closest('tr[data-row]');if(r)openDetail(r.dataset.row,Number(r.dataset.rowIndex));});
   document.addEventListener('click',e=>{
@@ -295,7 +320,7 @@
   });
   $('search-button').addEventListener('click',openSearch);$('search-input').addEventListener('input',e=>search(e.target.value));$('search-close').addEventListener('click',()=>$('search-dialog').close());
   $('notification-button').addEventListener('click',openActivity);
-  $('profile-button').addEventListener('click',()=>dialog('Jin Chen · 漢唐集成',`<div class="action-step"><span>JC</span><div><strong>Baseline 展示身分</strong><p>此身分為既有設計識別，尚未串接實際帳號服務。</p></div></div><div class="dialog-metrics"><div><small>工作中心</small><strong>4</strong></div><div><small>來源案場</small><strong>${window.RRCC_MERGED.data.projects.length}</strong></div><div><small>帳號資料</small><strong>NO DATA</strong></div></div>`));
+  $('profile-button').addEventListener('click',()=>dialog('Jin Chen · 漢唐集成',`<div class="action-step"><span>JC</span><div><strong>Baseline 展示身分</strong><p>此身分為既有設計識別，尚未串接實際帳號服務。</p></div></div><div class="dialog-metrics"><div><small>工作中心</small><strong>4</strong></div><div><small>${isPresentation()?'展示案場':'來源案場'}</small><strong>${(window.RRCC_ACTIVE_DATASET||window.RRCC_MERGED).data.projects.length}</strong></div><div><small>${isPresentation()?'展示帳號':'帳號資料'}</small><strong>${isPresentation()?window.CENTER_DATA.management.kpis[0].value:'NO DATA'}</strong></div></div>`));
   $('export-button').addEventListener('click',exportCSV);
   $('scope-button').addEventListener('click',()=>dialog('選擇檢視案場',`<p>選擇一個案場以檢視對應的案件清單。</p><div style="margin-top:15px">${Object.entries(projectNames).map(([key,label])=>`<button class="search-result" data-project="${key}">${icon('building')}<span>${escape(label)}</span>${key===state.project?'✓':''}</button>`).join('')}</div>`));
   document.addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b){state.project=b.dataset.project;$('project-select').value=state.project;$('detail-dialog').close();render();toast(`檢視範圍：${projectNames[state.project]}`);}});
@@ -306,6 +331,14 @@
   window.addEventListener('hashchange',()=>switchCenter(location.hash.slice(1),false));window.addEventListener('resize',resize);
   $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}" ${month===state.period?'selected':''}>${month}</option>`).join('');
   $('project-select').innerHTML=Object.entries(projectNames).map(([id,label])=>`<option value="${id}">${escape(label)}</option>`).join('');
+  $('data-mode-toggle')?.addEventListener('click',()=>{
+    window.RRCC_SET_DATA_MODE?.(isPresentation()?'source':'demo');
+    state.period=window.RRCC_DATA_MONTHS.at(-1);state.project='all';state.metric=defaults[state.center];state.rightTab='summary';state.sidebar=0;
+    $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}">${month}</option>`).join('');
+    $('project-select').innerHTML=Object.entries(projectNames).map(([id,label])=>`<option value="${id}">${escape(label)}</option>`).join('');
+    const url=new URL(location.href);url.searchParams.set('data-mode',isPresentation()?'demo':'source');history.replaceState(null,'',url.pathname+url.search+url.hash);
+    render(true);toast(isPresentation()?'已切換合成展示資料：非實際營運資料':'已切回 V1／V2 原始來源；未提供欄位維持 NO DATA');
+  });
   document.querySelectorAll('.common-nav .count').forEach(b=>b.remove());
   $('notification-button').classList.remove('notification-button');$('notification-button').setAttribute('aria-label','資料來源通知');
   panelMotion=new window.RightPanelMotion({panel:$('right-panel'),stage:$('stage'),layout:document.querySelector('.content-layout'),trigger:$('right-panel-trigger'),commit:metric=>{state.metric=metric;state.rightTab='summary';renderRight();applyMetricComparison();}});

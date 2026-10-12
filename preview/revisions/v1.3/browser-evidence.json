@@ -1,0 +1,918 @@
+{
+  "revision": "v1.3",
+  "fixtureSha256": "6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732",
+  "checks": [
+    {
+      "id": "overview-values",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aria": "案場數量 8 案場，查看詳細資訊",
+          "text": "案場數量\n8案場\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "材料總數 2,486 項，查看詳細資訊",
+          "text": "材料總數\n2,486項\n↑ 126\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "待驗證案件 32 件，查看詳細資訊",
+          "text": "待驗證案件\n32件\n↓ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "申報完成率 96.5% ，查看詳細資訊",
+          "text": "申報完成率\n96.5%\n↑ 0.9 pp\nvs. 上月 · Demo\n↗"
+        }
+      ]
+    },
+    {
+      "id": "overview-layout",
+      "status": "PASS",
+      "evidence": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "material-values",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aria": "材料總數 2,486 項，查看詳細資訊",
+          "text": "材料總數\n2,486項\n↑ 126\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "待申報材料 86 項，查看詳細資訊",
+          "text": "待申報材料\n86項\n↓ 18\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "供應商數量 48 家，查看詳細資訊",
+          "text": "供應商數量\n48家\n↑ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "申報完成率 96.5% ，查看詳細資訊",
+          "text": "申報完成率\n96.5%\n↑ 0.9 pp\nvs. 上月 · Demo\n↗"
+        }
+      ]
+    },
+    {
+      "id": "material-layout",
+      "status": "PASS",
+      "evidence": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "verification-values",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aria": "待驗證案件 32 件，查看詳細資訊",
+          "text": "待驗證案件\n32件\n↓ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "已驗證案件 428 件，查看詳細資訊",
+          "text": "已驗證案件\n428件\n↑ 25\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "退件／異常 9 件，查看詳細資訊",
+          "text": "退件／異常\n9件\n↓ 1\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "驗證完成率 91.3% ，查看詳細資訊",
+          "text": "驗證完成率\n91.3%\n↑ 1.3 pp\nvs. 上月 · Demo\n↗"
+        }
+      ]
+    },
+    {
+      "id": "verification-layout",
+      "status": "PASS",
+      "evidence": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "management-values",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aria": "使用者數量 186 人，查看詳細資訊",
+          "text": "使用者數量\n186人\n↑ 12\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "組織／供應商 56 個，查看詳細資訊",
+          "text": "組織／供應商\n56個\n↑ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "權限提醒 2 件，查看詳細資訊",
+          "text": "權限提醒\n2件\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "系統可用率 99.98% ，查看詳細資訊",
+          "text": "系統可用率\n99.98%\n運作正常\nvs. 上月 · Demo\n↗"
+        }
+      ]
+    },
+    {
+      "id": "management-layout",
+      "status": "PASS",
+      "evidence": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ]
+    },
+    {
+      "id": "source-mode-restores-original",
+      "status": "PASS",
+      "evidence": {
+        "center": "management",
+        "kpis": [
+          {
+            "aria": "使用者數量 NO DATA ，查看詳細資訊",
+            "text": "使用者數量\nNO DATA\n來源未提供\nNO DATA\n↗"
+          },
+          {
+            "aria": "組織／供應商 NO DATA ，查看詳細資訊",
+            "text": "組織／供應商\nNO DATA\n來源未提供\nNO DATA\n↗"
+          },
+          {
+            "aria": "權限異常 NO DATA ，查看詳細資訊",
+            "text": "權限異常\nNO DATA\n來源未提供\nNO DATA\n↗"
+          },
+          {
+            "aria": "系統狀態 NO DATA ，查看詳細資訊",
+            "text": "系統狀態\nNO DATA\n來源未提供\nNO DATA\n↗"
+          }
+        ],
+        "mode": "source",
+        "months": [
+          "2026-07",
+          "2026-08",
+          "2026-09"
+        ],
+        "noData": true,
+        "overflow": false,
+        "rects": [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 2416.013427734375,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 0,
+            "id": "right-panel",
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "demo-mode-restores-normal-values",
+      "status": "PASS",
+      "evidence": {
+        "center": "management",
+        "kpis": [
+          {
+            "aria": "使用者數量 186 人，查看詳細資訊",
+            "text": "使用者數量\n186人\n↑ 12\nvs. 上月 · Demo\n↗"
+          },
+          {
+            "aria": "組織／供應商 56 個，查看詳細資訊",
+            "text": "組織／供應商\n56個\n↑ 3\nvs. 上月 · Demo\n↗"
+          },
+          {
+            "aria": "權限提醒 2 件，查看詳細資訊",
+            "text": "權限提醒\n2件\n↑ 0\nvs. 上月 · Demo\n↗"
+          },
+          {
+            "aria": "系統可用率 99.98% ，查看詳細資訊",
+            "text": "系統可用率\n99.98%\n運作正常\nvs. 上月 · Demo\n↗"
+          }
+        ],
+        "mode": "demo",
+        "months": [
+          "2026-07",
+          "2026-08",
+          "2026-09",
+          "2026-10"
+        ],
+        "noData": false,
+        "overflow": false,
+        "rects": [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 2416.013427734375,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 0,
+            "id": "right-panel",
+            "width": 0,
+            "x": 0,
+            "y": 0
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "full-user-list",
+      "status": "PASS",
+      "evidence": "186 visible full-detail rows"
+    },
+    {
+      "id": "eight-projects-available",
+      "status": "PASS",
+      "evidence": "all plus A-H"
+    },
+    {
+      "id": "scoped-project-and-month",
+      "status": "PASS",
+      "evidence": [
+        {
+          "aria": "案場數量 1 案場，查看詳細資訊",
+          "text": "案場數量\n1案場\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "材料總數 280 項，查看詳細資訊",
+          "text": "材料總數\n280項\n↑ 11\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "待驗證案件 5 件，查看詳細資訊",
+          "text": "待驗證案件\n5件\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "申報完成率 95.4% ，查看詳細資訊",
+          "text": "申報完成率\n95.4%\n↑ 0.9 pp\nvs. 上月 · Demo\n↗"
+        }
+      ]
+    },
+    {
+      "id": "full-supplier-list",
+      "status": "PASS",
+      "evidence": {
+        "rows": 48,
+        "text": "供應商\t材料數\t完成率\t狀態\n示範精密材料 01\t61\t\n96.7%\n\t正常\n示範潔淨科技 02\t61\t\n96.7%\n\t正常\n示範流體工程 03\t61\t\n96.7%\n\t正常\n示範機電整合 04\t61\t\n96.7%\n\t正常\n示範環控設備 05\t61\t\n96.7%\n\t正常\n示範工程配件 06\t61\t\n96.7%\n\t正常\n示範精密材料 07\t61\t\n96.7%\n\t正常\n示範潔淨科技 08\t61\t\n96.",
+        "title": "供應商申報狀態"
+      }
+    },
+    {
+      "id": "verified-export-428",
+      "status": "PASS",
+      "evidence": {
+        "rows": 428,
+        "header": "﻿\"時間\",\"驗證項目\",\"審查人\",\"結果\""
+      }
+    },
+    {
+      "id": "pending-export-32",
+      "status": "PASS",
+      "evidence": {
+        "rows": 32,
+        "header": "﻿\"案件編號／內容\",\"案場\",\"審查人\",\"到期日\",\"狀態\""
+      }
+    },
+    {
+      "id": "demo-kpi-switch-genie",
+      "status": "PASS",
+      "evidence": {
+        "center": "verification",
+        "label": "已驗證案件",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1180,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 71,
+          "id": 1,
+          "maxRenderMs": 5.5999999940395355,
+          "meanRenderMs": 1.1366197179320832,
+          "preparationMs": 76.29999999701977,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 307.4952697753906,
+            "y": 385.32669830322266
+          }
+        },
+        "lastSource": "kpi-verification-0",
+        "layers": 0,
+        "mainWidth": 1594.677978515625,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 85.33143615722656,
+        "source": "kpi-verification-1"
+      }
+    },
+    {
+      "id": "demo-last-click-wins",
+      "status": "PASS",
+      "evidence": {
+        "center": "verification",
+        "label": "驗證完成率",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1179,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 69,
+          "id": 2,
+          "maxRenderMs": 2.5999999940395355,
+          "meanRenderMs": 1.040579709885777,
+          "preparationMs": 1.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 710.4971618652344,
+            "y": 385.32669830322266
+          }
+        },
+        "lastSource": "kpi-verification-1",
+        "layers": 0,
+        "mainWidth": 1594.677978515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 85.33143615722656,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "id": "explicit-synthetic-provenance",
+      "status": "PASS",
+      "evidence": {
+        "text": "/data/verificationCases\npresentation-demo · data/demo/rrcc-hantang-presentation-demo.json\nSYNTHETIC DEMO · 非實際營運資料\n\n本頁為 Owner 要求的正常數值展示情境，獨立合成資料不屬於 V1／V2 實際來源。以下列出前 8 個資料位置。\n\n/data/verificationCases/1258\n{\n  \"id\": \"VER-202610-0001\",\n  \"month\": \"2026-10\",\n  \"materialId\": \"MAT-00001\",\n  \"documentId\": \"DOC-202610-00001\",\n  \"project\": \"A\",\n  \"supplierId\": \"SUP-001\",\n  \"title\": \"UHP 316L 不鏽鋼管材 01型 材質證明\",\n  \"status\": \"verified\",\n  \"reviewerId\": \"USR-003\",\n  \"dueAt\": \"2026-10-14\",\n  \"updatedAt\": \"2026-10-13 09:00\",\n  \"reason\": \"文件資料齊備\"\n}\n/data/verificationCases/1259\n{\n  \"id\": \"VER-202610-0002\",\n  \"month\": \"2026-10\",\n  \"materialId\": \"MAT-00006\",\n  \"documentId\": \"DOC-202610-00006\",\n  \"project\": \"F\",\n",
+        "title": "合成展示資料與欄位追溯"
+      }
+    },
+    {
+      "id": "demo-blank-close",
+      "status": "PASS",
+      "evidence": {
+        "center": "verification",
+        "label": "驗證完成率",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1091,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 63,
+          "id": 3,
+          "maxRenderMs": 2.9000000059604645,
+          "meanRenderMs": 1.112698414496013,
+          "preparationMs": 0.7999999970197678,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1516.5008544921875,
+            "y": 385.32669830322266
+          }
+        },
+        "lastSource": "kpi-verification-3",
+        "layers": 0,
+        "mainWidth": 2416.013427734375,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 85.33143615722656,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "id": "material-export-full-2486",
+      "status": "PASS",
+      "evidence": {
+        "rows": 2486
+      }
+    },
+    {
+      "id": "overview-business-context",
+      "status": "PASS",
+      "evidence": {
+        "sidebar": "總覽儀表板\n案場總覽\n8\n材料與供應鏈\n申報進度\n驗證概況\n32\n異常追蹤\n3\n管理報表",
+        "titles": [
+          "材料申報趨勢",
+          "工程案場類型分布",
+          "進行中工程案",
+          "近期異常案件",
+          "管理待辦事項"
+        ],
+        "rightLabel": "案場數量"
+      }
+    },
+    {
+      "id": "material-business-context",
+      "status": "PASS",
+      "evidence": {
+        "sidebar": "材料清單\n供應商管理\n48\n材料申報\n86\n文件管理\n材料分類\n異常處理\n7\n報表分析",
+        "titles": [
+          "材料申報趨勢",
+          "材料類別分布",
+          "最近材料申報",
+          "供應商申報狀態",
+          "材料異常追蹤"
+        ],
+        "rightLabel": "材料總數"
+      }
+    },
+    {
+      "id": "verification-business-context",
+      "status": "PASS",
+      "evidence": {
+        "sidebar": "待驗證\n32\n驗證案件\n文件審查\n2400\n退件管理\n6\n異常追蹤\n3\n驗證紀錄\n報表分析",
+        "titles": [
+          "驗證案件趨勢",
+          "驗證結果分布",
+          "待驗證案件",
+          "最近驗證紀錄",
+          "退件與異常追蹤"
+        ],
+        "rightLabel": "待驗證案件"
+      }
+    },
+    {
+      "id": "management-business-context",
+      "status": "PASS",
+      "evidence": {
+        "sidebar": "使用者管理\n組織管理\n供應商管理\n角色與權限\n2\n規則設定\n系統設定\n4\n報表中心",
+        "titles": [
+          "使用者／供應商趨勢",
+          "權限角色分布",
+          "最近管理活動",
+          "系統事件",
+          "管理待辦事項"
+        ],
+        "rightLabel": "系統可用率"
+      }
+    },
+    {
+      "id": "four-centers-identical-grid",
+      "status": "PASS",
+      "evidence": [
+        [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 1594.677978515625,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1098.6646728515625,
+            "id": "right-panel",
+            "width": 797.3390502929688,
+            "x": 1733.3333740234375,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 1594.677978515625,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1098.6646728515625,
+            "id": "right-panel",
+            "width": 797.3390502929688,
+            "x": 1733.3333740234375,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 1594.677978515625,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1098.6646728515625,
+            "id": "right-panel",
+            "width": 797.3390502929688,
+            "x": 1733.3333740234375,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ],
+        [
+          {
+            "height": 205.33143615722656,
+            "id": "kpis",
+            "width": 1594.677978515625,
+            "x": 114.65908813476562,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1098.6646728515625,
+            "id": "right-panel",
+            "width": 797.3390502929688,
+            "x": 1733.3333740234375,
+            "y": 282.6609802246094
+          },
+          {
+            "height": 1440,
+            "id": "stage",
+            "width": 2560,
+            "x": 0,
+            "y": 0
+          }
+        ]
+      ]
+    },
+    {
+      "id": "self-contained-assets",
+      "status": "PASS",
+      "evidence": {
+        "scriptSources": 0,
+        "stylesheetLinks": 0
+      }
+    },
+    {
+      "id": "runtime-console-clean",
+      "status": "PASS",
+      "evidence": []
+    }
+  ],
+  "pages": [
+    {
+      "center": "overview",
+      "kpis": [
+        {
+          "aria": "案場數量 8 案場，查看詳細資訊",
+          "text": "案場數量\n8案場\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "材料總數 2,486 項，查看詳細資訊",
+          "text": "材料總數\n2,486項\n↑ 126\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "待驗證案件 32 件，查看詳細資訊",
+          "text": "待驗證案件\n32件\n↓ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "申報完成率 96.5% ，查看詳細資訊",
+          "text": "申報完成率\n96.5%\n↑ 0.9 pp\nvs. 上月 · Demo\n↗"
+        }
+      ],
+      "mode": "demo",
+      "months": [
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "noData": false,
+      "overflow": false,
+      "rects": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mainTitles": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "right": "KPI 詳細資訊\n案場數量\n摘要\n分類分布\n異常分析\n展示資料來源\n當前數值\n8案場\n↑ 0\nvs. 上月\n本期納管案場\n8 案場\n目標達成率\n100.0%\n近四個月趨勢（合成 Demo）\n2026\n7月\n8月\n9月\n10月\n業務重點\n8 個工程案場進行中；案場進度依同一份資料篩選。\n合成展示資料（Demo）｜非漢唐實際營運資料。\n資料來源：data/demo/rrcc-hantang-presentation-demo.json\n近期平台動態（合成 Demo）\n查看全部 ›\n嘉義 G 案 · 驗證通過\nVER-202610-0111 · 合成 Demo\n15:50\n嘉義 G 案 · 驗證通過\nVER-202610-0231 · 合成 Demo\n15:50\n嘉義 G 案 · 驗證通過\nVER-202610-0351 · 合成 Demo\n15:50\n32 件待驗證 · 3 件異常\n\n申報完成 96.5%；少量異常已列入追蹤，所有紀錄均為合成 Demo。\n\n快速檢視操作\n匯出案場總覽\n檢視工程案場\n檢視待驗證案件\n查看材料文件",
+      "sidebar": "總覽儀表板\n案場總覽\n8\n材料與供應鏈\n申報進度\n驗證概況\n32\n異常追蹤\n3\n管理報表"
+    },
+    {
+      "center": "material",
+      "kpis": [
+        {
+          "aria": "材料總數 2,486 項，查看詳細資訊",
+          "text": "材料總數\n2,486項\n↑ 126\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "待申報材料 86 項，查看詳細資訊",
+          "text": "待申報材料\n86項\n↓ 18\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "供應商數量 48 家，查看詳細資訊",
+          "text": "供應商數量\n48家\n↑ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "申報完成率 96.5% ，查看詳細資訊",
+          "text": "申報完成率\n96.5%\n↑ 0.9 pp\nvs. 上月 · Demo\n↗"
+        }
+      ],
+      "mode": "demo",
+      "months": [
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "noData": false,
+      "overflow": false,
+      "rects": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mainTitles": [
+        "材料申報趨勢",
+        "材料類別分布",
+        "最近材料申報",
+        "供應商申報狀態",
+        "材料異常追蹤"
+      ],
+      "right": "KPI 詳細資訊\n材料總數\n摘要\n分類分布\n異常分析\n展示資料來源\n當前數值\n2,486項\n↑ 126\nvs. 上月\n本期展示目標\n2611 項\n目標達成率\n95.2%\n近四個月趨勢（合成 Demo）\n2026\n7月\n8月\n9月\n10月\n業務重點\n2486 項材料，涵蓋 6 類工程材料。\n合成展示資料（Demo）｜非漢唐實際營運資料。\n資料來源：data/demo/rrcc-hantang-presentation-demo.json\n近期材料動態（合成 Demo）\n查看全部 ›\n台中 C 案 潔淨室高架地板 11型 申報完成\nDEC-202610-00171 · 合成 Demo\n16:50\n嘉義 G 案 潔淨室高架地板 31型 申報完成\nDEC-202610-00351 · 合成 Demo\n16:50\n台中 C 案 潔淨室高架地板 19型 申報完成\nDEC-202610-00531 · 合成 Demo\n16:50\n86 項待申報 · 7 項提醒\n\n供應商及材料文件依流程持續補齊；數值為合成展示情境。\n\n快速檢視操作\n檢視材料申報\n查看材料清單\n檢視供應商資料\n匯出材料報表",
+      "sidebar": "材料清單\n供應商管理\n48\n材料申報\n86\n文件管理\n材料分類\n異常處理\n7\n報表分析"
+    },
+    {
+      "center": "verification",
+      "kpis": [
+        {
+          "aria": "待驗證案件 32 件，查看詳細資訊",
+          "text": "待驗證案件\n32件\n↓ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "已驗證案件 428 件，查看詳細資訊",
+          "text": "已驗證案件\n428件\n↑ 25\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "退件／異常 9 件，查看詳細資訊",
+          "text": "退件／異常\n9件\n↓ 1\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "驗證完成率 91.3% ，查看詳細資訊",
+          "text": "驗證完成率\n91.3%\n↑ 1.3 pp\nvs. 上月 · Demo\n↗"
+        }
+      ],
+      "mode": "demo",
+      "months": [
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "noData": false,
+      "overflow": false,
+      "rects": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mainTitles": [
+        "驗證案件趨勢",
+        "驗證結果分布",
+        "待驗證案件",
+        "最近驗證紀錄",
+        "退件與異常追蹤"
+      ],
+      "right": "KPI 詳細資訊\n待驗證案件\n摘要\n分類分布\n異常分析\n展示資料來源\n當前數值\n32件\n↓ 3\nvs. 上月\n待驗證容量上限\n40 件\n目標達成率\n80.0%\n近四個月趨勢（合成 Demo）\n2026\n7月\n8月\n9月\n10月\n業務重點\n32 件待驗證，採先到期先審查排程。\n合成展示資料（Demo）｜非漢唐實際營運資料。\n資料來源：data/demo/rrcc-hantang-presentation-demo.json\n近期驗證動態（合成 Demo）\n查看全部 ›\n嘉義 G 案 · 驗證通過\nVER-202610-0111 · 合成 Demo\n15:50\n嘉義 G 案 · 驗證通過\nVER-202610-0231 · 合成 Demo\n15:50\n嘉義 G 案 · 驗證通過\nVER-202610-0351 · 合成 Demo\n15:50\n6 件補件 · 3 件異常追蹤\n\n32 件待驗證依到期日排程，請使用檢視操作查看合成案件。\n\n快速檢視操作\n檢視待驗證案件\n查看文件索引\n追蹤退件與異常\n匯出驗證紀錄",
+      "sidebar": "待驗證\n32\n驗證案件\n文件審查\n2400\n退件管理\n6\n異常追蹤\n3\n驗證紀錄\n報表分析"
+    },
+    {
+      "center": "management",
+      "kpis": [
+        {
+          "aria": "使用者數量 186 人，查看詳細資訊",
+          "text": "使用者數量\n186人\n↑ 12\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "組織／供應商 56 個，查看詳細資訊",
+          "text": "組織／供應商\n56個\n↑ 3\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "權限提醒 2 件，查看詳細資訊",
+          "text": "權限提醒\n2件\n↑ 0\nvs. 上月 · Demo\n↗"
+        },
+        {
+          "aria": "系統可用率 99.98% ，查看詳細資訊",
+          "text": "系統可用率\n99.98%\n運作正常\nvs. 上月 · Demo\n↗"
+        }
+      ],
+      "mode": "demo",
+      "months": [
+        "2026-07",
+        "2026-08",
+        "2026-09",
+        "2026-10"
+      ],
+      "noData": false,
+      "overflow": false,
+      "rects": [
+        {
+          "height": 205.33143615722656,
+          "id": "kpis",
+          "width": 1594.677978515625,
+          "x": 114.65908813476562,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1098.6646728515625,
+          "id": "right-panel",
+          "width": 797.3390502929688,
+          "x": 1733.3333740234375,
+          "y": 282.6609802246094
+        },
+        {
+          "height": 1440,
+          "id": "stage",
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        }
+      ],
+      "mainTitles": [
+        "使用者／供應商趨勢",
+        "權限角色分布",
+        "最近管理活動",
+        "系統事件",
+        "管理待辦事項"
+      ],
+      "right": "KPI 詳細資訊\n系統可用率\n摘要\n角色分布\n管理提醒\n展示資料來源\n當前數值\n99.98%\n運作正常\n服務狀態\n展示服務目標（%）\n99.9\n展示服務狀態\n運作正常\n近四個月趨勢（合成 Demo）\n2026\n7月\n8月\n9月\n10月\n業務重點\n平台全域合成可用率，切換案場仍顯示同一平台健康情境。\n此值僅供視覺展示，不是即時監控或實際 SLA 證據。\n合成展示資料（Demo）｜非漢唐實際營運資料。\n資料來源：data/demo/rrcc-hantang-presentation-demo.json\n系統通知（合成 Demo）\n查看全部 ›\n資料備份檢核完成\n備份服務 · 合成 Demo\n08:00\n材料索引同步完成\n資料服務 · 合成 Demo\n08:00\n排程報表產生完成\n報表服務 · 合成 Demo\n09:00\n2 件權限提醒 · 4 項待辦\n\n平台展示狀態正常；權限異動屬例行複核，並非實際安全事件。\n\n快速檢視操作\n檢視使用者\n檢視角色與權限\n查看組織資料\n開啟系統事件",
+      "sidebar": "使用者管理\n組織管理\n供應商管理\n角色與權限\n2\n規則設定\n系統設定\n4\n報表中心"
+    }
+  ],
+  "testedAt": "2026-10-12T19:04:57.672Z",
+  "surface": "Codex IAB, self-contained v1.3 HTML served over loopback; file:// not tested"
+}

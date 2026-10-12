@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="preview.css">
   <link rel="stylesheet" href="panel-motion.css">
   <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="presentation-mode.css">
   <script src="center-data.js" defer></script>
   <script src="demo-data.js" defer></script>
+  <script src="presentation-data.js" defer></script>
   <script src="merged-center-data.js" defer></script>
+  <script src="presentation-center-data.js" defer></script>
   <script src="genie.js" defer></script>
   <script src="panel-motion.js" defer></script>
   <script src="preview.js" defer></script>
@@ -77,7 +80,7 @@
           </div>
           <aside id="right-panel" class="right-panel" data-region="right" aria-label="中心詳細資訊" data-fixed="right-panel"></aside>
         </div>
-        <footer class="footer"><span>v3.2 <i></i> RRCC Scope 3 Management Platform <span class="footer-preview">· Demonstration Preview</span></span><span>Clean Supply Chain <b>·</b> Responsible Engineering <b>·</b> Sustainable Future</span></footer>
+        <footer class="footer"><span>v3.2 <i></i> RRCC Scope 3 Management Platform <span class="footer-preview">· Demonstration Preview</span> <button id="data-mode-toggle" class="data-mode-toggle" aria-pressed="true" title="切換合成展示資料與原始 JSON 來源模式">DEMO 合成展示資料</button></span><span>Clean Supply Chain <b>·</b> Responsible Engineering <b>·</b> Sustainable Future</span></footer>
       </main>
       <div id="toast" class="toast" role="status" aria-live="polite"></div>
       <dialog id="detail-dialog" class="detail-dialog"><div class="dialog-heading"><div><span id="dialog-context" class="eyebrow"></span><h2 id="dialog-title"></h2></div><button id="dialog-close" class="icon-button" aria-label="關閉詳細資訊"></button></div><div id="dialog-content"></div><div class="dialog-foot"><span>4-Center Demonstration Preview · 展示資料</span><button id="dialog-done" class="primary-button">完成</button></div></dialog>

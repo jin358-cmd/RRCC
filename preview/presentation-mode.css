@@ -1,0 +1,4 @@
+/* A small, explicit data-origin control; the approved dashboard grid is unchanged. */
+.data-mode-toggle{font:inherit;font-size:10px;line-height:1.4;padding:3px 8px;margin-left:8px;color:#2370b4;background:#edf6ff;border:1px solid #c9dff4;border-radius:4px;cursor:pointer;white-space:nowrap}
+.data-mode-toggle:hover,.data-mode-toggle:focus-visible{background:#ddefff;outline:2px solid #5b9bdb;outline-offset:2px}
+#stage[data-data-mode="source"] .data-mode-toggle{color:#64768b;background:#f5f8fc}
