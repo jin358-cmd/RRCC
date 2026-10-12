@@ -51,7 +51,7 @@
     {id:'management',label:'管理中心',icon:'settings',number:'04'}
   ];
   const defaults = {overview:0,material:3,verification:3,management:3};
-  const state = {center:'overview',metric:0,sidebar:0,rightTab:'summary',period:window.RRCC_DATA_MONTHS?.at(-1)||'2026-09',project:'all'};
+  const state = {center:'overview',metric:0,sidebar:0,rightTab:'summary',period:window.RRCC_DATA_MONTHS?.at(-1)||'2026-09',project:'all',materialFlowMode:'amount'};
   const projectNames = window.RRCC_PROJECT_NAMES||{all:'全部案場'};
   let toastTimer,externalTable,detailProvenance;
   function toast(message) { $('toast').textContent=message; $('toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),3100); }
@@ -99,6 +99,26 @@
     const bars=data.bars.map((v,i)=>typeof v==='number'?`<rect x="${x(i)-step*.22}" y="${y(v)}" width="${step*.44}" height="${y1-y(v)}" rx="2" fill="url(#bar-fill-${state.center})" opacity="${i===currentMonth?1:.78}"><title>${escape(months[i])} ${escape(data.legend[0])}：${v.toLocaleString('en-US')}</title></rect>`:'').join('');
     const curve=(values,color,dashed='')=>values.some(v=>typeof v!=='number')?'':`<polyline points="${line(values)}" fill="none" stroke="${color}" stroke-width="1.8" stroke-dasharray="${dashed}"/>${values.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="3" fill="${color}"/>`).join('')}`;
     return `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="${escape(data.title)}，${escape(months.join('、'))}來源資料"><defs><linearGradient id="bar-fill-${state.center}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#479afa"/><stop offset="1" stop-color="#8ac2ff"/></linearGradient></defs><text x="9" y="9" class="chart-unit">${escape(data.unit)}</text>${data.ticks.map(v=>`<line x1="${x0}" y1="${y(v)}" x2="${x1}" y2="${y(v)}" stroke="#e8eff8"/><text x="${x0-11}" y="${y(v)+4}" text-anchor="end" class="chart-text">${Number(v).toLocaleString('en-US')}</text>`).join('')}${bars}${curve(data.previous,'#a8bad2','4 3')}${curve(data.line,'#16b393')}${months.map((_,i)=>`<text x="${x(i)}" y="192" text-anchor="middle" class="chart-text" style="${highlight&&i===currentMonth?'fill:#2479ce;font-weight:700':''}">${monthLabel(i)}</text>`).join('')}</svg>`;
+  }
+  function renderMaterialFlow() {
+    const flow=window.RRCC_MATERIAL_FLOW;
+    if(state.center!=='material'||!flow)return;
+    $('trend-title').textContent='工程物料流向圖';
+    $('trend-legend').innerHTML='';
+    const matchesScope=element=>element?.dataset.flowPeriod===state.period&&element.dataset.flowProject===state.project&&element.dataset.flowMode===state.materialFlowMode;
+    // KPI actions must not replace identical nodes and replay the flow reading.
+    if(!matchesScope($('trend-chart').querySelector('[data-material-flow]')))$('trend-chart').innerHTML=flow.render({period:state.period,project:state.project,mode:state.materialFlowMode,idPrefix:'material-main'});
+    const detail=$('dialog-content').querySelector('[data-material-flow-detail]');
+    if(detail&&!matchesScope(detail.querySelector('[data-material-flow]')))detail.innerHTML=flow.render({period:state.period,project:state.project,mode:state.materialFlowMode,idPrefix:'material-detail'});
+    window.RRCC_CHART_MOTION?.refresh($('trend-chart'));
+    if(detail)window.RRCC_CHART_MOTION?.refresh(detail);
+  }
+  function openMaterialFlowDetails(lane) {
+    const flow=window.RRCC_MATERIAL_FLOW.details({period:state.period,project:state.project,lane});
+    const table=flow.table||flow;
+    externalTable={...table,provenance:{...table.provenance,view:'material-flow-v2'},rowProvenance:table.rowProvenance?.map(prov=>({...prov,view:'material-flow-v2'}))};
+    openDetail('external');
+    $('dialog-content').insertAdjacentHTML('afterbegin',flow.summary);
   }
   function renderDonut(data) {
     const c=2*Math.PI*78;let offset=0;
@@ -210,9 +230,12 @@
     $('kpis').style.setProperty('--kpi-count',Math.max(1,visibleMetrics.length));
     $('kpis').innerHTML=visibleMetrics.map(i=>{const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('')||'<div class="kpi-empty">此中心尚未選取 KPI。<button class="text-link" data-open-library>開啟 KPI 卡片櫃</button></div>';
     $('right-panel-trigger').disabled=!visibleMetrics.length;
-    $('trend-title').textContent=data.trend.title;
-    $('trend-legend').innerHTML=data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':i===1?'legend-line':'legend-line dashed'}"></i>${escape(l)}</span>`).join('');
-    $('trend-chart').innerHTML=renderTrend(data.trend);
+    if(state.center==='material'&&window.RRCC_MATERIAL_FLOW)renderMaterialFlow();
+    else {
+      $('trend-title').textContent=data.trend.title;
+      $('trend-legend').innerHTML=data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':i===1?'legend-line':'legend-line dashed'}"></i>${escape(l)}</span>`).join('');
+      $('trend-chart').innerHTML=renderTrend(data.trend);
+    }
     $('distribution-title').textContent=data.distribution.title;
     $('distribution-chart').innerHTML=renderDonut(data.distribution);
     ['table','secondary','tertiary'].forEach((key,i)=>{$(i===0?'table-title':`${key}-title`).textContent=data[key].title;const target=$(i===0?'primary-table':`${key}-table`);target.innerHTML=tableMarkup(data[key],key,true);target.title=`${data[key].sourceTitle} · 預覽 ${Math.min(data[key].rows.length,data[key].previewLimit||5)} / ${data[key].rows.length} 筆；查看全部與匯出保留完整資料`;});
@@ -236,6 +259,11 @@
     window.RRCC_CHART_MOTION?.refresh($('detail-dialog'));
   }
   function sourceDialog(prov=current().kpis[state.metric].provenance) {
+    if(prov?.view==='material-flow-v2'){
+      const canonical=window.RRCC_MERGED;
+      const records=(prov.canonicalPointers||[]).map(pointer=>({pointer,value:pointer.split('/').slice(1).reduce((value,key)=>value?.[key.replace(/~1/g,'/').replace(/~0/g,'~')],canonical)}));
+      dialog('V2 工程物料流向 · 原始來源',`<div class="audit-banner">V2 原始離線 Demo · 非實際營運資料。單月批次去重計算，未引用合成展示值。</div><pre class="library-source-json">${escape(JSON.stringify({sources:canonical.sources,provenance:prov,records},null,2))}</pre>`);return;
+    }
     if(prov?.dataset==='canonical-v1-v2'&&current().kpis[state.metric].detail?.libraryData){
       const k=current().kpis[state.metric],info=k.detail.libraryData;
       dialog(`${k.label} · 定義與來源`,librarySourceMarkup(k,info));return;
@@ -258,9 +286,11 @@
           const raw=t.libraryData.rawRecords[rowIndex],material=t.libraryData.materialRecords.find(record=>record.id===raw?.material);
           $('dialog-content').insertAdjacentHTML('beforeend',`<h3>完整原始批次、材料主檔與來源</h3><pre class="library-source-json">${escape(JSON.stringify({record:raw,material,source:t.libraryData.source,provenance:detailProvenance},null,2))}</pre>`);
         }
+        if(detailProvenance?.view==='material-flow-v2')$('dialog-content').insertAdjacentHTML('beforeend',`<h3>完整 V2 批次與逐欄來源</h3><pre class="library-source-json">${escape(JSON.stringify(detailProvenance,null,2))}</pre>`);
         if(detailProvenance)$('dialog-content').insertAdjacentHTML('beforeend','<button class="primary-button" data-row-provenance>查看此列原始 JSON 來源</button>');
       } else dialog(t.title,window.RRCC_FULL_TABLE.render(t,kind,{cell,scope:`${centers.find(c=>c.id===state.center).label} / ${state.period} / ${projectNames[state.project]}`,onExport:exportCSV}));
-    } else if(kind==='trend') dialog(data.trend.title,`<div class="chart-legend">${data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':'legend-line'}"></i>${escape(l)}</span>`).join('')}</div><div class="metric-detail-chart">${renderTrend(data.trend)}</div><div class="dialog-notice">${isPresentation()?'合成展示情境 · '+window.RRCC_DATA_MONTHS.join('、')+' · 非實際營運趨勢':'僅呈現原始 JSON 的 2026-07、08、09 來源月份，不補造其他月份。'}</div>`);
+    } else if(kind==='trend'&&state.center==='material'&&window.RRCC_MATERIAL_FLOW) dialog('工程物料流向圖',`<div data-material-flow-detail data-chart-motion>${window.RRCC_MATERIAL_FLOW.render({period:state.period,project:state.project,mode:state.materialFlowMode,idPrefix:'material-detail'})}</div>`);
+    else if(kind==='trend') dialog(data.trend.title,`<div class="chart-legend">${data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':'legend-line'}"></i>${escape(l)}</span>`).join('')}</div><div class="metric-detail-chart">${renderTrend(data.trend)}</div><div class="dialog-notice">${isPresentation()?'合成展示情境 · '+window.RRCC_DATA_MONTHS.join('、')+' · 非實際營運趨勢':'僅呈現原始 JSON 的 2026-07、08、09 來源月份，不補造其他月份。'}</div>`);
     else if(kind==='distribution') dialog(data.distribution.title,`<div class="distribution-chart" data-chart-motion style="height:auto;justify-content:center">${renderDonut(data.distribution)}</div>`);
   }
   function openSidebar(index) {
@@ -295,7 +325,8 @@
     const table=selectedTable?.columns?selectedTable:data.table;
     const lines=[table.columns,...filteredRows(table).map(r=>r.map(flat))].map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');
     const url=URL.createObjectURL(new Blob(['\ufeff'+lines],{type:'text/csv;charset=utf-8;'}));
-    const a=document.createElement('a');a.href=url;a.download=`RRCC_${state.center}_${state.project}_${state.period}_${isPresentation()?'SYNTHETIC':'SOURCE'}_DEMO.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast(`${table.title}已匯出為 CSV（展示資料）`);
+    const sourceTag=table.provenance?.view==='material-flow-v2'?'SOURCE_V2':isPresentation()?'SYNTHETIC':'SOURCE';
+    const a=document.createElement('a');a.href=url;a.download=`RRCC_${state.center}_${state.project}_${state.period}_${sourceTag}_DEMO.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),3000);toast(`${table.title}已匯出為 CSV（展示資料）`);
   }
   function openActivity() {
     const r=current().right;
@@ -352,7 +383,12 @@
   $('public-reference-button').addEventListener('click',()=>dialog('公開參考數據與官方依據',referenceMarkup()));
   document.querySelectorAll('[data-common]').forEach(b=>b.insertAdjacentHTML('afterbegin',icon(b.dataset.icon)));
   document.addEventListener('click',event=>{
+    const lane=event.target.closest('[data-material-lane]');
+    if(lane){openMaterialFlowDetails(lane.dataset.materialLane);return;}
     const b=event.target.closest('button,a');if(!b)return;
+    if(b.hasAttribute('data-material-flow-mode')){state.materialFlowMode=b.dataset.materialFlowMode==='percent'?'percent':'amount';renderMaterialFlow();return;}
+    if(b.hasAttribute('data-material-flow-details')){openMaterialFlowDetails();return;}
+    if(b.hasAttribute('data-material-flow-source')){setDataMode('source');return;}
     if(b.hasAttribute('data-public-reference')){dialog('公開參考數據與官方依據',referenceMarkup());return;}
     if(b.hasAttribute('data-open-library')){openLibrary();return;}
     if(b.hasAttribute('data-library-detail')){openLibraryDetail();return;}
@@ -378,6 +414,7 @@
     panelMotion.close();
   });
   document.addEventListener('keydown',e=>{
+    if(['Enter',' '].includes(e.key)&&e.target.matches('[data-material-lane]')){e.preventDefault();openMaterialFlowDetails(e.target.dataset.materialLane);return;}
     if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k'){e.preventDefault();if(!$('search-dialog').open)openSearch();}
     if(e.key==='Enter'&&e.target.matches('tr[data-row]'))openDetail(e.target.dataset.row,Number(e.target.dataset.rowIndex));
     if($('search-dialog').open&&['ArrowDown','ArrowUp'].includes(e.key)) {e.preventDefault();const items=Array.from(document.querySelectorAll('.search-result'));const i=items.indexOf(document.activeElement);items[(i+(e.key==='ArrowDown'?1:-1)+items.length)%items.length]?.focus();}

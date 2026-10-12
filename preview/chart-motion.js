@@ -78,7 +78,9 @@
     const root = state.root;
     if (progress(root)) {
       animate(state, root.querySelector('i'), [{ transform: 'scaleX(0)', transformOrigin: 'left center' }, { transform: 'scaleX(1)', transformOrigin: 'left center' }]);
-    } else {
+    } else if (!root.querySelector('[data-material-flow]')) {
+      // V2 routing geometry has a dedicated left-to-right CSS reveal. Treating
+      // its node rectangles as columns would distort the flow and its labels.
       let barIndex = 0, arcIndex = 0;
       for (const rect of root.querySelectorAll('svg rect')) {
         if (rect.closest('defs,clipPath,mask')) continue;
@@ -105,7 +107,7 @@
       for (const number of root.querySelectorAll('.donut-center strong,.distribution-legend strong')) animate(state, number, [{ opacity: .25, transform: 'translateY(3px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 400, delay: 180 });
     }
     // Always settle, including partial/unsupported animation implementations.
-    schedule(state, () => ready(state), 720);
+    schedule(state, () => ready(state), root.querySelector('[data-material-flow]') ? 1100 : 720);
   }
   function refresh(scope = document) {
     for (const state of Array.from(active)) if (hidden(state.root)) ready(state);

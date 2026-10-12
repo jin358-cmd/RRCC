@@ -65,12 +65,12 @@ await test('Date, project, export retain unique IDs and their order in the same 
   }
   assert.doesNotMatch(toolbar, /kpi-settings-button/);
 });
-await test('Incremental CSS is last in index and offline packaging without altering script order', () => {
+await test('Workspace CSS remains before v1.8 overrides in index and offline packaging', () => {
   const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(match => match[1]);
-  assert.equal(styles.at(-1), 'workspace-refinement.css');
+  assert.deepEqual(styles.slice(-3), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css']);
   const declared = [...packaging.match(/const stylesheetNames=\[([^\]]+)\]/)[1].matchAll(/'([^']+)'/g)].map(match => match[1]);
   assert.deepEqual(declared, styles);
-  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.7\.html/);
+  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.8\.html/);
   assert.match(html, /src="genie\.js" defer/);
   assert.match(html, /src="panel-motion\.js" defer/);
   assert.match(html, /src="sidebar\.js" defer/);

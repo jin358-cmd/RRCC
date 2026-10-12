@@ -1,0 +1,145 @@
+{
+  "verifiedAt": "2026-10-12T21:11:40.206Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 27,
+  "textFiles": 22,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 3362,
+      "sha256": "ab35be2959d74a05b4c6745fc6204e502a15b34dbf9243a7594316d2f99bd393"
+    },
+    {
+      "file": "docs/verification/owner-v1.8.md",
+      "bytes": 9027,
+      "sha256": "146f6d75912f75853f85c3d9616b6ad7b445a5b89baf2a37ad23b51f267a2f6c"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.8.html",
+      "bytes": 11748696,
+      "sha256": "1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0"
+    },
+    {
+      "file": "preview/chart-motion.js",
+      "bytes": 8482,
+      "sha256": "56e04ac4965599fbafe6edd4a08501dc3c274b665cad6690d370d69a8b49d448"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10120,
+      "sha256": "082c46c47dbfeb043b20219de0dda77575ff66c3c189a98082860f4164a8fc98"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.8.css",
+      "bytes": 5835,
+      "sha256": "4b7a9b96cb25f410a5e86d6ee2ef96c1bd762852f0754ed7eb34807b7b55ed19"
+    },
+    {
+      "file": "preview/material-flow.css",
+      "bytes": 6630,
+      "sha256": "204f4eb09932392c184850fa89c72b8185a27fdb6c223d87aae69b282b698a5f"
+    },
+    {
+      "file": "preview/material-flow.js",
+      "bytes": 15209,
+      "sha256": "0f5cbd4811dfc5696f6fe1ff0301a6eaf7d36fff473cfe3fd22d197386c9a4d4"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3271,
+      "sha256": "d17036de9a6f235515a872c7899a791b73d18545796156312b9eb62e1cb5bb67"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 59399,
+      "sha256": "08da546559a9c43c37c3d38eff02053d88b29c34c8fdbf588ea2d97d17a589f3"
+    },
+    {
+      "file": "preview/revisions/v1.8/README.md",
+      "bytes": 3123,
+      "sha256": "e88db36b36b747eceb52ca7aeb3dab1f286f10f5b8b3daec57ab6b4d9d0f8e10"
+    },
+    {
+      "file": "preview/revisions/v1.8/browser-interaction-evidence.json",
+      "bytes": 15304,
+      "sha256": "5b865246b7819e4a40898a9540127869647416f7481048330f3be2b1ea6499e4"
+    },
+    {
+      "file": "preview/revisions/v1.8/detail-65-percent.png",
+      "bytes": 81869,
+      "sha256": "5987a2f63dbf94e1533624101871d931cbf07c40506e192dbeb669a81ddb2a2c"
+    },
+    {
+      "file": "preview/revisions/v1.8/led-kpi-preview.png",
+      "bytes": 167304,
+      "sha256": "5d8e97c93039d52748edbb3d40e7c4f15e46e42657e5b07053523690fc65887c"
+    },
+    {
+      "file": "preview/revisions/v1.8/local-test-evidence.json",
+      "bytes": 60585,
+      "sha256": "63eefbae1c7254d703bd279e6edd6ffe596e302c978e30b99101f9e35733545c"
+    },
+    {
+      "file": "preview/revisions/v1.8/local-test-final-evidence.json",
+      "bytes": 62663,
+      "sha256": "85245860abff3e4444d16769e7d6b702c904bd8442eb24408f8ebfde81e3e005"
+    },
+    {
+      "file": "preview/revisions/v1.8/material-flow-final.png",
+      "bytes": 136643,
+      "sha256": "81e27197680ccb66122589dfc8f45e021b57c39cdd440701e0a31db6dca7efff"
+    },
+    {
+      "file": "preview/revisions/v1.8/material-flow-preview.png",
+      "bytes": 198207,
+      "sha256": "7d118afab4ad14a24a7b6853b68b546aa2782e677c0fab507d29df80319d80e9"
+    },
+    {
+      "file": "preview/revisions/v1.8/mobile-detail.png",
+      "bytes": 31471,
+      "sha256": "bd036479247ec5c86ab77e50f2acc44a402eabef8f5896039327867f5456b9b8"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6603,
+      "sha256": "5342c140f081c98a37f1fcbf281a63934941ea6f6ea769d47fa31c32593d5bb6"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.8.mjs",
+      "bytes": 3867,
+      "sha256": "850f375e7718f4db173c53de7ec02f9826f92dbe56f25f02eeb5f720f4d53a02"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12125,
+      "sha256": "b3b5cdac09e26efb5bdb6584da076d6a7273f6e0207f34fbd96cdbe2eabcecd3"
+    },
+    {
+      "file": "scripts/test-material-flow.mjs",
+      "bytes": 10789,
+      "sha256": "b1c6fffd36f29ed547e560e76cf2a9f42a8640e3332a15bad37dcdc6fc313827"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16759,
+      "sha256": "3772314eff604f3cc50d404ee3ba403010b0225c9b969e09247712a60d0826b4"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6952,
+      "sha256": "f0e1c2d752c7a0909aea40b933280e3baa1e01b938c8f4f65185ec4fc10cfe3e"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11478,
+      "sha256": "d4deb846f722bbbf890bbf35bb088499f3d703eaeaebbc97e1a8466911b38def"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 4505,
+      "sha256": "cbf6ad85ae7332898995ee1f6042e522272a4ccb6032e56bd4a2f90d414c15db"
+    }
+  ]
+}

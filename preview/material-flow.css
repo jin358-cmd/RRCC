@@ -1,0 +1,61 @@
+/* V2's three-column material form; flow geometry owns its reading animation. */
+.trend-chart:has(>[data-material-flow]){height:auto;padding:.1rem .8rem .8rem}
+.trend-panel:has([data-material-flow]) .panel-head{height:auto;min-height:2.7rem}
+.trend-panel:has([data-material-flow]) #trend-legend:empty{display:none}
+.material-flow{min-width:0;color:#28494c;font-size:.72rem;text-align:left}
+.material-flow-controls{display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;padding:0 0 .35rem}
+.material-flow-controls>span{color:#66848d;font-size:.65rem}
+.material-flow-tabs{display:inline-flex;gap:.25rem;flex:none}
+.material-flow-tab{border:1px solid #cfe1df;border-radius:6px;background:#fff;padding:.25rem .5rem;font-size:.63rem;line-height:1.4;white-space:nowrap;color:#587981;cursor:pointer}
+.material-flow-tab.active{background:#edf8f5;border-color:#a9d7cc;color:#167a69;font-weight:700}
+.material-flow-tab:hover{background:#f2f9f7}
+.material-flow-tab:focus-visible{outline:2px solid #168bd3;outline-offset:2px}
+.material-flow-viewport{width:100%;overflow-x:auto;overflow-y:hidden;scrollbar-width:thin;scrollbar-color:#c4ded8 #f3f8f6}
+.material-flow-svg{display:block;width:100%!important;min-width:640px;height:auto!important;overflow:visible;margin:0 auto;font-family:inherit}
+.material-flow-svg rect{transform:none!important}
+.material-flow-node-label{font-size:14px;font-weight:750;fill:#28494c}
+.material-flow-intake-value{font-size:25px;font-weight:820;fill:#14685c;font-variant-numeric:tabular-nums}
+.material-flow-lane-value{font-size:14px;font-weight:800;fill:#204749;font-variant-numeric:tabular-nums}
+.material-flow-node-small{font-size:10px;fill:#6d898d}
+.material-flow-rcos{font-size:12px;font-weight:700;fill:#defaf3;letter-spacing:1.5px}
+.material-flow-route-label{font-size:15px;font-weight:800;fill:#fff}
+.material-flow-lane{cursor:pointer}
+.material-flow-lane:hover>rect:first-child{fill:#f2faf7;stroke:#6ebaaa}
+.material-flow-lane:focus-visible{outline:none}
+.material-flow-lane:focus-visible>rect:first-child{stroke:#168bd3;stroke-width:3px}
+.material-flow-unavailable .material-flow-branch-path{stroke-dasharray:.025 .025;opacity:.38}
+.material-flow-footer{border-top:1px solid #e0ece9;padding:.5rem 0;display:flex;align-items:center;justify-content:space-between;gap:.65rem;flex-wrap:wrap}
+.material-flow-legend{display:flex;gap:.3rem .55rem;flex-wrap:wrap;color:#54727a;font-size:.58rem}
+.material-flow-legend>span{display:inline-flex;align-items:center;gap:.25rem;white-space:nowrap}
+.material-flow-legend i{height:.35rem;width:.35rem;border-radius:50%;display:inline-block;flex:none}
+.material-flow-structure{display:flex;align-items:center;gap:.4rem;min-width:150px;flex:1;max-width:260px;font-size:.56rem;color:#66848d}
+.material-flow-structure>span{white-space:nowrap}
+.material-flow-strip{display:flex;flex:1;height:7px;background:#eef4f1;border-radius:6px;overflow:hidden;gap:1px}
+.material-flow-strip>span{height:100%;min-width:0;flex:none}
+.material-flow-closure{border-radius:6px;background:#f1f8f5;border:1px solid #dcece4;padding:.4rem .55rem;display:flex;flex-direction:column;gap:.18rem;font-size:.6rem;line-height:1.5;color:#4b7166}
+.material-flow-closure strong{color:#267760;font-weight:650}
+.material-flow-warning{background:#fff8ed;border-color:#ecd8b9;color:#95703c}
+.material-flow-warning strong{color:#98652f}
+.material-flow-source-note{font-size:.56rem;line-height:1.5;color:#7c929b;margin:.35rem 0 0;overflow-wrap:anywhere}
+.material-flow-issues{font-size:.6rem;line-height:1.5;color:#98652f;margin:.3rem 0}
+.material-flow-empty{padding:.35rem .5rem;background:#f6f9fb;border:1px solid #e2e9ee;color:#6c818e;border-radius:5px;font-size:.63rem;line-height:1.5;margin:.2rem 0}
+.material-flow-source-button{display:inline-block;border:1px solid #cfe1df;border-radius:5px;padding:.22rem .45rem;background:#f7fcfa;color:#23796d;font-size:.62rem;line-height:1.4;margin:.3rem .25rem 0 0;cursor:pointer}
+.material-flow-source-button:hover{background:#eaf6f1;border-color:#8ec6b8}
+.material-flow-source-button:focus-visible{outline:2px solid #168bd3;outline-offset:2px}
+.material-flow-detail-summary{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem;padding:.75rem;border:1px solid #d5e8e0;border-radius:8px;background:#f1f8f5;color:#42695d;font-size:.85rem;line-height:1.5}
+.material-flow-detail-summary>strong{font-size:1.1rem;color:#176c56}
+.material-flow-detail-summary p{font-size:.7rem;margin:.2rem 0 0;color:#6d817b}
+/* Loading begins at intake, then trunk/router, then each left-to-right branch.
+   Retain the same animation through chart-phase ready; do not replay on KPI clicks. */
+[data-chart-phase="loading"] .material-flow-node{opacity:.18}
+[data-chart-phase="loading"] .material-flow-path{stroke-dasharray:1;stroke-dashoffset:1}
+:is([data-chart-phase="reading"],[data-chart-phase="ready"]) .material-flow-source{animation:rrcc-flow-node .16s ease-out both}
+:is([data-chart-phase="reading"],[data-chart-phase="ready"]) .material-flow-trunk{stroke-dasharray:1;animation:rrcc-flow-read .18s ease-out .05s both}
+:is([data-chart-phase="reading"],[data-chart-phase="ready"]) .material-flow-router{animation:rrcc-flow-node .16s ease-out .16s both}
+:is([data-chart-phase="reading"],[data-chart-phase="ready"]) .material-flow-branch-path{stroke-dasharray:1;animation:rrcc-flow-read .2s cubic-bezier(.2,.7,.3,1) calc(.28s + var(--material-flow-index)*.035s) both}
+:is([data-chart-phase="reading"],[data-chart-phase="ready"]) .material-flow-lane{animation:rrcc-flow-node .12s ease-out calc(.46s + var(--material-flow-index)*.035s) both}
+.material-flow-unavailable .material-flow-branch-path{animation:none!important;stroke-dasharray:.025 .025!important;stroke-dashoffset:0!important}
+@keyframes rrcc-flow-read{from{stroke-dashoffset:1;opacity:.2}to{stroke-dashoffset:0;opacity:.76}}
+@keyframes rrcc-flow-node{from{opacity:0;clip-path:inset(0 100% 0 0)}to{opacity:1;clip-path:inset(0 0 0 0)}}
+@media(max-width:640px){.material-flow-controls{align-items:flex-start}.material-flow-controls>span{width:100%}.material-flow-svg{min-width:640px}.material-flow-footer{gap:.4rem}.material-flow-source-note{font-size:.62rem}.material-flow-legend{font-size:.63rem}.material-flow-closure{font-size:.65rem}}
+@media(prefers-reduced-motion:reduce){.material-flow *{animation:none!important;transition:none!important}.material-flow-node{opacity:1!important;clip-path:none!important}.material-flow-path{stroke-dashoffset:0!important;stroke-dasharray:none!important}.material-flow-unavailable .material-flow-branch-path{stroke-dasharray:.025 .025!important}}

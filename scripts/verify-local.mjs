@@ -24,7 +24,10 @@ const commands=[
  ['scripts/test-workspace-refinement.mjs'],
  ['scripts/test-brand-alignment.mjs'],
  ['scripts/test-vercel-preview.mjs'],
- ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js'].map(f=>['--check',`preview/${f}`])
+ ['scripts/test-material-flow.mjs'],
+ ['scripts/test-material-flow-integration.mjs'],
+ ['scripts/test-interaction-refinement-v1.8.mjs'],
+ ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js','material-flow.js'].map(f=>['--check',`preview/${f}`])
 ];
 const results=commands.map(args=>{
  const p=spawnSync(process.execPath,args,{cwd:root,encoding:'utf8'});
@@ -41,6 +44,7 @@ const preserved={
  'preview/RRCC-Hantang-4-Center-Preview.html':'5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8',
  'preview/RRCC-Hantang-4-Center-Preview-v1.5.html':'01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852',
  'preview/RRCC-Hantang-4-Center-Preview-v1.6.html':'60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9',
+ 'preview/RRCC-Hantang-4-Center-Preview-v1.7.html':'0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a',
  'preview/RRCC-Hantang-4-Center-Demonstration.zip':'66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975'
 };
 const preservation=[];
@@ -48,9 +52,13 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'RRCC brand alignment and Vercel Preview v1.7',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; online browser evidence is separate',results,preservation};
-const destination=path.join(root,'preview/revisions/v1.7');
-await mkdir(destination,{recursive:true});
-await writeFile(path.join(destination,'local-test-evidence.json'),JSON.stringify(evidence,null,2)+'\n');
+const evidence={revision:'RRCC V2 material flow and interaction refinement v1.8',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
+const outputArgument=process.argv.find(argument=>argument.startsWith('--output='));
+const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.8/local-test-evidence.json');
+const evidenceRoot=path.join(root,'preview/revisions/v1.8')+path.sep;
+if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.8.');
+await mkdir(path.dirname(destination),{recursive:true});
+// Evidence is append-only: select a fresh output filename for a later rerun.
+await writeFile(destination,JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
 console.log(JSON.stringify({commands:results.map(({command,status})=>({command,status})),preservation:preservation.map(({file,status})=>({file,status}))},null,2));
 if([...results,...preservation].some(r=>r.status!=='PASS'))process.exitCode=1;
