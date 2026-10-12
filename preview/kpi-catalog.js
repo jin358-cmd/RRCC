@@ -36,12 +36,12 @@
       title: 'KPI 詳細資訊', kpiLabel: config.label, value, unit: config.unit,
       target: value, targetLabel: '本期符合條件資料', completion: numeric > 0 ? 100 : 0,
       comparisonLabel: '資料計算狀態', comparisonValue: '已計算', comparisonColor: '#14b59b',
-      delta, trendTitle: '近四個月趨勢（合成 Demo）', spark: values, sparkMonths: [...months],
+      delta, trendTitle: '近四個月趨勢', spark: values, sparkMonths: [...months],
       notesTitle: '計算與來源', notes: [config.note, '依所選月份與案場計算；不是外部公司公開值。', '合成展示資料（Demo）｜非漢唐實際營運資料。', '本期符合條件資料為資料計數，不代表正式管理目標或稽核品質證明。'],
-      actions, provenance: source, sourceTitle: `${config.label}｜合成 Demo /data/${config.collection}`,
+      actions, provenance: source, sourceTitle: `${config.label}｜/data/${config.collection}`,
       synthetic: true, unavailable: false
     };
-    return {label: config.label, value, unit: config.unit, icon: config.icon, color: colors[index % colors.length], delta, deltaType: 'neutral', foot: prior === null ? '合成 Demo' : 'vs. 上月 · Demo', series: values, seriesMonths: [...months], provenance: source, sourceTitle: detail.sourceTitle, detail};
+    return {label: config.label, value, unit: config.unit, icon: config.icon, color: colors[index % colors.length], delta, deltaType: 'neutral', foot: prior === null ? '本期統計' : 'vs. 上月', series: values, seriesMonths: [...months], provenance: source, sourceTitle: detail.sourceTitle, detail};
   }
   const count = (key, predicate) => (period, project) => filtered(key, period, project, predicate).length;
   const verified = count('verificationCases', record => record.status === 'verified');

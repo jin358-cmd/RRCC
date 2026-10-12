@@ -36,6 +36,14 @@
     plus:'<path d="M12 4v16M4 12h16"/>'
   };
   const icon = (name, cls='') => `<svg class="ico ${cls}" viewBox="0 0 24 24" aria-hidden="true">${icons[name] || icons.file}</svg>`;
+  // Dedicated, consistent navigation geometry; shared utility icons remain unchanged.
+  const centerIcons = {
+    overview:'<path d="M2.5 12s3.4-6.5 9.5-6.5 9.5 6.5 9.5 6.5-3.4 6.5-9.5 6.5S2.5 12 2.5 12Z"/><circle cx="12" cy="12" r="3.2"/>',
+    material:'<path d="m12 2.8 4.2 2.4v4.7L12 12.3 7.8 9.9V5.2L12 2.8ZM6.5 12l4.2 2.4v4.7l-4.2 2.4-4.2-2.4v-4.7L6.5 12ZM17.5 12l4.2 2.4v4.7l-4.2 2.4-4.2-2.4v-4.7l4.2-2.4Z"/><path d="m7.8 5.2 4.2 2.4 4.2-2.4M12 7.6v4.7M2.3 14.4l4.2 2.4 4.2-2.4M6.5 16.8v4.7m6.8-7.1 4.2 2.4 4.2-2.4m-4.2 2.4v4.7"/>',
+    verification:'<path d="M12 2.5c2.7 1.8 5.4 2.8 8.3 3.2v5.8c0 5-4 8.1-8.3 10-4.3-1.9-8.3-5-8.3-10V5.7c2.9-.4 5.6-1.4 8.3-3.2Z"/><path d="m7.8 11.6 2.9 2.9 5.5-5.7"/>',
+    management:'<path d="m9.4 3-.5 2.5-1.8 1-2.4-.8-2.2 3.8 1.9 1.7v2.1l-1.9 1.8 2.2 3.8 2.4-.8 1.8 1 .5 2.4h5.2l.5-2.4 1.8-1 2.4.8 2.2-3.8-1.9-1.8v-2.1l1.9-1.7-2.2-3.8-2.4.8-1.8-1-.5-2.5H9.4Z"/><circle cx="12" cy="12" r="3.4"/>'
+  };
+  const centerIcon = id => `<span class="center-icon" aria-hidden="true"><svg class="ico" viewBox="0 0 24 24">${centerIcons[id]}</svg></span>`;
   const centers = [
     {id:'overview',label:'總覽中心',icon:'eye',number:'01'},
     {id:'material',label:'材料中心',icon:'box',number:'02'},
@@ -194,8 +202,7 @@
     $('stage').dataset.dataMode=isPresentation()?'demo':'source';
     $('period-select').value=state.period;$('project-select').value=state.project;
     const modeButton=$('data-mode-toggle');if(modeButton){modeButton.textContent=isPresentation()?'DEMO 合成展示資料 · 切換來源':'V1／V2 原始來源 · 切換展示';modeButton.setAttribute('aria-pressed',String(isPresentation()));}
-    $('center-nav').innerHTML=centers.map(c=>`<a href="#${c.id}" class="center-tab ${c.id===state.center?'active':''}" data-center="${c.id}" aria-current="${c.id===state.center?'page':'false'}" aria-label="${c.label} ${window.CENTER_DATA[c.id].en}">${icon(c.icon)}<span>${c.label}</span></a>`).join('');
-    $('center-number').textContent=meta.number;
+    $('center-nav').innerHTML=centers.map(c=>`<a href="#${c.id}" class="center-tab ${c.id===state.center?'active':''}" data-center="${c.id}" aria-current="${c.id===state.center?'page':'false'}" aria-label="${c.label} ${window.CENTER_DATA[c.id].en}">${centerIcon(c.id)}<span>${c.label}</span></a>`).join('');
     $('center-title').innerHTML=`${escape(data.en)} <span class="zh-title">${escape(data.title)}</span>`;
     $('center-subtitle').textContent='— '+data.subtitle;
     $('sidebar-label').textContent=data.sectionLabel;$('sidebar-code').textContent=meta.number;
@@ -339,7 +346,7 @@
     panelMotion?.settle();
     window.RRCC_KPI_LIBRARY.open(state.center,current().kpis,{mode:window.RRCC_DATA_MODE,centerLabel:centers.find(c=>c.id===state.center).label,apply:(visible,persisted)=>{if(!visible.includes(state.metric))state.metric=visible[0]??0;render(true);toast(persisted?'已儲存此中心 KPI 配置；僅影響本瀏覽器的 Preview 身分。':'已套用配置；瀏覽器禁止儲存，重新整理後將恢復預設。');},useSource:()=>{setDataMode('source');openLibrary();}});
   }
-  $('search-button').innerHTML=icon('search');$('notification-button').innerHTML=icon('bell');$('calendar-icon').innerHTML=icon('calendar');$('export-button').innerHTML=icon('download')+'匯出報表';$('dialog-close').innerHTML=icon('close');$('search-icon').innerHTML=icon('search');$('kpi-settings-button').innerHTML=icon('settings')+'KPI 卡片櫃';
+  $('search-button').innerHTML=icon('search');$('notification-button').innerHTML=icon('bell');$('calendar-icon').innerHTML=icon('calendar');$('export-button').innerHTML=icon('download')+'匯出報表';$('dialog-close').innerHTML=icon('close');$('search-icon').innerHTML=icon('search');$('kpi-settings-button').innerHTML=icon('layers')+'<span class="nav-label">KPI 卡片櫃</span>';
   $('kpi-settings-button').setAttribute('aria-label','開啟 KPI 卡片櫃');
   $('kpi-settings-button').addEventListener('click',openLibrary);
   $('public-reference-button').addEventListener('click',()=>dialog('公開參考數據與官方依據',referenceMarkup()));

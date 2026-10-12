@@ -16,6 +16,7 @@
   <link rel="stylesheet" href="full-data-view.css">
   <link rel="stylesheet" href="kpi-library.css">
   <link rel="stylesheet" href="kpi-library-integration.css">
+  <link rel="stylesheet" href="workspace-refinement.css">
   <script src="center-data.js" defer></script>
   <script src="demo-data.js" defer></script>
   <script src="presentation-data.js" defer></script>
@@ -53,6 +54,7 @@
       </header>
       <aside class="sidebar" data-fixed="sidebar">
         <label class="project-selector"><span class="sr-only">選擇案場</span><select id="project-select"><option value="all">全部案場</option><option value="tainan">台南 A 案｜無塵室新建</option><option value="hsinchu">新竹 B 案｜機電整合</option><option value="taichung">台中 C 案｜製程擴建</option></select></label>
+        <nav class="sidebar-library-nav" aria-label="KPI 卡片管理"><button id="kpi-settings-button" class="sidebar-library-button" aria-label="設定 KPI 卡片" aria-haspopup="dialog" title="KPI 卡片櫃"><span class="nav-label">KPI 卡片櫃</span></button></nav>
         <div class="sidebar-heading"><span id="sidebar-label">全局工作台</span><span class="sidebar-code" id="sidebar-code">01</span></div>
         <nav id="business-nav" class="business-nav" aria-label="中心功能"></nav>
         <div class="sidebar-separator"></div>
@@ -71,9 +73,12 @@
       <main class="workspace">
         <section class="hero" data-fixed="hero">
           <div class="hero-photo" aria-hidden="true"></div>
-          <div class="hero-copy"><div class="eyebrow"><span id="center-number">01</span><i></i>RRCC ENTERPRISE WORKSPACE</div><h1 id="center-title"></h1><p id="center-subtitle"></p></div>
-          <div class="hero-controls"><button id="kpi-settings-button" class="filter-button" aria-label="設定 KPI 卡片" aria-haspopup="dialog">KPI 設定</button><label class="filter-date"><span id="calendar-icon"></span><select id="period-select" aria-label="選擇月份"><option value="2026-10">2026-10</option><option value="2026-09">2026-09</option><option value="2026-08">2026-08</option></select></label><button id="scope-button" class="filter-button">全部案場<span id="scope-chevron"></span></button><button id="export-button" class="export-button"></button></div>
+          <div class="hero-copy"><h1 id="center-title"></h1><p id="center-subtitle"></p></div>
           <div class="hero-motto"><strong>CLEAN ROOM</strong><span>SUSTAINABLE TOMORROW</span></div>
+        </section>
+        <section class="workspace-toolbar panel" aria-label="最新動態與報表工作列">
+          <div class="toolbar-activity"><h2>最新動態</h2><div id="activity-strip" aria-label="近期活動"></div></div>
+          <div class="hero-controls"><label class="filter-date"><span id="calendar-icon"></span><select id="period-select" aria-label="選擇月份"><option value="2026-10">2026-10</option><option value="2026-09">2026-09</option><option value="2026-08">2026-08</option></select></label><button id="scope-button" class="filter-button">全部案場<span id="scope-chevron"></span></button><button id="export-button" class="export-button"></button></div>
         </section>
         <button id="right-panel-trigger" class="right-panel-trigger" data-restore-right aria-controls="right-panel" aria-expanded="false" aria-label="展開 KPI 詳細資訊">KPI 詳細資訊</button>
         <div class="content-layout right-closed">
@@ -90,7 +95,6 @@
                 <section class="panel secondary-table-panel"><div class="panel-head"><h2 id="tertiary-title" class="accent-title"></h2><button class="text-link" data-detail="tertiary">查看更多 <span>›</span></button></div><div id="tertiary-table" class="data-table compact"></div></section>
               </div>
             </div>
-            <section class="activity-strip panel"><h2>最新動態</h2><div id="activity-strip"></div></section>
           </div>
           <aside id="right-panel" class="right-panel" data-region="right" aria-label="中心詳細資訊" data-fixed="right-panel"></aside>
         </div>

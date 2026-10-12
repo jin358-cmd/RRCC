@@ -1,5 +1,5 @@
 /**
- * Static integration contracts for the authored v1.5 preview sources.
+ * Static integration contracts for the authored v1.6 preview sources.
  * These checks do not execute UI code, load a browser, prove visual geometry,
  * verify public-report contents or certify native pointer/touch dragging.
  */
@@ -27,7 +27,7 @@ function declaredFiles(variable) {
 const scripts = [...html.matchAll(/<script\s+src="([^"]+)"\s+defer><\/script>/g)].map(item => item[1]);
 const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)">/g)].map(item => item[1]);
 const expectedScripts = ['center-data.js', 'demo-data.js', 'presentation-data.js', 'merged-center-data.js', 'presentation-center-data.js', 'reference-data.js', 'kpi-catalog.js', 'kpi-settings.js', 'kpi-library-data.js', 'kpi-library-binding.js', 'kpi-library.js', 'full-data-view.js', 'chart-motion.js', 'genie.js', 'panel-motion.js', 'preview.js', 'sidebar.js'];
-const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css'];
+const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css'];
 
 test('Deferred script order binds canonical/demo/reference data before catalog and UI consumers', () => {
   assert.deepEqual(scripts, expectedScripts);
@@ -40,7 +40,7 @@ test('Stylesheet order retains baseline then applies responsive, green selection
 test('Offline packaging embeds exactly the same ordered scripts and styles as index.html', () => {
   assert.deepEqual(declaredFiles('scriptNames'), scripts);
   assert.deepEqual(declaredFiles('stylesheetNames'), styles);
-  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.5\.html/);
+  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.6\.html/);
 });
 test('Right-panel tab content has one complete wrapper after the persistent tab navigation', () => {
   const right = section(app, 'function renderRight()', 'function applyMetricComparison()');
@@ -217,5 +217,5 @@ test('Left menu-toggle button is absent while business navigation and focusable 
 });
 
 const failed = results.filter(result => result.status === 'FAIL');
-console.log(JSON.stringify({suite: 'RRCC v1.5 authored preview static integration contracts', evidenceTier: 'STATIC_SOURCE_CONTRACT_NOT_RUNTIME_OR_BROWSER_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results}, null, 2));
+console.log(JSON.stringify({suite: 'RRCC v1.6 authored preview static integration contracts', evidenceTier: 'STATIC_SOURCE_CONTRACT_NOT_RUNTIME_OR_BROWSER_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results}, null, 2));
 if (failed.length) process.exitCode = 1;

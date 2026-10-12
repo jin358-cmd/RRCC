@@ -21,6 +21,7 @@ const commands=[
  ['scripts/test-kpi-library-data.mjs'],
  ['scripts/test-kpi-library-ui.mjs'],
  ['scripts/test-kpi-library-integration.mjs'],
+ ['scripts/test-workspace-refinement.mjs'],
  ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js'].map(f=>['--check',`preview/${f}`])
 ];
 const results=commands.map(args=>{
@@ -36,6 +37,7 @@ const preserved={
  'preview/QA.md':'4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e',
  'preview/qa-results.json':'d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa',
  'preview/RRCC-Hantang-4-Center-Preview.html':'5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8',
+ 'preview/RRCC-Hantang-4-Center-Preview-v1.5.html':'01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852',
  'preview/RRCC-Hantang-4-Center-Demonstration.zip':'66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975'
 };
 const preservation=[];
@@ -43,8 +45,8 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'RRCC KPI Card Library preview v1.5',verifiedAt:new Date().toISOString(),scope:'Node VM/unit and source preservation; browser evidence is separate',results,preservation};
-const destination=path.join(root,'preview/revisions/v1.5');
+const evidence={revision:'RRCC workspace refinement preview v1.6',verifiedAt:new Date().toISOString(),scope:'Node VM/unit and source preservation; browser evidence is separate',results,preservation};
+const destination=path.join(root,'preview/revisions/v1.6');
 await mkdir(destination,{recursive:true});
 await writeFile(path.join(destination,'local-test-evidence.json'),JSON.stringify(evidence,null,2)+'\n');
 console.log(JSON.stringify({commands:results.map(({command,status})=>({command,status})),preservation:preservation.map(({file,status})=>({file,status}))},null,2));
