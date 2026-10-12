@@ -36,3 +36,13 @@
 3. Vercel 後續行動等待既有 incident 的 Owner 方向；本輪無新增 Preview URL，不宣稱線上 PASS。
 
 Owner Verification Status：REQUIRED / PENDING。Production Deployment：NOT AUTHORIZED。Merge to main：NOT AUTHORIZED。
+
+## GitHub Readback
+
+Implementation Commit：`df059a3bc3d3ead72576ff1e3b5a554314883c3d`，已推送既有 Feature Branch 與 PR #1。Main 保持 README-only Commit `5e722c043c2164da5795e5a6523a6b3dfd946d59`。
+
+[Implementation 讀回證據](github-readback-v1.9-implementation.json)：230 個受追蹤檔案與遠端 Git blob 的 SHA-256 全部一致；Repository／Branch／PR／main 等 11 項檔案及版本 Gate PASS。
+
+讀回腳本整體狀態仍為 FAIL，唯一失敗為 `githubDeploymentRecordsPreviewOnly:false`，原因是原 v1.7 已取消的 Production-target 歷史紀錄，不是本輪新增部署；此 Gate 沒有刪除、忽略或改成通過。部署維持 NOT PASS，Owner 視覺與原生操作驗收仍獨立。
+
+v1.9 離線檔：11,767,161 bytes；SHA-256：`3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5`。

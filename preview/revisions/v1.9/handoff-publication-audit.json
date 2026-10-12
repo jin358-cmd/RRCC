@@ -1,0 +1,25 @@
+{
+  "verifiedAt": "2026-10-12T21:27:10.643Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 3,
+  "textFiles": 3,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/verification/github-readback-v1.9-implementation.json",
+      "bytes": 63990,
+      "sha256": "d875b2ea4ba93ba10394d58aabb01e77c5ba9378492e690f46ba2061bf27d9cf"
+    },
+    {
+      "file": "docs/verification/owner-v1.9.md",
+      "bytes": 4586,
+      "sha256": "f9576c2a76db4c06b31cf664e6534bd11adcdca33bce9457ea40686a22a211d2"
+    },
+    {
+      "file": "preview/revisions/v1.9/README.md",
+      "bytes": 2754,
+      "sha256": "44fa482d67e0b06604b27db87d1cf0dd0dbbf7f851c3bceaab9722b6ccd8a92a"
+    }
+  ]
+}

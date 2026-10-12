@@ -29,6 +29,8 @@
 
 本輪不合併 main、不部署；原 v1.7 Vercel incident 與部署 NOT PASS Gate 保留，不重試。
 
+Implementation `df059a3bc3d3ead72576ff1e3b5a554314883c3d` 已更新既有 PR #1，230 個檔案讀回一致；部署歷史 Gate 仍 NOT PASS，詳見 Owner Report，未以此宣稱線上驗收。
+
 本機重跑時請使用新的 Evidence 名稱：
 
 ```powershell
