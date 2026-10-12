@@ -1,0 +1,71 @@
+{
+  "status": "PASS_JSON_STRUCTURAL_MERGE",
+  "scope": "JSON merge only; UI binding, Owner acceptance, GitHub and Production not verified by this script",
+  "sourceHashes": {
+    "v1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+    "v2.0/RRCC_Hantang_Embedded_Demo_Data.json": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514"
+  },
+  "merged": {
+    "path": "data/demo/rrcc-hantang-merged-v1-v2.json",
+    "sha256": "c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d"
+  },
+  "total": {
+    "inputRecords": 144,
+    "uniqueRecords": 72,
+    "duplicatesRemoved": 72
+  },
+  "numericFieldConflicts": 0,
+  "allFieldConflicts": 0,
+  "checkedSourceFields": 2394,
+  "checkedMetadataNodes": 14,
+  "tests": [
+    {
+      "name": "Exact duplicates deduplicated, not summed",
+      "status": "PASS"
+    },
+    {
+      "name": "Null preserved separately from absent fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Conflicting numeric candidates retained; no canonical value selected",
+      "status": "PASS"
+    },
+    {
+      "name": "One-source fields and added entities retained",
+      "status": "PASS"
+    },
+    {
+      "name": "Every field carries source pointer and SHA-256",
+      "status": "PASS"
+    },
+    {
+      "name": "Exact numeric JSON tokens retained",
+      "status": "PASS"
+    },
+    {
+      "name": "JSON Pointer escaping verified",
+      "status": "PASS"
+    },
+    {
+      "name": "Composite-key collision resistance verified",
+      "status": "PASS"
+    },
+    {
+      "name": "Duplicate source-local identity fails closed",
+      "status": "PASS"
+    },
+    {
+      "name": "Potential binary64 serialization precision loss fails closed before merging",
+      "status": "PASS"
+    }
+  ],
+  "preservation": {
+    "originalFilesUnmodified": true,
+    "sourceNumericTokensRetained": true,
+    "originalMetadataRetained": true,
+    "sourceFieldCoverage": "100%",
+    "noDuplicateSummation": true,
+    "noUnitConversion": true
+  }
+}

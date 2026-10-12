@@ -1,0 +1,20 @@
+/* Shared by all four Centers. Overlay animation never intercepts Dashboard input. */
+.content-layout{grid-template-columns:minmax(0,2fr) minmax(374px,1fr)}
+.content-layout.right-closed{grid-template-columns:minmax(0,1fr);gap:0}
+.right-panel[hidden]{display:none!important}
+.right-panel{width:100%;will-change:transform;overscroll-behavior:contain}
+.right-panel[data-motion="closing"]{pointer-events:none}
+.right-panel-trigger{position:absolute;right:2px;top:227px;width:29px;height:112px;padding:10px 5px;background:linear-gradient(160deg,#398fe9,#426ca4);border:1px solid #75afe4;border-radius:7px 0 0 7px;box-shadow:0 3px 9px #376b9e22;color:white;font-size:12px;line-height:1.8;writing-mode:vertical-rl;letter-spacing:2px;z-index:5;opacity:0;pointer-events:none}
+.right-panel-trigger.available{opacity:1;pointer-events:auto}
+.right-panel-trigger:focus-visible{outline:2px solid #226fe4;outline-offset:3px}
+.right-panel .right-collapsed-message{display:none!important}
+.source-empty{display:grid;place-items:center;min-height:60px;color:#88a0b8;font-size:12px;background:#f4f8fd;border:1px dashed #d7e5f4;border-radius:6px;padding:12px}
+.source-reference{padding:12px 0;border-bottom:1px solid #e1ebf8;font-size:12px;overflow-wrap:anywhere}
+.source-reference code{display:block;margin-top:5px;font-size:11px;color:#6986a5;word-break:break-all}
+.source-reference pre{white-space:pre-wrap;line-height:1.5;color:#567797;margin-top:7px}
+.right-notes{overflow-wrap:anywhere}
+.kpi-value{font-size:35px}
+.donut-center strong{font-size:25px}
+.chart-legend{gap:12px}
+.panel-head h2{max-width:calc(100% - 35px);overflow:hidden;text-overflow:ellipsis}
+@media(prefers-reduced-motion:reduce){.right-panel{will-change:auto}}

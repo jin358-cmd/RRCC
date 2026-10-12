@@ -1,0 +1,330 @@
+{
+  "verifiedAt": "2026-10-12T18:48:09.576Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 64,
+  "textFiles": 53,
+  "findings": [],
+  "manifest": [
+    {
+      "file": ".gitignore",
+      "bytes": 196,
+      "sha256": "5b458ac8d4b7a064ac68002f876bf30d0c369e2b6d2f2bceebd485863068f86a"
+    },
+    {
+      "file": "New/RRCC範疇三永續管理儀表板-1C.png",
+      "bytes": 1674997,
+      "sha256": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040"
+    },
+    {
+      "file": "README.md",
+      "bytes": 1433,
+      "sha256": "f50d837ffd9953c772e97035ab1d6cda800588d766414615f7bc8ea5326b98ee"
+    },
+    {
+      "file": "data/demo/rrcc-hantang-merged-v1-v2.json",
+      "bytes": 882495,
+      "sha256": "c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-event.md",
+      "bytes": 3128,
+      "sha256": "7339663c00cd067c0748fc452c56cfd4e612dc086dfeec056e871ae34020d7c2"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-evidence.md",
+      "bytes": 4054,
+      "sha256": "6689123b7a7842b592718f94771bf7ec3f23077515f07c281c0446db970f5cfd"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-resolution.md",
+      "bytes": 3274,
+      "sha256": "49723e4f10eb97236e237d8516a3e80179041c6f9996da070983598d6dd2dd1a"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-verification.md",
+      "bytes": 3789,
+      "sha256": "4c1cfa18d21d598a8acd0ba3a68ea558af32eeef40419308f6cb405925ffe282"
+    },
+    {
+      "file": "docs/reference/Eva_Hands_R51_Rev2_Genie_Verification.md",
+      "bytes": 4223,
+      "sha256": "bd80e93bda66e07d45ea24761ab31d5b164127f1c188dff239888708c8e26d56"
+    },
+    {
+      "file": "docs/reference/owner-instruction-alignment-v1.2.md",
+      "bytes": 2412,
+      "sha256": "fbb49ab003f7440d2c09495e2ad765c6d7a740f2547d9558ca0223cfad6928dd"
+    },
+    {
+      "file": "docs/verification/json-merge-evidence.json",
+      "bytes": 2052,
+      "sha256": "e18a3e87cafb6995ea5dbdbddcef0504c37f65ae2eaa9974f48665a3d241c26a"
+    },
+    {
+      "file": "docs/verification/json-merge-report.md",
+      "bytes": 8467,
+      "sha256": "0a9df5c7df5e2b0add5a564ec8e839dc35dad6f2bf8dd01331c765aa5a4111ec"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.2.md",
+      "bytes": 11330,
+      "sha256": "1a8e81bb2cf8c50962e8103e19d346c5b6c3097cc45cb799eccd89ec681a845d"
+    },
+    {
+      "file": "preview/QA.md",
+      "bytes": 3416,
+      "sha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e"
+    },
+    {
+      "file": "preview/README.md",
+      "bytes": 1882,
+      "sha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Demonstration.zip",
+      "bytes": 2738389,
+      "sha256": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.2.html",
+      "bytes": 2957010,
+      "sha256": "ee564d5519b574c01ec6df34f48fdeb31d6acd70d443b77a1c21e7b3ffffb008"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview.html",
+      "bytes": 2325589,
+      "sha256": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8"
+    },
+    {
+      "file": "preview/center-data.js",
+      "bytes": 22047,
+      "sha256": "0c51f1357e186b47c7309dc613815799cfe225096dcc2ec5d3062ca2376fcf4e"
+    },
+    {
+      "file": "preview/demo-data.js",
+      "bytes": 567710,
+      "sha256": "f6ae9ab2a1caf100d13b9a7c3c8b7b43d3585786dfb6963f80f6ba25350a4ec4"
+    },
+    {
+      "file": "preview/genie.js",
+      "bytes": 17410,
+      "sha256": "4f65fbaca28cd0ab911369dcb4329fa1e0b3805ce0083af900e26c334b1bd81f"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 8214,
+      "sha256": "cd42f40b8f76277966b8995626847a15791d48a2a523348b2b7eabea091185f6"
+    },
+    {
+      "file": "preview/merged-center-data.js",
+      "bytes": 21499,
+      "sha256": "00695ece5c4f74296c80abebd6dd58025d1572f62b9b3ab72f36b848b4429c0d"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 1817,
+      "sha256": "52f109e0e8146bde21bf571bbef4340390d3b6a011581bfd5cb01e33e049aae5"
+    },
+    {
+      "file": "preview/panel-motion.css",
+      "bytes": 1714,
+      "sha256": "9aa65867924eafe6ee5d16c5d81193da1e3a4bd1027fa99ac5ddc6692cf0be93"
+    },
+    {
+      "file": "preview/panel-motion.js",
+      "bytes": 4696,
+      "sha256": "04ca5490010407303ae760d8c4ee215af411bd48a7e4c4e03d72936191b28852"
+    },
+    {
+      "file": "preview/preview.css",
+      "bytes": 26881,
+      "sha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 41040,
+      "sha256": "94a17e8a3561836ea7ed61a52e52323a2cbae13e7ae729c7fff76872b6d2248a"
+    },
+    {
+      "file": "preview/qa-results.json",
+      "bytes": 9860,
+      "sha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa"
+    },
+    {
+      "file": "preview/revisions/v1.2/README.md",
+      "bytes": 4352,
+      "sha256": "243877f7d5bb9c882f05997adee5bd8a56cab9a6a17589048cbf1762ffc21091"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/QA.md",
+      "bytes": 3416,
+      "sha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/README.md",
+      "bytes": 1882,
+      "sha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/index.html",
+      "bytes": 7674,
+      "sha256": "78587401c904cfb58cdb49e95bf0ed4761517a82ea8bfa3fe15d073eef7ee5ef"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/package-preview.mjs",
+      "bytes": 1280,
+      "sha256": "201d4942f4c30ef883f427364091d5495e7a5da30b3f8237a65992f29cb7a743"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/preview.css",
+      "bytes": 26881,
+      "sha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/preview.js",
+      "bytes": 35762,
+      "sha256": "6cdfc20bf8fcd88d0d4116b961a3be325ede1e7058eb1594dbf8d6d0ab3add28"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/qa-results.json",
+      "bytes": 9860,
+      "sha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/展示包說明.md",
+      "bytes": 689,
+      "sha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d"
+    },
+    {
+      "file": "preview/revisions/v1.2/browser-evidence.json",
+      "bytes": 75387,
+      "sha256": "fcb913a019ac18d779b55719356c2cc0931010876b3bfa03af5d57a3fc90689a"
+    },
+    {
+      "file": "preview/revisions/v1.2/local-test-evidence.json",
+      "bytes": 13032,
+      "sha256": "b3c2ae1cd853e759f5f33b59e18e37710b20d2aadcf7fb04779f89d9239fd6b5"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/01-Overview-Center.jpg",
+      "bytes": 294491,
+      "sha256": "e86a61a86bd81d238602f1ea7efec1a1c298dbf5f471a7235b9c7c06ae25e17d"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/02-Material-Center.jpg",
+      "bytes": 310141,
+      "sha256": "02c1a4762093485e926b61eabdc0df701580396b259ecc1b942af00198aa82b4"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/03-Verification-Center.jpg",
+      "bytes": 297592,
+      "sha256": "ee2a095c82f28178f80b9dcba04060332836396cb15fbb0d7dac61c11e290de2"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/04-Management-Center.jpg",
+      "bytes": 293494,
+      "sha256": "441ecb908cc385f3d219b14494eb9cc0c85218d567212e40682efb1f63bcc27d"
+    },
+    {
+      "file": "preview/screenshots/01-Overview-Center.jpg",
+      "bytes": 322603,
+      "sha256": "7e9eb8bbc2e6546e2074471d079c80e8c55d5b1d8835edd43fb2e17436235bab"
+    },
+    {
+      "file": "preview/screenshots/02-Material-Center.jpg",
+      "bytes": 328238,
+      "sha256": "6b240fb23ad78bca9e5b07a4af2a5b3c4a01c3e9ccc79f30acc5818d31ebe1a3"
+    },
+    {
+      "file": "preview/screenshots/03-Verification-Center.jpg",
+      "bytes": 324657,
+      "sha256": "7dda30956e6c64a72b4ecc4c9c3a9918a13ce4669781fd018160e6ba085678f3"
+    },
+    {
+      "file": "preview/screenshots/04-Management-Center.jpg",
+      "bytes": 332975,
+      "sha256": "35e0bd61abf2a82cbfd0a0c84cc1b505ba8cb5aedceeea7eed5c59b1b208de61"
+    },
+    {
+      "file": "preview/server.mjs",
+      "bytes": 1492,
+      "sha256": "9ce3e5b001e00fe03435755fc1040be12e8eb92129253543ebf09a777e1e3305"
+    },
+    {
+      "file": "preview/sidebar.css",
+      "bytes": 4621,
+      "sha256": "451750290f6a294975c3359481256f0e76fcc206fcfcffd798a1c92a7acd7859"
+    },
+    {
+      "file": "preview/sidebar.js",
+      "bytes": 8187,
+      "sha256": "ede1cbd2a255fb9ab6939fd50103a799d50eb71eea437531447324f170a545cb"
+    },
+    {
+      "file": "preview/vendor/NOTICE.md",
+      "bytes": 1910,
+      "sha256": "76d805ef0b8173a76354828e17a48e53597474febe426cb64f72c59406bdb4a6"
+    },
+    {
+      "file": "preview/vendor/eva-genie-r51-rev2.original.js",
+      "bytes": 17459,
+      "sha256": "4299723d498a61b481acde8f048548ba8c95840e0140e963584d34c13b84698b"
+    },
+    {
+      "file": "preview/展示包說明.md",
+      "bytes": 689,
+      "sha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d"
+    },
+    {
+      "file": "scripts/audit-staged.mjs",
+      "bytes": 1808,
+      "sha256": "8c071bd3852d14fc59f567edb21c32044843380a2f4054162a57505c61c9f499"
+    },
+    {
+      "file": "scripts/merge-demo-data.mjs",
+      "bytes": 25707,
+      "sha256": "068ef1e33cbd253b49f14ba58ec01427357a7cc81f9d2cd054e0acac8ba64790"
+    },
+    {
+      "file": "scripts/test-center-bindings.mjs",
+      "bytes": 11660,
+      "sha256": "59ff5aadc01124c6e92a8e32b92603193de4746d2e476fbd7e668a00a16f2c52"
+    },
+    {
+      "file": "scripts/test-panel-motion.mjs",
+      "bytes": 14076,
+      "sha256": "dd1ea96e486d6ff13123132cf79d1a0f448f2e0b508a92202df1c4cc3b1e1cd7"
+    },
+    {
+      "file": "scripts/test-sidebar.mjs",
+      "bytes": 16624,
+      "sha256": "e4c4f2780a1b80d85b632a2a76ae4416f6c837fdfede03b431dca4ce0fc2a880"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 2851,
+      "sha256": "7a526c685a0570e3c26600e3f487c9fca28514ccf060d75397b7fe2b0ae17497"
+    },
+    {
+      "file": "v1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json",
+      "bytes": 33869,
+      "sha256": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b"
+    },
+    {
+      "file": "v1.0/rrcc_hantang_demo_v1_OFFLINE.html",
+      "bytes": 69663,
+      "sha256": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2"
+    },
+    {
+      "file": "v2.0/RRCC_Hantang_Embedded_Demo_Data.json",
+      "bytes": 33859,
+      "sha256": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514"
+    },
+    {
+      "file": "v2.0/rrcc_hantang_dashboard_v2_OFFLINE.html",
+      "bytes": 66993,
+      "sha256": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d"
+    }
+  ]
+}
