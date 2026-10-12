@@ -4,6 +4,8 @@
   --ui-font: clamp(15px, calc(.55vw + 8px), 22px);
   --header-height: clamp(90px, 5.2vw, 128px);
   --rail-width: 64px;
+  --sidebar-overlay-width: clamp(320px, 17vw, 360px);
+  --sidebar-menu-font: clamp(17px, calc(.25vw + 13px), 19px);
   --content-gutter: clamp(16px, 1.4vw, 36px);
   --layout-gap: clamp(14px, 1vw, 24px);
   font-size: var(--ui-font);
@@ -56,15 +58,19 @@ body { font-size: 1rem; }
 }
 #stage.sidebar-refined .sidebar::-webkit-scrollbar { display: none; }
 .sidebar-center-marker { min-height: 2rem; font-size: .74rem; margin-bottom: .9rem; }
-.sidebar-expanded .rail-center-number { font-size: .7rem; }
+.sidebar-expanded .sidebar-center-marker { min-height: 2.4rem; font-size: clamp(15px, calc(.22vw + 12px), 18px); }
+.sidebar-expanded .rail-center-number { font-size: .8rem; }
 #stage.sidebar-refined .business-nav button,
 #stage.sidebar-refined .common-nav button { min-height: 2.6rem; }
 #stage.sidebar-refined .sidebar-expanded .business-nav button,
-#stage.sidebar-refined .sidebar-expanded .common-nav button { font-size: .92rem; padding: 0 .65rem; gap: .7rem; }
+#stage.sidebar-refined .sidebar-expanded .common-nav button { min-height: 3rem; font-size: var(--sidebar-menu-font); padding: .4rem .8rem; gap: .8rem; }
 .business-nav .ico, .common-nav .ico { width: 1.2rem; height: 1.2rem; }
-.project-selector select { font-size: .8rem; height: 2.6rem; }
-.sidebar-heading { font-size: .67rem; }
+.sidebar-expanded .business-nav .ico, .sidebar-expanded .common-nav .ico { width: clamp(22px, 1.3vw, 26px); height: clamp(22px, 1.3vw, 26px); flex: 0 0 auto; }
+.project-selector select { font-size: clamp(16px, calc(.2vw + 12px), 18px); height: 3rem; }
+.sidebar-heading { font-size: clamp(13px, calc(.1vw + 12px), 15px); }
 .sidebar-code { font-size: .65rem; }
+#stage.sidebar-refined .sidebar-expanded .nav-count,
+#stage.sidebar-refined .sidebar-expanded .count { font-size: clamp(12px, calc(.1vw + 11px), 14px); flex-shrink: 0; }
 #stage.sidebar-refined .sidebar-bottom { position: relative; left: 0; right: auto; bottom: auto; margin-top: 2.4rem; }
 #stage.sidebar-refined .sidebar-expanded .sidebar-bottom { padding: 0 .35rem; }
 .rrcc-signature strong { font-size: 1.55rem; }

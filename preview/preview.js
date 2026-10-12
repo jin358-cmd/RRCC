@@ -115,8 +115,30 @@
     const target=targets[state.center][state.metric],value=parseFloat(k.value.replace(/,/g,'')),zeroTarget=Number(target)===0;
     return {...data.right,kpiLabel:k.label,value:k.value,unit:k.unit,delta:k.delta,target,targetLabel:zeroTarget?'待處理目標':'管理目標',completion:zeroTarget?0:Math.min(100,Math.round(value/parseFloat(target.replace(/,/g,''))*1000)/10),comparisonLabel:zeroTarget?'待處理':null,comparisonValue:zeroTarget?`${k.value} ${k.unit}`:null,notes:notes[state.center][state.metric],spark:series[state.center][state.metric],trendTitle:`近 6 個月${k.label.replace('（範疇三）','')}趨勢`};
   }
+  function librarySourceMarkup(k,info) {
+    const definition=window.RRCC_KPI_LIBRARY_DATA.registry.cards.find(card=>card.cardId===k.cardId);
+    return `<div class="audit-banner">${escape(k.cardId)} · 唯一 KPI 定義／跨中心引用<br>資料狀態：${escape(info.status)} · 不將來源缺值轉成 0</div><h3>核准卡片定義</h3><pre class="library-source-json">${escape(JSON.stringify(definition,null,2))}</pre><h3>本次計算與範圍</h3><pre class="library-source-json">${escape(JSON.stringify({definition:info.definition,requestedScope:info.requestedScope,availableScope:info.availableScope,numericValue:info.numericValue,source:info.source,provenance:k.provenance},null,2))}</pre><p>V1／V2 原始資料未覆寫；同一實體已去重，不重複加總。完整計算列可由 KPI 明細匯出。</p>`;
+  }
+  function renderLibraryRight(k) {
+    const info=k.detail.libraryData;
+    const valuePresent=typeof info.numericValue==='number'&&Number.isFinite(info.numericValue);
+    $('right-panel').innerHTML=`<div class="right-heading"><h2>KPI 詳細資訊</h2><button data-collapse-right aria-label="收合詳細資訊">${icon('close')}</button></div><div class="right-body"><div class="right-kpi-label">${icon(k.icon)}${escape(k.label)}</div><div class="library-kpi-id">${escape(k.cardId)} · V2 原始定義</div><div class="right-content"><div class="right-current"><div><small>${valuePresent?'來源計算值':'此範圍尚無可用來源'}</small><div class="right-value library-metric-value">${escape(k.value)}<span>${escape(k.unit)}</span></div></div></div><div class="audit-banner">${escape(info.status)}<br>要求範圍：${escape(state.period)} / ${escape(projectNames[state.project])}<br>此卡僅使用 V1／V2 整合來源，不引用合成展示值。</div><h3 class="right-section-title">計算規則</h3><pre class="library-rule">${escape(info.definition?.definition||info.definition)}\n${escape(info.formula||info.definition?.formula||'尚未提供')}</pre>${valuePresent?`<h3 class="right-section-title">來源月份趨勢<span>2026-07～09</span></h3><div class="right-spark">${spark(k.series,k.seriesMonths)}</div>`:''}<h3 class="right-section-title">來源與可追溯性</h3><p class="library-panel-note">${valuePresent?`${info.rows?.length||0} 列計算明細，保留原始欄位及資料位置。`:escape(info.reason||'不自動改用其他月份、案場或虛構示範值。請在卡片櫃明確選擇「檢視 V1／V2 來源月份」。')}</p><button class="primary-button" data-library-detail>完整數據與計算明細</button><button class="text-link library-source-button" data-library-source>完整來源、SHA-256 與卡片定義 ↗</button><p class="library-panel-note">跨中心引用同一 Card ID；卡片設定不會複製資料來源。材料隱含碳僅為原 Demo 估算，不是認證排放結果。</p></div></div>`;
+    $('right-panel').dataset.sourceTitle='V1／V2 Canonical KPI Registry';
+    window.RRCC_CHART_MOTION?.refresh($('right-panel'));
+  }
+  function openLibraryDetail() {
+    const k=current().kpis[state.metric],info=k.detail.libraryData;
+    const rowProvenance=(info.rawRecords||[]).map(record=>{
+      const index=window.RRCC_MERGED.data.rows.findIndex(row=>row.id===record.id);
+      return {...k.provenance,canonicalPointers:index>=0?[`/data/rows/${index}`]:[],sourceReferences:window.RRCC_MERGED.provenance?.rows?.[record.id]?.recordSources||[]};
+    });
+    externalTable={title:`${k.label} · 完整來源計算列`,columns:info.columns||[],rows:info.rows||[],rowProvenance,provenance:k.provenance,libraryData:info,sourceTitle:`${k.cardId} / ${info.status}`};
+    openDetail('external');
+    $('dialog-content').insertAdjacentHTML('beforeend',`<details class="library-raw-details"><summary>完整原始紀錄（${info.rawRecords?.length||0} 筆）與計算定義</summary><pre class="library-source-json">${escape(JSON.stringify({definition:info.definition,source:info.source,schema:info.schema,records:info.rawRecords,materials:info.materialRecords},null,2))}</pre></details>`);
+  }
   function renderRight() {
     const data=current(),r=selectedRight(),active=state.rightTab;
+    if(r.libraryData){renderLibraryRight(data.kpis[state.metric]);return;}
     let body='';
     if(active==='summary') body=`<div class="right-current"><div><small>當前數值</small><div class="right-value">${escape(r.value)}<span>${escape(r.unit)}</span></div></div><div class="right-delta"><span class="delta">${escape(r.delta)}</span><small>vs. 上月</small></div></div><div class="right-targets"><div><small>${escape(r.targetLabel)}</small><strong>${escape(r.target)} <span>${r.targetLabel.includes('%')?'':escape(r.unit)}</span></strong></div><div><small>${state.center==='overview'&&state.metric===0?'達成率':'完成率'}</small><strong>${r.completion}%</strong><div class="right-progress"><i style="width:${r.completion}%"></i></div></div></div><h3 class="right-section-title">${escape(r.trendTitle)}<span>2026</span></h3><div class="right-spark">${spark(r.spark)}</div><h3 class="right-section-title">${escape(r.notesTitle)}</h3><ul class="right-notes">${r.notes.map(n=>`<li>${escape(n)}</li>`).join('')}</ul><h3 class="right-section-title">${escape(r.activityTitle)}<button class="text-link" data-open-activity>查看全部 ›</button></h3><div class="right-activity">${r.activities.map(a=>`<div class="right-activity-item"><i></i><div><strong>${escape(a.title)}</strong><small>${escape(a.meta)}</small></div><time>${escape(a.time)}</time></div>`).join('')}</div><button class="right-alert" data-open-alert>${icon('alert')}<div><strong>${escape(r.alert.title)}</strong><p>${escape(r.alert.body)}</p></div></button><h3 class="right-section-title">${escape(r.quickTitle)}</h3><div class="quick-actions">${r.actions.map((a,i)=>`<button data-action="${i}">${icon(a.icon)}${escape(a.label)}</button>`).join('')}</div>`;
     else if(active==='distribution') body=`<div class="right-tab-content"><h3>${escape(data.distribution.title)}</h3>${data.distribution.items.map(v=>`<div class="evidence-link"><i class="legend-dot" style="background:${v.color}"></i><span>${escape(v.label)}</span><strong>${Number(v.value.toFixed(1))}%</strong></div>`).join('')}<h3>管理範圍</h3><p>${escape(data.subtitle)}</p><div class="audit-banner">目前範圍：${escape(projectNames[state.project])}<br>資料期間：${escape(state.period)}</div></div>`;
@@ -149,7 +171,7 @@
   }
   function applyMetricComparison() {
     const r=selectedRight();
-    if(r.publicReference)return;
+    if(r.publicReference||r.libraryData)return;
     if(!r.comparisonLabel||state.rightTab!=='summary') return;
     const box=$('right-panel').querySelector('.right-targets>div:nth-child(2)');
     box.querySelector('small').textContent=r.comparisonLabel;
@@ -166,7 +188,7 @@
     if(window.RRCC_DATA_CONTEXT){state.period=window.RRCC_DATA_CONTEXT.period;state.project=window.RRCC_DATA_CONTEXT.project;}
     const data=current(),meta=centers.find(c=>c.id===state.center);
     const visibleMetrics=window.RRCC_KPI_SETTINGS?.visible(state.center,data.kpis,window.RRCC_DATA_MODE)||data.kpis.map((_,i)=>i);
-    if(!visibleMetrics.includes(state.metric))state.metric=visibleMetrics[0];
+    if(!visibleMetrics.includes(state.metric))state.metric=visibleMetrics[0]??0;
     document.title=`${meta.label}｜RRCC × 漢唐集成 4-Center Preview`;
     $('stage').dataset.center=state.center;
     $('stage').dataset.dataMode=isPresentation()?'demo':'source';
@@ -178,7 +200,9 @@
     $('center-subtitle').textContent='— '+data.subtitle;
     $('sidebar-label').textContent=data.sectionLabel;$('sidebar-code').textContent=meta.number;
     $('business-nav').innerHTML=data.sidebar.map((s,i)=>`<button data-sidebar="${i}" class="${state.sidebar===i?'active':''}" aria-current="${state.sidebar===i?'page':'false'}">${icon(s.icon)}<span class="nav-label">${escape(s.label)}</span>${s.count?`<span class="nav-count">${s.count}</span>`:''}</button>`).join('');
-    $('kpis').innerHTML=visibleMetrics.map(i=>{const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('');
+    $('kpis').style.setProperty('--kpi-count',Math.max(1,visibleMetrics.length));
+    $('kpis').innerHTML=visibleMetrics.map(i=>{const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('')||'<div class="kpi-empty">此中心尚未選取 KPI。<button class="text-link" data-open-library>開啟 KPI 卡片櫃</button></div>';
+    $('right-panel-trigger').disabled=!visibleMetrics.length;
     $('trend-title').textContent=data.trend.title;
     $('trend-legend').innerHTML=data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':i===1?'legend-line':'legend-line dashed'}"></i>${escape(l)}</span>`).join('');
     $('trend-chart').innerHTML=renderTrend(data.trend);
@@ -187,8 +211,9 @@
     ['table','secondary','tertiary'].forEach((key,i)=>{$(i===0?'table-title':`${key}-title`).textContent=data[key].title;const target=$(i===0?'primary-table':`${key}-table`);target.innerHTML=tableMarkup(data[key],key,true);target.title=`${data[key].sourceTitle} · 預覽 ${Math.min(data[key].rows.length,data[key].previewLimit||5)} / ${data[key].rows.length} 筆；查看全部與匯出保留完整資料`;});
     $('activity-strip').innerHTML=data.activity.map(a=>`<div class="activity-item"><i class="${escape(a.status)}"></i><time>${escape(a.time)}</time><span title="${escape(a.text)}">${escape(a.text)}</span></div>`).join('');
     $('scope-button').innerHTML=`${escape(projectNames[state.project])}${icon('chevron')}`;
-    renderRight();applyMetricComparison();
-    if(resetPanel)panelMotion?.reset(state.metric,metricSource());else panelMotion?.sync();
+    if(visibleMetrics.length){renderRight();applyMetricComparison();}
+    else{$('right-panel').innerHTML='';$('right-panel').dataset.sourceTitle='';}
+    if(resetPanel||!visibleMetrics.length)panelMotion?.reset(state.metric,metricSource());else panelMotion?.sync();
     window.RRCC_CHART_MOTION?.refresh(document.querySelector('.dashboard-main'));
   }
   function switchCenter(id, updateHash=true) {
@@ -204,6 +229,10 @@
     window.RRCC_CHART_MOTION?.refresh($('detail-dialog'));
   }
   function sourceDialog(prov=current().kpis[state.metric].provenance) {
+    if(prov?.dataset==='canonical-v1-v2'&&current().kpis[state.metric].detail?.libraryData){
+      const k=current().kpis[state.metric],info=k.detail.libraryData;
+      dialog(`${k.label} · 定義與來源`,librarySourceMarkup(k,info));return;
+    }
     if(prov?.dataset==='public-reference'){dialog('公開參考數據與官方依據',referenceMarkup(prov.referenceIds));return;}
     const refs=prov?.sourceReferences||[],pointers=prov?.canonicalPointers||[];
     const dataset=isPresentation()?window.RRCC_ACTIVE_DATASET:window.RRCC_MERGED;
@@ -218,8 +247,12 @@
         const row=t.rows[rowIndex];
         detailProvenance=t.rowProvenance?.[rowIndex];
         dialog(typeof row[0]==='string'?row[0]:t.title,`<h3>${escape(t.title)} · 案件詳情</h3>${t.columns.map((c,i)=>`<div class="action-step"><strong style="width:155px">${escape(c)}</strong><div>${cell(row[i])}</div></div>`).join('')}<div class="audit-banner">${escape(centers.find(c=>c.id===state.center).label)} / ${escape(state.period)} / ${escape(projectNames[state.project])}</div>`);
+        if(t.libraryData){
+          const raw=t.libraryData.rawRecords[rowIndex],material=t.libraryData.materialRecords.find(record=>record.id===raw?.material);
+          $('dialog-content').insertAdjacentHTML('beforeend',`<h3>完整原始批次、材料主檔與來源</h3><pre class="library-source-json">${escape(JSON.stringify({record:raw,material,source:t.libraryData.source,provenance:detailProvenance},null,2))}</pre>`);
+        }
         if(detailProvenance)$('dialog-content').insertAdjacentHTML('beforeend','<button class="primary-button" data-row-provenance>查看此列原始 JSON 來源</button>');
-      } else dialog(t.title,`<div class="data-table">${tableMarkup(t,kind)}</div><div class="dialog-notice">${escape(state.period)} · ${escape(projectNames[state.project])} · 展示資料</div>`);
+      } else dialog(t.title,window.RRCC_FULL_TABLE.render(t,kind,{cell,scope:`${centers.find(c=>c.id===state.center).label} / ${state.period} / ${projectNames[state.project]}`,onExport:exportCSV}));
     } else if(kind==='trend') dialog(data.trend.title,`<div class="chart-legend">${data.trend.legend.map((l,i)=>`<span><i class="${i===0?'legend-dot':'legend-line'}"></i>${escape(l)}</span>`).join('')}</div><div class="metric-detail-chart">${renderTrend(data.trend)}</div><div class="dialog-notice">${isPresentation()?'合成展示情境 · '+window.RRCC_DATA_MONTHS.join('、')+' · 非實際營運趨勢':'僅呈現原始 JSON 的 2026-07、08、09 來源月份，不補造其他月份。'}</div>`);
     else if(kind==='distribution') dialog(data.distribution.title,`<div class="distribution-chart" data-chart-motion style="height:auto;justify-content:center">${renderDonut(data.distribution)}</div>`);
   }
@@ -251,7 +284,7 @@
     dialog(item.label,`<h3>${escape(data[kind].title)}</h3><div class="data-table">${tableMarkup(data[kind],kind)}</div><div class="dialog-notice">${escape(data.en)} · ${escape(item.label)} · ${escape(state.period)}</div>`);
   }
   function exportCSV(selectedTable) {
-    const data=current(),flat=(v)=>typeof v==='object'?(v.text??v.name??`${v.value}%`):v;
+    const data=current(),flat=(v)=>v===null?'null':v===undefined?'':typeof v==='object'?(v.text??(v.type==='person'?`${v.name} / ${v.role}`:v.name)??(v.type==='progress'?`${v.value}%`:JSON.stringify(v))):v;
     const table=selectedTable?.columns?selectedTable:data.table;
     const lines=[table.columns,...filteredRows(table).map(r=>r.map(flat))].map(row=>row.map(v=>`"${String(v).replace(/"/g,'""')}"`).join(',')).join('\r\n');
     const url=URL.createObjectURL(new Blob(['\ufeff'+lines],{type:'text/csv;charset=utf-8;'}));
@@ -302,25 +335,30 @@
     $('search-results').innerHTML=results.length?results.map((r,i)=>`<button class="search-result" data-search-result="${i}">${icon(r.icon)}<span>${escape(r.label)}</span><small>${escape(centers.find(c=>c.id===r.center).label)} ↵</small></button>`).join(''):'<div class="empty-result">沒有符合的中心、功能或材料。試試「管材」或「驗證」。</div>';
   }
   function openSearch() {search();$('search-input').value='';$('search-dialog').showModal();$('search-input').focus();}
-  $('search-button').innerHTML=icon('search');$('notification-button').innerHTML=icon('bell');$('calendar-icon').innerHTML=icon('calendar');$('export-button').innerHTML=icon('download')+'匯出報表';$('dialog-close').innerHTML=icon('close');$('search-icon').innerHTML=icon('search');$('kpi-settings-button').innerHTML=icon('settings')+'KPI 設定';
-  $('kpi-settings-button').addEventListener('click',()=>{
+  function openLibrary(){
     panelMotion?.settle();
-    window.RRCC_KPI_SETTINGS.open(state.center,current().kpis,{mode:window.RRCC_DATA_MODE,centerLabel:centers.find(c=>c.id===state.center).label,apply:(visible,persisted)=>{if(!visible.includes(state.metric))state.metric=visible[0];render(true);toast(persisted?'已儲存六張 KPI 配置；僅影響本瀏覽器。':'已套用六張 KPI；瀏覽器禁止儲存，重新整理後將恢復預設。');}});
-  });
+    window.RRCC_KPI_LIBRARY.open(state.center,current().kpis,{mode:window.RRCC_DATA_MODE,centerLabel:centers.find(c=>c.id===state.center).label,apply:(visible,persisted)=>{if(!visible.includes(state.metric))state.metric=visible[0]??0;render(true);toast(persisted?'已儲存此中心 KPI 配置；僅影響本瀏覽器的 Preview 身分。':'已套用配置；瀏覽器禁止儲存，重新整理後將恢復預設。');},useSource:()=>{setDataMode('source');openLibrary();}});
+  }
+  $('search-button').innerHTML=icon('search');$('notification-button').innerHTML=icon('bell');$('calendar-icon').innerHTML=icon('calendar');$('export-button').innerHTML=icon('download')+'匯出報表';$('dialog-close').innerHTML=icon('close');$('search-icon').innerHTML=icon('search');$('kpi-settings-button').innerHTML=icon('settings')+'KPI 卡片櫃';
+  $('kpi-settings-button').setAttribute('aria-label','開啟 KPI 卡片櫃');
+  $('kpi-settings-button').addEventListener('click',openLibrary);
   $('public-reference-button').addEventListener('click',()=>dialog('公開參考數據與官方依據',referenceMarkup()));
   document.querySelectorAll('[data-common]').forEach(b=>b.insertAdjacentHTML('afterbegin',icon(b.dataset.icon)));
   document.addEventListener('click',event=>{
     const b=event.target.closest('button,a');if(!b)return;
     if(b.hasAttribute('data-public-reference')){dialog('公開參考數據與官方依據',referenceMarkup());return;}
+    if(b.hasAttribute('data-open-library')){openLibrary();return;}
+    if(b.hasAttribute('data-library-detail')){openLibraryDetail();return;}
+    if(b.hasAttribute('data-library-source')&&b.closest('#right-panel')){const k=current().kpis[state.metric];if(k.detail?.libraryData)dialog(`${k.label} · 完整來源與定義`,librarySourceMarkup(k,k.detail.libraryData));return;}
     if(b.dataset.center){event.preventDefault();switchCenter(b.dataset.center);return;}
-    if(b.dataset.metric!==undefined){panelMotion.request(Number(b.dataset.metric),metricSource(Number(b.dataset.metric)));return;}
+    if(b.dataset.metric!==undefined){const metric=Number(b.dataset.metric);if(window.RRCC_KPI_SETTINGS.visible(state.center,current().kpis,window.RRCC_DATA_MODE).includes(metric))panelMotion.request(metric,metricSource(metric));return;}
     if(b.dataset.sidebar!==undefined){openSidebar(Number(b.dataset.sidebar));return;}
     if(b.dataset.rightTab){state.rightTab=b.dataset.rightTab;renderRight();applyMetricComparison();return;}
     if(b.dataset.detail){openDetail(b.dataset.detail);return;}
     if(b.hasAttribute('data-row-provenance')){sourceDialog(detailProvenance);return;}
     if(b.dataset.action!==undefined){quickAction(Number(b.dataset.action));return;}
     if(b.hasAttribute('data-collapse-right')){panelMotion.close();return;}
-    if(b.hasAttribute('data-restore-right')){panelMotion.request(state.metric,{id:'right-panel-trigger'});return;}
+    if(b.hasAttribute('data-restore-right')){if(window.RRCC_KPI_SETTINGS.visible(state.center,current().kpis,window.RRCC_DATA_MODE).includes(state.metric))panelMotion.request(state.metric,{id:'right-panel-trigger'});return;}
     if(b.hasAttribute('data-open-activity')){openActivity();return;}
     if(b.hasAttribute('data-open-alert')){openDetail(state.center==='overview'?'secondary':'tertiary');return;}
     if(b.dataset.evidence!==undefined){sourceDialog();return;}
@@ -356,14 +394,15 @@
   window.addEventListener('hashchange',()=>switchCenter(location.hash.slice(1),false));window.addEventListener('resize',resize);
   $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}" ${month===state.period?'selected':''}>${month}</option>`).join('');
   $('project-select').innerHTML=Object.entries(projectNames).map(([id,label])=>`<option value="${id}">${escape(label)}</option>`).join('');
-  $('data-mode-toggle')?.addEventListener('click',()=>{
-    window.RRCC_SET_DATA_MODE?.(isPresentation()?'source':'demo');
+  function setDataMode(mode){
+    window.RRCC_SET_DATA_MODE?.(mode);
     state.period=window.RRCC_DATA_MONTHS.at(-1);state.project='all';state.metric=defaults[state.center];state.rightTab='summary';state.sidebar=0;
     $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}">${month}</option>`).join('');
     $('project-select').innerHTML=Object.entries(projectNames).map(([id,label])=>`<option value="${id}">${escape(label)}</option>`).join('');
     const url=new URL(location.href);url.searchParams.set('data-mode',isPresentation()?'demo':'source');history.replaceState(null,'',url.pathname+url.search+url.hash);
     render(true);toast(isPresentation()?'已切換合成展示資料：非實際營運資料':'已切回原始來源與獨立公開參考；缺口未改寫。');
-  });
+  }
+  $('data-mode-toggle')?.addEventListener('click',()=>setDataMode(isPresentation()?'source':'demo'));
   document.querySelectorAll('.common-nav .count').forEach(b=>b.remove());
   $('notification-button').classList.remove('notification-button');$('notification-button').setAttribute('aria-label','資料來源通知');
   panelMotion=new window.RightPanelMotion({panel:$('right-panel'),stage:$('stage'),layout:document.querySelector('.content-layout'),trigger:$('right-panel-trigger'),commit:metric=>{state.metric=metric;state.rightTab='summary';renderRight();applyMetricComparison();}});

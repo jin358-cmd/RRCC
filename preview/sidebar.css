@@ -1,4 +1,4 @@
-/* Incremental overlay navigation; the original 232px menu remains the baseline. */
+/* Incremental overlay navigation; only the slide-out width changes in v1.5. */
 #stage.sidebar-refined .workspace {
   left: 64px;
 }
@@ -12,10 +12,17 @@
 }
 
 #stage.sidebar-refined .sidebar.sidebar-expanded {
-  width: 232px;
+  width: min(var(--sidebar-overlay-width, 320px), calc(100vw - 16px));
   padding-right: 16px;
   padding-left: 16px;
   box-shadow: 14px 0 28px rgb(32 77 126 / 12%), 1px 0 0 rgb(177 207 239 / 65%);
+}
+
+#stage.sidebar-refined .sidebar-expanded .nav-label {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
 }
 
 #stage.sidebar-refined .sidebar[data-interaction="initial"] { transition: none; }

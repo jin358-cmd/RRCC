@@ -49,7 +49,14 @@ test('Left visible menu-toggle button is removed while Center marker remains key
   assert.match(sidebar, /marker\.tabIndex\s*=\s*0/);
   assert.match(sidebar, /event\.key !== 'Enter' && event\.key !== ' '/);
 });
+test('Wider sidebar scales 320–360px and menu type scales 17–19px without moving the 64px rail', () => {
+  assert.match(css, /--sidebar-overlay-width:\s*clamp\(320px, 17vw, 360px\)/);
+  assert.match(css, /--sidebar-menu-font:\s*clamp\(17px, calc\(\.25vw \+ 13px\), 19px\)/);
+  assert.match(css, /--rail-width:\s*64px/);
+  assert.match(css, /\.sidebar-expanded \.common-nav button[^}]*font-size:\s*var\(--sidebar-menu-font\)/);
+  assert.match(css, /\.sidebar-expanded \.common-nav button[^}]*min-height:\s*3rem/);
+});
 
 const failed = results.filter(result => result.status === 'FAIL');
-console.log(JSON.stringify({ suite: 'RRCC v1.4 responsive CSS contracts', evidenceTier: 'STATIC_CONTRACT_NOT_BROWSER_GEOMETRY', total: results.length, passed: results.length - failed.length, failed: failed.length, results }, null, 2));
+console.log(JSON.stringify({ suite: 'RRCC v1.5 responsive CSS contracts', evidenceTier: 'STATIC_CONTRACT_NOT_BROWSER_GEOMETRY', total: results.length, passed: results.length - failed.length, failed: failed.length, results }, null, 2));
 if (failed.length) process.exitCode = 1;

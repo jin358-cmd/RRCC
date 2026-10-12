@@ -199,10 +199,17 @@
 
   setExpanded(false, 'initial');
   updateLabels();
+  function overlayWidth() {
+    // Mirrors --sidebar-overlay-width and its mobile viewport safety cap.
+    // getState remains useful while the rail is collapsed (its actual width is 64).
+    const viewportWidth = Number(window.innerWidth);
+    if (!Number.isFinite(viewportWidth) || viewportWidth <= 0) return 320;
+    return Math.min(360, Math.max(320, viewportWidth * .17), viewportWidth - 16);
+  }
   window.RRCC_SIDEBAR = Object.freeze({
     expand,
     collapse,
-    getState: () => ({ expanded, pinned, pointerWithin, permanentWidth: 64, overlayWidth: 232 }),
+    getState: () => ({ expanded, pinned, pointerWithin, permanentWidth: 64, overlayWidth: overlayWidth() }),
     destroy() {
       destroyed = true;
       clearCloseTimer();

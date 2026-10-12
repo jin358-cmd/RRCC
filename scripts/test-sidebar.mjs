@@ -200,7 +200,7 @@ function fixture() {
     target.focus();
     return dispatch(target, 'click', { detail: 1 });
   };
-  return { document, stage, sidebar, selector, code, business, item, center, marker, api, tick, dispatch, hover, leave, pointerClick, add, observers,
+  return { document, window, stage, sidebar, selector, code, business, item, center, marker, api, tick, dispatch, hover, leave, pointerClick, add, observers,
     mutate() { for (const observer of observers) if (!observer.disconnected) observer.callback([]); }
   };
 }
@@ -214,7 +214,7 @@ function test(name, run) {
 test('Initial state is a 64px collapsed rail with an inert project selector', f => {
   assert.equal(f.api.getState().expanded, false);
   assert.equal(f.api.getState().permanentWidth, 64);
-  assert.equal(f.api.getState().overlayWidth, 232);
+  assert.equal(f.api.getState().overlayWidth, 320);
   assert.equal(f.sidebar.dataset.expanded, 'false');
   assert.equal(f.document.getElementById('sidebar-toggle'), null);
   assert.equal(f.marker.tagName, 'DIV');
@@ -231,6 +231,19 @@ test('Mouse hover opens without changing Center or navigation selection', f => {
   assert.equal(f.stage.dataset.center, 'overview');
   assert.equal(f.center.getAttribute('aria-current'), 'page');
   assert.equal(f.selector.inert, false);
+});
+
+test('Expanded overlay diagnostics track viewport changes without mutating menu state', f => {
+  for (const [width, expected] of [[320, 304], [390, 320], [1440, 320], [1920, 326.4], [2560, 360]]) {
+    f.window.innerWidth = width;
+    assert.ok(Math.abs(f.api.getState().overlayWidth - expected) < .001, `Unexpected overlay at ${width}px`);
+    assert.equal(f.api.getState().permanentWidth, 64);
+    assert.equal(f.api.getState().expanded, false);
+  }
+  f.hover();
+  f.window.innerWidth = 320;
+  assert.equal(f.api.getState().overlayWidth, 304);
+  assert.equal(f.api.getState().expanded, true);
 });
 
 test('Mouse leave waits 140ms before collapse', f => {
@@ -403,16 +416,19 @@ test('Destroy clears timers/listeners/observer and prevents later expansion', f 
 
 test('CSS keeps workspace at 64px for both states and provides reduced-motion handling', () => {
   assert.match(css, /#stage\.sidebar-refined \.workspace\s*\{\s*left:\s*64px\s*;/);
-  assert.match(css, /\.sidebar\.sidebar-expanded\s*\{\s*width:\s*232px\s*;/);
+  assert.match(css, /\.sidebar\.sidebar-expanded\s*\{\s*width:\s*min\(var\(--sidebar-overlay-width, 320px\), calc\(100vw - 16px\)\)\s*;/);
   assert.match(css, /transition:\s*width 220ms/);
   assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)\s*\{/);
   assert.match(css, /transition:\s*none\s*;/);
   assert.equal((css.match(/\.workspace\s*\{/g) || []).length, 1, 'Overlay must not introduce a second expanded workspace position');
+  assert.match(css, /\.sidebar-expanded \.nav-label\s*\{[^}]*min-width:\s*0/);
+  assert.match(css, /\.sidebar-expanded \.nav-label\s*\{[^}]*white-space:\s*normal/);
+  assert.match(css, /\.sidebar-expanded \.nav-label\s*\{[^}]*overflow-wrap:\s*anywhere/);
 });
 
 const failed = results.filter(result => result.status === 'FAIL');
 console.log(JSON.stringify({
-  suite: 'RRCC Sidebar v1.4 marker-only deterministic event regression',
+  suite: 'RRCC Sidebar v1.5 wider overlay deterministic event regression',
   evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE',
   total: results.length,
   passed: results.length - failed.length,
