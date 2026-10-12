@@ -20,64 +20,10 @@
 
 #stage.sidebar-refined .sidebar[data-interaction="initial"] { transition: none; }
 
-.sidebar-toggle {
-  position: relative;
-  z-index: 1;
-  width: 44px;
-  height: 36px;
-  margin-bottom: 10px;
-  padding: 0 11px;
-  display: flex;
-  align-items: center;
-  gap: 13px;
-  border: 1px solid #c7dff6;
-  border-radius: 6px;
-  background: #f6fbff;
-  color: #35618d;
-  white-space: nowrap;
-  overflow: hidden;
-  flex: none;
-}
-
-.sidebar-toggle:hover {
-  color: #126bc4;
-  background: #e6f2ff;
-}
-
-.sidebar-toggle .ico {
-  width: 20px;
-  height: 20px;
-}
-
-.sidebar-toggle-chevron {
-  transform-origin: 20px 12px;
-  transition: transform 220ms ease;
-}
-
-.sidebar-toggle-label {
-  opacity: 0;
-  font-size: 13px;
-  font-weight: 650;
-  letter-spacing: 1px;
-  transition: opacity 130ms ease;
-}
-
-.sidebar-expanded .sidebar-toggle {
-  width: 200px;
-}
-
-.sidebar-expanded .sidebar-toggle-label {
-  opacity: 1;
-}
-
-.sidebar-expanded .sidebar-toggle-chevron {
-  transform: rotate(180deg);
-}
-
 .sidebar-center-marker {
   position: relative;
   z-index: 1;
-  height: 24px;
+  min-height: 32px;
   margin-bottom: 14px;
   display: flex;
   align-items: center;
@@ -90,6 +36,13 @@
   font-size: 11px;
   font-weight: 650;
   letter-spacing: .6px;
+  cursor: default;
+  touch-action: manipulation;
+}
+
+.sidebar-center-marker:focus-visible {
+  outline: 3px solid #1875dc;
+  outline-offset: 3px;
 }
 
 .rail-center-number,
@@ -210,9 +163,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  #stage.sidebar-refined .sidebar,
-  .sidebar-toggle-chevron,
-  .sidebar-toggle-label {
+  #stage.sidebar-refined .sidebar {
     transition: none;
   }
 }

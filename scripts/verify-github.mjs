@@ -23,6 +23,7 @@ for(const file of files){
 const deployments=api(`repos/${repo}/deployments?per_page=100`);
 const checks={repository:metadata.full_name===repo,publicRepository:metadata.visibility==='public',writePermission:metadata.permissions?.push===true,defaultBranch:metadata.default_branch==='main',mainUnchanged:main==='5e722c043c2164da5795e5a6523a6b3dfd946d59',mainReadmeOnly:mainFiles.length===1&&mainFiles[0]==='README.md',headMatchesLocal:head===local,prHeadMatches:pr.headRefOid===head,prOpenUnmerged:pr.state==='OPEN'&&pr.mergedAt===null,prBase:pr.baseRefName==='main'&&pr.headRefName===branch,allFilesMatch:hashes.every(x=>x.status==='PASS'),githubDeploymentRecordsEmpty:deployments.length===0};
 const result={verifiedAt:new Date().toISOString(),repository:repo,branch,verifiedCommit:head,mainCommit:main,pr,checks,files:hashes,scope:'Authenticated GitHub API metadata plus freshly fetched Git blobs, SHA-256 compared with exact local publication files. No merge or deployment performed; no claim about unrelated hosting accounts.'};
-if(!process.argv.includes('--check'))await writeFile('docs/verification/github-readback-v1.2.json',JSON.stringify(result,null,2)+'\n');
+const outputArgument=process.argv.find(value=>value.startsWith('--output='));
+if(!process.argv.includes('--check'))await writeFile(outputArgument?.slice('--output='.length)||'docs/verification/github-readback-v1.2.json',JSON.stringify(result,null,2)+'\n');
 console.log(JSON.stringify({status:Object.values(checks).every(Boolean)?'PASS':'FAIL',verifiedCommit:head,mainCommit:main,pr:pr.url,fileCount:hashes.length,checks},null,2));
 if(!Object.values(checks).every(Boolean))process.exitCode=1;

@@ -53,7 +53,7 @@ class FakeElement {
   set innerHTML(value) {
     this.children = [];
     this._text = '';
-    // Only the marker needs parsed descendants; toggle's SVG is decorative.
+    // The Center marker has parsed descendants; no visible toggle is created.
     for (const match of value.matchAll(/<span class="(rail-center-[^"]+)"[^>]*>/g)) {
       const span = new FakeElement('span', this.ownerDocument);
       span.className = match[1];
@@ -122,7 +122,9 @@ class FakeDocument extends FakeElement {
     const event = {
       type, target, bubbles: !['pointerenter', 'pointerleave'].includes(type),
       defaultPrevented: false,
+      propagationStopped: false,
       preventDefault() { this.defaultPrevented = true; },
+      stopPropagation() { this.propagationStopped = true; },
       ...fields
     };
     const path = [];
@@ -130,9 +132,9 @@ class FakeDocument extends FakeElement {
     const invoke = (node, capture) => {
       for (const item of node.listeners.get(type) || []) if (item.capture === capture) item.listener(event);
     };
-    for (const node of [...path].reverse()) invoke(node, true);
+    for (const node of [...path].reverse()) { invoke(node, true); if (event.propagationStopped) return event; }
     invoke(target, false);
-    if (event.bubbles) for (const node of path.slice(1)) invoke(node, false);
+    if (event.bubbles && !event.propagationStopped) for (const node of path.slice(1)) { invoke(node, false); if (event.propagationStopped) break; }
     return event;
   }
 }
@@ -177,7 +179,7 @@ function fixture() {
     disconnect() { this.disconnected = true; }
   }
   vm.runInNewContext(source, { document, window, MutationObserver }, { filename: 'preview/sidebar.js' });
-  const toggle = document.getElementById('sidebar-toggle');
+  const marker = document.getElementById('sidebar-center-marker');
   const api = window.RRCC_SIDEBAR;
   const tick = amount => {
     const end = now + amount;
@@ -196,9 +198,9 @@ function fixture() {
   const pointerClick = (target, pointerType = 'mouse') => {
     dispatch(target, 'pointerdown', { pointerType });
     target.focus();
-    dispatch(target, 'click', { detail: 1 });
+    return dispatch(target, 'click', { detail: 1 });
   };
-  return { document, stage, sidebar, selector, code, business, item, center, toggle, api, tick, dispatch, hover, leave, pointerClick, add, observers,
+  return { document, stage, sidebar, selector, code, business, item, center, marker, api, tick, dispatch, hover, leave, pointerClick, add, observers,
     mutate() { for (const observer of observers) if (!observer.disconnected) observer.callback([]); }
   };
 }
@@ -214,7 +216,10 @@ test('Initial state is a 64px collapsed rail with an inert project selector', f 
   assert.equal(f.api.getState().permanentWidth, 64);
   assert.equal(f.api.getState().overlayWidth, 232);
   assert.equal(f.sidebar.dataset.expanded, 'false');
-  assert.equal(f.toggle.getAttribute('aria-expanded'), 'false');
+  assert.equal(f.document.getElementById('sidebar-toggle'), null);
+  assert.equal(f.marker.tagName, 'DIV');
+  assert.equal(f.marker.tabIndex, 0);
+  assert.equal(f.marker.getAttribute('aria-expanded'), 'false');
   assert.equal(f.selector.inert, true);
   assert.equal(f.selector.getAttribute('aria-hidden'), 'true');
   assert.equal(f.stage.classList.contains('sidebar-refined'), true);
@@ -260,12 +265,12 @@ test('Escape collapses, returns focus, and does not re-open from that focus', f 
   const event = f.dispatch(f.item, 'keydown', { key: 'Escape' });
   assert.equal(event.defaultPrevented, true);
   assert.equal(f.api.getState().expanded, false);
-  assert.equal(f.document.activeElement, f.toggle);
-  assert.equal(f.toggle.getAttribute('aria-expanded'), 'false');
-  assert.equal(f.toggle.lastFocusOptions.preventScroll, true);
+  assert.equal(f.document.activeElement, f.marker);
+  assert.equal(f.marker.getAttribute('aria-expanded'), 'false');
+  assert.equal(f.marker.lastFocusOptions.preventScroll, true);
   f.tick(500);
   assert.equal(f.api.getState().expanded, false);
-  f.dispatch(f.toggle, 'keydown', { key: 'Tab' });
+  f.dispatch(f.marker, 'keydown', { key: 'Tab' });
   f.item.focus();
   assert.equal(f.api.getState().expanded, true);
 });
@@ -280,10 +285,10 @@ test('A modal retains ownership of Escape', f => {
   assert.equal(f.api.getState().expanded, true);
 });
 
-test('Touch does not rely on hover; tapping the trigger opens and pins', f => {
+test('Touch does not rely on hover; tapping the Center marker opens and pins', f => {
   f.dispatch(f.sidebar, 'pointerenter', { pointerType: 'touch' });
   assert.equal(f.api.getState().expanded, false);
-  f.pointerClick(f.toggle, 'touch');
+  f.pointerClick(f.marker, 'touch');
   assert.equal(f.api.getState().expanded, true);
   assert.equal(f.api.getState().pinned, true);
   f.document.body.focus(); f.leave(); f.tick(500);
@@ -291,11 +296,11 @@ test('Touch does not rely on hover; tapping the trigger opens and pins', f => {
 });
 
 test('A second touch tap closes and clears the pinned state', f => {
-  f.pointerClick(f.toggle, 'touch');
-  f.pointerClick(f.toggle, 'touch');
+  f.pointerClick(f.marker, 'touch');
+  f.pointerClick(f.marker, 'touch');
   assert.equal(f.api.getState().expanded, false);
   assert.equal(f.api.getState().pinned, false);
-  assert.equal(f.toggle.getAttribute('aria-expanded'), 'false');
+  assert.equal(f.marker.getAttribute('aria-expanded'), 'false');
 });
 
 test('Mouse-click focus on a business item does not prevent leave collapse', f => {
@@ -304,8 +309,8 @@ test('Mouse-click focus on a business item does not prevent leave collapse', f =
   assert.equal(f.api.getState().expanded, false);
 });
 
-test('Explicit toggle collapse remains closed until the pointer leaves and re-enters', f => {
-  f.hover(); f.pointerClick(f.toggle);
+test('Escape collapse remains closed until the pointer leaves and re-enters', f => {
+  f.hover(); f.dispatch(f.marker, 'keydown', { key: 'Escape' });
   assert.equal(f.api.getState().expanded, false);
   f.dispatch(f.item, 'pointerenter', { pointerType: 'mouse' });
   f.tick(500);
@@ -314,12 +319,12 @@ test('Explicit toggle collapse remains closed until the pointer leaves and re-en
   assert.equal(f.api.getState().expanded, true);
 });
 
-test('Keyboard trigger focus opens, and keyboard activation can collapse', f => {
+test('Keyboard marker focus opens, and Enter activation can collapse', f => {
   f.dispatch(f.document.body, 'keydown', { key: 'Tab' });
-  f.toggle.focus();
+  f.marker.focus();
   assert.equal(f.api.getState().expanded, true);
-  f.dispatch(f.toggle, 'keydown', { key: 'Enter' });
-  f.dispatch(f.toggle, 'click', { detail: 0 });
+  const event = f.dispatch(f.marker, 'keydown', { key: 'Enter' });
+  assert.equal(event.defaultPrevented, true);
   assert.equal(f.api.getState().expanded, false);
 });
 
@@ -343,8 +348,9 @@ test('Center and rebuilt business labels update via the MutationObserver', f => 
 test('Collapsed controls retain Chinese accessible names', f => {
   assert.equal(f.item.getAttribute('aria-label'), '全局總覽');
   assert.equal(f.item.title, '全局總覽');
-  assert.equal(f.toggle.getAttribute('aria-label'), '展開功能選單');
-  assert.equal(f.toggle.getAttribute('aria-describedby'), 'sidebar-center-marker');
+  assert.match(f.marker.getAttribute('aria-label'), /總覽中心/);
+  assert.match(f.marker.getAttribute('aria-label'), /輕觸展開導覽/);
+  assert.equal(f.marker.getAttribute('aria-controls'), 'business-nav');
 });
 
 test('Business controls still bubble their original click to the application', f => {
@@ -354,6 +360,34 @@ test('Business controls still bubble their original click to the application', f
   const event = f.dispatch(f.item, 'click', { detail: 1 });
   assert.equal(calls, 1);
   assert.equal(event.defaultPrevented, false);
+  assert.equal(f.api.getState().expanded, true);
+});
+
+test('First touch on a collapsed business icon reveals only; second touch activates its original action', f => {
+  let calls = 0;
+  f.document.addEventListener('click', event => { if (event.target === f.item) calls++; });
+  const first = f.pointerClick(f.item, 'touch');
+  assert.equal(first.defaultPrevented, true);
+  assert.equal(first.propagationStopped, true);
+  assert.equal(calls, 0);
+  assert.equal(f.api.getState().expanded, true);
+  assert.equal(f.api.getState().pinned, true);
+  const second = f.pointerClick(f.item, 'touch');
+  assert.equal(second.defaultPrevented, false);
+  assert.equal(calls, 1);
+});
+
+test('An outside touch closes the pinned overlay without intercepting the outside control', f => {
+  f.pointerClick(f.marker, 'touch');
+  const event = f.dispatch(f.document.body, 'pointerdown', { pointerType: 'touch' });
+  assert.equal(f.api.getState().expanded, false);
+  assert.equal(f.api.getState().pinned, false);
+  assert.equal(event.defaultPrevented, false);
+});
+
+test('Space opens a collapsed Center marker with native scrolling prevented', f => {
+  const event = f.dispatch(f.marker, 'keydown', { key: ' ' });
+  assert.equal(event.defaultPrevented, true);
   assert.equal(f.api.getState().expanded, true);
 });
 
@@ -378,7 +412,7 @@ test('CSS keeps workspace at 64px for both states and provides reduced-motion ha
 
 const failed = results.filter(result => result.status === 'FAIL');
 console.log(JSON.stringify({
-  suite: 'RRCC Sidebar v1.2 deterministic event regression',
+  suite: 'RRCC Sidebar v1.4 marker-only deterministic event regression',
   evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE',
   total: results.length,
   passed: results.length - failed.length,

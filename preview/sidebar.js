@@ -4,30 +4,29 @@
 
   const stage = document.getElementById('stage');
   const sidebar = document.querySelector('.sidebar');
-  if (!stage || !sidebar || document.getElementById('sidebar-toggle')) return;
-
-  const toggle = document.createElement('button');
-  toggle.id = 'sidebar-toggle';
-  toggle.type = 'button';
-  toggle.className = 'sidebar-toggle';
-  toggle.setAttribute('aria-controls', 'business-nav');
-  toggle.setAttribute('aria-describedby', 'sidebar-center-marker');
-  toggle.innerHTML = '<svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h11M4 12h11M4 18h11"/><path class="sidebar-toggle-chevron" d="m18 8 4 4-4 4"/></svg><span class="sidebar-toggle-label">功能選單</span>';
+  if (!stage || !sidebar || document.getElementById('sidebar-center-marker')) return;
 
   const marker = document.createElement('div');
   marker.id = 'sidebar-center-marker';
   marker.className = 'sidebar-center-marker';
+  // This is the existing Center marker, not another visible menu button.
+  // It is focusable so keyboard and touch users retain a predictable rail entry.
+  marker.tabIndex = 0;
+  marker.setAttribute('role', 'group');
+  marker.setAttribute('aria-roledescription', '工作中心導覽入口');
+  marker.setAttribute('aria-controls', 'business-nav');
   marker.innerHTML = '<span class="rail-center-number"></span><span class="rail-center-short" aria-hidden="true"></span><span class="rail-center-name"></span>';
   sidebar.prepend(marker);
-  sidebar.prepend(toggle);
 
   let expanded = false;
   let pointerWithin = false;
   let pinned = false;
   let suppressHover = false;
-  let suppressToggleFocus = false;
+  let suppressMarkerFocus = false;
   let keyboardFocus = false;
   let lastPointerType = 'mouse';
+  let touchRevealPending = false;
+  let markerPressExpanded = null;
   let closeTimer = 0;
   let destroyed = false;
 
@@ -43,9 +42,7 @@
     sidebar.classList.toggle('sidebar-expanded', expanded);
     sidebar.dataset.expanded = String(expanded);
     sidebar.dataset.interaction = reason;
-    toggle.setAttribute('aria-expanded', String(expanded));
-    toggle.setAttribute('aria-label', expanded ? '收合功能選單' : '展開功能選單');
-    toggle.title = expanded ? '收合功能選單（Esc）' : '展開功能選單';
+    marker.setAttribute('aria-expanded', String(expanded));
     const selector = sidebar.querySelector('.project-selector');
     if (selector) {
       selector.inert = !expanded;
@@ -63,11 +60,11 @@
     pinned = false;
     suppressHover = pointerWithin;
     if (returnFocus) {
-      suppressToggleFocus = true;
-      toggle.focus({ preventScroll: true });
+      suppressMarkerFocus = true;
+      marker.focus({ preventScroll: true });
       // Focus has already been delivered synchronously. Only this deliberate
       // return to the trigger is suppressed; subsequent keyboard focus opens it.
-      suppressToggleFocus = false;
+      suppressMarkerFocus = false;
     }
     setExpanded(false, reason);
   }
@@ -96,39 +93,59 @@
 
   function onFocusIn(event) {
     clearCloseTimer();
-    if (event.target === toggle && suppressToggleFocus) return;
+    if (event.target === marker && suppressMarkerFocus) return;
     // Explicitly collapsing with the trigger must remain possible while it
     // retains focus. Moving on to any menu control opens the overlay again.
-    if (event.target !== toggle || !suppressHover) expand('keyboard-focus');
+    if (event.target !== marker || !suppressHover) expand('keyboard-focus');
   }
 
   function onFocusOut() {
     scheduleClose('focus-leave');
   }
 
-  function onToggleClick(event) {
-    // Native keyboard clicks have detail 0; pointer clicks can focus the
-    // trigger first, so use the collapsed state from pointerdown when present.
-    const wasExpanded = event.detail > 0 && toggle.dataset.pressExpanded != null
-      ? toggle.dataset.pressExpanded === 'true'
-      : expanded;
-    delete toggle.dataset.pressExpanded;
-    if (wasExpanded) {
-      collapse('toggle', true);
-    } else {
-      pinned = event.detail > 0 && lastPointerType === 'touch';
-      suppressHover = false;
-      expand(event.detail === 0 ? 'keyboard-toggle' : 'touch-or-pointer-toggle');
-    }
-  }
-
-  function onTogglePointerDown() {
-    toggle.dataset.pressExpanded = String(expanded);
-  }
-
   function onSidebarPointerDown(event) {
     keyboardFocus = false;
     lastPointerType = event.pointerType || 'mouse';
+    markerPressExpanded = event.target === marker || marker.contains(event.target) ? expanded : null;
+    if (lastPointerType === 'touch' && !expanded) {
+      // First touch reveals the overlay only. The following click is consumed
+      // in capture phase so a rail icon cannot accidentally activate a workflow.
+      touchRevealPending = true;
+      pinned = true;
+      suppressHover = false;
+      expand('touch-reveal');
+    }
+  }
+
+  function onSidebarClick(event) {
+    if (touchRevealPending) {
+      touchRevealPending = false;
+      markerPressExpanded = null;
+      event.preventDefault();
+      event.stopPropagation();
+      return;
+    }
+    if (lastPointerType === 'touch' && (event.target === marker || marker.contains(event.target))) {
+      event.preventDefault();
+      event.stopPropagation();
+      if (markerPressExpanded) collapse('touch-marker', true);
+      else { pinned = true; suppressHover = false; expand('touch-marker'); }
+    }
+    markerPressExpanded = null;
+  }
+
+  function onMarkerKeyDown(event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    if (expanded) collapse('keyboard-marker', true);
+    else { suppressHover = false; expand('keyboard-marker'); }
+  }
+
+  function onOutsidePointerDown(event) {
+    if (!sidebar.contains(event.target) && pinned) {
+      touchRevealPending = false;
+      collapse('outside-touch');
+    }
   }
 
   function onKeyboardInput(event) {
@@ -152,8 +169,8 @@
     marker.querySelector('.rail-center-number').textContent = centerNumber;
     marker.querySelector('.rail-center-short').textContent = centerLabel.replace(/中心$/, '').slice(0, 2);
     marker.querySelector('.rail-center-name').textContent = centerLabel;
-    marker.title = `目前工作中心：${centerLabel}`;
-    marker.setAttribute('aria-label', `目前工作中心：${centerLabel}`);
+    marker.title = `目前工作中心：${centerLabel} · 移入或聚焦展開導覽 · Esc 收合`;
+    marker.setAttribute('aria-label', `目前工作中心：${centerLabel}，聚焦或輕觸展開導覽，Escape 收合`);
     sidebar.querySelectorAll('.business-nav button, .common-nav button').forEach(button => {
       const label = button.querySelector('.nav-label')?.textContent.trim() || button.dataset.common || button.textContent.trim();
       button.title = label;
@@ -166,9 +183,10 @@
   sidebar.addEventListener('pointerleave', onPointerLeave);
   sidebar.addEventListener('focusin', onFocusIn);
   sidebar.addEventListener('focusout', onFocusOut);
-  sidebar.addEventListener('pointerdown', onSidebarPointerDown);
-  toggle.addEventListener('pointerdown', onTogglePointerDown);
-  toggle.addEventListener('click', onToggleClick);
+  sidebar.addEventListener('pointerdown', onSidebarPointerDown, true);
+  sidebar.addEventListener('click', onSidebarClick, true);
+  marker.addEventListener('keydown', onMarkerKeyDown);
+  document.addEventListener('pointerdown', onOutsidePointerDown);
   document.addEventListener('keydown', onEscape);
   document.addEventListener('keydown', onKeyboardInput, true);
 
@@ -193,9 +211,10 @@
       sidebar.removeEventListener('pointerleave', onPointerLeave);
       sidebar.removeEventListener('focusin', onFocusIn);
       sidebar.removeEventListener('focusout', onFocusOut);
-      sidebar.removeEventListener('pointerdown', onSidebarPointerDown);
-      toggle.removeEventListener('pointerdown', onTogglePointerDown);
-      toggle.removeEventListener('click', onToggleClick);
+      sidebar.removeEventListener('pointerdown', onSidebarPointerDown, true);
+      sidebar.removeEventListener('click', onSidebarClick, true);
+      marker.removeEventListener('keydown', onMarkerKeyDown);
+      document.removeEventListener('pointerdown', onOutsidePointerDown);
       document.removeEventListener('keydown', onEscape);
       document.removeEventListener('keydown', onKeyboardInput, true);
     }

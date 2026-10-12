@@ -1,0 +1,1117 @@
+{
+  "revision": "v1.4",
+  "time": "2026-10-12T19:24:39.530Z",
+  "checks": [
+    {
+      "name": "remove keeps apply disabled until six",
+      "passed": true,
+      "details": "主介面區\n5 / 6"
+    },
+    {
+      "name": "list remove add reorder applied",
+      "passed": true,
+      "details": [
+        "overview-1",
+        "overview-2",
+        "overview-3",
+        "overview-4",
+        "overview-6",
+        "overview-5"
+      ]
+    },
+    {
+      "name": "configuration persists after reload",
+      "passed": true,
+      "details": [
+        "overview-1",
+        "overview-2",
+        "overview-3",
+        "overview-4",
+        "overview-6",
+        "overview-5"
+      ]
+    },
+    {
+      "name": "center settings isolated",
+      "passed": true
+    },
+    {
+      "name": "keyboard move to reserve",
+      "passed": true
+    },
+    {
+      "name": "keyboard returns card and cancels grab not settings",
+      "passed": true
+    },
+    {
+      "name": "full six replacement uses chosen slot",
+      "passed": true
+    },
+    {
+      "name": "selected KPI green",
+      "passed": true,
+      "details": {
+        "background": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))",
+        "pressed": null
+      }
+    },
+    {
+      "name": "responsive open 2560",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "22px",
+        "header": {
+          "height": 127.99715423583984,
+          "width": 2545,
+          "x": 0,
+          "y": 0
+        },
+        "height": 1440,
+        "layoutColumns": "1590.21px 795.107px",
+        "main": {
+          "height": 1513.5794677734375,
+          "width": 1590.2130126953125,
+          "x": 99.8366470336914,
+          "y": 303.991455078125
+        },
+        "overflow": false,
+        "right": {
+          "height": 1513.5794677734375,
+          "width": 795.1065063476562,
+          "x": 1714.0482177734375,
+          "y": 303.991455078125
+        },
+        "stage": {
+          "height": 1887.9686279296875,
+          "width": 2545,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "18.26px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 1440,
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        },
+        "width": 2560
+      }
+    },
+    {
+      "name": "responsive open 1920",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "18.56px",
+        "header": {
+          "height": 99.8366470336914,
+          "width": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "height": 1080,
+        "layoutColumns": "1178.69px 589.354px",
+        "main": {
+          "height": 1272.5,
+          "width": 1178.693115234375,
+          "x": 90.87357330322266,
+          "y": 248.3096466064453
+        },
+        "overflow": false,
+        "right": {
+          "height": 1272.5,
+          "width": 589.3536987304688,
+          "x": 1288.76416015625,
+          "y": 248.3096466064453
+        },
+        "stage": {
+          "height": 1580.1988525390625,
+          "width": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "15.4048px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 1080,
+          "width": 1919.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "width": 1920
+      }
+    },
+    {
+      "name": "responsive open 1440",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15.92px",
+        "header": {
+          "height": 90,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        },
+        "height": 900,
+        "layoutColumns": "870.852px 435.426px",
+        "main": {
+          "height": 1081.9246826171875,
+          "width": 870.8522338867188,
+          "x": 84.15482330322266,
+          "y": 217.35794067382812
+        },
+        "overflow": false,
+        "right": {
+          "height": 1081.9246826171875,
+          "width": 435.4261169433594,
+          "x": 969.4033813476562,
+          "y": 217.35794067382812
+        },
+        "stage": {
+          "height": 1350.2200927734375,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "13.2136px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 899.9999389648438,
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        },
+        "width": 1440
+      }
+    },
+    {
+      "name": "responsive open 1280",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15.04px",
+        "header": {
+          "height": 90,
+          "width": 1265,
+          "x": 0,
+          "y": 0
+        },
+        "height": 800,
+        "layoutColumns": "716.754px 434.396px",
+        "main": {
+          "height": 1735.56103515625,
+          "width": 716.7542114257812,
+          "x": 81.91761016845703,
+          "y": 210.3195953369141
+        },
+        "overflow": false,
+        "right": {
+          "height": 1735.56103515625,
+          "width": 434.3963012695313,
+          "x": 812.67041015625,
+          "y": 210.3195953369141
+        },
+        "stage": {
+          "height": 1994.005615234375,
+          "width": 1265,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.4832px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 800,
+          "width": 1280,
+          "x": 0,
+          "y": 0
+        },
+        "width": 1280
+      }
+    },
+    {
+      "name": "responsive open 960",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 150,
+          "width": 944.9999389648438,
+          "x": 0,
+          "y": 0
+        },
+        "height": 800,
+        "layoutColumns": "849.006px",
+        "main": {
+          "height": 1639.708740234375,
+          "width": 849.0056762695312,
+          "x": 79.9928970336914,
+          "y": 321.27130126953125
+        },
+        "overflow": false,
+        "right": {
+          "height": 956.6690063476562,
+          "width": 849.0056762695312,
+          "x": 79.9928970336914,
+          "y": 1974.9786376953125
+        },
+        "stage": {
+          "height": 2979.644775390625,
+          "width": 944.9999389648438,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 800,
+          "width": 959.9999389648438,
+          "x": 0,
+          "y": 0
+        },
+        "width": 960
+      }
+    },
+    {
+      "name": "responsive open 768",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 150,
+          "width": 753.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "height": 900,
+        "layoutColumns": "657.188px",
+        "main": {
+          "height": 1654.1121826171875,
+          "width": 657.1875,
+          "x": 79.9928970336914,
+          "y": 321.27130126953125
+        },
+        "overflow": false,
+        "right": {
+          "height": 956.6690063476562,
+          "width": 657.1875,
+          "x": 79.9928970336914,
+          "y": 1989.382080078125
+        },
+        "stage": {
+          "height": 2994.048095703125,
+          "width": 753.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 899.9999389648438,
+          "width": 768.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "width": 768
+      }
+    },
+    {
+      "name": "responsive open 390",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 140,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "height": 844,
+        "layoutColumns": "287.003px",
+        "main": {
+          "height": 2349.460205078125,
+          "width": 287.0028381347656,
+          "x": 75.99431610107422,
+          "y": 475.241455078125
+        },
+        "overflow": false,
+        "right": {
+          "height": 1035.4189453125,
+          "width": 287.0028381347656,
+          "x": 75.99431610107422,
+          "y": 2836.697265625
+        },
+        "stage": {
+          "height": 3941.13623046875,
+          "width": 375,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 844.0908813476562,
+          "width": 390,
+          "x": 0,
+          "y": 0
+        },
+        "width": 390
+      }
+    },
+    {
+      "name": "responsive open 320",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 140,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "height": 760,
+        "layoutColumns": "217.003px",
+        "main": {
+          "height": 2349.460205078125,
+          "width": 217.0028381347656,
+          "x": 75.99431610107422,
+          "y": 475.241455078125
+        },
+        "overflow": false,
+        "right": {
+          "height": 1152.6419677734375,
+          "width": 217.0028381347656,
+          "x": 75.99431610107422,
+          "y": 2836.697265625
+        },
+        "stage": {
+          "height": 4089.44580078125,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 760,
+          "width": 320,
+          "x": 0,
+          "y": 0
+        },
+        "width": 320
+      }
+    },
+    {
+      "name": "responsive closed 2560",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "22px",
+        "header": {
+          "height": 127.99715423583984,
+          "width": 2545,
+          "x": 0,
+          "y": 0
+        },
+        "height": 1440,
+        "layoutColumns": "2409.32px",
+        "main": {
+          "height": 1269.5809326171875,
+          "width": 2409.318115234375,
+          "x": 99.8366470336914,
+          "y": 303.991455078125
+        },
+        "overflow": false,
+        "right": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "stage": {
+          "height": 1643.9700927734375,
+          "width": 2545,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "18.26px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 1440,
+          "width": 2560,
+          "x": 0,
+          "y": 0
+        },
+        "width": 2560
+      }
+    },
+    {
+      "name": "responsive closed 1440",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15.92px",
+        "header": {
+          "height": 90,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        },
+        "height": 900,
+        "layoutColumns": "1320.68px",
+        "main": {
+          "height": 941.49853515625,
+          "width": 1320.6817626953125,
+          "x": 84.15482330322266,
+          "y": 217.35794067382812
+        },
+        "overflow": false,
+        "right": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "stage": {
+          "height": 1209.7939453125,
+          "width": 1425,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "13.2136px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 899.9999389648438,
+          "width": 1440,
+          "x": 0,
+          "y": 0
+        },
+        "width": 1440
+      }
+    },
+    {
+      "name": "responsive closed 768",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 150,
+          "width": 753.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "height": 900,
+        "layoutColumns": "657.188px",
+        "main": {
+          "height": 1654.1121826171875,
+          "width": 657.1875,
+          "x": 79.9928970336914,
+          "y": 321.27130126953125
+        },
+        "overflow": false,
+        "right": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "stage": {
+          "height": 2023.380615234375,
+          "width": 753.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 899.9999389648438,
+          "width": 768.1817626953125,
+          "x": 0,
+          "y": 0
+        },
+        "width": 768
+      }
+    },
+    {
+      "name": "responsive closed 320",
+      "passed": true,
+      "details": {
+        "cards": 6,
+        "font": "15px",
+        "header": {
+          "height": 140,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "height": 760,
+        "layoutColumns": "217.003px",
+        "main": {
+          "height": 2353.210205078125,
+          "width": 217.0028381347656,
+          "x": 75.99431610107422,
+          "y": 475.241455078125
+        },
+        "overflow": false,
+        "right": {
+          "height": 0,
+          "width": 0,
+          "x": 0,
+          "y": 0
+        },
+        "stage": {
+          "height": 2928.55810546875,
+          "width": 305,
+          "x": 0,
+          "y": 0
+        },
+        "tableFont": "12.45px",
+        "toggleButtons": 0,
+        "viewport": {
+          "height": 760,
+          "width": 320,
+          "x": 0,
+          "y": 0
+        },
+        "width": 320
+      }
+    },
+    {
+      "name": "new public card opens with null original",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "public reference no fake completion or monthly chart",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference overview 4",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference overview 5",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference material 4",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference material 5",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜製程水回收率\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n製程水回收率\n88.1 %\n\n台積電 · 2024\n台積電 2024 年平均製程水回收率；不是所有取水之廢水再利用比率。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference verification 4",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜重大高風險供應商\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n重大高風險供應商\n112 家\n\n台積電 · 2024\n台積電 2024 評估分類之重大高風險供應商；屬 609 家重大供應商子集合，不可與其相加。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference verification 5",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜重大高風險供應商\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n重大高風險供應商\n112 家\n\n台積電 · 2024\n台積電 2024 評估分類之重大高風險供應商；屬 609 家重大供應商子集合，不可與其相加。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference management 4",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜非第一階重大供應商冶煉廠\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n非第一階重大供應商冶煉廠\n222 家\n\n台積電 · 2024\n台積電 2024 年非第一階重大供應商中之冶煉廠；為 609 家重大供應商之組成項。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "source new reference management 5",
+      "passed": true,
+      "details": "公開產業參考｜非本平台營運值\n參考｜非第一階重大供應商冶煉廠\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n非第一階重大供應商冶煉廠\n222 家\n\n台積電 · 2024\n台積電 2024 年非第一階重大供應商中之冶煉廠；為 609 家重大供應商之組成項。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗"
+    },
+    {
+      "name": "async exact right binding overview 4",
+      "passed": true,
+      "details": "參考｜製程水回收率"
+    },
+    {
+      "name": "async exact right binding overview 5",
+      "passed": true,
+      "details": "參考｜回收水量"
+    },
+    {
+      "name": "async exact right binding material 4",
+      "passed": true,
+      "details": "參考｜製程水回收率"
+    },
+    {
+      "name": "async exact right binding material 5",
+      "passed": true,
+      "details": "參考｜回收水量"
+    },
+    {
+      "name": "async exact right binding verification 4",
+      "passed": true,
+      "details": "參考｜重大高風險供應商"
+    },
+    {
+      "name": "async exact right binding verification 5",
+      "passed": true,
+      "details": "參考｜重大供應商"
+    },
+    {
+      "name": "async exact right binding management 4",
+      "passed": true,
+      "details": "參考｜非第一階重大供應商冶煉廠"
+    },
+    {
+      "name": "async exact right binding management 5",
+      "passed": true,
+      "details": "參考｜製程水回收率"
+    },
+    {
+      "name": "reference source dialog eight sourced records",
+      "passed": true,
+      "details": [
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=129",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=129",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=129",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=96",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=91",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=91",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=91",
+        "https://esg.tsmc.com/en-US/file/public/2024-TSMC-Sustainability-Report-e.pdf#page=91"
+      ]
+    },
+    {
+      "name": "changed data shows chart read lifecycle",
+      "passed": true,
+      "details": "loading"
+    },
+    {
+      "name": "chart read settles ready",
+      "passed": true
+    },
+    {
+      "name": "distribution detail has animated lifecycle",
+      "passed": true
+    },
+    {
+      "name": "trend detail has animated lifecycle",
+      "passed": true
+    },
+    {
+      "name": "rapid refresh latest data wins",
+      "passed": true
+    },
+    {
+      "name": "six distinct KPI overview",
+      "passed": true,
+      "details": [
+        "案場數量",
+        "材料總數",
+        "待驗證案件",
+        "申報完成率",
+        "已驗證案件",
+        "供應商數量"
+      ]
+    },
+    {
+      "name": "KPI switch Genie source overview",
+      "passed": true,
+      "details": {
+        "anchor": {
+          "x": 280.9232864379883,
+          "y": 341.1079406738281
+        },
+        "result": {
+          "fixed": "right-panel",
+          "genieEdge": "left",
+          "lastFlight": "{\"id\":9,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":341.1079406738281},\"duration\":1169,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":0.8041666665424904,\"maxRenderMs\":1.7000000029802322,\"preparationMs\":0.6000000089406967,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+          "lastSource": "kpi-overview-0",
+          "metric": "1",
+          "motion": "open",
+          "pending": "",
+          "region": "right",
+          "renderer": "webgl-mesh",
+          "returnX": "280.9232864379883",
+          "returnY": "341.1079406738281",
+          "source": "kpi-overview-1",
+          "sourceTitle": "材料總數｜合成 Demo /data/materials"
+        }
+      }
+    },
+    {
+      "name": "selected green overview",
+      "passed": true
+    },
+    {
+      "name": "blank close and full width overview",
+      "passed": true
+    },
+    {
+      "name": "six distinct KPI material",
+      "passed": true,
+      "details": [
+        "材料總數",
+        "待申報材料",
+        "供應商數量",
+        "申報完成率",
+        "已申報材料",
+        "材料文件數量"
+      ]
+    },
+    {
+      "name": "KPI switch Genie source material",
+      "passed": true,
+      "details": {
+        "anchor": {
+          "x": 280.9232864379883,
+          "y": 341.1079406738281
+        },
+        "result": {
+          "fixed": "right-panel",
+          "genieEdge": "left",
+          "lastFlight": "{\"id\":11,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":341.1079406738281},\"duration\":1169,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":0.974999999627471,\"maxRenderMs\":2.5999999940395355,\"preparationMs\":0.5999999940395355,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+          "lastSource": "kpi-material-0",
+          "metric": "1",
+          "motion": "open",
+          "pending": "",
+          "region": "right",
+          "renderer": "webgl-mesh",
+          "returnX": "280.9232864379883",
+          "returnY": "341.1079406738281",
+          "source": "kpi-material-1",
+          "sourceTitle": "待申報材料｜合成 Demo /data/declarations"
+        }
+      }
+    },
+    {
+      "name": "selected green material",
+      "passed": true
+    },
+    {
+      "name": "blank close and full width material",
+      "passed": true
+    },
+    {
+      "name": "six distinct KPI verification",
+      "passed": true,
+      "details": [
+        "待驗證案件",
+        "已驗證案件",
+        "退件／異常",
+        "驗證完成率",
+        "退件補正",
+        "驗證異常"
+      ]
+    },
+    {
+      "name": "KPI switch Genie source verification",
+      "passed": true,
+      "details": {
+        "anchor": {
+          "x": 280.9232864379883,
+          "y": 341.1079406738281
+        },
+        "result": {
+          "fixed": "right-panel",
+          "genieEdge": "left",
+          "lastFlight": "{\"id\":13,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":341.1079406738281},\"duration\":1169,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":0.752777778233091,\"maxRenderMs\":2.0999999940395355,\"preparationMs\":0.5,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+          "lastSource": "kpi-verification-0",
+          "metric": "1",
+          "motion": "open",
+          "pending": "",
+          "region": "right",
+          "renderer": "webgl-mesh",
+          "returnX": "280.9232864379883",
+          "returnY": "341.1079406738281",
+          "source": "kpi-verification-1",
+          "sourceTitle": "已驗證案件｜合成 Demo /data/verificationCases"
+        }
+      }
+    },
+    {
+      "name": "selected green verification",
+      "passed": true
+    },
+    {
+      "name": "blank close and full width verification",
+      "passed": true
+    },
+    {
+      "name": "six distinct KPI management",
+      "passed": true,
+      "details": [
+        "使用者數量",
+        "組織／供應商",
+        "權限提醒",
+        "系統可用率",
+        "供應商數量",
+        "管理待辦"
+      ]
+    },
+    {
+      "name": "KPI switch Genie source management",
+      "passed": true,
+      "details": {
+        "anchor": {
+          "x": 280.9232864379883,
+          "y": 341.1079406738281
+        },
+        "result": {
+          "fixed": "right-panel",
+          "genieEdge": "left",
+          "lastFlight": "{\"id\":15,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":341.1079406738281},\"duration\":1169,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":0.6819444447755814,\"maxRenderMs\":1.9000000059604645,\"preparationMs\":1.0999999940395355,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+          "lastSource": "kpi-management-0",
+          "metric": "1",
+          "motion": "open",
+          "pending": "",
+          "region": "right",
+          "renderer": "webgl-mesh",
+          "returnX": "280.9232864379883",
+          "returnY": "341.1079406738281",
+          "source": "kpi-management-1",
+          "sourceTitle": "組織／供應商｜合成 Demo /data/organizations + /data/suppliers + /data/organizations + /data/suppliers"
+        }
+      }
+    },
+    {
+      "name": "selected green management",
+      "passed": true
+    },
+    {
+      "name": "blank close and full width management",
+      "passed": true
+    },
+    {
+      "name": "short reference unit wraps 1440",
+      "passed": true,
+      "details": {
+        "scrollWidth": 173,
+        "text": "609家",
+        "unitWidth": 11.463068008422852,
+        "width": 173
+      }
+    },
+    {
+      "name": "short reference unit wraps 390",
+      "passed": true,
+      "details": {
+        "scrollWidth": 215,
+        "text": "609家",
+        "unitWidth": 10.802556037902832,
+        "width": 215
+      }
+    },
+    {
+      "name": "short reference unit wraps 320",
+      "passed": true,
+      "details": {
+        "scrollWidth": 145,
+        "text": "609家",
+        "unitWidth": 10.802556037902832,
+        "width": 145
+      }
+    },
+    {
+      "name": "keyboard focus opens sidebar",
+      "passed": true
+    },
+    {
+      "name": "Escape closes sidebar",
+      "passed": true
+    },
+    {
+      "name": "long unit L wafer mask layer 1440",
+      "passed": true,
+      "details": {
+        "scrollWidth": 173,
+        "text": "161.0L／晶圓光罩層",
+        "width": 173
+      }
+    },
+    {
+      "name": "long unit L wafer mask layer 390",
+      "passed": true,
+      "details": {
+        "scrollWidth": 215,
+        "text": "161.0L／晶圓光罩層",
+        "width": 215
+      }
+    },
+    {
+      "name": "long unit L wafer mask layer 320",
+      "passed": true,
+      "details": {
+        "scrollWidth": 145,
+        "text": "161.0L／晶圓光罩層",
+        "width": 145
+      }
+    },
+    {
+      "name": "final four-region content overview",
+      "passed": true,
+      "details": {
+        "sidebar": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "kpis": [
+          "案場數量",
+          "材料總數",
+          "待驗證案件",
+          "申報完成率",
+          "已驗證案件",
+          "供應商數量"
+        ],
+        "main": [
+          "材料申報趨勢",
+          "工程案場類型分布",
+          "進行中工程案",
+          "近期異常案件",
+          "管理待辦事項",
+          "最新動態"
+        ],
+        "right": "案場數量",
+        "screen": "C:/Users/Lucky_Unicorn/Desktop/RRCC/preview/revisions/v1.4/screenshots/01-overview.png"
+      }
+    },
+    {
+      "name": "final four-region content material",
+      "passed": true,
+      "details": {
+        "sidebar": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "kpis": [
+          "材料總數",
+          "待申報材料",
+          "供應商數量",
+          "申報完成率",
+          "已申報材料",
+          "材料文件數量"
+        ],
+        "main": [
+          "材料申報趨勢",
+          "材料類別分布",
+          "最近材料申報",
+          "供應商申報狀態",
+          "材料異常追蹤",
+          "最新動態"
+        ],
+        "right": "材料總數",
+        "screen": "C:/Users/Lucky_Unicorn/Desktop/RRCC/preview/revisions/v1.4/screenshots/02-material.png"
+      }
+    },
+    {
+      "name": "final four-region content verification",
+      "passed": true,
+      "details": {
+        "sidebar": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "kpis": [
+          "待驗證案件",
+          "已驗證案件",
+          "退件／異常",
+          "驗證完成率",
+          "退件補正",
+          "驗證異常"
+        ],
+        "main": [
+          "驗證案件趨勢",
+          "驗證結果分布",
+          "待驗證案件",
+          "最近驗證紀錄",
+          "退件與異常追蹤",
+          "最新動態"
+        ],
+        "right": "待驗證案件",
+        "screen": "C:/Users/Lucky_Unicorn/Desktop/RRCC/preview/revisions/v1.4/screenshots/03-verification.png"
+      }
+    },
+    {
+      "name": "final four-region content management",
+      "passed": true,
+      "details": {
+        "sidebar": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "kpis": [
+          "使用者數量",
+          "組織／供應商",
+          "權限提醒",
+          "系統可用率",
+          "供應商數量",
+          "管理待辦"
+        ],
+        "main": [
+          "使用者／供應商趨勢",
+          "權限角色分布",
+          "最近管理活動",
+          "系統事件",
+          "管理待辦事項",
+          "最新動態"
+        ],
+        "right": "使用者數量",
+        "screen": "C:/Users/Lucky_Unicorn/Desktop/RRCC/preview/revisions/v1.4/screenshots/04-management.png"
+      }
+    }
+  ],
+  "limitations": [
+    "Native HTML5 pointer drag not available through browser-control API; engine simulation and real browser keyboard/list interaction tested.",
+    "Reduced-motion and disabled WebGL exercised in local unit tests, not OS accessibility emulation."
+  ],
+  "observations": [
+    {
+      "name": "chart read lifecycle starts on period change",
+      "passed": false,
+      "details": "ready",
+      "resolution": "Invalid expectation: this chart displays all months; changing the selected month alone left identical geometry. Identical data intentionally skips replay. Lifecycle re-tested using center/data changes."
+    },
+    {
+      "name": "chart read starts on changed center geometry",
+      "passed": false,
+      "details": "observed loading in preceding DOM inspection",
+      "resolution": "Inspection was delayed until the animation had settled; repeat with action and immediate read in one call."
+    }
+  ],
+  "consoleErrors": [],
+  "testedArtifact": "preview/RRCC-Hantang-4-Center-Preview-v1.4.html",
+  "protocol": "http://127.0.0.1:4173",
+  "summary": {
+    "passed": 72,
+    "failed": 0,
+    "nativePointerDrag": "OWNER_MANUAL_CHECK_PENDING",
+    "production": "NOT_DEPLOYED",
+    "ownerVisualAcceptance": "REQUIRED"
+  }
+}
