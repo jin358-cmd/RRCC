@@ -1,0 +1,105 @@
+{
+  "verifiedAt": "2026-10-12T21:56:51.872Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 19,
+  "textFiles": 16,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 4179,
+      "sha256": "86acf2f6191ca0d7e67ba23bf944532b7b537c6700dd93b6397536520c108ce6"
+    },
+    {
+      "file": "docs/verification/owner-v1.11.md",
+      "bytes": 4748,
+      "sha256": "eff773e48cae4a7cc3a698c64078d348801f9a02b5732de8f6e6c2623e867784"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.11.html",
+      "bytes": 11805134,
+      "sha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10596,
+      "sha256": "adfabed3ea1e2ea88bac993a73313505faf6d6ae3a04aff90d460943ca9a6037"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.11.css",
+      "bytes": 3284,
+      "sha256": "5d06b4b213abc40e204530568a69afafd85704256591646c60edc5daaa26654c"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3737,
+      "sha256": "a8203464f87a9f05e9c3dac859eb91453d3734ec636e32d928036327e5907025"
+    },
+    {
+      "file": "preview/revisions/v1.11/README.md",
+      "bytes": 1343,
+      "sha256": "7133338a541851e202a523da65bd691fff294c73f69988373eb923d007e11d58"
+    },
+    {
+      "file": "preview/revisions/v1.11/browser-interaction-evidence.json",
+      "bytes": 14880,
+      "sha256": "1eca90c744980dae760cf660567b1a68e9ef786c3b11554f187df6e4700a982d"
+    },
+    {
+      "file": "preview/revisions/v1.11/local-test-evidence.json",
+      "bytes": 76697,
+      "sha256": "d17e02042304358d33e0bfec9e1a61fe68e94cf040f2caadd07d566e243b9fc1"
+    },
+    {
+      "file": "preview/revisions/v1.11/material-selected-transparent.png",
+      "bytes": 223938,
+      "sha256": "5e4b9d189ba326dac3564b28d65f089e6cb4caebe3d5de0dd4306204beaad7bc"
+    },
+    {
+      "file": "preview/revisions/v1.11/material-taller-detail.png",
+      "bytes": 128047,
+      "sha256": "5e4cdef28fa14c02791553a8e9bc0743fb42f88a7354d58f2f627837eb9d08ac"
+    },
+    {
+      "file": "preview/revisions/v1.11/overview-sidebar-indicator.png",
+      "bytes": 186554,
+      "sha256": "338e7c0beb38cdf1654d394edf4b04ec55b210da46302cf2e0f79334bf3a950e"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6604,
+      "sha256": "36d7eb2d7a9793998dbc4fa82641c0b33a5f64e928b079337935964efbea6025"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.11.mjs",
+      "bytes": 6294,
+      "sha256": "e7d6fe38dd257da014f34e2b5bf16007d3de0acf987abbff14684d6dd32ad7bd"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12576,
+      "sha256": "f702126fb525b3c7c532a6539cd03c50a114efc94c9dc80685d0c6018b57df04"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16895,
+      "sha256": "e12f99f20376fc6f2fcf16c2e069ab08438238f1309287c413604f5bdfcac0d3"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6954,
+      "sha256": "ac75d0db9d828fc10b5b599fc8291f4e028fbbd749fe8477e665f2d5cb2a1468"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11590,
+      "sha256": "48f7eb039543b076295918028490ffca1cc1ea312848362ac570c06f964e2f31"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 5281,
+      "sha256": "9361a89b05314135b7bdad1cae02400b5693f4a2b2e08f32c023b16fbc24e0b0"
+    }
+  ]
+}

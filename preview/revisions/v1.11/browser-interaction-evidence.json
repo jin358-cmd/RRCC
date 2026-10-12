@@ -1,0 +1,515 @@
+{
+  "version": "v1.11",
+  "observedAt": "2026-10-12T21:54:08.782Z",
+  "scope": "Actual browser UI actions and read-only DOM/computed-style observations; no synthetic app events",
+  "observations": [
+    {
+      "case": "desktop-selected",
+      "navLED": "rrcc-center-led-shuttle",
+      "navShadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgba(73, 123, 166, 0.3) 0px -1px 0px 0px inset, rgba(49, 91, 125, 0.2) 0px 2px 1px 0px, rgba(36, 73, 109, 0.4) 0px 6px 9px -6px",
+      "panel": "open",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "viewport": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "case": "desktop-detail",
+      "content": {
+        "bottom": 962.897689819336,
+        "height": 815.7528076171875,
+        "left": 336.9104919433594,
+        "right": 1583.0894470214844,
+        "top": 147.14488220214844,
+        "width": 1246.178955078125,
+        "x": 336.9104919433594,
+        "y": 147.14488220214844
+      },
+      "dialog": {
+        "bottom": 1044.559600830078,
+        "height": 1009.1192626953124,
+        "left": 336.00140380859375,
+        "right": 1583.9984741210938,
+        "top": 35.440338134765625,
+        "width": 1247.9970703125,
+        "x": 336.00140380859375,
+        "y": 35.440338134765625
+      },
+      "open": true,
+      "viewport": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "case": "desktop-library",
+      "dialog": {
+        "bottom": 1044.559600830078,
+        "height": 1009.1192626953124,
+        "left": 336.00140380859375,
+        "right": 1583.9984741210938,
+        "top": 35.440338134765625,
+        "width": 1247.9970703125,
+        "x": 336.00140380859375,
+        "y": 35.440338134765625
+      },
+      "mode": "kpi-library-page",
+      "open": true,
+      "scroll": []
+    },
+    {
+      "case": "sidebar-keyboard-indicator",
+      "expanded": "true",
+      "focusVisible": true,
+      "focused": true,
+      "label": "總覽儀表板",
+      "pseudo": {
+        "animation": "rrcc-sidebar-yellow-sweep",
+        "color": "rgb(243, 207, 56)",
+        "opacity": "1",
+        "origin": "0px 1.49858px",
+        "pointerEvents": "none",
+        "transform": "matrix(0.08, 0, 0, 1, 0, 0)"
+      }
+    },
+    {
+      "case": "sidebar-keyboard-indicator",
+      "expanded": "true",
+      "focusVisible": true,
+      "focused": true,
+      "label": "我的任務",
+      "pseudo": {
+        "animation": "rrcc-sidebar-yellow-sweep",
+        "color": "rgb(243, 207, 56)",
+        "opacity": "1",
+        "origin": "0px 1.49858px",
+        "pointerEvents": "none",
+        "transform": "matrix(0.08, 0, 0, 1, 0, 0)"
+      }
+    },
+    {
+      "case": "sidebar-keyboard-indicator",
+      "expanded": "true",
+      "focusVisible": true,
+      "focused": true,
+      "label": "開啟 KPI 卡片櫃",
+      "pseudo": {
+        "animation": "rrcc-sidebar-yellow-sweep",
+        "color": "rgb(243, 207, 56)",
+        "opacity": "1",
+        "origin": "0px 1.49858px",
+        "pointerEvents": "none",
+        "transform": "matrix(0.08, 0, 0, 1, 0, 0)"
+      }
+    },
+    {
+      "animation": "rrcc-sidebar-yellow-sweep",
+      "case": "sidebar-keyboard-animation-later",
+      "hover": false,
+      "transform": "matrix(0.311661, 0, 0, 1, 0, 0)"
+    },
+    {
+      "buttons": [
+        {
+          "aria": "關閉搜尋",
+          "text": "Esc"
+        },
+        {
+          "aria": null,
+          "text": "總覽中心 · Overview Center總覽中心 ↵"
+        },
+        {
+          "aria": null,
+          "text": "材料中心 · Material Center材料中心 ↵"
+        },
+        {
+          "aria": null,
+          "text": "驗證中心 · Verification Center驗證中心 ↵"
+        },
+        {
+          "aria": null,
+          "text": "管理中心 · Management Center管理中心 ↵"
+        }
+      ],
+      "case": "desktop-search",
+      "open": true,
+      "rect": {
+        "bottom": 1044.559600830078,
+        "height": 1009.1192626953124,
+        "left": 336.00140380859375,
+        "right": 1583.9984741210938,
+        "top": 35.440338134765625,
+        "width": 1247.9970703125,
+        "x": 336.00140380859375,
+        "y": 35.440338134765625
+      }
+    },
+    {
+      "case": "four-center-source-regression",
+      "center": "overview",
+      "kpis": [
+        "來源案場數量 3 案場，查看詳細資訊",
+        "材料主檔類型 6 類，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "當月廠務紀錄 3 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "來源月份紀錄數（非營運案件）",
+        "當月案場收料重量分布",
+        "案場來源與當月材料概況",
+        "當月廠務來源紀錄",
+        "材料主檔來源"
+      ],
+      "pageWidth": 1920,
+      "panel": "open",
+      "right": "來源案場數量",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況",
+        "異常追蹤",
+        "管理報表"
+      ]
+    },
+    {
+      "case": "kpi-swap-start",
+      "center": "overview",
+      "motion": "closing"
+    },
+    {
+      "case": "blank-close-start",
+      "center": "overview",
+      "motion": "closing"
+    },
+    {
+      "case": "four-center-source-regression",
+      "center": "material",
+      "kpis": [
+        "材料主檔類型 6 類，查看詳細資訊",
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "pageWidth": 1920,
+      "panel": "open",
+      "right": "材料主檔類型",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ]
+    },
+    {
+      "case": "kpi-swap-start",
+      "center": "material",
+      "motion": "closing"
+    },
+    {
+      "case": "blank-close-start",
+      "center": "material",
+      "motion": "closing"
+    },
+    {
+      "case": "four-center-source-regression",
+      "center": "verification",
+      "kpis": [
+        "追溯率樣本平均 94% ，查看詳細資訊",
+        "等級率樣本平均 91% ，查看詳細資訊",
+        "合規率樣本平均 96.1% ，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜重大供應商 609 家，查看詳細資訊"
+      ],
+      "main": [
+        "來源率樣本算術平均（非完成率）",
+        "有效率欄位值分布（非驗證結果）",
+        "驗證案件 · NO DATA",
+        "率欄位原始樣本（非驗證結果）",
+        "驗證來源缺口"
+      ],
+      "pageWidth": 1920,
+      "panel": "open",
+      "right": "追溯率樣本平均",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ]
+    },
+    {
+      "case": "kpi-swap-start",
+      "center": "verification",
+      "motion": "closing"
+    },
+    {
+      "case": "blank-close-start",
+      "center": "verification",
+      "motion": "closing"
+    },
+    {
+      "case": "four-center-source-regression",
+      "center": "management",
+      "kpis": [
+        "參考｜重大供應商 609 家，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜第一階重大供應商 387 家，查看詳細資訊",
+        "參考｜非第一階重大供應商冶煉廠 222 家，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊"
+      ],
+      "main": [
+        "資料月份覆蓋概況（非使用者趨勢）",
+        "所選範圍來源集合分布",
+        "資料來源索引（非管理活動）",
+        "跨版完全相同紀錄去重",
+        "管理資料覆蓋缺口"
+      ],
+      "pageWidth": 1920,
+      "panel": "open",
+      "right": "參考｜重大供應商",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限",
+        "規則設定",
+        "系統設定",
+        "報表中心"
+      ]
+    },
+    {
+      "case": "kpi-swap-start",
+      "center": "management",
+      "motion": "closing"
+    },
+    {
+      "case": "blank-close-start",
+      "center": "management",
+      "motion": "closing"
+    },
+    {
+      "case": "1280-sidebar-detail",
+      "dialog": {
+        "bottom": 696.3706932067871,
+        "height": 672.74853515625,
+        "left": 223.99856567382812,
+        "right": 1055.9942932128906,
+        "top": 23.62215805053711,
+        "width": 831.9957275390625,
+        "x": 223.99856567382812,
+        "y": 23.62215805053711
+      },
+      "pageWidth": 1280,
+      "scroll": {
+        "contentHeight": 1337,
+        "height": 510,
+        "overflow": "auto"
+      },
+      "title": "材料批次來源紀錄",
+      "viewport": [
+        1280,
+        720
+      ]
+    },
+    {
+      "case": "mobile-library-modal",
+      "dialog": {
+        "bottom": 796.0226821899414,
+        "height": 779.77978515625,
+        "left": 7.002840518951416,
+        "right": 367.9971337318421,
+        "top": 16.242897033691406,
+        "width": 360.9942932128906,
+        "x": 7.002840518951416,
+        "y": 16.242897033691406
+      },
+      "pageWidth": 375,
+      "scroll": {
+        "contentHeight": 7330,
+        "height": 778,
+        "overflow": "auto"
+      },
+      "viewport": [
+        375,
+        812
+      ]
+    },
+    {
+      "cardCount": 6,
+      "case": "mobile-editing-dock",
+      "dialog": {
+        "bottom": 805.2769775390625,
+        "height": 373.6434631347656,
+        "left": 6.995738506317139,
+        "right": 367.99003171920776,
+        "top": 431.6335144042969,
+        "width": 360.9942932128906,
+        "x": 6.995738506317139,
+        "y": 431.6335144042969
+      },
+      "mode": "kpi-library-page kpi-library-docked",
+      "pageWidth": 375
+    },
+    {
+      "case": "mobile-detail",
+      "dialog": {
+        "bottom": 796.0226821899414,
+        "height": 779.77978515625,
+        "left": 7.002840518951416,
+        "right": 367.9971337318421,
+        "top": 16.242897033691406,
+        "width": 360.9942932128906,
+        "x": 7.002840518951416,
+        "y": 16.242897033691406
+      },
+      "pageWidth": 375,
+      "scroll": {
+        "contentHeight": 1500,
+        "height": 644,
+        "overflow": "auto"
+      },
+      "viewport": [
+        375,
+        812
+      ]
+    },
+    {
+      "case": "tablet-search",
+      "dialog": {
+        "bottom": 872.9971027374268,
+        "height": 845.9942626953125,
+        "left": 12.002840042114258,
+        "right": 887.9971027374268,
+        "top": 27.002840042114254,
+        "width": 875.9942626953125,
+        "x": 12.002840042114258,
+        "y": 27.002840042114254
+      },
+      "pageWidth": 900,
+      "viewport": [
+        900,
+        900
+      ]
+    },
+    {
+      "case": "tsmc-retained",
+      "kpis": [
+        "回收水量 318.94 百萬 m³，查看詳細資訊",
+        "製程水回收率 86.2 %，查看詳細資訊",
+        "單位產品耗水 153.3 L／十二吋晶圓當量—光罩數，查看詳細資訊",
+        "第一階重大供應商 396 家，查看詳細資訊",
+        "非第一階重大供應商冶煉廠 198 家，查看詳細資訊",
+        "重大供應商 594 家，查看詳細資訊"
+      ],
+      "pageWidth": 1920,
+      "right": "回收水量",
+      "scope": "\n          最新動態2025台積電 2025 年度公開永續數據 · 7 個已核實指標SOURCE三個 RRCC 示範案場仍保留；公開企業範圍獨立篩選，不相加2026-10-13官方報告來源與單位可追溯；非 RRCC 即時營運資料\n          台積電永續公開數據2024 年度2025 年度匯出報表\n        ",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ]
+    },
+    {
+      "case": "final-taller-detail",
+      "dialog": {
+        "bottom": 1044.559600830078,
+        "height": 1009.1192626953124,
+        "left": 336.00140380859375,
+        "right": 1583.9984741210938,
+        "top": 35.440338134765625,
+        "width": 1247.9970703125,
+        "x": 336.00140380859375,
+        "y": 35.440338134765625
+      },
+      "selectedCard": [
+        "當月收料總量267,530kg示範來源2026-09↗"
+      ],
+      "title": "材料批次來源紀錄",
+      "viewport": [
+        1920,
+        1080
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "limitations": [
+    "Native mouse hover was not separately simulated; browser keyboard-focus pseudo animation was observed and hover CSS contract passed.",
+    "Reduced-motion CSS contract tested, no browser media preference emulation.",
+    "No native pointer drag or physical touch acceptance repeated.",
+    "Owner visual acceptance required; transparent yellow text has no v1.10 opaque contrast backing.",
+    "No Vercel deployment, Production changes or main merge."
+  ]
+}

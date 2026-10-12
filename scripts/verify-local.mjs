@@ -29,6 +29,7 @@ const commands=[
  ['scripts/test-interaction-refinement-v1.8.mjs'],
  ['scripts/test-interaction-refinement-v1.9.mjs'],
  ['scripts/test-interaction-refinement-v1.10.mjs'],
+ ['scripts/test-interaction-refinement-v1.11.mjs'],
  ['scripts/test-tsmc-sustainability.mjs'],
  ['scripts/test-tsmc-ui-integration.mjs'],
  ['scripts/test-kpi-dashboard-drag.mjs'],
@@ -53,6 +54,7 @@ const preserved={
  'preview/RRCC-Hantang-4-Center-Preview-v1.7.html':'0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a',
  'preview/RRCC-Hantang-4-Center-Preview-v1.8.html':'1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0',
  'preview/RRCC-Hantang-4-Center-Preview-v1.9.html':'3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5',
+ 'preview/RRCC-Hantang-4-Center-Preview-v1.10.html':'7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344',
  'preview/RRCC-Hantang-4-Center-Demonstration.zip':'66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975'
 };
 const preservation=[];
@@ -60,11 +62,11 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'RRCC KPI readability, public sustainability scope and LED refinement v1.10',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
+const evidence={revision:'RRCC navigation depth, transparent KPI values, sidebar indicator and taller dialogs v1.11',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
 const outputArgument=process.argv.find(argument=>argument.startsWith('--output='));
-const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.10/local-test-evidence.json');
-const evidenceRoot=path.join(root,'preview/revisions/v1.10')+path.sep;
-if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.10.');
+const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.11/local-test-evidence.json');
+const evidenceRoot=path.join(root,'preview/revisions/v1.11')+path.sep;
+if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.11.');
 await mkdir(path.dirname(destination),{recursive:true});
 // Evidence is append-only: select a fresh output filename for a later rerun.
 await writeFile(destination,JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
