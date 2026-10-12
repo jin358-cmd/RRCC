@@ -28,6 +28,7 @@
 - [綠色背景](../../assets/green-fab-v1.6.png)／[完整 prompt 與 SHA-256](../../assets/green-fab-v1.6-prompt.md)：built-in `image_gen.imagegen` 新生成、2048×768，不代表真實設施或環保績效。
 - [本機測試證據](local-test-evidence.json)：16 組測試、13 語法檢查、10 項原檔保留檢查全部 PASS；[Browser 證據](browser-interaction-evidence.json)：40 有效斷言 PASS、0 FAIL，另保留 7 項測試預期／定位／等待觀察及後續確認。兩類證據不等同 Owner 視覺或真機驗收。
 - [四中心獨立截圖及功能畫面](screenshots/)：四中心分開存檔，另含完整材料資料、展開選單、375px 工作列、右側 KPI 與左側卡片櫃入口。
+- [GitHub Readback](../../../docs/verification/github-readback-v1.6.json)：實作 commit `a00014fffa7e3b3ff419c1dab991dfc34e7ee292` 的 173 個 tracked 檔案 SHA-256 全部一致；main 維持 README-only、PR OPEN／unmerged。後續 Evidence commit 會另做最終讀回；Owner 視覺接受仍待確認。
 - [19-slot Registry](../../../docs/verification/kpi-master-registry-v1.5.md) 沿用；KPI-13～19 仍為 `PENDING DATA MAPPING`。原始 Demo、合成展示與公開參考來源仍分開。
 - Preview 偏好 namespace 不是正式 SSO／RBAC／後端租戶隔離；勿承載真實敏感企業資料。
 - 同一 [Feature PR #1](https://github.com/jin358-cmd/RRCC/pull/1) 供 Owner Review；不合併 main、不新增 Vercel 部署、不部署 Production。歷史版本及 Evidence 保留。

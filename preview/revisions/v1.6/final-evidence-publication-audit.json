@@ -1,0 +1,45 @@
+{
+  "verifiedAt": "2026-10-12T20:41:06.461Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 7,
+  "textFiles": 7,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/records/workspace-v1.6-evidence.md",
+      "bytes": 1461,
+      "sha256": "0d5a808ff7156e89df44c0bc48f76f74127a731a53101bf8b0a327b8ce3a9db7"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-resolution.md",
+      "bytes": 872,
+      "sha256": "4c5a9699c16a01de6a82310eaa5886307c17a27af7f875fdb4bd252ffd0944ec"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-verification.md",
+      "bytes": 1610,
+      "sha256": "ab52050de12e3968d2c6b0d160322398c16409e589c49590c2e221fa18852cb5"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.6.json",
+      "bytes": 48285,
+      "sha256": "dfc04e3c381b071c3938c72b03f3d0b58bd81ad9339a3ae00059537d53315407"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.6.md",
+      "bytes": 7429,
+      "sha256": "440e0b35a1fb4ad020343d9bfe736d6ea3d3cd0b69c45060b3100ada4bd03dba"
+    },
+    {
+      "file": "docs/verification/pr-review-summary-v1.6.md",
+      "bytes": 11115,
+      "sha256": "5da12fd04d1bdd4e999dcc4368a02cc7a34b53defbfc92e96ad248e0d1b46039"
+    },
+    {
+      "file": "preview/revisions/v1.6/README.md",
+      "bytes": 4071,
+      "sha256": "0253201b951f7c774935ebc10fd703a81ee7b6c900f7bb2f6b5faaffabd4e7c8"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 
 日期：2026-10-13。範圍：既有四中心 Preview 的七項介面增量；資料定義及主架構不重建。
 
-目前狀態：**LOCAL PREVIEW PASS / OWNER REVIEW PENDING / GITHUB READBACK PENDING**。本機及 Browser 範圍內的驗證已完成；GitHub 上傳讀回尚待完成。Owner 視覺驗收、正式部署與正式安全能力為獨立 Gate。
+目前狀態：**TECHNICAL PREVIEW + GITHUB READBACK PASS / OWNER REVIEW PENDING**。本機、Browser 與實作 commit 的 GitHub 讀回已完成；不代表 Owner 視覺接受、正式部署或正式安全能力已通過。
 
 ## Event｜Owner 本輪要求
 
@@ -39,6 +39,7 @@
 - 1920px 實際選單 Focus 展開寬約 326.4px、字級 17.8px、常駐 rail 約 64px；數量提示為 17px 紅字、選定指示為深色。中心導覽距 Header 底邊約 2px，圓角與陰影的計算樣式符合新規則，綠色圖片已嵌入自包含檔。
 - 1440／960／640／375／320px Browser viewport override：工作列及主頁無整頁水平溢出；月份／案場／匯出在同一區塊內自動換行。主圖表及右欄圖表讀取 lifecycle 到達 ready／aria-busy=false。
 - 原生指標 Hover／拖曳、真機 Touch／OS Reduced Motion、Owner 最終視覺接受不因 Node 事件模擬而視為已驗收。
+- 獨立唯讀程式／截圖審查未發現本輪阻擋性問題；新增 11 項檢查重跑 PASS，144 組 scope 快照仍一致。這不是第二套原生指標／真機 UI 驗收。
 
 ### 透明保留的 7 項測試觀察
 
@@ -48,7 +49,8 @@
 
 - [互動 Preview](../../preview/RRCC-Hantang-4-Center-Preview-v1.6.html)／[Owner 操作指引](../../preview/revisions/v1.6/README.md)。
 - [九張獨立截圖](../../preview/revisions/v1.6/screenshots/)：四中心主頁分開存檔，另有完整材料資料、展開選單、375px 工作列、右欄及左側 Library 入口；不是四中心合成圖。
-- [Publication Audit](../../preview/revisions/v1.6/publication-audit.json)：待提交前常見憑證模式檢查；不是完整安全認證。
-- [GitHub Readback](github-readback-v1.6.json)：待 push 後比對 branch／commit、全部 tracked blob SHA-256、PR 與 README-only main。最終 Evidence commit 再以 `--check` 讀回，不生成自我引用 SHA。
-- Feature：`feature/rrcc-hantang-ui-refinement-20261013`；沿用 [PR #1](https://github.com/jin358-cmd/RRCC/pull/1)。本輪 commit／readback 尚待完成。
+- [Publication Audit](../../preview/revisions/v1.6/publication-audit.json)：實作 commit 的 31 個顯式 staged 檔案常見憑證模式檢查 PASS、0 findings；不是完整安全認證。
+- [GitHub Readback](github-readback-v1.6.json)：實作 commit `a00014fffa7e3b3ff419c1dab991dfc34e7ee292` push 後，173 個 tracked 檔案之遠端／本機 SHA-256 全部一致。Repository／寫入權限／default branch／PR head 等 metadata 符合；PR #1 OPEN／unmerged；GitHub deployment records 為空，此結果不宣稱其他 hosting 帳戶已被全面盤點。
+- `main` 維持 README-only，SHA `5e722c043c2164da5795e5a6523a6b3dfd946d59` 未變。Feature：`feature/rrcc-hantang-ui-refinement-20261013`；沿用 [PR #1](https://github.com/jin358-cmd/RRCC/pull/1)。[實作 commit](https://github.com/jin358-cmd/RRCC/commit/a00014fffa7e3b3ff419c1dab991dfc34e7ee292) 已推送並讀回。
+- 本報告及讀回 Evidence 另以後續 Evidence commit 保留；其最終 SHA 由交付訊息提供，並再次執行只檢查、不覆寫檔案的 GitHub 讀回，避免紀錄自我引用 SHA。
 - 不合併 main；不新增 Vercel 部署、不改 Production alias、不部署 Production。Owner Review 仍待確認。
