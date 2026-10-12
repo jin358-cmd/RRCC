@@ -70,3 +70,10 @@
 - 此文件建立時，本輪尚未 Commit、Push、GitHub Readback 或重試任何部署。現有工作分支為 `feature/rrcc-hantang-ui-refinement-20261013`；仍沿用 [PR #1](https://github.com/jin358-cmd/RRCC/pull/1)。後續如有本輪版本提交，必須另補實際 SHA 與讀回結果，不沿用舊版 SHA 冒充。
 - 不合併 main、不部署 Production。本輪沒有 Vercel 重試；[v1.7 部署目標不符及取消紀錄](vercel-preview-v1.7.md) 原樣保留，狀態仍為 **NOT PASS / STOPPED FOR OWNER DIRECTION**，不存在已驗收的線上 Preview。
 - Owner 視覺驗收：**PENDING**。請檢查 V2 表單可讀性、光條強度／速度、65% 視窗比例、頂部整合框架，再決定是否接受；本機技術結果不代替 Owner 決定。
+
+### GitHub 增量提交補充
+
+- Implementation Commit：`5a78763b0c44c641a4f6c685734520a056b08b27`，已推送既有 `feature/rrcc-hantang-ui-refinement-20261013`，沿用 PR #1，未合併。
+- [Implementation Readback](github-readback-v1.8-implementation.json)：213 個遠端檔案逐一 SHA-256 與本機一致；PR head、來源分支、寫入權限、main README-only 及 main SHA 保持原值等 11 個 repository/file gates 為 true。
+- 綜合讀回腳本仍回傳 FAIL，唯一 false 為 `githubDeploymentRecordsPreviewOnly`：歷史 GitHub Deployment `7023745536`（SHA `7895fedeb16c2a7f5bf4290eff32c445a785d05e`）是上一輪已取消的 Production-target 紀錄。本輪沒有新增部署紀錄，也未削弱此檢查以掩蓋事故。**檔案讀回通過與部署邊界 NOT PASS 分開報告**。
+- 提交前僅 stage 本輪明確檔案；原始未追蹤 PNG／ZIP 及 `new1013` 參考照片未加入。常見憑證模式掃描未發現命中，但不宣稱全面資安認證。

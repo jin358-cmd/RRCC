@@ -25,6 +25,7 @@
 - 同一個 Card ID／資料來源及 12 正式 KPI＋7 個 PENDING DATA MAPPING 槽位保留。個人配置仍屬 Preview 本地偏好，不是正式 SSO／RBAC／企業隔離。
 - [最終材料畫面](material-flow-final.png)／[桌機 65% 詳情窗](detail-65-percent.png)／[最終本機回歸](local-test-final-evidence.json)／[瀏覽器互動證據](browser-interaction-evidence.json)。35 個本機測試／語法項目、12 項檔案保留檢查皆 PASS；1280／375 版面及修正後 `SOURCE_V2` CSV（18 筆、19 欄）已實際重測。首次紀錄另存，未覆寫。
 - 本輪未重試 Vercel。v1.7 已取消的 Production-target incident 與 NOT PASS 狀態保留；不合併 main、不部署 Production，Owner Review 尚待確認。
+- Implementation `5a78763b0c44c641a4f6c685734520a056b08b27` 已更新既有 Feature PR #1；213 個檔案讀回一致。整體部署 Gate 仍因歷史已取消的 Production-target 紀錄為 NOT PASS，詳見 Owner Report，未新增部署。
 
 本機重跑指令（每次使用新的 Evidence 檔名，避免覆寫歷史）：
 
