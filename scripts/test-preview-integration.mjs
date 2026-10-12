@@ -40,7 +40,7 @@ test('Stylesheet order retains baseline then applies responsive, green selection
 test('Offline packaging embeds exactly the same ordered scripts and styles as index.html', () => {
   assert.deepEqual(declaredFiles('scriptNames'), scripts);
   assert.deepEqual(declaredFiles('stylesheetNames'), styles);
-  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.6\.html/);
+  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.7\.html/);
 });
 test('Right-panel tab content has one complete wrapper after the persistent tab navigation', () => {
   const right = section(app, 'function renderRight()', 'function applyMetricComparison()');

@@ -4,7 +4,7 @@ Enterprise Management Platform · 4-Center Demonstration Preview.
 
 本分支為增量 UI Review Preview，保留「總覽／材料／驗證／管理」四中心及既有 Overview 視覺母版，未重建正式系統。
 
-開啟 `preview/RRCC-Hantang-4-Center-Preview-v1.6.html` 可操作最新版：最新動態與篩選／匯出合併上方工作列、左側 KPI 卡片櫃、紅色數量提示、下移的圓角中心導覽與綠色環境背景；原完整資料視窗、19 槽位卡片櫃、每中心配置及 Genie 互動保留。[v1.6 Review Guide](preview/revisions/v1.6/README.md) 說明操作與驗收界線。[v1.5 Review Guide](preview/revisions/v1.5/README.md)、[v1.4 Review Guide](preview/revisions/v1.4/README.md)、[v1.3 正常數值預覽](preview/revisions/v1.3/README.md) 與 [v1.2 原始來源交付](preview/revisions/v1.2/README.md) 保留，不覆寫歷史。
+開啟 `preview/RRCC-Hantang-4-Center-Preview-v1.7.html` 可操作最新版：品牌藍色 × 微幅上移，並加入僅限 Vercel Preview 的靜態包裝。[v1.7 Review Guide](preview/revisions/v1.7/README.md) 說明本輪範圍與部署界線。[v1.6 Review Guide](preview/revisions/v1.6/README.md) 保留最新動態工作列、左側 KPI 卡片櫃、圓角中心導覽與綠色環境背景說明；原完整資料視窗、19 槽位卡片櫃、每中心配置及 Genie 互動不變。[v1.5 Review Guide](preview/revisions/v1.5/README.md)、[v1.4 Review Guide](preview/revisions/v1.4/README.md)、[v1.3 正常數值預覽](preview/revisions/v1.3/README.md) 與 [v1.2 原始來源交付](preview/revisions/v1.2/README.md) 保留，不覆寫歷史。
 
 開發預覽（Node.js，無第三方套件）：
 

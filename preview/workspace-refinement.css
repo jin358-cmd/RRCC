@@ -1,4 +1,9 @@
 /* v1.6: bounded workspace refinements; shared data, KPI grid and panel motion stay intact. */
+/* v1.7: optical brand alignment only; em keeps the small lift proportional on mobile. */
+.header .brand-line .brand-cross {
+  transform: translateY(-.06em);
+}
+
 .header .center-nav {
   align-self: flex-end;
   height: 75%;

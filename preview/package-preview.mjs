@@ -26,6 +26,6 @@ html=html.replace('<link rel="stylesheet" href="preview.css">',`<style>${css}</s
 for(const file of scriptNames) html=html.replace(`  <script src="${file}" defer></script>\n`,'');
 for(const file of stylesheetNames.slice(4))html=html.replace(`  <link rel="stylesheet" href="${file}">\n`,'');
 html=html.replace('</body>',scripts.map(js=>`<script>${js.replaceAll('</script','<\\/script')}</script>`).join('\n')+'\n</body>');
-const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.6.html');
+const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.7.html');
 await writeFile(output,html,'utf8');
 console.log(`Self-contained offline preview: ${output}`);

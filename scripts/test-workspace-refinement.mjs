@@ -70,7 +70,7 @@ await test('Incremental CSS is last in index and offline packaging without alter
   assert.equal(styles.at(-1), 'workspace-refinement.css');
   const declared = [...packaging.match(/const stylesheetNames=\[([^\]]+)\]/)[1].matchAll(/'([^']+)'/g)].map(match => match[1]);
   assert.deepEqual(declared, styles);
-  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.6\.html/);
+  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.7\.html/);
   assert.match(html, /src="genie\.js" defer/);
   assert.match(html, /src="panel-motion\.js" defer/);
   assert.match(html, /src="sidebar\.js" defer/);
