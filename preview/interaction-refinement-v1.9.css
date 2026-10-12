@@ -1,0 +1,230 @@
+/* v1.9: three additional optical nudges; preserve the proportional v1.7 lift. */
+.header .brand-line .brand-cross {
+  transform: translateY(calc(-.06em - 3px));
+}
+
+/* Owner change: 65dvh × 1.25 = 81.25dvh, centered; desktop width stays 65vw.
+   This is a larger content viewport, not transform-based text scaling. */
+#detail-dialog,
+#search-dialog,
+#kpi-library-dialog,
+#kpi-settings-dialog {
+  height: 81.25dvh;
+  max-height: 81.25dvh;
+}
+
+/* The extra editing entry wraps with the existing return button on narrow screens. */
+#kpi-library-dialog .kpi-library-heading { flex-wrap: wrap; }
+#kpi-library-dialog .kpi-library-heading > div { flex: 1 1 260px; min-width: 0; }
+
+/* A deliberately non-modal editing dock makes the real Dashboard a drop target.
+   It is temporary; applying/cancelling removes the reserved workspace gutter. */
+body.kpi-layout-editing {
+  --kpi-library-dock-width: clamp(360px, 29vw, 430px);
+}
+
+body.kpi-layout-editing #stage.sidebar-refined .workspace,
+body.kpi-layout-editing .workspace {
+  padding-inline-end: calc(var(--kpi-library-dock-width) + 32px);
+}
+
+#kpi-library-dialog.kpi-library-docked {
+  z-index: 50;
+  inset-block: 0;
+  inset-inline-start: auto;
+  inset-inline-end: 16px;
+  margin-block: auto;
+  margin-inline: 0;
+  width: var(--kpi-library-dock-width);
+  max-width: var(--kpi-library-dock-width);
+  height: 81.25dvh;
+  max-height: 81.25dvh;
+  border-color: #93c5b6;
+  box-shadow: 0 16px 52px #15375435, 0 0 0 1px #ffffffa6;
+}
+
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 15px 14px;
+}
+
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading h2 { font-size: 22px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading p { font-size: 11px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading span { font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading button { padding: 8px; font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-heading > div { flex-basis: 190px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-scope-notice { padding: 12px 14px 8px; display: block; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-scope-notice strong { font-size: 15px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-scope-notice p { font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-scope-notice button { margin-top: 8px; padding: 8px 10px; font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-isolation-notice { margin: 0 14px 12px; padding: 8px 10px; font-size: 12px; }
+
+#kpi-library-dialog.kpi-library-docked .kpi-library-layout {
+  grid-template-columns: minmax(0, 1fr);
+  padding: 0 12px 16px;
+  gap: 0;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-selected-zone { display: none; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-reserve-zone { padding: 13px 11px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-zone-heading { flex-wrap: wrap; gap: 5px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-zone-heading h3 { font-size: 17px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-toolbar { gap: 10px; margin-bottom: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-filters { gap: 4px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-filters button { padding: 7px 9px; font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-search { width: 100%; min-width: 0; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-master-grid,
+#kpi-library-dialog.kpi-library-docked .kpi-library-legacy-grid { grid-template-columns: minmax(0, 1fr); }
+#kpi-library-dialog.kpi-library-docked .kpi-library-master-card { padding: 13px 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-card-title > span { font-size: 17px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-card-value strong { font-size: 26px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-footer { flex-wrap: wrap; gap: 7px; padding: 12px 14px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-footer [role="status"] { flex-basis: 100%; font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-footer button { padding: 8px 10px; font-size: 12px; }
+#kpi-library-dialog.kpi-library-docked .kpi-library-footer .primary-button { margin-inline-start: auto; }
+
+/* Selected-name chips keep two-way operations available to touch and keyboard. */
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection {
+  width: 100%;
+  flex: 1 1 100%;
+  min-width: 0;
+  padding: 11px 10px;
+  border: 1px solid #bfddce;
+  border-radius: 7px;
+  background: #f1faf5;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection > strong {
+  display: block;
+  color: #1b6951;
+  font-size: 15px;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection > p {
+  margin: 5px 0 10px;
+  color: #567767;
+  font-size: 13px;
+  line-height: 1.6;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection button {
+  max-width: 100%;
+  min-height: 38px;
+  padding: 6px 9px;
+  border: 1px solid #a8cbbb;
+  border-radius: 6px;
+  background: #ffffff;
+  color: #306d55;
+  font-size: 13px;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+#kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection button:hover {
+  border-color: #29916d;
+  background: #dff5e8;
+}
+
+.kpi-library-drag-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.kpi-library-drag-actions button,
+[data-library-dock] {
+  border: 1px solid #8abda9;
+  border-radius: 6px;
+  background: #edf9f3;
+  color: #117450;
+  padding: 9px 12px;
+  font-size: 14px;
+}
+.kpi-library-drag-help {
+  margin: 0 14px 12px;
+  padding: 10px 12px;
+  border: 1px dashed #8ebba9;
+  border-radius: 7px;
+  background: #f1fbf5;
+  color: #376650;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+body.kpi-layout-editing #kpis {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  min-height: 9rem;
+  border: 1px dashed #8abda9;
+  border-radius: 10px;
+  padding: 10px;
+  background: #eef9f4a6;
+  align-content: start;
+}
+body.kpi-layout-editing #kpis.drag-over {
+  border-color: #008e67;
+  box-shadow: 0 0 0 3px #38bb9029;
+  background: #e1f5e9;
+}
+body.kpi-layout-editing #kpis .kpi-card[draggable="true"] { cursor: grab; }
+body.kpi-layout-editing #kpis .kpi-card[draggable="true"]:active { cursor: grabbing; }
+body.kpi-layout-editing #kpis .kpi-card[draggable="true"]:focus-visible { outline: 3px solid #14835f; outline-offset: 3px; }
+body.kpi-layout-editing #kpis .kpi-card.is-dragging { opacity: .65; border-color: #0d9973; }
+body.kpi-layout-editing #kpis .kpi-card { flex-direction: column; gap: .4rem; }
+
+@media (max-width: 1280px) {
+  body.kpi-layout-editing .chart-row,
+  body.kpi-layout-editing .table-row { grid-template-columns: minmax(0, 1fr); }
+  body.kpi-layout-editing .workspace-toolbar { flex-wrap: wrap; }
+  body.kpi-layout-editing .hero-copy { max-width: 100%; }
+  body.kpi-layout-editing .hero-motto { display: none; }
+}
+
+/* Standard dialogs retain the existing readable small-screen dimensions. */
+@media (max-width: 960px) {
+  #detail-dialog,
+  #search-dialog,
+  #kpi-library-dialog,
+  #kpi-settings-dialog { height: 92dvh; max-height: 92dvh; }
+
+  body.kpi-layout-editing { --kpi-library-dock-width: clamp(320px, 44vw, 430px); }
+  body.kpi-layout-editing #kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  body.kpi-layout-editing #kpis .kpi-card { padding: .7rem; }
+}
+
+/* Phone editing is a bottom sheet. Buttons/keyboard offer the same operations
+   without requiring a precision drag into the remaining upper viewport. */
+@media (max-width: 640px) {
+  #detail-dialog,
+  #search-dialog,
+  #kpi-library-dialog,
+  #kpi-settings-dialog { height: 94dvh; max-height: 94dvh; }
+
+  body.kpi-layout-editing #stage.sidebar-refined .workspace,
+  body.kpi-layout-editing .workspace {
+    padding-inline-end: var(--content-gutter);
+    padding-bottom: calc(46dvh + 24px);
+  }
+  #kpi-library-dialog.kpi-library-docked {
+    inset-block-start: auto;
+    inset-block-end: 7px;
+    inset-inline: 7px;
+    margin: 0;
+    width: calc(100vw - 14px);
+    max-width: calc(100vw - 14px);
+    height: 46dvh;
+    max-height: 46dvh;
+    border-radius: 12px 12px 8px 8px;
+  }
+  #kpi-library-dialog.kpi-library-docked .kpi-library-heading { padding: 10px 12px; }
+  #kpi-library-dialog.kpi-library-docked .kpi-library-heading h2 { font-size: 19px; }
+  #kpi-library-dialog.kpi-library-docked .kpi-library-heading p { display: none; }
+  #kpi-library-dialog.kpi-library-docked .kpi-library-heading span { font-size: 11px; }
+  #kpi-library-dialog:not(.kpi-library-docked) .kpi-library-heading > div { flex-basis: 100%; }
+  #kpi-library-dialog.kpi-library-docked .kpi-library-dock-selection button { min-height: 40px; }
+  body.kpi-layout-editing #kpis { grid-template-columns: minmax(0, 1fr); }
+  body.kpi-layout-editing #kpis .kpi-card { flex-direction: row; min-height: 9rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.kpi-layout-editing #kpis,
+  #kpi-library-dialog.kpi-library-docked { scroll-behavior: auto; }
+}

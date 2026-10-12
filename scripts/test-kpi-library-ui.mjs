@@ -2,11 +2,13 @@
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
+import {pathToFileURL} from 'node:url';
 
 const code = readFileSync(new URL('../preview/kpi-library.js', import.meta.url), 'utf8');
 const css = readFileSync(new URL('../preview/kpi-library.css', import.meta.url), 'utf8');
 const registry = JSON.parse(readFileSync(new URL('../data/demo/rrcc-kpi-master-registry.json', import.meta.url), 'utf8'));
 const plain = value => JSON.parse(JSON.stringify(value));
+const runAsMain = import.meta.url === pathToFileURL(process.argv[1] || '').href;
 
 class Element {
   constructor(tag, doc) { this.tagName = tag.toUpperCase(); this.doc = doc; this.children = []; this.attributes = {}; this.dataset = {}; this.listeners = {}; this.parentNode = null; this.className = ''; this.open = false; this.value = ''; this.id = ''; this.disabled = false; this.checked = false; this.textContent = ''; }
@@ -22,6 +24,7 @@ class Element {
   }
   hasAttribute(key) { return Object.hasOwn(this.attributes, key); }
   getAttribute(key) { return this.attributes[key] ?? null; }
+  removeAttribute(key) { delete this.attributes[key]; if (key.startsWith('data-')) delete this.dataset[key.slice(5).replace(/-([a-z])/g, (_, character) => character.toUpperCase())]; }
   get classList() {
     return {
       add: (...names) => { this.className = [...new Set([...this.className.split(/\s+/), ...names])].join(' ').trim(); },
@@ -45,6 +48,7 @@ class Element {
   addEventListener(type, callback) { (this.listeners[type] ??= []).push(callback); }
   focus(options) { this.doc.activeElement = this; this.focusOptions = options; }
   showModal() { this.open = true; }
+  show() { this.open = true; }
   close() { this.open = false; this.emit('close', this); }
   emit(type, target, extra = {}) {
     const event = {type, target, defaultPrevented: false, propagationStopped: false, preventDefault() { this.defaultPrevented = true; }, stopPropagation() { this.propagationStopped = true; }, ...extra};
@@ -64,9 +68,10 @@ class Element {
   }
 }
 
-function fixture({initial = '{}', blocked = false, writeBlocked = false, actor, specifyIdentity = false, scopePending = false} = {}) {
+function fixture({initial = '{}', blocked = false, writeBlocked = false, actor, specifyIdentity = false, scopePending = false, withDashboard = false} = {}) {
   const doc = {activeElement: null, createElement: tag => new Element(tag, doc)};
   doc.body = new Element('body', doc);
+  doc.getElementById = id => doc.body.descendants().find(node => node.id === id) || null;
   doc.activeElement = new Element('button', doc);
   const storage = new Map([['rrcc-kpi-library-v1', initial]]);
   const localStorage = {getItem(key) { if (blocked) throw Error('Storage unavailable'); return storage.get(key) || null; }, setItem(key, value) { if (blocked || writeBlocked) throw Error('Storage write unavailable'); storage.set(key, value); }};
@@ -76,9 +81,17 @@ function fixture({initial = '{}', blocked = false, writeBlocked = false, actor, 
   vm.runInNewContext(code, {window, document: doc, localStorage, CSS: {escape: value => value}}, {filename: 'preview/kpi-library.js'});
   const api = window.RRCC_KPI_LIBRARY;
   const catalog = [...Array.from({length: 8}, (_, index) => ({metricId: `overview-${index}`, label: `既有指標 ${index}`, value: `${100 + index}`, unit: '項'})), ...registry.cards.filter(card => card.formalName).map((card, index) => ({cardId: card.cardId, metricId: card.cardId, label: card.formalName, value: scopePending ? 'NO DATA' : `${1000 + index}`, unit: card.unit, detail: {unavailable: scopePending, libraryData: {status: scopePending ? 'PENDING DATA MAPPING' : card.status}}}))];
-  const applied = [], switched = [];
-  const open = (center = 'overview', mode = 'demo') => { api.open(center, catalog, {mode, centerLabel: center, apply: (...args) => applied.push(args), useSource: () => switched.push('source')}); return doc.body.children[0]; };
-  const dialog = () => doc.body.children[0];
+  const applied = [], switched = [], previewed = [], finished = [];
+  let centerScope = 'overview', modeScope = 'demo';
+  const main = withDashboard ? new Element('section', doc) : null;
+  if (main) { main.id = 'kpis'; doc.body.append(main); }
+  const renderDashboard = () => { if (main) { main.innerHTML = api.visible(centerScope, catalog, modeScope).map(index => `<button class="kpi-card" data-metric-id="${catalog[index].cardId || catalog[index].metricId}">${catalog[index].label}</button>`).join(''); api.refreshDashboard(); } };
+  const open = (center = 'overview', mode = 'demo') => {
+    centerScope = center; modeScope = mode;
+    api.open(center, catalog, {mode, centerLabel: center, apply: (...args) => { applied.push(args); renderDashboard(); }, useSource: () => switched.push('source'), ...(main ? {preview: indices => { previewed.push(plain(indices)); renderDashboard(); }, finish: () => { finished.push('finish'); renderDashboard(); }} : {})});
+    renderDashboard(); return doc.getElementById('kpi-library-dialog');
+  };
+  const dialog = () => doc.getElementById('kpi-library-dialog');
   const get = selector => { const node = dialog().querySelector(selector); assert.ok(node, `missing ${selector}`); return node; };
   const click = name => dialog().emit('click', get(`[data-library-${name}]`));
   const operation = (name, id) => { const button = dialog().querySelectorAll(`[data-library-id="${id}"]`).find(node => node.dataset.libraryOperation === name); assert.ok(button); return dialog().emit('click', button); };
@@ -94,11 +107,13 @@ function fixture({initial = '{}', blocked = false, writeBlocked = false, actor, 
     const drop = dialog().emit('drop', target, {dataTransfer: data});
     return {data, over, drop};
   };
-  return {window, doc, storage, catalog, api, legacy, applied, switched, open, dialog, get, click, operation, toggle, ids, masterIds, key, drag};
+  return {window, doc, storage, catalog, api, legacy, applied, switched, previewed, finished, main, renderDashboard, open, dialog, get, click, operation, toggle, ids, masterIds, key, drag};
 }
 
+export {Element, fixture};
+
 const results = [];
-function test(name, run) { try { run(); results.push({name, status: 'PASS'}); } catch (error) { results.push({name, status: 'FAIL', error: error.stack}); } }
+function test(name, run) { if (!runAsMain) return; try { run(); results.push({name, status: 'PASS'}); } catch (error) { results.push({name, status: 'FAIL', error: error.stack}); } }
 
 test('Registry main catalog is exactly 19 slots, separately from eight legacy cards', () => { const f = fixture(); f.open(); assert.equal(f.masterIds().length, 19); assert.equal(f.dialog().querySelectorAll('[data-library-toggle]').length, 27); assert.equal(f.get('[data-library-zone="main"]').querySelectorAll('[data-library-item]').length, 6); assert.match(f.dialog().html, /既有中心展示卡（不列入 19 張 Master）/); });
 test('Defaults preserve previous six-card selection, and settings visible delegates to Library', () => { const f = fixture(); assert.deepEqual(plain(f.api.visible('overview', f.catalog)), [0, 1, 2, 3, 4, 5]); assert.equal(f.window.RRCC_KPI_SETTINGS.visible, f.api.visible); assert.equal(f.window.RRCC_KPI_SETTINGS.open, f.legacy.open); });
@@ -115,7 +130,7 @@ test('Tenant, user, and role each produce a different preference key', () => { c
 test('Identity-scoped preference does not leak to another tenant in a fresh runtime', () => { const actor = {tenantId: 'A', userId: 'owner', role: 'reviewer', allowedCardIds: ['RRCC-KPI-001', 'RRCC-KPI-002']}; const f = fixture({actor}); f.open(); f.toggle('RRCC-KPI-001', false); f.click('save'); const other = fixture({initial: f.storage.get('rrcc-kpi-library-v1'), actor: {...actor, tenantId: 'B'}}); assert.deepEqual(plain(other.api.visible('overview', other.catalog)), [8, 9]); });
 test('Explicit identity allowlist filters displayed values and visible layout', () => { const f = fixture({actor: {tenantId: 'A', userId: 'U', role: 'R', allowedCardIds: ['RRCC-KPI-009']}}); assert.deepEqual(plain(f.api.visible('overview', f.catalog)), [16]); f.open(); assert.equal(f.get('[data-library-toggle="RRCC-KPI-001"]').disabled, true); assert.equal(f.get('[data-library-toggle="RRCC-KPI-009"]').disabled, false); assert.equal(f.dialog().html.includes('既有中心展示卡（不列入 19 張 Master）'), false); });
 test('Supplied invalid identity fails closed rather than inheriting default owner access', () => { for (const actor of [null, {}, {tenantId: 'A', userId: 'U', role: 'R'}, {tenantId: 'A', userId: 'U', role: 'R', allowedCardIds: [1]}]) { const f = fixture({actor, specifyIdentity: true}); assert.equal(f.api.identity().valid, false); assert.deepEqual(plain(f.api.visible('overview', f.catalog)), []); f.open(); assert.equal(f.get('[data-library-save]').disabled, true); assert.equal(f.dialog().querySelectorAll('[data-library-toggle]').every(input => input.disabled), true); } });
-test('Changing identity while dialog is open prevents saving a stale tenant context', () => { const f = fixture(); f.open(); f.window.RRCC_PREVIEW_IDENTITY = {tenantId: 'B', userId: 'U', role: 'R', allowedCardIds: ['RRCC-KPI-001']}; f.click('save'); assert.equal(f.applied.length, 0); assert.equal(f.dialog().open, true); assert.match(f.dialog().html, /身分已改變/); });
+test('Changing identity while dialog is open prevents saving a stale tenant context', () => { const f = fixture(); f.open(); f.window.RRCC_PREVIEW_IDENTITY = {tenantId: 'B', userId: 'U', role: 'R', allowedCardIds: ['RRCC-KPI-001']}; f.click('save'); assert.equal(f.applied.length, 0); assert.equal(f.dialog().open, true); assert.match(f.get('[data-library-status]').textContent, /身分已改變/); });
 test('Cancel discards changes and restores opener focus', () => { const f = fixture(), opener = f.doc.activeElement; f.open(); f.operation('remove', 'overview-1'); f.click('cancel'); assert.equal(f.applied.length, 0); assert.equal(f.dialog().open, false); assert.equal(f.doc.activeElement, opener); f.open(); assert.equal(f.ids().length, 6); });
 test('Explicit source-month action closes the Library and invokes the provided callback once', () => { const f = fixture(); f.open(); f.click('source'); assert.equal(f.dialog().open, false); assert.deepEqual(f.switched, ['source']); assert.equal(f.applied.length, 0); });
 test('Up/down controls reorder without duplicate references', () => { const f = fixture(); f.open(); f.operation('up', 'overview-3'); assert.deepEqual(f.ids(), ['overview-0', 'overview-1', 'overview-3', 'overview-2', 'overview-4', 'overview-5']); f.operation('down', 'overview-3'); assert.deepEqual(f.ids(), ['overview-0', 'overview-1', 'overview-2', 'overview-3', 'overview-4', 'overview-5']); });
@@ -134,5 +149,7 @@ test('Registry and supplied catalog are never mutated by selection or ordering',
 test('Interface states the local-preview security limitation and honors reduced-motion CSS', () => { const f = fixture(); f.open(); assert.match(f.dialog().html, /並非正式 SSO、RBAC 或企業資料隔離/); assert.match(css, /prefers-reduced-motion:reduce/); assert.match(css, /@media\(max-width:600px\)/); assert.match(css, /focus-visible/); });
 
 const failed = results.filter(result => result.status === 'FAIL');
-console.log(JSON.stringify({suite: 'RRCC v1.5 unified KPI Library', evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_OR_NATIVE_POINTER_DRAG_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results}, null, 2));
-if (failed.length) process.exitCode = 1;
+if (runAsMain) {
+  console.log(JSON.stringify({suite: 'RRCC v1.5 unified KPI Library', evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_OR_NATIVE_POINTER_DRAG_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results}, null, 2));
+  if (failed.length) process.exitCode = 1;
+}

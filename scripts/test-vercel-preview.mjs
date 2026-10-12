@@ -9,7 +9,7 @@ import {fileURLToPath} from 'node:url';
 import {validateSelfContainedHtml} from './build-vercel-preview.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const artifact = 'preview/RRCC-Hantang-4-Center-Preview-v1.8.html';
+const artifact = 'preview/RRCC-Hantang-4-Center-Preview-v1.9.html';
 const results = [];
 async function test(name, action) {
   try {await action(); results.push({name, status: 'PASS'});}
@@ -41,7 +41,7 @@ await test('Vercel config selects the explicit static Preview build and only dis
   assert.equal(config.git?.deploymentEnabled, false);
   assert.doesNotMatch(JSON.stringify(config), /(?:file:\/\/|(?:^|[\s"'(])[a-z]:[\\/])/i);
 });
-await test('Packaged v1.8 artifact embeds resources and has no network data dependency', () => {
+await test('Packaged v1.9 artifact embeds resources and has no network data dependency', () => {
   validateSelfContainedHtml(html);
   assert.ok(html.includes('RRCC_KPI_LIBRARY_DATA'), 'Embedded KPI Library data is present.');
   assert.ok(html.includes('RRCC_MERGED'), 'Embedded canonical merged data is present.');

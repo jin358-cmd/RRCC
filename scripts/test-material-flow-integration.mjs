@@ -190,8 +190,8 @@ test('Authored and self-contained artifacts load identical ordered flow dependen
   assert.ok(scripts.indexOf('demo-data.js') < scripts.indexOf('material-flow.js'));
   assert.ok(scripts.indexOf('material-flow.js') < scripts.indexOf('chart-motion.js'));
   assert.ok(scripts.indexOf('chart-motion.js') < scripts.indexOf('preview.js'));
-  assert.deepEqual(styles.slice(-2), ['material-flow.css', 'interaction-refinement-v1.8.css']);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.8\.html/);
+  assert.deepEqual(styles.slice(-3), ['material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css']);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.9\.html/);
 });
 
 const failed = results.filter(result => result.status === 'FAIL');

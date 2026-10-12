@@ -229,7 +229,7 @@
     $('business-nav').innerHTML=data.sidebar.map((s,i)=>`<button data-sidebar="${i}" class="${state.sidebar===i?'active':''}" aria-current="${state.sidebar===i?'page':'false'}">${icon(s.icon)}<span class="nav-label">${escape(s.label)}</span>${s.count?`<span class="nav-count">${s.count}</span>`:''}</button>`).join('');
     $('kpis').style.setProperty('--kpi-count',Math.max(1,visibleMetrics.length));
     $('kpis').innerHTML=visibleMetrics.map(i=>{const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('')||'<div class="kpi-empty">此中心尚未選取 KPI。<button class="text-link" data-open-library>開啟 KPI 卡片櫃</button></div>';
-    $('right-panel-trigger').disabled=!visibleMetrics.length;
+    $('right-panel-trigger').disabled=!visibleMetrics.length||document.body.classList.contains('kpi-layout-editing');
     if(state.center==='material'&&window.RRCC_MATERIAL_FLOW)renderMaterialFlow();
     else {
       $('trend-title').textContent=data.trend.title;
@@ -245,14 +245,17 @@
     else{$('right-panel').innerHTML='';$('right-panel').dataset.sourceTitle='';}
     if(resetPanel||!visibleMetrics.length)panelMotion?.reset(state.metric,metricSource());else panelMotion?.sync();
     window.RRCC_CHART_MOTION?.refresh(document.querySelector('.dashboard-main'));
+    window.RRCC_KPI_LIBRARY?.refreshDashboard();
   }
   function switchCenter(id, updateHash=true) {
+    window.RRCC_KPI_LIBRARY?.cancelEditing();
     if(!window.CENTER_DATA[id]) id='overview';
     state.center=id;state.metric=defaults[id];state.sidebar=0;state.rightTab='summary';
     if(updateHash && location.hash!==`#${id}`) history.replaceState(null,'',`#${id}`);
     render(true);
   }
   function dialog(title,html) {
+    window.RRCC_KPI_LIBRARY?.cancelEditing();
     $('dialog-context').textContent=current().en.toUpperCase();
     $('dialog-title').textContent=title;$('dialog-content').innerHTML=html;
     if(!$('detail-dialog').open) $('detail-dialog').showModal();
@@ -372,10 +375,11 @@
     results=results.slice(0,9);
     $('search-results').innerHTML=results.length?results.map((r,i)=>`<button class="search-result" data-search-result="${i}">${icon(r.icon)}<span>${escape(r.label)}</span><small>${escape(centers.find(c=>c.id===r.center).label)} ↵</small></button>`).join(''):'<div class="empty-result">沒有符合的中心、功能或材料。試試「管材」或「驗證」。</div>';
   }
-  function openSearch() {search();$('search-input').value='';$('search-dialog').showModal();$('search-input').focus();}
+  function openSearch() {window.RRCC_KPI_LIBRARY?.cancelEditing();search();$('search-input').value='';$('search-dialog').showModal();$('search-input').focus();}
   function openLibrary(){
+    window.RRCC_KPI_LIBRARY?.cancelEditing();
     panelMotion?.settle();
-    window.RRCC_KPI_LIBRARY.open(state.center,current().kpis,{mode:window.RRCC_DATA_MODE,centerLabel:centers.find(c=>c.id===state.center).label,apply:(visible,persisted)=>{if(!visible.includes(state.metric))state.metric=visible[0]??0;render(true);toast(persisted?'已儲存此中心 KPI 配置；僅影響本瀏覽器的 Preview 身分。':'已套用配置；瀏覽器禁止儲存，重新整理後將恢復預設。');},useSource:()=>{setDataMode('source');openLibrary();}});
+    window.RRCC_KPI_LIBRARY.open(state.center,current().kpis,{mode:window.RRCC_DATA_MODE,centerLabel:centers.find(c=>c.id===state.center).label,preview:()=>render(true),finish:()=>render(true),apply:(visible,persisted)=>{if(!visible.includes(state.metric))state.metric=visible[0]??0;render(true);toast(persisted?'已儲存此中心 KPI 配置；僅影響本瀏覽器的 Preview 身分。':'已套用配置；瀏覽器禁止儲存，重新整理後將恢復預設。');},useSource:()=>{setDataMode('source');openLibrary();}});
   }
   $('search-button').innerHTML=icon('search');$('notification-button').innerHTML=icon('bell');$('calendar-icon').innerHTML=icon('calendar');$('export-button').innerHTML=icon('download')+'匯出報表';$('dialog-close').innerHTML=icon('close');$('search-icon').innerHTML=icon('search');$('kpi-settings-button').innerHTML=icon('layers')+'<span class="nav-label">KPI 卡片櫃</span>';
   $('kpi-settings-button').setAttribute('aria-label','開啟 KPI 卡片櫃');
@@ -394,7 +398,7 @@
     if(b.hasAttribute('data-library-detail')){openLibraryDetail();return;}
     if(b.hasAttribute('data-library-source')&&b.closest('#right-panel')){const k=current().kpis[state.metric];if(k.detail?.libraryData)dialog(`${k.label} · 完整來源與定義`,librarySourceMarkup(k,k.detail.libraryData));return;}
     if(b.dataset.center){event.preventDefault();switchCenter(b.dataset.center);return;}
-    if(b.dataset.metric!==undefined){const metric=Number(b.dataset.metric);if(window.RRCC_KPI_SETTINGS.visible(state.center,current().kpis,window.RRCC_DATA_MODE).includes(metric))panelMotion.request(metric,metricSource(metric));return;}
+    if(b.dataset.metric!==undefined){if(document.body.classList.contains('kpi-layout-editing'))return;const metric=Number(b.dataset.metric);if(window.RRCC_KPI_SETTINGS.visible(state.center,current().kpis,window.RRCC_DATA_MODE).includes(metric))panelMotion.request(metric,metricSource(metric));return;}
     if(b.dataset.sidebar!==undefined){openSidebar(Number(b.dataset.sidebar));return;}
     if(b.dataset.rightTab){state.rightTab=b.dataset.rightTab;renderRight();applyMetricComparison();return;}
     if(b.dataset.detail){openDetail(b.dataset.detail);return;}
@@ -430,15 +434,16 @@
   $('profile-button').addEventListener('click',()=>dialog('Jin Chen · 漢唐集成',`<div class="action-step"><span>JC</span><div><strong>Baseline 展示身分</strong><p>此身分為既有設計識別，尚未串接實際帳號服務。</p></div></div><div class="dialog-metrics"><div><small>工作中心</small><strong>4</strong></div><div><small>${isPresentation()?'展示案場':'來源案場'}</small><strong>${(window.RRCC_ACTIVE_DATASET||window.RRCC_MERGED).data.projects.length}</strong></div><div><small>${isPresentation()?'展示帳號':'帳號資料'}</small><strong>${isPresentation()?window.CENTER_DATA.management.kpis[0].value:'未串接'}</strong></div></div>`));
   $('export-button').addEventListener('click',exportCSV);
   $('scope-button').addEventListener('click',()=>dialog('選擇檢視案場',`<p>選擇一個案場以檢視對應的案件清單。</p><div style="margin-top:15px">${Object.entries(projectNames).map(([key,label])=>`<button class="search-result" data-project="${key}">${icon('building')}<span>${escape(label)}</span>${key===state.project?'✓':''}</button>`).join('')}</div>`));
-  document.addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b){state.project=b.dataset.project;$('project-select').value=state.project;$('detail-dialog').close();render();toast(`檢視範圍：${projectNames[state.project]}`);}});
-  $('project-select').addEventListener('change',e=>{state.project=e.target.value;render();toast(`檢視範圍：${projectNames[state.project]} · 來源 KPI 與表格已更新`);});
-  $('period-select').addEventListener('change',e=>{state.period=e.target.value;render();toast(`來源月份：${state.period} · KPI 與來源表格已更新`);});
+  document.addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b){window.RRCC_KPI_LIBRARY?.cancelEditing();state.project=b.dataset.project;$('project-select').value=state.project;$('detail-dialog').close();render();toast(`檢視範圍：${projectNames[state.project]}`);}});
+  $('project-select').addEventListener('change',e=>{const project=e.target.value;window.RRCC_KPI_LIBRARY?.cancelEditing();state.project=project;render();toast(`檢視範圍：${projectNames[state.project]} · 來源 KPI 與表格已更新`);});
+  $('period-select').addEventListener('change',e=>{const period=e.target.value;window.RRCC_KPI_LIBRARY?.cancelEditing();state.period=period;render();toast(`來源月份：${state.period} · KPI 與來源表格已更新`);});
   [$('dialog-close'),$('dialog-done')].forEach(b=>b.addEventListener('click',()=>$('detail-dialog').close()));
   for(const d of document.querySelectorAll('dialog'))d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}});
   window.addEventListener('hashchange',()=>switchCenter(location.hash.slice(1),false));window.addEventListener('resize',resize);
   $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}" ${month===state.period?'selected':''}>${month}</option>`).join('');
   $('project-select').innerHTML=Object.entries(projectNames).map(([id,label])=>`<option value="${id}">${escape(label)}</option>`).join('');
   function setDataMode(mode){
+    window.RRCC_KPI_LIBRARY?.cancelEditing();
     window.RRCC_SET_DATA_MODE?.(mode);
     state.period=window.RRCC_DATA_MONTHS.at(-1);state.project='all';state.metric=defaults[state.center];state.rightTab='summary';state.sidebar=0;
     $('period-select').innerHTML=window.RRCC_DATA_MONTHS.map(month=>`<option value="${month}">${month}</option>`).join('');

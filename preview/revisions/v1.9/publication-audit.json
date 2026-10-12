@@ -1,0 +1,135 @@
+{
+  "verifiedAt": "2026-10-12T21:25:54.563Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 25,
+  "textFiles": 21,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/verification/owner-v1.9.md",
+      "bytes": 3736,
+      "sha256": "5efafeff9957d76371ff6633b8198d538118ee9956f134c6fa7fd5433a1ded8f"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.9.html",
+      "bytes": 11767161,
+      "sha256": "3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10185,
+      "sha256": "b1fc75706e9a3251968bbe490f7adb377a4c7c0e5da672117699c4f3cbcff40f"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.9.css",
+      "bytes": 9216,
+      "sha256": "536d16229a781690d00cfcada3234ee03883ddbee443a8dafa26a0ac60e57efa"
+    },
+    {
+      "file": "preview/kpi-library.js",
+      "bytes": 32872,
+      "sha256": "b6ae89ec689c9016dbb2bcb7d6fede639b328fa60b7c4a8e7fb598039267729c"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3305,
+      "sha256": "7c00ffc2cc526ce2a50ba98060cb5f0c2f3e36f94234944cef2bb5fff626bd5f"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 60008,
+      "sha256": "b39a8feebbfe3e9a22a0bcf9c2cd00d8a66e71d92c45687eb61c6504ca90cbbc"
+    },
+    {
+      "file": "preview/revisions/v1.9/README.md",
+      "bytes": 2557,
+      "sha256": "bb443f402a3d47041505e0b9aa5a0dad4a2adc9671da3a6a32700cd509578e0a"
+    },
+    {
+      "file": "preview/revisions/v1.9/browser-interaction-evidence.json",
+      "bytes": 11351,
+      "sha256": "60e7d5276fbb3f1923917a6fca05889edbfcbb9efb6798c38e648ca155f6cd34"
+    },
+    {
+      "file": "preview/revisions/v1.9/extended-detail.png",
+      "bytes": 114359,
+      "sha256": "005732cd112def58d1ba2a179e61d0b426e319ceae1451d9366d085104c7afab"
+    },
+    {
+      "file": "preview/revisions/v1.9/library-dashboard-cards.png",
+      "bytes": 214896,
+      "sha256": "ad990e26ddfd5c1d35b46f09c4aad70b40d2e8b054a2f414faf29b69f8c7f1ae"
+    },
+    {
+      "file": "preview/revisions/v1.9/library-dashboard-editor.png",
+      "bytes": 225860,
+      "sha256": "21c30557c1a339130b8ccea73deae63d0ce0a2299653c99e294ee90aec8c00d2"
+    },
+    {
+      "file": "preview/revisions/v1.9/local-test-evidence.json",
+      "bytes": 69020,
+      "sha256": "fe594c765c44ec224b27f70dea7d4f02457c4bfa936215c9edd048c17efd1518"
+    },
+    {
+      "file": "preview/revisions/v1.9/local-test-final-evidence.json",
+      "bytes": 69183,
+      "sha256": "7e1f8b8bb2e2fdbcfdf8af20aedca800b406b192a81cb2c725f3f98a95851199"
+    },
+    {
+      "file": "preview/revisions/v1.9/mobile-detail.png",
+      "bytes": 28831,
+      "sha256": "8565882e76477c8441ed3a6637f4a9be83ed0d045ec038bc1da4b6dfc4d693a9"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6603,
+      "sha256": "8735792d2340921dbc04417d597e1ea4e32d0d30081ef2b67222a4a27d187aa4"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.9.mjs",
+      "bytes": 5056,
+      "sha256": "e87d9b7f1a05f52af86a4d8677c53ecb47e46cda51628e98f041e85f9d2db4fc"
+    },
+    {
+      "file": "scripts/test-kpi-dashboard-drag.mjs",
+      "bytes": 15098,
+      "sha256": "a04395e0f3831e7b47845d1ffbc3c9b2cc40b87c3c7587ffe6397664cd560e17"
+    },
+    {
+      "file": "scripts/test-kpi-editor-integration.mjs",
+      "bytes": 2587,
+      "sha256": "a47e0f4cd40cf05c7d122ab074de88233f8d8062de72020bc1650149cf69e371"
+    },
+    {
+      "file": "scripts/test-kpi-library-ui.mjs",
+      "bytes": 23529,
+      "sha256": "390391231def556255e56a33593acfe87e847015eac3a99c3b321b90741f097c"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12160,
+      "sha256": "20f14019921128f2491dab61632c25594360ac73d62cb2f0b60ade623f67faa0"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16794,
+      "sha256": "c6e825044eb0216ffe0e35b79d7a97e4de52946833777a15f020d1f4f0708781"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6952,
+      "sha256": "e90aad25771ffc074e5c80f6a5a29425eeda7ca5fed71d8b535c8fdb4a01498a"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11518,
+      "sha256": "26b116f7073fa573197710dcce650df0e4afdbda0d3a2f42041c544da6182510"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 4776,
+      "sha256": "b0dfc867db86c484fbf04be869f0dd974f02842403b9c3cb2e66f05fb0bb7fa5"
+    }
+  ]
+}

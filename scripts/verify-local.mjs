@@ -27,6 +27,9 @@ const commands=[
  ['scripts/test-material-flow.mjs'],
  ['scripts/test-material-flow-integration.mjs'],
  ['scripts/test-interaction-refinement-v1.8.mjs'],
+ ['scripts/test-interaction-refinement-v1.9.mjs'],
+ ['scripts/test-kpi-dashboard-drag.mjs'],
+ ['scripts/test-kpi-editor-integration.mjs'],
  ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js','material-flow.js'].map(f=>['--check',`preview/${f}`])
 ];
 const results=commands.map(args=>{
@@ -45,6 +48,7 @@ const preserved={
  'preview/RRCC-Hantang-4-Center-Preview-v1.5.html':'01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852',
  'preview/RRCC-Hantang-4-Center-Preview-v1.6.html':'60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9',
  'preview/RRCC-Hantang-4-Center-Preview-v1.7.html':'0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a',
+ 'preview/RRCC-Hantang-4-Center-Preview-v1.8.html':'1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0',
  'preview/RRCC-Hantang-4-Center-Demonstration.zip':'66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975'
 };
 const preservation=[];
@@ -52,11 +56,11 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'RRCC V2 material flow and interaction refinement v1.8',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
+const evidence={revision:'RRCC dialog height, brand and two-way Library drag refinement v1.9',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
 const outputArgument=process.argv.find(argument=>argument.startsWith('--output='));
-const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.8/local-test-evidence.json');
-const evidenceRoot=path.join(root,'preview/revisions/v1.8')+path.sep;
-if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.8.');
+const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.9/local-test-evidence.json');
+const evidenceRoot=path.join(root,'preview/revisions/v1.9')+path.sep;
+if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.9.');
 await mkdir(path.dirname(destination),{recursive:true});
 // Evidence is append-only: select a fresh output filename for a later rerun.
 await writeFile(destination,JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});
