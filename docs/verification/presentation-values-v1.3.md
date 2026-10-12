@@ -36,6 +36,8 @@ IAB 實際互動 28 項 PASS：四中心 Sidebar／KPI／Main Content／Right Pa
 
 合成資料 SHA-256：`6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732`。
 
+GitHub 實作 commit：`be2ca0bc3eb49e42c373a64a7b04d3757558cd63`。88 個已發布檔案 SHA-256 讀回一致；[讀回紀錄](github-readback-v1.3.json)。沿用 [PR #1](https://github.com/jin358-cmd/RRCC/pull/1) 提供 Owner Review，`main` 仍為 README-only 初始 commit，未合併、未部署。
+
 ## 驗收界線（仍適用）
 
 這是可點擊 Demonstration Preview，沒有建立正式帳號、材料申報、驗證判定或系統監控後端。合成數據與「正常」服務指標僅描述展示情境；不代表真實外部系統健康。原始 Genie／Sidebar 的實體裝置及跨瀏覽器限制仍沿用 v1.2 報告。不得自動合併 main 或部署 Production。
