@@ -31,6 +31,7 @@ const commands=[
  ['scripts/test-interaction-refinement-v1.10.mjs'],
  ['scripts/test-interaction-refinement-v1.11.mjs'],
  ['scripts/test-interaction-refinement-v1.12.mjs'],
+ ['scripts/test-interaction-refinement-v1.13.mjs'],
  ['scripts/test-tsmc-sustainability.mjs'],
  ['scripts/test-tsmc-ui-integration.mjs'],
  ['scripts/test-kpi-dashboard-drag.mjs'],
@@ -63,11 +64,11 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'RRCC light-gray Center navigation and removed source-summary banner v1.12',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
+const evidence={revision:'RRCC gray resting Center tabs and restored blue selection v1.13',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
 const outputArgument=process.argv.find(argument=>argument.startsWith('--output='));
-const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.12/local-test-evidence.json');
-const evidenceRoot=path.join(root,'preview/revisions/v1.12')+path.sep;
-if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.12.');
+const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.13/local-test-evidence.json');
+const evidenceRoot=path.join(root,'preview/revisions/v1.13')+path.sep;
+if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.13.');
 await mkdir(path.dirname(destination),{recursive:true});
 // Evidence is append-only: select a fresh output filename for a later rerun.
 await writeFile(destination,JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});

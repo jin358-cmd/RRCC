@@ -27,7 +27,7 @@ function declaredFiles(variable) {
 const scripts = [...html.matchAll(/<script\s+src="([^"]+)"\s+defer><\/script>/g)].map(item => item[1]);
 const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)">/g)].map(item => item[1]);
 const expectedScripts = ['center-data.js', 'demo-data.js', 'presentation-data.js', 'merged-center-data.js', 'presentation-center-data.js', 'reference-data.js', 'kpi-catalog.js', 'kpi-settings.js', 'kpi-library-data.js', 'kpi-library-binding.js', 'tsmc-reference-data.js', 'tsmc-sustainability.js', 'kpi-library.js', 'full-data-view.js', 'material-flow.js', 'chart-motion.js', 'genie.js', 'panel-motion.js', 'preview.js', 'sidebar.js'];
-const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css'];
+const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css'];
 
 test('Deferred script order binds canonical/demo/reference data before catalog and UI consumers', () => {
   assert.deepEqual(scripts, expectedScripts);
@@ -40,7 +40,7 @@ test('Stylesheet order retains baseline then applies responsive, green selection
 test('Offline packaging embeds exactly the same ordered scripts and styles as index.html', () => {
   assert.deepEqual(declaredFiles('scriptNames'), scripts);
   assert.deepEqual(declaredFiles('stylesheetNames'), styles);
-  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.12\.html/);
+  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.13\.html/);
 });
 test('Right-panel tab content has one complete wrapper after the persistent tab navigation', () => {
   const right = section(app, 'function renderRight()', 'function applyMetricComparison()');
