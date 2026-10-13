@@ -1,0 +1,28 @@
+{
+  "observedAt": "2026-10-13T00:59:03.510Z",
+  "url": "https://rrcc-dylgc54xe-tjc1.vercel.app/",
+  "requestToolbarDisabled": true,
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "bytes": 11805472,
+  "sha256": "1226079e5aadb928867bdbb4cc55337dd5a7abfbd29423053702066fc3de10a2",
+  "expectedSHA256": "1226079e5aadb928867bdbb4cc55337dd5a7abfbd29423053702066fc3de10a2",
+  "exactMatch": true,
+  "metadataStatus": 200,
+  "metadata": {
+    "schemaVersion": "1.0",
+    "previewOnly": true,
+    "sourceCommitSha": "ccfcab516029c7d7a82388bdef42ee19c492ec60",
+    "sourceBranch": "feature/rrcc-hantang-ui-refinement-20261013",
+    "deploymentEnvironment": "preview",
+    "artifact": {
+      "source": "preview/RRCC-Hantang-4-Center-Preview-v1.13.html",
+      "output": "index.html",
+      "sha256": "1226079e5aadb928867bdbb4cc55337dd5a7abfbd29423053702066fc3de10a2",
+      "sizeBytes": 11805472
+    },
+    "generatedAt": "2026-10-13T00:58:25.023Z"
+  },
+  "sourceCommitMatch": true,
+  "environmentMatch": true
+}
