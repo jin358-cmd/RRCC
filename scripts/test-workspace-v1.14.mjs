@@ -63,14 +63,14 @@ await test('Source-summary banner remains removed while source filters remain ac
   assert.match(app, /\$\('scope-button'\)\.addEventListener/);
 });
 
-await test('The versioned workspace stylesheet loads last in authored and offline sources', () => {
+await test('The retained v1.14 workspace stylesheet loads before the appended v1.15 incremental overrides', () => {
   const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)"/g)].map(match => match[1]);
-  assert.equal(styles.at(-1), 'workspace-v1.14.css');
+  assert.deepEqual(styles.slice(-4), ['workspace-v1.14.css', 'sidebar-alignment-v1.15.css', 'kpi-drafts-v1.15.css', 'workspace-v1.15.css']);
   assert.equal(styles.filter(file => file === 'workspace-v1.14.css').length, 1);
   const declared = packager.match(/const\s+stylesheetNames\s*=\s*\[([^\]]+)\]/);
   assert.ok(declared);
   assert.deepEqual([...declared[1].matchAll(/'([^']+)'/g)].map(match => match[1]), styles);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.15\.html/);
 });
 
 await test('Open and closed panel states keep the same one-column main layout', () => {

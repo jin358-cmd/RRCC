@@ -194,8 +194,8 @@ test('Authored and self-contained artifacts load identical ordered flow dependen
   assert.ok(scripts.indexOf('demo-data.js') < scripts.indexOf('material-flow.js'));
   assert.ok(scripts.indexOf('material-flow.js') < scripts.indexOf('chart-motion.js'));
   assert.ok(scripts.indexOf('chart-motion.js') < scripts.indexOf('preview.js'));
-  assert.deepEqual(styles.slice(-9), ['material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css']);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
+  assert.deepEqual(styles.slice(-12), ['material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css', 'sidebar-alignment-v1.15.css', 'kpi-drafts-v1.15.css', 'workspace-v1.15.css']);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.15\.html/);
 });
 
 const failed = results.filter(result => result.status === 'FAIL');

@@ -1,4 +1,4 @@
-/* v1.14: fixed 64px icon rail, click-pinned overlay, then workflow activation. */
+/* v1.15: shared row geometry for the fixed icon rail and click-pinned drawer. */
 (() => {
   'use strict';
 
@@ -26,13 +26,23 @@
   const hint = document.createElement('p');
   hint.className = 'sidebar-menu-hint';
   hint.textContent = '選擇功能以開啟詳細資料 · Esc 收合';
+  // The Center heading occupies exactly the marker's row. Instructions are
+  // available through the panel label, not an extra row above the navigation.
+  hint.hidden = true;
+  panel.setAttribute('aria-description', hint.textContent);
   const content = document.createElement('div');
   content.className = 'sidebar-menu-content';
   panel.append(heading, hint);
-  // Move the live scope selector, not a copy: its ID and change listener stay
-  // authoritative, and Center/data-mode renders continue to update it.
+  // Preserve the authoritative scope node/listener for existing render code,
+  // but remove this duplicate control from the visible/focusable left menu.
+  // The main toolbar remains the visible scope-selection entry point.
   const selector = sidebar.querySelector('.project-selector');
-  if (selector) panel.append(selector);
+  if (selector) {
+    selector.hidden = true;
+    selector.inert = true;
+    selector.setAttribute('aria-hidden', 'true');
+    panel.append(selector);
+  }
   panel.append(content);
   stage.append(panel);
 
@@ -41,7 +51,50 @@
   let origin = marker;
   let center = stage.dataset.center;
   let destroyed = false;
+  let scrollSyncTarget = null;
+  let activeRow = '';
   const entrySelector = '.business-nav button, .common-nav button, .sidebar-library-nav button';
+
+  function rowKey(button) {
+    if (!button) return '';
+    if (button.dataset.sidebar !== undefined) return `business:${button.dataset.sidebar}`;
+    if (button.dataset.common) return `common:${button.dataset.common}`;
+    return 'library';
+  }
+
+  function markActiveRow(key) {
+    activeRow = key;
+    for (const region of [sidebar, content]) region.querySelectorAll(entrySelector).forEach(button => {
+      button.classList.toggle('sidebar-row-highlight', Boolean(key) && rowKey(button) === key);
+    });
+  }
+
+  function onRowPointerOver(event) {
+    const button = event.target.closest('button');
+    if (button && (sidebar.contains(button) || content.contains(button))) markActiveRow(rowKey(button));
+  }
+
+  function onRowPointerOut(event) {
+    const next = event.relatedTarget?.closest?.('button');
+    if (next && (sidebar.contains(next) || content.contains(next))) markActiveRow(rowKey(next));
+    else markActiveRow('');
+  }
+
+  function onRowFocusIn(event) { onRowPointerOver(event); }
+  function onRowFocusOut(event) { onRowPointerOut(event); }
+
+  function syncScroll(source, target) {
+    const next = Number(source.scrollTop) || 0;
+    if (scrollSyncTarget === source && Math.abs((Number(target.scrollTop) || 0) - next) < 1) {
+      scrollSyncTarget = null;
+      return;
+    }
+    if (Math.abs((Number(target.scrollTop) || 0) - next) < 1) return;
+    scrollSyncTarget = target;
+    target.scrollTop = next;
+  }
+  function onRailScroll() { syncScroll(sidebar, panel); }
+  function onPanelScroll() { syncScroll(panel, sidebar); }
 
   function setExpanded(next, reason) {
     expanded = Boolean(next);
@@ -55,6 +108,8 @@
     panel.inert = !expanded;
     panel.setAttribute('aria-hidden', String(!expanded));
     marker.setAttribute('aria-expanded', String(expanded));
+    if (expanded) syncScroll(sidebar, panel);
+    else markActiveRow('');
     sidebar.querySelectorAll(entrySelector).forEach(button => {
       button.setAttribute('aria-controls', panel.id);
       button.setAttribute('aria-expanded', String(expanded));
@@ -111,7 +166,15 @@
     });
     // Only source renders rebuild the drawer. Hover/activation cannot create
     // independent menu registries that drift away from the current Center.
-    content.replaceChildren(...[...sidebar.querySelectorAll('.sidebar-library-nav, .business-nav, .common-nav')].map(cloneNavigation));
+    const groups = [...sidebar.querySelectorAll('.sidebar-library-nav, .business-nav, .sidebar-separator, .common-nav')].map(cloneNavigation);
+    if (sidebar.querySelector('.sidebar-bottom')) {
+      const tail = document.createElement('div');
+      tail.className = 'sidebar-scroll-tail';
+      tail.setAttribute('aria-hidden', 'true');
+      groups.push(tail);
+    }
+    content.replaceChildren(...groups);
+    markActiveRow(activeRow);
     if (center !== stage.dataset.center) {
       center = stage.dataset.center;
       collapse('center-change');
@@ -123,7 +186,7 @@
     if (button?.dataset.sidebar !== undefined) next = content.querySelector(`[data-sidebar="${button.dataset.sidebar}"]`);
     else if (button?.dataset.common) next = [...content.querySelectorAll('[data-common]')].find(item => item.dataset.common === button.dataset.common);
     else next = content.querySelector('[data-open-library]');
-    (next || content.querySelector('button') || selector?.querySelector('select'))?.focus({ preventScroll: true });
+    (next || content.querySelector('button'))?.focus({ preventScroll: true });
   }
 
   function onSidebarClick(event) {
@@ -167,6 +230,14 @@
   sidebar.addEventListener('pointerleave', onPointerLeave);
   panel.addEventListener('pointerenter', onPointerEnter);
   panel.addEventListener('pointerleave', onPointerLeave);
+  for (const region of [sidebar, panel]) {
+    region.addEventListener('pointerover', onRowPointerOver);
+    region.addEventListener('pointerout', onRowPointerOut);
+    region.addEventListener('focusin', onRowFocusIn);
+    region.addEventListener('focusout', onRowFocusOut);
+  }
+  sidebar.addEventListener('scroll', onRailScroll, { passive: true });
+  panel.addEventListener('scroll', onPanelScroll, { passive: true });
   document.addEventListener('pointerdown', onOutsidePointerDown);
   document.addEventListener('keydown', onEscape);
 
@@ -189,7 +260,7 @@
   window.RRCC_SIDEBAR = Object.freeze({
     expand,
     collapse,
-    getState: () => ({ expanded, pinned: expanded, pointerWithin, permanentWidth: 64, overlayWidth: overlayWidth(), activation: 'click-then-workflow' }),
+    getState: () => ({ expanded, pinned: expanded, pointerWithin, permanentWidth: 64, overlayWidth: overlayWidth(), activation: 'click-then-workflow', rowAlignment: 'shared-tokens', scrollSynchronized: true }),
     destroy() {
       destroyed = true;
       observer.disconnect();
@@ -199,6 +270,14 @@
       sidebar.removeEventListener('pointerleave', onPointerLeave);
       panel.removeEventListener('pointerenter', onPointerEnter);
       panel.removeEventListener('pointerleave', onPointerLeave);
+      for (const region of [sidebar, panel]) {
+        region.removeEventListener('pointerover', onRowPointerOver);
+        region.removeEventListener('pointerout', onRowPointerOut);
+        region.removeEventListener('focusin', onRowFocusIn);
+        region.removeEventListener('focusout', onRowFocusOut);
+      }
+      sidebar.removeEventListener('scroll', onRailScroll);
+      panel.removeEventListener('scroll', onPanelScroll);
       document.removeEventListener('pointerdown', onOutsidePointerDown);
       document.removeEventListener('keydown', onEscape);
     }

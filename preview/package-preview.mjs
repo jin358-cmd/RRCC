@@ -7,7 +7,7 @@ const dir=path.dirname(fileURLToPath(import.meta.url));
 execFileSync(process.execPath,[path.join(dir,'../scripts/generate-presentation-demo.mjs')],{stdio:'inherit'});
 execFileSync(process.execPath,[path.join(dir,'../scripts/test-kpi-library-data.mjs'),'--sync-registry'],{stdio:'inherit'});
 let html=await readFile(path.join(dir,'index.html'),'utf8');
-const stylesheetNames=['preview.css','panel-motion.css','sidebar.css','presentation-mode.css','responsive.css','kpi-settings.css','chart-motion.css','full-data-view.css','kpi-library.css','kpi-library-integration.css','workspace-refinement.css','material-flow.css','interaction-refinement-v1.8.css','interaction-refinement-v1.9.css','interaction-refinement-v1.10.css','interaction-refinement-v1.11.css','interaction-refinement-v1.12.css','interaction-refinement-v1.13.css','sidebar-click-v1.14.css','workspace-v1.14.css'];
+const stylesheetNames=['preview.css','panel-motion.css','sidebar.css','presentation-mode.css','responsive.css','kpi-settings.css','chart-motion.css','full-data-view.css','kpi-library.css','kpi-library-integration.css','workspace-refinement.css','material-flow.css','interaction-refinement-v1.8.css','interaction-refinement-v1.9.css','interaction-refinement-v1.10.css','interaction-refinement-v1.11.css','interaction-refinement-v1.12.css','interaction-refinement-v1.13.css','sidebar-click-v1.14.css','workspace-v1.14.css','sidebar-alignment-v1.15.css','kpi-drafts-v1.15.css','workspace-v1.15.css'];
 let css=(await Promise.all(stylesheetNames.map(file=>readFile(path.join(dir,file),'utf8')))).join('\n');
 const baseline=await readFile(path.join(dir,'../New/RRCC範疇三永續管理儀表板-1C.png'));
 css=css.replaceAll("url('../New/RRCC範疇三永續管理儀表板-1C.png')",`url('data:image/png;base64,${baseline.toString('base64')}')`);
@@ -19,7 +19,7 @@ const references=JSON.parse(await readFile(path.join(dir,'../data/demo/rrcc-publ
 await writeFile(path.join(dir,'reference-data.js'),`/* Public reference values, not RRCC operating data. */\nwindow.RRCC_PUBLIC_REFERENCES=${JSON.stringify(references)};\n`,'utf8');
 const tsmc=JSON.parse(await readFile(path.join(dir,'../data/demo/rrcc-tsmc-sustainability-v1.10.json'),'utf8'));
 await writeFile(path.join(dir,'tsmc-reference-data.js'),`/* Generated verified public annual data; independent from RRCC Demo sources. */\nwindow.RRCC_TSMC_DATA=${JSON.stringify(tsmc)};\n`,'utf8');
-const scriptNames=['center-data.js','demo-data.js','presentation-data.js','merged-center-data.js','presentation-center-data.js','reference-data.js','kpi-catalog.js','kpi-settings.js','kpi-library-data.js','kpi-library-binding.js','tsmc-reference-data.js','tsmc-sustainability.js','kpi-library.js','full-data-view.js','material-flow.js','chart-motion.js','genie.js','panel-motion.js','preview.js','sidebar.js'];
+const scriptNames=['center-data.js','demo-data.js','presentation-data.js','merged-center-data.js','presentation-center-data.js','reference-data.js','kpi-catalog.js','kpi-settings.js','kpi-library-data.js','kpi-library-binding.js','tsmc-reference-data.js','tsmc-sustainability.js','recommendations-v1.15.js','kpi-library.js','full-data-view.js','material-flow.js','chart-motion.js','genie.js','panel-motion.js','preview.js','sidebar.js','view-footers-v1.15.js'];
 const scripts=await Promise.all(scriptNames.map(file=>readFile(path.join(dir,file),'utf8')));
 html=html.replace('<link rel="stylesheet" href="preview.css">',`<style>${css}</style>`)
   .replace('  <link rel="stylesheet" href="panel-motion.css">\n','')
@@ -28,6 +28,6 @@ html=html.replace('<link rel="stylesheet" href="preview.css">',`<style>${css}</s
 for(const file of scriptNames) html=html.replace(`  <script src="${file}" defer></script>\n`,'');
 for(const file of stylesheetNames.slice(4))html=html.replace(`  <link rel="stylesheet" href="${file}">\n`,'');
 html=html.replace('</body>',scripts.map(js=>`<script>${js.replaceAll('</script','<\\/script')}</script>`).join('\n')+'\n</body>');
-const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.14.html');
+const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.15.html');
 await writeFile(output,html,'utf8');
 console.log(`Self-contained offline preview: ${output}`);

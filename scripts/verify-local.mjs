@@ -34,11 +34,16 @@ const commands=[
  ['scripts/test-interaction-refinement-v1.13.mjs'],
  ['scripts/test-workspace-v1.14.mjs'],
  ['scripts/test-kpi-twelve-v1.14.mjs'],
+ ['scripts/test-sidebar-alignment-v1.15.mjs'],
+ ['scripts/test-provenance-footer-v1.15.mjs'],
+ ['scripts/test-kpi-drafts-v1.15.mjs'],
+ ['scripts/test-workspace-v1.15.mjs'],
+ ['scripts/test-view-footers-v1.15.mjs'],
  ['scripts/test-tsmc-sustainability.mjs'],
  ['scripts/test-tsmc-ui-integration.mjs'],
  ['scripts/test-kpi-dashboard-drag.mjs'],
  ['scripts/test-kpi-editor-integration.mjs'],
- ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js','material-flow.js','tsmc-reference-data.js','tsmc-sustainability.js'].map(f=>['--check',`preview/${f}`])
+ ...['preview.js','merged-center-data.js','presentation-center-data.js','panel-motion.js','genie.js','sidebar.js','kpi-catalog.js','kpi-settings.js','chart-motion.js','full-data-view.js','kpi-library-data.js','kpi-library-binding.js','kpi-library.js','material-flow.js','tsmc-reference-data.js','tsmc-sustainability.js','recommendations-v1.15.js','view-footers-v1.15.js'].map(f=>['--check',`preview/${f}`])
 ];
 const results=commands.map(args=>{
  const p=spawnSync(process.execPath,args,{cwd:root,encoding:'utf8'});
@@ -66,11 +71,11 @@ for(const [file,expected] of Object.entries(preserved)){
  const actual=createHash('sha256').update(await readFile(path.join(root,file))).digest('hex');
  preservation.push({file,expected,actual,status:actual===expected?'PASS':'FAIL'});
 }
-const evidence={revision:'Hantang × RRCC compact twelve-slot overlay workspace v1.14',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
+const evidence={revision:'Hantang × RRCC aligned navigation, editable drafts and recommendation cards v1.15',verifiedAt:new Date().toISOString(),scope:'Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment',results,preservation};
 const outputArgument=process.argv.find(argument=>argument.startsWith('--output='));
-const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.14/local-test-evidence.json');
-const evidenceRoot=path.join(root,'preview/revisions/v1.14')+path.sep;
-if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.14.');
+const destination=path.resolve(root,outputArgument?.slice('--output='.length)||'preview/revisions/v1.15/local-test-evidence.json');
+const evidenceRoot=path.join(root,'preview/revisions/v1.15')+path.sep;
+if(!destination.startsWith(evidenceRoot))throw new Error('Local evidence must remain inside preview/revisions/v1.15.');
 await mkdir(path.dirname(destination),{recursive:true});
 // Evidence is append-only: select a fresh output filename for a later rerun.
 await writeFile(destination,JSON.stringify(evidence,null,2)+'\n',{flag:'wx'});

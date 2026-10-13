@@ -64,10 +64,10 @@ await test('Project, date, export retain unique IDs in the Owner v1.10 requested
 });
 await test('Workspace CSS remains before versioned overrides in index and offline packaging', () => {
   const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-10), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css']);
+  assert.deepEqual(styles.slice(-13), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css', 'sidebar-alignment-v1.15.css', 'kpi-drafts-v1.15.css', 'workspace-v1.15.css']);
   const declared = [...packaging.match(/const stylesheetNames=\[([^\]]+)\]/)[1].matchAll(/'([^']+)'/g)].map(match => match[1]);
   assert.deepEqual(declared, styles);
-  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
+  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.15\.html/);
   assert.match(html, /src="genie\.js" defer/);
   assert.match(html, /src="panel-motion\.js" defer/);
   assert.match(html, /src="sidebar\.js" defer/);

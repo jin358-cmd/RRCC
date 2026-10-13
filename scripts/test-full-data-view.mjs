@@ -192,6 +192,19 @@ await test('Source bands distinguish synthetic, public, original, and unlabelled
     const {html}=environment().render({columns:['ID'],rows:[['A']],provenance});assert(html.includes(label));
   }
 });
+await test('Complete source identity/location/linked count remain together at the table footer', () => {
+  const fixture=table(8), {html}=environment().render(fixture);
+  const footer=html.match(/<footer class="full-table-source" data-provenance-footer[\s\S]*?<\/footer>/)?.[0];
+  assert(footer, 'Semantic provenance footer is required');
+  assert.match(footer,/aria-label="資料來源與追溯資訊"/);
+  assert.match(footer,/合成 Demo · 非 RRCC／漢唐實際營運資料/);
+  assert.match(footer,/材料完整清單｜合成 Demo \/data\/materials/);
+  assert.match(footer,/8 列具來源追溯資訊 · 點選資料列查看所有欄位/);
+  assert(html.indexOf(footer)>html.indexOf('data-full-table-page'));
+  assert(html.indexOf(footer)>html.indexOf('data-full-table-feedback'));
+  assert(html.endsWith(`${footer}</section>`));
+  assert.match(css,/\.full-data-view > \[data-provenance-footer\]\s*\{[^}]*position:\s*static/);
+});
 await test('Export always receives the complete original table, not only search/page results', async () => {
   const e=environment(), fixture=table(), calls=[];
   const {root}=e.render(fixture,'external',{onExport:value=>calls.push(value)});

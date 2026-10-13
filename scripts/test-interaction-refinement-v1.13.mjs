@@ -39,14 +39,17 @@ function declaration(body, property) {
   return normalize(found[1]);
 }
 
-test('v1.13 CSS loads once, last and after v1.12 in both authored and packaged previews', () => {
+test('v1.13 active-blue override remains once after v1.12 and before later workspace overrides', () => {
   const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-4, -2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
+  const historicalIndex = styles.indexOf('interaction-refinement-v1.12.css');
+  assert.ok(historicalIndex >= 0);
+  assert.deepEqual(styles.slice(historicalIndex, historicalIndex + 2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
+  assert.deepEqual(styles.slice(-3), ['sidebar-alignment-v1.15.css', 'kpi-drafts-v1.15.css', 'workspace-v1.15.css']);
   assert.equal(styles.filter(file => file === 'interaction-refinement-v1.13.css').length, 1);
   const packaged = packager.match(/const\s+stylesheetNames\s*=\s*\[([^\]]+)\]/);
   assert.ok(packaged, 'Packaging must retain explicit CSS ordering.');
   assert.deepEqual([...packaged[1].matchAll(/'([^']+)'/g)].map(match => match[1]), styles);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.15\.html/);
 });
 
 test('Unselected default and hovered Centers retain the v1.12 light-gray surfaces and dark text', () => {

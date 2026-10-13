@@ -27,6 +27,9 @@
   <link rel="stylesheet" href="interaction-refinement-v1.13.css">
   <link rel="stylesheet" href="sidebar-click-v1.14.css">
   <link rel="stylesheet" href="workspace-v1.14.css">
+  <link rel="stylesheet" href="sidebar-alignment-v1.15.css">
+  <link rel="stylesheet" href="kpi-drafts-v1.15.css">
+  <link rel="stylesheet" href="workspace-v1.15.css">
   <script src="center-data.js" defer></script>
   <script src="demo-data.js" defer></script>
   <script src="presentation-data.js" defer></script>
@@ -39,6 +42,7 @@
   <script src="kpi-library-binding.js" defer></script>
   <script src="tsmc-reference-data.js" defer></script>
   <script src="tsmc-sustainability.js" defer></script>
+  <script src="recommendations-v1.15.js" defer></script>
   <script src="kpi-library.js" defer></script>
   <script src="full-data-view.js" defer></script>
   <script src="material-flow.js" defer></script>
@@ -47,6 +51,7 @@
   <script src="panel-motion.js" defer></script>
   <script src="preview.js" defer></script>
   <script src="sidebar.js" defer></script>
+  <script src="view-footers-v1.15.js" defer></script>
 </head>
 <body>
   <div id="viewport">
@@ -85,13 +90,14 @@
       </aside>
       <main class="workspace">
         <section class="workspace-toolbar panel" aria-label="最新動態與報表工作列">
-          <div class="toolbar-activity"><h2>最新動態</h2><div id="activity-strip" aria-label="近期活動"></div></div>
           <div class="hero-controls"><button id="scope-button" class="filter-button" aria-haspopup="dialog">全部案場<span id="scope-chevron"></span></button><label class="filter-date"><span id="calendar-icon"></span><select id="period-select" aria-label="選擇月份"><option value="2026-10">2026-10</option><option value="2026-09">2026-09</option><option value="2026-08">2026-08</option></select></label><button id="export-button" class="export-button"></button></div>
+          <div class="toolbar-activity"><h2>最新動態</h2><div id="activity-strip" aria-label="近期活動"></div></div>
         </section>
         <button id="right-panel-trigger" class="right-panel-trigger" data-restore-right aria-controls="right-panel" aria-expanded="false" aria-label="展開 KPI 詳細資訊">KPI 詳細資訊</button>
         <div class="content-layout right-closed">
           <div class="dashboard-main" data-region="main">
             <section id="kpis" class="kpis" aria-label="中心核心指標" data-region="kpis"></section>
+            <details id="reduction-guidance" class="reduction-guidance"></details>
             <div class="chart-row" data-fixed="chart-grid">
               <section class="panel trend-panel"><div class="panel-head"><h2 id="trend-title"></h2><button class="more-icon" data-detail="trend" aria-label="查看趨勢詳細資訊">···</button></div><div id="trend-legend" class="chart-legend"></div><div id="trend-chart" class="trend-chart"></div></section>
               <section class="panel distribution-panel"><div class="panel-head"><h2 id="distribution-title"></h2><button class="more-icon" data-detail="distribution" aria-label="查看分布詳細資訊">···</button></div><div id="distribution-chart" class="distribution-chart"></div></section>

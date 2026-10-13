@@ -1,0 +1,29 @@
+/* Owner draft UI only. Registry definitions and mapped Dashboard values are unchanged. */
+.kpi-library-order-actions button[data-library-operation="up"],
+.kpi-library-order-actions button[data-library-operation="down"]{display:inline-flex;align-items:center;justify-content:center;min-width:40px;min-height:38px;padding:7px 9px}
+.kpi-library-order-arrow{display:block;width:23px;height:23px;flex:none;filter:drop-shadow(0 1px 0 #17345414)}
+.kpi-owner-draft-edit{margin-top:13px;padding:9px 13px;border:1px solid #b8cde0;border-radius:6px;background:#eef5fb;color:#175c96;font-weight:650}
+.kpi-owner-draft-edit:hover:not(:disabled){background:#deedfa;border-color:#6497c3}
+.kpi-owner-draft-summary{margin:12px 0 0;padding:8px 10px;background:#fff5d7;border-left:3px solid #d3a63d;border-radius:3px;color:#795d1e;font-size:13px;overflow-wrap:anywhere}
+.kpi-owner-draft-container{margin:0 30px 22px}
+.kpi-owner-draft-editor{padding:22px 24px;border:1px solid #c2d6e7;border-radius:10px;background:#fff;box-shadow:0 5px 18px #284c7010}
+.kpi-owner-draft-editor>header{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.kpi-owner-draft-editor>header p{margin:0 0 4px;color:#976e15;font-size:12px;font-weight:700;letter-spacing:.08em}
+.kpi-owner-draft-editor h3{margin:0;color:#183c61;font-size:22px}
+.kpi-owner-draft-editor button{padding:10px 14px;border:1px solid #c3d8e8;border-radius:6px;background:#f1f6fb;color:#285d88;font-weight:650}
+.kpi-owner-draft-warning{margin:15px 0 18px;padding:11px 14px;border-left:3px solid #d2a540;background:#fff8e5;color:#7d641f;font-size:14px;line-height:1.6}
+.kpi-owner-draft-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px 22px}
+.kpi-owner-draft-fields label{display:flex;flex-direction:column;gap:7px;min-width:0;color:#3d607e;font-size:15px;font-weight:650}
+.kpi-owner-draft-fields label.wide{grid-column:1/-1}
+.kpi-owner-draft-fields input,.kpi-owner-draft-fields textarea,.kpi-owner-draft-fields select{width:100%;min-width:0;box-sizing:border-box;border:1px solid #bdd1e2;border-radius:6px;padding:10px 12px;background:#fbfdff;color:#193e60;font-family:inherit;font-size:16px;font-weight:400;line-height:1.6}
+.kpi-owner-draft-fields textarea{min-height:100px;resize:vertical;font-family:inherit;font-size:16px;font-weight:400;line-height:1.6}
+.kpi-owner-draft-fields select{font-family:inherit;font-size:16px;font-weight:400}
+.kpi-owner-draft-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:19px}
+.kpi-owner-draft-actions button[data-library-draft-operation="save"]{background:#1679bc;border-color:#1679bc;color:#fff}
+.kpi-owner-draft-fields textarea:focus-visible,.kpi-owner-draft-fields select:focus-visible{outline:3px solid #258bc5;outline-offset:3px}
+.kpi-library-docked .kpi-owner-draft-container{margin:0 14px 16px}
+.kpi-library-docked .kpi-owner-draft-fields{grid-template-columns:1fr}
+.kpi-library-docked .kpi-owner-draft-editor{padding:17px 15px}
+.kpi-library-docked .kpi-owner-draft-editor>header{align-items:flex-start;flex-wrap:wrap}
+@media(max-width:1000px){.kpi-owner-draft-container{margin:0 18px 20px}}
+@media(max-width:600px){.kpi-owner-draft-container{margin:0 11px 16px}.kpi-owner-draft-editor{padding:16px 13px}.kpi-owner-draft-editor>header{align-items:flex-start;flex-wrap:wrap}.kpi-owner-draft-editor h3{font-size:19px}.kpi-owner-draft-fields{grid-template-columns:1fr}.kpi-owner-draft-actions{flex-wrap:wrap}.kpi-owner-draft-warning{font-size:13px}}

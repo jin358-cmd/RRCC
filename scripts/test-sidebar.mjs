@@ -1,4 +1,4 @@
-/** v1.14 deterministic click-pinned navigation tests; not browser acceptance. */
+/** v1.15 deterministic aligned click-pinned navigation tests; not browser acceptance. */
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import vm from 'node:vm';
@@ -9,7 +9,7 @@ const dataKey = name => name.slice(5).replace(/-([a-z])/g, (_, letter) => letter
 
 class FakeElement {
   constructor(tag, ownerDocument) {
-    Object.assign(this, { tagName: tag.toUpperCase(), ownerDocument, parentNode: null, children: [], dataset: {}, attributes: new Map(), listeners: new Map(), className: '', id: '', _text: '', inert: false });
+    Object.assign(this, { tagName: tag.toUpperCase(), ownerDocument, parentNode: null, children: [], dataset: {}, attributes: new Map(), listeners: new Map(), className: '', id: '', _text: '', inert: false, hidden: false, scrollTop: 0 });
     this.classList = {
       add: (...names) => { this.className = [...new Set([...this.className.split(/\s+/).filter(Boolean), ...names])].join(' '); },
       remove: (...names) => { this.className = this.className.split(/\s+/).filter(value => value && !names.includes(value)).join(' '); },
@@ -141,7 +141,12 @@ function fixture() {
   item.setAttribute('aria-current', 'page'); add('span', '', 'nav-label', item, '全局總覽');
   const second = add('button', '', '', business); second.dataset.sidebar = '1'; add('span', '', 'nav-label', second, '案場總覽');
   const common = add('nav', '', 'common-nav', sidebar);
+  const separator = add('div', '', 'sidebar-separator', sidebar);
+  // Move the separator to its real DOM position, immediately before common.
+  sidebar.children.splice(sidebar.children.indexOf(separator), 1);
+  sidebar.children.splice(sidebar.children.indexOf(common), 0, separator);
   const commonItem = add('button', '', '', common, '我的任務'); commonItem.dataset.common = '我的任務';
+  add('div', '', 'sidebar-bottom', sidebar);
   const nav = add('nav', 'center-nav', '', stage);
   const center = add('button', '', 'active', nav, '總覽中心'); center.setAttribute('aria-current', 'page');
   add('h1', 'center-title', '', stage, 'Overview Center 總覽中心');
@@ -210,8 +215,9 @@ test('Library rail capture precedes its direct listener; drawer uses data-open-l
   const entry = f.panel.querySelector('[data-open-library]'); assert.ok(entry); assert.equal(entry.id, '');
   assert.equal(entry.getAttribute('aria-haspopup'), 'dialog'); f.pointerClick(entry); assert.deepEqual(f.routes, ['library']);
 });
-test('Original project selector is moved once, retains its ID and existing change handler', f => {
+test('Original scope node stays unique for synchronization but is hidden and inert in the drawer', f => {
   assert.equal(f.selector.parentNode, f.panel); assert.equal(f.document.querySelectorAll('#project-select').length, 1);
+  assert.equal(f.selector.hidden, true); assert.equal(f.selector.inert, true); assert.equal(f.selector.getAttribute('aria-hidden'), 'true');
   f.dispatch(f.project, 'change'); assert.equal(f.counters().scopeChanges, 1); assert.equal(f.document.getElementById('project-select'), f.project);
 });
 test('Drawer clones have no duplicate IDs or recursive rail bindings', f => {
@@ -260,6 +266,32 @@ test('Same-center data render retains pin and replaces clone data instead of acc
   assert.equal(f.api.getState().expanded, true); assert.equal(f.panel.querySelector('[data-sidebar="0"]').textContent, '更新總覽');
   assert.equal(f.panel.querySelectorAll('[data-sidebar]').length, 2); assert.equal(f.document.querySelectorAll('#kpi-settings-button').length, 1);
 });
+test('Drawer uses the same group order and separator, with no extra hint or scope row', f => {
+  const content = f.panel.querySelector('.sidebar-menu-content');
+  assert.deepEqual(Array.from(content.children, node => node.className), ['sidebar-library-nav', 'business-nav', 'sidebar-separator', 'common-nav', 'sidebar-scroll-tail']);
+  assert.equal(f.panel.querySelector('.sidebar-menu-hint').hidden, true);
+  assert.equal(f.panel.querySelectorAll('.sidebar-separator').length, 1);
+});
+test('Hover identifies the matching logical rail and drawer rows without opening a workflow', f => {
+  f.pointerClick(f.item); const drawer = f.panel.querySelector('[data-sidebar="1"]');
+  f.dispatch(f.second, 'pointerover'); assert.equal(drawer.classList.contains('sidebar-row-highlight'), true);
+  assert.equal(f.second.classList.contains('sidebar-row-highlight'), true); assert.deepEqual(f.routes, []);
+  f.dispatch(drawer, 'pointerout'); assert.equal(f.second.classList.contains('sidebar-row-highlight'), false);
+  f.dispatch(drawer, 'pointerover'); assert.equal(f.second.classList.contains('sidebar-row-highlight'), true);
+});
+test('Keyboard focus shares the same row highlight and clearing it cannot close the pinned menu', f => {
+  f.pointerClick(f.item); const drawer = f.panel.querySelector('[data-sidebar="0"]');
+  f.dispatch(drawer, 'focusin'); assert.equal(f.item.classList.contains('sidebar-row-highlight'), true);
+  f.dispatch(drawer, 'focusout'); assert.equal(f.item.classList.contains('sidebar-row-highlight'), false);
+  assert.equal(f.api.getState().pinned, true);
+});
+test('Scroll is synchronized in either direction without reciprocal scroll loops', f => {
+  f.pointerClick(f.item); f.sidebar.scrollTop = 72; f.dispatch(f.sidebar, 'scroll'); assert.equal(f.panel.scrollTop, 72);
+  f.dispatch(f.panel, 'scroll'); assert.equal(f.sidebar.scrollTop, 72);
+  f.panel.scrollTop = 136; f.dispatch(f.panel, 'scroll'); assert.equal(f.sidebar.scrollTop, 136);
+  f.dispatch(f.sidebar, 'scroll'); assert.equal(f.panel.scrollTop, 136);
+  assert.equal(f.api.getState().rowAlignment, 'shared-tokens'); assert.equal(f.api.getState().scrollSynchronized, true);
+});
 test('Overlay diagnostics match the CSS cap and never mutate the permanent rail', f => {
   for (const [width, expected] of [[320, 256], [390, 326], [1440, 336], [1920, 384], [2560, 400]]) {
     f.window.innerWidth = width; assert.equal(f.api.getState().overlayWidth, expected); assert.equal(f.api.getState().permanentWidth, 64);
@@ -278,5 +310,5 @@ test('CSS fixes rail, overlays drawer, uses top-Center blue hover/focus, and han
 });
 
 const failed = results.filter(result => result.status === 'FAIL');
-console.log(JSON.stringify({ suite: 'RRCC v1.14 fixed rail and click-then-workflow navigation', evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results }, null, 2));
+console.log(JSON.stringify({ suite: 'RRCC v1.15 aligned fixed rail and click-then-workflow navigation', evidenceTier: 'NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE', total: results.length, passed: results.length - failed.length, failed: failed.length, results }, null, 2));
 if (failed.length) process.exitCode = 1;

@@ -13,6 +13,7 @@ const runAsMain = import.meta.url === pathToFileURL(process.argv[1] || '').href;
 class Element {
   constructor(tag, doc) { this.tagName = tag.toUpperCase(); this.doc = doc; this.children = []; this.attributes = {}; this.dataset = {}; this.listeners = {}; this.parentNode = null; this.className = ''; this.open = false; this.value = ''; this.id = ''; this.disabled = false; this.checked = false; this.textContent = ''; }
   append(node) { node.parentNode = this; this.children.push(node); }
+  insertBefore(node, reference) { node.parentNode = this; const index = this.children.indexOf(reference); if (index < 0) this.children.push(node); else this.children.splice(index, 0, node); }
   setAttribute(key, value) {
     this.attributes[key] = String(value);
     if (key === 'id') this.id = value;
@@ -36,6 +37,7 @@ class Element {
   descendants() { return this.children.flatMap(child => [child, ...child.descendants()]); }
   matches(selector) {
     if (selector === 'button') return this.tagName === 'BUTTON';
+    if (/^[a-zA-Z][\w-]*$/.test(selector)) return this.tagName === selector.toUpperCase();
     if (selector.startsWith('.')) return this.classList.contains(selector.slice(1));
     const attribute = selector.match(/^\[([^=\]]+)(?:="([^"]*)")?\]$/);
     if (attribute) return this.hasAttribute(attribute[1]) && (attribute[2] === undefined || this.getAttribute(attribute[1]) === attribute[2]);
@@ -57,27 +59,32 @@ class Element {
   }
   set innerHTML(html) {
     this.html = html; this.children = [];
+    const decode = value => String(value).replace(/&(amp|lt|gt|quot|#39);/g, (_, entity) => ({amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'"}[entity]));
     const stack = [this], voids = ['BR', 'INPUT', 'META', 'LINK', 'IMG'];
     for (const match of html.matchAll(/<\/?([a-zA-Z][\w-]*)([^>]*)>/g)) {
       if (match[0].startsWith('</')) { if (stack.length > 1) stack.pop(); continue; }
       const node = new Element(match[1], this.doc);
-      for (const attribute of match[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)) node.setAttribute(attribute[1], attribute[2] ?? '');
+      for (const attribute of match[2].matchAll(/([\w-]+)(?:="([^"]*)")?/g)) node.setAttribute(attribute[1], decode(attribute[2] ?? ''));
+      if (node.tagName === 'TEXTAREA') node.value = decode(html.slice(match.index + match[0].length, html.indexOf('</textarea>', match.index + match[0].length)));
       stack.at(-1).append(node);
       if (!voids.includes(node.tagName) && !match[0].endsWith('/>')) stack.push(node);
     }
+    for (const select of this.descendants().filter(node => node.tagName === 'SELECT')) select.value = select.children.find(node => node.hasAttribute('selected'))?.value ?? select.children[0]?.value ?? '';
   }
 }
 
-function fixture({initial = '{}', legacyInitial, blocked = false, writeBlocked = false, actor, specifyIdentity = false, scopePending = false, withDashboard = false} = {}) {
+function fixture({initial = '{}', legacyInitial, draftInitial, blocked = false, writeBlocked = false, actor, specifyIdentity = false, scopePending = false, withDashboard = false, recommendations} = {}) {
   const doc = {activeElement: null, createElement: tag => new Element(tag, doc)};
   doc.body = new Element('body', doc);
   doc.getElementById = id => doc.body.descendants().find(node => node.id === id) || null;
   doc.activeElement = new Element('button', doc);
   const storage = new Map([['rrcc-kpi-library-v1.14', initial]]);
   if (legacyInitial !== undefined) storage.set('rrcc-kpi-library-v1', legacyInitial);
+  if (draftInitial !== undefined) storage.set('rrcc-kpi-owner-drafts-v1.15', draftInitial);
   const localStorage = {getItem(key) { if (blocked) throw Error('Storage unavailable'); return storage.get(key) || null; }, setItem(key, value) { if (blocked || writeBlocked) throw Error('Storage write unavailable'); storage.set(key, value); }};
   const legacy = {limit: 6, visible: () => [0, 1, 2, 3, 4, 5], open: () => 'legacy'};
   const window = {RRCC_KPI_LIBRARY_DATA: {registry}, RRCC_KPI_SETTINGS: legacy};
+  if (recommendations) window.RRCC_RECOMMENDATIONS = recommendations;
   if (specifyIdentity || actor !== undefined) window.RRCC_PREVIEW_IDENTITY = actor;
   vm.runInNewContext(code, {window, document: doc, localStorage, CSS: {escape: value => value}}, {filename: 'preview/kpi-library.js'});
   const api = window.RRCC_KPI_LIBRARY;
@@ -116,11 +123,11 @@ export {Element, fixture};
 const results = [];
 function test(name, run) { if (!runAsMain) return; try { run(); results.push({name, status: 'PASS'}); } catch (error) { results.push({name, status: 'FAIL', error: error.stack}); } }
 
-test('Registry main catalog is exactly 19 slots, separately from eight legacy cards', () => { const f = fixture(); f.open(); assert.equal(f.masterIds().length, 19); assert.equal(f.dialog().querySelectorAll('[data-library-toggle]').length, 27); assert.equal(f.get('[data-library-zone="main"]').querySelectorAll('[data-library-item]').length, 12); assert.match(f.dialog().html, /既有中心展示卡（不列入 19 張 Master）/); });
+test('UI catalog shows 12 confirmed plus two editable pending while immutable Registry retains 19', () => { const f = fixture(); f.open(); assert.equal(f.masterIds().length, 14); assert.equal(f.dialog().querySelectorAll('[data-library-toggle]').length, 22); assert.equal(registry.cards.length, 19); assert.equal(f.get('[data-library-zone="main"]').querySelectorAll('[data-library-item]').length, 12); assert.match(f.dialog().html, /既有中心展示卡（不列入 19 張 Master）/); });
 test('Defaults preserve previous first six cards and fill twelve, and settings visible delegates to Library', () => { const f = fixture(); assert.deepEqual(plain(f.api.visible('overview', f.catalog)), [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]); assert.equal(f.window.RRCC_KPI_SETTINGS.visible, f.api.visible); assert.equal(f.window.RRCC_KPI_SETTINGS.open, f.legacy.open); });
 test('Owner classification yields nine material and three verification cards', () => { const f = fixture(); assert.equal(f.api.filterCards(registry.cards, 'material').length, 9); assert.equal(f.api.filterCards(registry.cards, 'verification').length, 3); assert.equal(f.api.filterCards(registry.cards, 'shared').length, 12); assert.equal(f.api.filterCards(registry.cards, 'material').some(card => card.cardId === 'RRCC-KPI-009'), false); });
 test('Search supports formal name, Card ID, unit, and original calculation rule', () => { const f = fixture(); assert.deepEqual(plain(f.api.filterCards(registry.cards, 'all', 'RRCC-KPI-009').map(card => card.cardId)), ['RRCC-KPI-009']); assert.equal(f.api.filterCards(registry.cards, 'all', '來源追溯').length, 1); assert.ok(f.api.filterCards(registry.cards, 'all', 'kg').length > 1); assert.ok(f.api.filterCards(registry.cards, 'all', 'planned').length > 0); });
-test('Pending seven slots have disabled selection and no fabricated formal name or value', () => { const f = fixture(); f.open(); for (let index = 13; index <= 19; index++) { const id = `RRCC-KPI-${String(index).padStart(3, '0')}`; const input = f.get(`[data-library-toggle="${id}"]`); assert.equal(input.disabled, true); const before = f.ids(); f.toggle(id, true); assert.deepEqual(f.ids(), before); const article = f.get(`[data-library-item="${id}"]`); assert.equal(article.getAttribute('draggable'), null); } });
+test('Only two pending cards are visible, disabled for Dashboard selection and no fabricated values; five historical slots stay in Registry', () => { const f = fixture(); f.open(); for (let index = 13; index <= 14; index++) { const id = `RRCC-KPI-${String(index).padStart(3, '0')}`; const input = f.get(`[data-library-toggle="${id}"]`); assert.equal(input.disabled, true); const before = f.ids(); f.toggle(id, true); assert.deepEqual(f.ids(), before); const article = f.get(`[data-library-item="${id}"]`); assert.equal(article.getAttribute('draggable'), null); } for (let index = 15; index <= 19; index++) { const id = `RRCC-KPI-${String(index).padStart(3, '0')}`; assert.equal(f.masterIds().includes(id), false); assert.ok(registry.cards.some(card => card.cardId === id)); } });
 test('Adding to full twelve-card selection is rejected without silently replacing another card', () => { const f = fixture(); f.open(); f.toggle('RRCC-KPI-009', true); assert.deepEqual(f.ids(), ['overview-0', 'overview-1', 'overview-2', 'overview-3', 'overview-4', 'overview-5', 'overview-6', 'overview-7', 'RRCC-KPI-001', 'RRCC-KPI-002', 'RRCC-KPI-003', 'RRCC-KPI-004']); assert.match(f.get('[data-library-status]').html || f.get('[data-library-status]').textContent || f.dialog().html, /12 張上限/); });
 test('Removing and adding a canonical card preserves its single registry Card ID', () => { const f = fixture(); f.open(); f.operation('remove', 'overview-1'); f.toggle('RRCC-KPI-009', true); assert.deepEqual(f.ids(), ['overview-0', 'overview-2', 'overview-3', 'overview-4', 'overview-5', 'overview-6', 'overview-7', 'RRCC-KPI-001', 'RRCC-KPI-002', 'RRCC-KPI-003', 'RRCC-KPI-004', 'RRCC-KPI-009']); f.click('save'); assert.deepEqual(plain(f.applied[0][0]), [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16]); assert.equal(f.applied[0][1], true); });
 test('Unchecking a selected canonical card removes it, not its definition', () => { const f = fixture(); f.open(); f.operation('remove', 'overview-0'); f.toggle('RRCC-KPI-001', true); f.toggle('RRCC-KPI-001', false); assert.equal(f.ids().includes('RRCC-KPI-001'), false); assert.equal(f.masterIds().includes('RRCC-KPI-001'), true); assert.equal(registry.cards.length, 19); });
