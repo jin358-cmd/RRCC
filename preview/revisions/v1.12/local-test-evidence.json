@@ -1,0 +1,414 @@
+{
+  "revision": "RRCC light-gray Center navigation and removed source-summary banner v1.12",
+  "verifiedAt": "2026-10-13T00:42:35.319Z",
+  "scope": "Node VM/unit, build contracts and source preservation; browser evidence is separate; no deployment",
+  "results": [
+    {
+      "command": "node scripts/merge-demo-data.mjs --test",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"tests\": [\n    \"Exact duplicates deduplicated, not summed\",\n    \"Null preserved separately from absent fields\",\n    \"Conflicting numeric candidates retained; no canonical value selected\",\n    \"One-source fields and added entities retained\",\n    \"Every field carries source pointer and SHA-256\",\n    \"Exact numeric JSON tokens retained\",\n    \"JSON Pointer escaping verified\",\n    \"Composite-key collision resistance verified\",\n    \"Duplicate source-local identity fails closed\",\n    \"Potential binary64 serialization precision loss fails closed before merging\"\n  ]\n}\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/merge-demo-data.mjs --check",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS_READ_ONLY_REPRODUCIBILITY_CHECK\",\n  \"merged\": \"data/demo/rrcc-hantang-merged-v1-v2.json\",\n  \"sha256\": \"c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d\",\n  \"total\": {\n    \"inputRecords\": 144,\n    \"uniqueRecords\": 72,\n    \"duplicatesRemoved\": 72\n  },\n  \"conflicts\": 0,\n  \"checkedSourceFields\": 2394,\n  \"checkedMetadataNodes\": 14,\n  \"sourcesUnmodified\": true,\n  \"tests\": 10\n}\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-center-bindings.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"test\": \"RRCC source-bound center adapter\",\n  \"status\": \"PASS\",\n  \"scopeCases\": 12,\n  \"metadataSha256\": \"e492f89a20098efe3dca9f9278a6c475e38d0dc53e2aaa87b8aaabeb39332f39\",\n  \"canonicalSourceUnchanged\": true,\n  \"originalSourceHashesVerified\": true,\n  \"derivedProjectRowProvenanceVerified\": true,\n  \"allDisplayedTrendMonthsProvenanceVerified\": true,\n  \"cases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 210860,\n      \"usedKg\": 173988,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 86110,\n      \"usedKg\": 70813,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 67180,\n      \"usedKg\": 55337,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 57570,\n      \"usedKg\": 47838,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 242390,\n      \"usedKg\": 201454,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 97880,\n      \"usedKg\": 81680,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 79220,\n      \"usedKg\": 65831,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 65290,\n      \"usedKg\": 53943,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"rows\": 18,\n      \"utilities\": 3,\n      \"receivedKg\": 267530,\n      \"usedKg\": 221338,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 109260,\n      \"usedKg\": 90102,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 88480,\n      \"usedKg\": 73150,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"rows\": 6,\n      \"utilities\": 1,\n      \"receivedKg\": 69790,\n      \"usedKg\": 58086,\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-presentation-demo.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"test\": \"RRCC explicit synthetic presentation demo\",\n  \"status\": \"PASS\",\n  \"demoScopeCases\": 36,\n  \"preservedSourceScopeCases\": 12,\n  \"syntheticFile\": \"data/demo/rrcc-hantang-presentation-demo.json\",\n  \"syntheticSha256\": \"6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732\",\n  \"mergedSourceSha256\": \"c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d\",\n  \"inputsUnchanged\": true,\n  \"originalSourceHashesVerified\": true,\n  \"scopeCases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"materials\": 2148,\n      \"declarations\": 2148,\n      \"suppliers\": 40,\n      \"users\": 152,\n      \"verificationCases\": 390,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"D\",\n      \"materials\": 269,\n      \"declarations\": 269,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 48,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"E\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"F\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"G\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 48,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"H\",\n      \"materials\": 268,\n      \"declarations\": 268,\n      \"suppliers\": 5,\n      \"users\": 19,\n      \"verificationCases\": 49,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"materials\": 2240,\n      \"declarations\": 2240,\n      \"suppliers\": 42,\n      \"users\": 160,\n      \"verificationCases\": 420,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 6,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 6,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"D\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"E\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"F\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"G\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 52,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"H\",\n      \"materials\": 280,\n      \"declarations\": 280,\n      \"suppliers\": 5,\n      \"users\": 20,\n      \"verificationCases\": 53,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"materials\": 2360,\n      \"declarations\": 2360,\n      \"suppliers\": 45,\n      \"users\": 174,\n      \"verificationCases\": 448,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"D\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"E\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 6,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"F\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 22,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"G\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 21,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"H\",\n      \"materials\": 295,\n      \"declarations\": 295,\n      \"suppliers\": 5,\n      \"users\": 21,\n      \"verificationCases\": 56,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"all\",\n      \"materials\": 2486,\n      \"declarations\": 2486,\n      \"suppliers\": 48,\n      \"users\": 186,\n      \"verificationCases\": 469,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"A\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 24,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"B\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 24,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"C\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"D\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"E\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"F\",\n      \"materials\": 311,\n      \"declarations\": 311,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"G\",\n      \"materials\": 310,\n      \"declarations\": 310,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 58,\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-10\",\n      \"project\": \"H\",\n      \"materials\": 310,\n      \"declarations\": 310,\n      \"suppliers\": 6,\n      \"users\": 23,\n      \"verificationCases\": 59,\n      \"status\": \"PASS\"\n    }\n  ],\n  \"sourceCases\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-panel-motion.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"Node VM deterministic lifecycle tests with fake DOM and manually controlled animation adapter; browser, rendering quality and Owner acceptance not covered\",\n  \"tests\": 17,\n  \"passed\": 17,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Initial panel is closed and main area is released\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A open → blank close → Genie returns to actual A card\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B preserves A content until return finishes, then opens B automatically\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → C retains last C intent with only one old-A return\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → A cancels obsolete B, keeps A open, rejects stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A → B → close cancels queued B and finishes closed\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Opening B → C returns to B source, not previous A source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Same KPI during opening and while open never replays slide or commits\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Fixed right trigger is tracked as the actual opening/return source\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Return target uses live source geometry after resize, not opening coordinates\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Resize during A → B settles B, cleans old return and ignores stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Resize during opening or closing settles without any residual layers\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center reset cancels in-flight return, clears queued intent and stale completion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reduced Motion produces a zero-duration opening and consistent close lifecycle\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unavailable Genie module still closes; no interaction lock remains\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Renderer exception still closes and records diagnostic instead of blocking user\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Many rapid KPI requests never overlap returns/slides and final intent wins\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-sidebar.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC Sidebar v1.5 wider overlay deterministic event regression\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_NOT_BROWSER_ACCEPTANCE\",\n  \"total\": 21,\n  \"passed\": 21,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Initial state is a 64px collapsed rail with an inert project selector\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse hover opens without changing Center or navigation selection\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Expanded overlay diagnostics track viewport changes without mutating menu state\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse leave waits 140ms before collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Re-entry cancels stale close and does not flicker during internal movement\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard Tab/focus opens and retains menu after pointer leaves\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Escape collapses, returns focus, and does not re-open from that focus\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A modal retains ownership of Escape\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Touch does not rely on hover; tapping the Center marker opens and pins\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A second touch tap closes and clears the pinned state\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Mouse-click focus on a business item does not prevent leave collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Escape collapse remains closed until the pointer leaves and re-enters\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard marker focus opens, and Enter activation can collapse\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center and rebuilt business labels update via the MutationObserver\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Collapsed controls retain Chinese accessible names\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Business controls still bubble their original click to the application\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"First touch on a collapsed business icon reveals only; second touch activates its original action\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"An outside touch closes the pinned overlay without intercepting the outside control\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Space opens a collapsed Center marker with native scrolling prevented\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Destroy clears timers/listeners/observer and prevents later expansion\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"CSS keeps workspace at 64px for both states and provides reduced-motion handling\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-responsive.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.5 responsive CSS contracts\",\n  \"evidenceTier\": \"STATIC_CONTRACT_NOT_BROWSER_GEOMETRY\",\n  \"total\": 9,\n  \"passed\": 9,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Stage is full-width natural flow instead of a transformed fixed canvas\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Content consumes all width after the persistent rail without a centered maximum\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All main content types share proportional fluid typography\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Right panel uses one-third layout and closed panel releases its width\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Desktop defaults support six KPI cards and open-panel 3×2 arrangement\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"1600, 1280, 960 and 640 pixel breakpoints are explicit\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Tablet stacks chart and table sections; mobile tables scroll only within their panel\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Left visible menu-toggle button is removed while Center marker remains keyboard accessible\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Wider sidebar scales 320–360px and menu type scales 17–19px without moving the 64px rail\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-catalog.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"test\": \"RRCC v1.4 six-visible eight-card KPI catalog and public-reference separation\",\n  \"status\": \"PASS\",\n  \"demoScopeCases\": 36,\n  \"sourceScopeCases\": 12,\n  \"checkedCards\": 1404,\n  \"publicReferenceRecords\": 8,\n  \"rawSourceBinderUnchanged\": true,\n  \"originalSourceHashesVerified\": true,\n  \"publicReferenceYear\": 2024,\n  \"publicReferencesAreNotPlatformData\": true,\n  \"demoCases\": [\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"D\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"E\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"F\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"G\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"H\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"D\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"E\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"F\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"G\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"H\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"D\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"E\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"F\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"G\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"H\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"D\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"E\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"F\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"G\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-10\",\n      \"project\": \"H\",\n      \"status\": \"PASS\"\n    }\n  ],\n  \"sourceCases\": [\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-07\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-08\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"all\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"A\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"B\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"month\": \"2026-09\",\n      \"project\": \"C\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-settings.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.4 KPI settings model/list/drag/keyboard regression\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_NOT_BROWSER_OR_OS_DRAG_ACCEPTANCE\",\n  \"total\": 18,\n  \"passed\": 18,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Default visible catalog contains exactly six stable IDs\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Malformed preferences recover defaults and normalize removes unknown and duplicate IDs\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"List removal reserves a card and disables apply until a sixth is restored\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"List add at capacity swaps the selected slot instead of creating a seventh card\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"List up/down reorders without duplication or item loss\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"HTML5 drag sends an ID, permits move drop and moves to reserve\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"HTML5 full-capacity drop swaps the destination slot and retains six\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"HTML5 reorder moves an existing card while retaining the whole selected set\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dragend clears temporary drag and drop classes\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Cancel discards unsaved changes and returns focus to the opener\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Save persists ordering and a fresh runtime reads it back\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Per-mode and per-Center preferences are isolated\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unavailable storage uses session memory and accurately reports not persisted\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Null-shaped corrupt storage is repaired before save and reload retains the layout\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Array-shaped corrupt storage must never claim persistence unless reload reads the saved layout\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard grab then arrows reserves and restores a card while retaining focus\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard up/down changes ordering; Escape cancels the grab without closing settings\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reset prepares default six-card draft but does not save without apply\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-chart-motion.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "PASS module exposes a frozen refresh/cancel API\nPASS charts announce honest local-data loading and retain source values\nPASS loading transitions to bar/line/donut/dot/numerical reading animations\nPASS completion clears timers/animations and marks exact data ready\nPASS identical large charts do not replay after unrelated renders\nPASS identical replaced SVGs and status nodes never remain busy\nPASS changed datasets restart once and obsolete completion cannot win\nPASS progress bars use the same lifecycle without mutating percentages\nPASS reduced motion announces loading then instant result with no animation\nPASS unsupported Web Animations fail open to readable static charts\nPASS unsupported animation properties or line lengths never block completion\nPASS hidden panels do not run loading and read when opened\nPASS targeted cancel settles only the specified region\nPASS disconnected charts release active timers on the next refresh\nPASS hidden-document, reduced-motion change and pagehide all cancel safely\nPASS no external requests/data counters and motion CSS supports accessibility\nChart motion: 16 checks PASS (deterministic lifecycle; browser visual QA separate).\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-preview-integration.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.6 authored preview static integration contracts\",\n  \"evidenceTier\": \"STATIC_SOURCE_CONTRACT_NOT_RUNTIME_OR_BROWSER_ACCEPTANCE\",\n  \"total\": 26,\n  \"passed\": 26,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Deferred script order binds canonical/demo/reference data before catalog and UI consumers\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Stylesheet order retains baseline then applies responsive, green selection and chart lifecycle\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Offline packaging embeds exactly the same ordered scripts and styles as index.html\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Right-panel tab content has one complete wrapper after the persistent tab navigation\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Public-reference originalMetric handles null before reading its label\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Public reference replaces complete tab content without a fabricated progress bar or monthly chart\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Public source-dialog routing does not resolve public pointers against the V1/V2 dataset\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Both detailed trend and donut charts are covered by the chart-motion roots\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dialog chart refresh runs after showModal so hidden-dialog detection cannot skip the first read\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Main and right regions explicitly refresh chart lifecycle after rendering/comparison\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Accessible KPI entry opens the current Center/mode Library instead of the legacy settings dialog\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Legacy six-card settings implementation remains retained, not overwritten as Library evidence\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Default six-card presentation catalog remains retained while visible cards use stable saved IDs\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Retained legacy settings still has main/reserve, list/keyboard alternatives and its original save gate\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Canonical library binding resolves one shared card per ID/scope and excludes unnamed pending definitions\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Canonical right branch precedes generic progress/chart content and exposes honest calculation details\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Root Library source action is scoped to the right panel so the Library source-month entry keeps its own handler\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Library calculation modal retains all original calculation rows and raw record definitions\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Canonical per-row provenance resolves batch identity against actual merged indices and original source references\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Opening a canonical detail row preserves its complete raw batch, joined material, source, and row provenance\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Complete table dialogs use a full viewer and original row indices rather than dashboard preview limits\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Complete data modal has a bounded wide viewport and wraps original values without ellipsis\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"An empty personalized Dashboard keeps a Library recovery entry and disables stale panel restore\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"KPI requests and restore only open metrics still present in the saved Center/mode configuration\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Selected KPI is green and long numerical units can wrap under responsive CSS\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Left menu-toggle button is absent while business navigation and focusable Center entry remain\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-full-data-view.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.5 complete-data table viewer\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_AND_STATIC_CSS_NOT_BROWSER_ACCEPTANCE\",\n  \"total\": 21,\n  \"passed\": 21,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"API is frozen and defaults to 50 rows while retaining full count/schema metadata\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Next/previous preserve original row indices and clamp at the last page\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"100 and all page sizes expose every record rather than dashboard preview rows\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Search spans all records and filtered row click indices never shift\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Search supports NFKC/case normalization and nested badge/person values\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Empty search result is not confused with absent source records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Genuine missing records stay empty, with no fabricated values\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Duplicate references preserve separate original indices, not Array.indexOf aliases\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Frozen input records/schema/provenance remain unchanged through all interactions\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Custom cell renderer receives original object references and renders exact values\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Missing values preserve null/undefined/empty distinctions instead of inventing zero\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unknown objects or failing cell renderers retain full readable source values\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Extra fields and incomplete schemas are fully surfaced without source rewrite\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Markup escapes source headings/context/IDs while preserving complete text\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Source bands distinguish synthetic, public, original, and unlabelled records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Export always receives the complete original table, not only search/page results\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Export failure leaves readable records and can be retried\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"No export callback means an honestly disabled control rather than a fake success\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"New dialog render invalidates stale view events and delayed export feedback\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Invalid page-size values do not corrupt display state\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"CSS gives wide constrained dialogs, local scrolling, wrapping, and 16–18px data text\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-library-data.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"registrySlots\": 19,\n  \"originalDefinitions\": 12,\n  \"pendingAdditionSlots\": 7,\n  \"materialPrimary\": 9,\n  \"verificationPrimary\": 3,\n  \"sharedReferences\": 12,\n  \"scopeCases\": 12,\n  \"checkedValues\": 144,\n  \"checkedRecords\": 1296,\n  \"defensiveCases\": 7,\n  \"checks\": [\n    \"canonical registry byte-source comparison\",\n    \"original names and definitions\",\n    \"independent legacy formulas and 3-month series\",\n    \"full raw records and schema\",\n    \"scope cache object identity\",\n    \"all source and sparkline pointers\",\n    \"missing/out-of-scope fail closed\",\n    \"immutable original inputs\",\n    \"no binder or center mutation\",\n    \"missing/null/mixed-unit/zero-denominator/no-period/missing-factor/mutation safeguards\"\n  ],\n  \"scopes\": [\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"all\",\n      \"records\": 18\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"A\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"B\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-07\",\n      \"project\": \"C\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"all\",\n      \"records\": 18\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"A\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"B\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-08\",\n      \"project\": \"C\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"all\",\n      \"records\": 18\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"A\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"B\",\n      \"records\": 6\n    },\n    {\n      \"period\": \"2026-09\",\n      \"project\": \"C\",\n      \"records\": 6\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-library-ui.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.5 unified KPI Library\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_NOT_BROWSER_OR_NATIVE_POINTER_DRAG_ACCEPTANCE\",\n  \"total\": 32,\n  \"passed\": 32,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Registry main catalog is exactly 19 slots, separately from eight legacy cards\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Defaults preserve previous six-card selection, and settings visible delegates to Library\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Owner classification yields nine material and three verification cards\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Search supports formal name, Card ID, unit, and original calculation rule\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Pending seven slots have disabled selection and no fabricated formal name or value\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Adding to full six-card selection is rejected without silently replacing another card\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Removing and adding a canonical card preserves its single registry Card ID\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unchecking a selected canonical card removes it, not its definition\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Confirmed card with missing source scope remains selectable but clearly shows pending value\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Zero-card selection is persisted and never auto-filled on subsequent reads\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Individual per-mode and per-center configurations remain independent\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Tenant, user, and role each produce a different preference key\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Identity-scoped preference does not leak to another tenant in a fresh runtime\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Explicit identity allowlist filters displayed values and visible layout\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Supplied invalid identity fails closed rather than inheriting default owner access\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Changing identity while dialog is open prevents saving a stale tenant context\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Cancel discards changes and restores opener focus\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Explicit source-month action closes the Library and invokes the provided callback once\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Up/down controls reorder without duplicate references\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Synthetic HTML5 drag reorders a selected card and includes the canonical stable payload\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Synthetic drag to reserve removes from Dashboard without removing registry metadata\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Synthetic reserve-to-main drop adds a canonical card into the selected lane\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard Space / Arrow / Escape controls reorder and release the grabbed item\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard can return a canonical card to reserve then add it back\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Category filters update the Master area without rebuilding the search input\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reset only changes the draft, not saved preferences until apply\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Malformed / array-shaped / null-shaped storage recovers cleanly and persists truthfully\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unavailable storage retains session configuration and reports persisted false\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Write-only quota failure keeps newest session preference instead of restoring readable stale storage\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Normalize deduplicates and caps at six without filling saved empty selections\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Registry and supplied catalog are never mutated by selection or ordering\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Interface states the local-preview security limitation and honors reduced-motion CSS\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-library-integration.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.5 shared registry/binder integration\",\n  \"evidenceTier\": \"NODE_VM_RUNTIME_NOT_BROWSER\",\n  \"total\": 11,\n  \"passed\": 11,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Registry has 19 unique definitions; only 12 have approved formal names\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2026-07: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2026-08: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2026-09: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2026-10: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source/2026-07: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source/2026-08: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source/2026-09: all centers share identical canonical card objects without replacing existing 8\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"October canonical cards do not borrow September or synthetic business values\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Out-of-source project D cannot borrow a source A/B/C value\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Original and synthetic datasets are unchanged by every canonical resolution\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-workspace-refinement.mjs",
+      "status": "FAIL",
+      "exitCode": 1,
+      "stdout": "{\n  \"suite\": \"RRCC v1.6 workspace refinement\",\n  \"evidenceTier\": \"STATIC_SOURCE_CONTRACT_AND_NODE_VM_BINDING_NOT_BROWSER_VISUAL_ACCEPTANCE\",\n  \"total\": 11,\n  \"passed\": 10,\n  \"failed\": 1,\n  \"unchangedCenterScopeChecks\": 144,\n  \"results\": [\n    {\n      \"name\": \"All hero eyebrows are removed without leaving a missing center-number dereference\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"KPI Library has exactly one dialog entry in the left function rail\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Latest activity is one top toolbar block before the Dashboard grid\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Project, date, export retain unique IDs in the Owner v1.10 requested order\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Workspace CSS remains before versioned overrides in index and offline packaging\",\n      \"status\": \"FAIL\",\n      \"error\": \"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  [\\n-   'workspace-refinement.css',\\n    'material-flow.css',\\n    'interaction-refinement-v1.8.css',\\n    'interaction-refinement-v1.9.css',\\n    'interaction-refinement-v1.10.css',\\n    'interaction-refinement-v1.11.css',\\n+   'interaction-refinement-v1.12.css'\\n  ]\\n\"\n    },\n    {\n      \"name\": \"Green photo uses a versioned local asset and is embedded into the offline artifact\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Rail badges and dark hover/selection indicators have explicit scoped CSS contracts\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center tabs retain bottom alignment, rounded corners and dimensional shadow contracts\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All 144 Center/scope business values and provenance match the preserved v1.5 artifact\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Every scoped Center removes decorative Demo suffixes but preserves explicit detailed provenance notices\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Original canonical and presentation data files remain byte-identical after all binding checks\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-brand-alignment.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"checks\": 7,\n  \"liftEm\": -0.06,\n  \"scope\": \"static source contracts; visual acceptance not implied\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-vercel-preview.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC Vercel Preview static packaging\",\n  \"evidenceTier\": \"LOCAL_PACKAGE_TEST_NOT_DEPLOYMENT_OR_ONLINE_ACCEPTANCE\",\n  \"total\": 8,\n  \"passed\": 8,\n  \"failed\": 0,\n  \"temporaryFixtureRetained\": true,\n  \"results\": [\n    {\n      \"name\": \"Vercel config selects the explicit static Preview build and only dist output\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Packaged v1.12 artifact embeds resources and has no network data dependency\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Validator rejects external scripts, CSS imports, images and Windows resources\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Production build is refused before any dist is created\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Preview build emits exactly two files with exact SHA, branch and no local paths\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"--check reads back matching output without changing metadata or HTML bytes\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Commit mismatch and invalid commit identities fail instead of claiming a verified build\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unknown dist files are listed, retained and prevent all output overwrites\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-material-flow.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"suites\": [\n    \"V2 flow layout\",\n    \"source SHA-256\",\n    \"scope and source provenance\",\n    \"no cross-version summing\",\n    \"all raw columns and rows\",\n    \"zero and missing semantics\",\n    \"closed mass and mismatch precision\",\n    \"duplicates and unit guard\",\n    \"keyboard controls and escaped markup\",\n    \"left-to-right reading and reduced motion\"\n  ],\n  \"scopes\": 12,\n  \"independentValues\": 72,\n  \"checkedRecords\": 108,\n  \"noDataScopes\": 15\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-material-flow-integration.mjs",
+      "status": "FAIL",
+      "exitCode": 1,
+      "stdout": "{\n  \"suite\": \"RRCC v1.8 material-flow integration\",\n  \"evidenceTier\": \"STATIC_SOURCE_AND_ISOLATED_FAKE_DOM_NOT_BROWSER_ACCEPTANCE\",\n  \"total\": 11,\n  \"passed\": 10,\n  \"failed\": 1,\n  \"results\": [\n    {\n      \"name\": \"Only RRCC Material Center replaces the trend; public annual scope retains its own renderer\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Main and detail flow share period/project/mode but use distinct accessible SVG IDs\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unrelated KPI rendering preserves identical flow nodes; a changed mode/scope refreshes both hosts\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Full flow detail uses complete-table rows, summary and a source-specific provenance view\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"V2 source detail resolves canonical pointers before generic/demo source routing\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Amount/percentage, full-detail and explicit source-month controls have dedicated routes\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Lane click and Enter/Space invoke the same detail route without blank-close interception\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"V2 full-table export is identified as SOURCE even from the presentation Dashboard\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Isolated CSV route exports the complete selected source table rather than the active demo table\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dedicated flow animation bypasses generic bar transforms and receives its complete reading interval\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Authored and self-contained artifacts load identical ordered flow dependencies once\",\n      \"status\": \"FAIL\",\n      \"error\": \"Expected values to be strictly deep-equal:\\n+ actual - expected\\n\\n  [\\n-   'material-flow.css',\\n    'interaction-refinement-v1.8.css',\\n    'interaction-refinement-v1.9.css',\\n    'interaction-refinement-v1.10.css',\\n    'interaction-refinement-v1.11.css',\\n+   'interaction-refinement-v1.12.css'\\n  ]\\n\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-interaction-refinement-v1.8.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"interaction-refinement-v1.8\",\n  \"status\": \"PASS\",\n  \"verificationTier\": \"static-contracts-only\",\n  \"results\": [\n    {\n      \"name\": \"All four clicked second-level dialogs receive 65vw × 65dvh desktop dimensions\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Detail and search keep header/footer accessible and scroll only their full content\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Tablet/mobile use a readable near-full viewport instead of shrinking type\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Selected KPI LED is an animated perimeter mask, not a content-blocking overlay\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reduced motion and unsupported masking retain a static pale-green outline\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Top centers are a narrower lower shared segmented frame with no floating gaps\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"No right-panel dimensions, brand alignment, data, or non-selected card rules are replaced\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-interaction-refinement-v1.9.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"interaction-refinement-v1.9\",\n  \"status\": \"PASS\",\n  \"verificationTier\": \"static-contracts-only\",\n  \"results\": [\n    {\n      \"name\": \"Brand X receives exactly three extra pixels above its preserved proportional lift\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All four desktop second-level dialogs expand height by 25 percent without changing 65vw width\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Regular tablet and phone dialogs preserve readable 92dvh and 94dvh bounds\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Temporary non-modal editing dock reserves real Dashboard space and hides duplicate internal target\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Real Dashboard drop target and draggable cards have visible keyboard-safe feedback\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dock selected-name chips wrap across full toolbar width with readable touch and keyboard controls\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Phone editing is a bounded bottom sheet with no permanent right gutter\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Existing LED and Genie/right-panel dimensions remain untouched\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-interaction-refinement-v1.10.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"interaction-refinement-v1.10\",\n  \"status\": \"PASS\",\n  \"verificationTier\": \"static-contracts-only\",\n  \"contrast\": {\n    \"yellow\": \"#fff176\",\n    \"valueBacking\": \"#075744\",\n    \"ratio\": 7.37\n  },\n  \"results\": [\n    {\n      \"name\": \"KPI panel heading and card name enlarge with explicit bold weights and wrapping\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All panel reading contexts, rules, labels, tabs and units have larger bounded type\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"KPI source dialogs and both full/docked card library receive bold larger typography\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Selected value and units use yellow without changing green card fill or perimeter LED\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Header LED is a pointer-transparent 3px top strip scoped only to joined center nav\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"LED travels left to right then reverses on the same width-aware path\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reduced motion keeps a static centered LED and mobile text remains readable\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Brand nudges, dialog geometry, 4-center frame and data access stay untouched\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-interaction-refinement-v1.11.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"interaction-refinement-v1.11\",\n  \"status\": \"PASS\",\n  \"verificationTier\": \"static-contracts-only\",\n  \"geometry\": {\n    \"previousDesktopDvh\": 81.25,\n    \"increase\": \"15%\",\n    \"desktopDvh\": 93.4375,\n    \"tabletCapDvh\": 94,\n    \"phoneCapDvh\": 96,\n    \"phoneEditingDockDvh\": 46\n  },\n  \"selectedKpi\": {\n    \"text\": \"#fff176\",\n    \"backing\": \"transparent\",\n    \"contrastAcceptance\": \"OWNER REVIEW REQUIRED; no opaque contrast backing\"\n  },\n  \"results\": [\n    {\n      \"name\": \"Joined center lower edge gains layered depth without consuming existing top LED pseudos\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Selected KPI number and unit backing is transparent and yellow remains explicit\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All business/common/library sidebar items get a thin pointer-transparent yellow indicator\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Hover and keyboard focus expand/contract from the same fixed left origin\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Reduced motion substitutes a static full-width yellow focus/hover indicator\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Four second-layer dialogs grow 15 percent in height, retain safe margins and existing width\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Tablet and phone modal heights cap safely without sacrificing the two-way mobile editing dock\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"CSS remains scoped to requested visual controls without touching data, layout or motion ownership\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-interaction-refinement-v1.12.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"interaction-refinement-v1.12\",\n  \"evidenceTier\": \"STATIC_SOURCE_NODE_VM_AND_HASHES_NOT_BROWSER\",\n  \"status\": \"PASS\",\n  \"scope\": \"Light-gray center controls and removal of the comparison banner only; source data and selectors preserved.\",\n  \"checks\": [\n    {\n      \"name\": \"The v1.12 navigation overrides load once and last in authored and offline CSS order\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All four center labels and active accessibility identity remain unchanged\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Default, hover and active center buttons use light-gray surfaces with dark readable text\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Unselected and selected center icons both override previous blue/white treatments\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Navigation restyling leaves dimensions, top LED and lower-frame depth ownership untouched\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"The requested comparison banner DOM and all its display text are removed, not just hidden\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Monthly and annual period controls execute without requiring the removed banner element\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"The scope control, separate TSMC routing and source-reference entry remain available\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"SHA-256 preserved: data/demo/rrcc-hantang-merged-v1-v2.json\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"SHA-256 preserved: data/demo/rrcc-tsmc-sustainability-v1.10.json\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"SHA-256 preserved: data/demo/rrcc-public-references.json\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"SHA-256 preserved: data/demo/rrcc-kpi-master-registry.json\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"SHA-256 preserved: preview/RRCC-Hantang-4-Center-Preview-v1.11.html\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-tsmc-sustainability.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.10 TSMC separate annual reference adapter\",\n  \"evidenceTier\": \"NODE_VM_RUNTIME_NOT_BROWSER_OR_EXTERNAL_SOURCE_VERIFICATION\",\n  \"total\": 12,\n  \"passed\": 12,\n  \"failed\": 0,\n  \"checks\": [\n    {\n      \"name\": \"Only a separate annual scope is added; the original 2024 reference records remain byte-equivalent\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source: normal A/B/C/all bind output is unchanged, and mode changes retain the extra selector\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo: normal A/B/C/all bind output is unchanged, and mode changes retain the extra selector\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source/2024: all four centers use only traceable official annual records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"source/2025: all four centers use only traceable official annual records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2024: all four centers use only traceable official annual records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"demo/2025: all four centers use only traceable official annual records\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Supplier donut is a valid two-part partition; high-risk suppliers remain a subset, never a third segment\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Water annual trend preserves official values and units, with no interpolation or future year leakage\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"2025 contains seven verified facts; 2024 audit closure rate is not silently reused\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Original three source projects, both source datasets and the 19-card registry are unchanged\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"TSMC-to-RRCC switching restores exact prior source values rather than retaining annual state\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-tsmc-ui-integration.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"v1.10 public reference UI integration\",\n  \"evidenceTier\": \"STATIC_SOURCE_AND_NODE_VM_NOT_BROWSER\",\n  \"checks\": [\n    {\n      \"name\": \"Scope precedes date in DOM and annual/monthly select options are explicit\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"One preference namespace is used consistently by main, Library and panel requests\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Public source routing precedes active Demo lookup and CSV is labeled PUBLIC_REFERENCE\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Annual chart uses full years and single observations cannot produce invalid spark paths\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-dashboard-drag.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"RRCC v1.9 actual Dashboard ↔ KPI Library\",\n  \"evidenceTier\": \"NODE_VM_FAKE_DOM_SYNTHETIC_EVENTS_NOT_NATIVE_POINTER_DRAG_BROWSER_ACCEPTANCE\",\n  \"total\": 24,\n  \"passed\": 24,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"Explicit dock entry keeps one draft and exposes actual Dashboard drag targets\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Real Dashboard target → library reserve removes from live draft, not the registry\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Library → actual Dashboard joins at the target stable ID without duplicate sources\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Actual Dashboard native-event path also supports in-place ordering\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Forward Dashboard drag inserts before target without off-by-one ordering\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Full Dashboard rejects a seventh card without replacing an existing KPI\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Pending slots cannot initiate or complete a card transfer\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"External text/plain drops are ignored even if payload resembles a valid Card ID\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Cancel discards live preview and restores saved Dashboard / drag attributes\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Save persists exactly the current live draft and clears editing state once\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Public cancelEditing is idempotent and leaves no stale main drag capability\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Re-rendered Dashboard cards are rebound, but delegated listeners are installed only once\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard moves an actual Dashboard card to Library and back to actual Dashboard\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Keyboard ordering operates on current live cards and Escape releases without committing\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dock keyboard focus stays on visible Master cards, never hidden selected-lane copies\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Selected legacy reserve keyboard focus reopens its disclosure after redraw\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Dock offers touch/click return controls without nesting buttons inside Dashboard cards\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Escape outside a grabbed item closes dock and restores original preference\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Tenant change during drag rejects stale drop and refresh removes dock session\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Same identity with changed allowlist invalidates old draft, controls and save\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"A canceled drag cannot be reused by a newly opened center or mode\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Modal → nonmodal transition tolerates browser queued close events without finishing new dock\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Empty live Dashboard remains a valid drop target and empty save is not refilled\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"All four centers share two-way draft behavior with independently persisted preferences\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node scripts/test-kpi-editor-integration.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "{\n  \"suite\": \"v1.9 KPI editor integration\",\n  \"evidenceTier\": \"STATIC_SOURCE_CONTRACT_NOT_BROWSER\",\n  \"checks\": [\n    {\n      \"name\": \"Library previews and rollback refresh the actual Dashboard while saved preferences remain central\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Center, mode and new modal workflows discard an unsaved editor before changing context\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Filter values are captured before rollback rerenders their select nodes\",\n      \"status\": \"PASS\"\n    },\n    {\n      \"name\": \"Editing card clicks do not open a competing KPI detail panel\",\n      \"status\": \"PASS\"\n    }\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/preview.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/merged-center-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/presentation-center-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/panel-motion.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/genie.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/sidebar.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/kpi-catalog.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/kpi-settings.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/chart-motion.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/full-data-view.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/kpi-library-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/kpi-library-binding.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/kpi-library.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/material-flow.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/tsmc-reference-data.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "node --check preview/tsmc-sustainability.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "preservation": [
+    {
+      "file": "v1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json",
+      "expected": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "actual": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/RRCC_Hantang_Embedded_Demo_Data.json",
+      "expected": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "actual": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "status": "PASS"
+    },
+    {
+      "file": "v1.0/rrcc_hantang_demo_v1_OFFLINE.html",
+      "expected": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "actual": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/rrcc_hantang_dashboard_v2_OFFLINE.html",
+      "expected": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "actual": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "status": "PASS"
+    },
+    {
+      "file": "New/RRCC範疇三永續管理儀表板-1C.png",
+      "expected": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "actual": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/QA.md",
+      "expected": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "actual": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/qa-results.json",
+      "expected": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "actual": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview.html",
+      "expected": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "actual": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.5.html",
+      "expected": "01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852",
+      "actual": "01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.6.html",
+      "expected": "60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9",
+      "actual": "60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.7.html",
+      "expected": "0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a",
+      "actual": "0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.8.html",
+      "expected": "1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0",
+      "actual": "1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.9.html",
+      "expected": "3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5",
+      "actual": "3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.10.html",
+      "expected": "7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344",
+      "actual": "7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Demonstration.zip",
+      "expected": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "actual": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "status": "PASS"
+    }
+  ]
+}

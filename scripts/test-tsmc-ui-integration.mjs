@@ -8,12 +8,12 @@ const section=(start,end)=>app.slice(app.indexOf(start),app.indexOf(end,app.inde
 const checks=[];
 const test=(name,check)=>{try{check();checks.push({name,status:'PASS'});}catch(error){checks.push({name,status:'FAIL',error:error.message});}};
 test('Scope precedes date in DOM and annual/monthly select options are explicit',()=>{
- const toolbar=html.slice(html.indexOf('<section class="workspace-toolbar'),html.indexOf('<section id="sustainability-context'));
+ const toolbar=html.slice(html.indexOf('<section class="workspace-toolbar'),html.indexOf('<button id="right-panel-trigger'));
  assert.ok(toolbar.indexOf('id="scope-button"')<toolbar.indexOf('id="period-select"'));
  assert.match(app,/periods=annual\?window\.RRCC_TSMC\.years:window\.RRCC_DATA_MONTHS/);
  assert.match(app,/annual\?'選擇公開報告年度':'選擇月份'/);
- assert.match(html,/id="sustainability-context"/);
- assert.match(app,/同頁併列、來源分離/);
+ assert.doesNotMatch(html,/id="sustainability-context"/);
+ assert.doesNotMatch(app,/同頁併列、來源分離|\$\('sustainability-context'\)/);
 });
 test('One preference namespace is used consistently by main, Library and panel requests',()=>{
  assert.match(app,/function layoutMode\(\).*isTsmc\(\)\?`\$\{window\.RRCC_TSMC\.mode\}-\$\{state\.period\}`:window\.RRCC_DATA_MODE/);

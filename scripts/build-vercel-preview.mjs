@@ -6,7 +6,7 @@ import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const sourceFile = 'preview/RRCC-Hantang-4-Center-Preview-v1.11.html';
+const sourceFile = 'preview/RRCC-Hantang-4-Center-Preview-v1.12.html';
 const allowedOutputs = ['deployment-meta.json', 'index.html'];
 const windowsResource = /(?:file:\/\/|(?:^|[\s"'(])[a-z]:[\\/])/i;
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');

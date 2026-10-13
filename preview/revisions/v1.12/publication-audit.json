@@ -1,0 +1,100 @@
+{
+  "verifiedAt": "2026-10-13T00:44:18.513Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 18,
+  "textFiles": 17,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/verification/owner-v1.12.md",
+      "bytes": 2331,
+      "sha256": "a94d7a64f252cd4b5aff91cfd510e172237ed9987e140ac658e4e18a1b52a8b9"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.12.html",
+      "bytes": 11804912,
+      "sha256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10516,
+      "sha256": "71d7994945200eff530af4a617bbd042dc1951fb0ff8aeab0bec880bbb71ce88"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.12.css",
+      "bytes": 885,
+      "sha256": "b6a22d774d903c317f539f3c179c88725be1e19c09018809345125a0b2945261"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3772,
+      "sha256": "2454f26950b8092ceae4e473662001c80515d8b765d1bedfe74c30bd01ba1d60"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 62121,
+      "sha256": "d660bfcc80ca5cb24eeca385bed417e3cdc2a1dd9f9c028de7e1ce1a6b9f7d59"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-browser-evidence.json",
+      "bytes": 9586,
+      "sha256": "640bd4316074e9571fb4e2df436cf7e78d4f68b7b663a490167e9dae29a1effc"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-test-evidence-02.json",
+      "bytes": 78982,
+      "sha256": "ee157c92ff871663f61fec5bfc89d15b17fe5bc0ecb239c26fd2e9441014f819"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-test-evidence.json",
+      "bytes": 79696,
+      "sha256": "667bf5f6a07a5058b9f6fea2125a1b4198b3dd619850a385a07c4f0a3bc99535"
+    },
+    {
+      "file": "preview/revisions/v1.12/overview-local.png",
+      "bytes": 147448,
+      "sha256": "ca8cdba92999d444d2828a2c85a6c8bc5499a809e3fa3da6df98c95e52339550"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6604,
+      "sha256": "0f8038f6f3dc85fbface98acd068487713d7e790d6410953893a86ab43eedae5"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.12.mjs",
+      "bytes": 9384,
+      "sha256": "0de665882c993410ba29e58f966ee5dbe0882c8c52bbab24034792655759c724"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12612,
+      "sha256": "070aea90cc37df1e94398a3f10a85382d7431b301f7b45ed7def9a159c05d2a5"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16931,
+      "sha256": "59cdf4928683abdd1135377d1ccbeb4e47a2d0381ef6665cde03fbb4217b80c0"
+    },
+    {
+      "file": "scripts/test-tsmc-ui-integration.mjs",
+      "bytes": 3113,
+      "sha256": "81fe86ac7cdcca4cf030b9dec92e27ab40ca8435271e7eecff71e2560308aedc"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6954,
+      "sha256": "ee794bed85167ce603d710032257dd2b8bb7b97853f087639bffd088c8cd76bf"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11626,
+      "sha256": "87144802691651aee65d619f36e32388f909ed0117060a03730b3736b0ed66b1"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 5317,
+      "sha256": "95d9ff0a21102bd2455cf3bde12c2fc95f0f03f6386d7bcc5324cc6863ee68fb"
+    }
+  ]
+}

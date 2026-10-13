@@ -67,10 +67,6 @@
     $('period-select').innerHTML=periods.map(period=>`<option value="${escape(period)}">${escape(period)}${annual?' 年度':''}</option>`).join('');
     $('period-select').setAttribute('aria-label',annual?'選擇公開報告年度':'選擇月份');
     $('period-select').value=state.period;
-    const records=window.RRCC_TSMC?.records.filter(r=>String(r.year)==='2025')||[];
-    const water=records.find(r=>r.id.includes('process-water-recycling'));
-    const suppliers=records.find(r=>r.id.endsWith('-significant-suppliers')&&!r.id.includes('tier1')&&!r.id.includes('high-risk'));
-    $('sustainability-context').innerHTML=`<div><strong>V1／V2 原始示範案場</strong><span>南科 A ／ 高雄 B ／ 竹科 C</span><button class="text-link" data-demo-sites>檢視原始三案場 ↗</button></div><div><strong>台積電公開永續參考 · 最新 2025 摘要</strong><span>${water?`製程水回收率 ${escape(water.value)}%`:''}${suppliers?` ／ 關鍵供應商 ${escape(suppliers.value)} 家`:''}</span><button class="text-link" data-project="${escape(window.RRCC_TSMC?.scopeId)}">${annual?'目前範圍':'篩選公開資料 ↗'}</button></div><p>同頁併列、來源分離；企業年度數據不加總至示範案場月度工程量。</p>`;
   }
   function referenceMarkup(ids) {
     const root=window.RRCC_PUBLIC_REFERENCES,records=(root?.records||[]).filter(r=>!ids?.length||ids.includes(r.id));
