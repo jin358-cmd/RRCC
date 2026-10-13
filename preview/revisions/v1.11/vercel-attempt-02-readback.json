@@ -1,0 +1,489 @@
+{
+  "checkedAt": "2026-10-13T00:35:21.236Z",
+  "team": {
+    "id": "team_Aep4PXnmiXE5276HRkoQrHtF",
+    "name": "TJC",
+    "slug": "tjc1"
+  },
+  "project": {
+    "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+    "name": "rrcc",
+    "live": false,
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    }
+  },
+  "deployment": {
+    "id": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+    "name": "rrcc",
+    "url": "rrcc-6c2lf094l-tjc1.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1791851115689,
+    "creator": {
+      "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+      "username": "jin358-6510"
+    },
+    "project": {
+      "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+      "name": "rrcc",
+      "framework": null
+    },
+    "meta": {
+      "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+      "githubCommitSha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0",
+      "githubCommitMessage": "Record v1.11 GitHub readback and Owner verification boundaries",
+      "githubRepo": "RRCC",
+      "githubOrg": "jin358-cmd"
+    },
+    "alias": [
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "target": null,
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1791851118307,
+    "ready": 1791851124576,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "deployments": [
+    {
+      "id": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+      "name": "rrcc",
+      "url": "rrcc-6c2lf094l-tjc1.vercel.app",
+      "created": 1791851115689,
+      "state": "READY",
+      "target": null,
+      "creator": {
+        "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+        "username": "jin358-6510"
+      },
+      "meta": {
+        "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+        "githubCommitSha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0",
+        "githubCommitMessage": "Record v1.11 GitHub readback and Owner verification boundaries",
+        "githubRepo": "RRCC",
+        "githubOrg": "jin358-cmd"
+      },
+      "inspectorUrl": "https://vercel.com/tjc1/rrcc/CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+      "isRollbackCandidate": false
+    },
+    {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "name": "rrcc",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "created": 1791838349180,
+      "state": "CANCELED",
+      "target": "production",
+      "creator": {
+        "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+        "username": "jin358-6510"
+      },
+      "meta": {
+        "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+        "githubCommitSha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e",
+        "githubCommitMessage": "feat: align RRCC branding and prepare Preview-only Vercel build v1.7",
+        "githubRepo": "RRCC",
+        "githubOrg": "jin358-cmd"
+      },
+      "inspectorUrl": "https://vercel.com/tjc1/rrcc/GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "isRollbackCandidate": false
+    }
+  ],
+  "buildEvents": [
+    {
+      "created": 1791851117986,
+      "date": 1791851117986,
+      "type": "stdout",
+      "text": "Running build in Washington, D.C., USA (East) – iad1",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851117987,
+      "date": 1791851117987,
+      "type": "stdout",
+      "text": "Build machine configuration: 2 cores, 8 GB",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851118124,
+      "date": 1791851118124,
+      "type": "stdout",
+      "text": "Cloning github.com/jin358-cmd/RRCC (Branch: feature/rrcc-hantang-ui-refinement-20261013, Commit: d36672c)",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851118126,
+      "date": 1791851118126,
+      "type": "stdout",
+      "text": "Previous build caches not available.",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851120514,
+      "date": 1791851120514,
+      "type": "stdout",
+      "text": "Cloning completed: 2.389s",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851121466,
+      "date": 1791851121466,
+      "type": "stdout",
+      "text": "Running \"vercel build\"",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851121491,
+      "date": 1791851121491,
+      "type": "stderr",
+      "text": "Vercel CLI 62.7.0",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851122315,
+      "date": 1791851122315,
+      "type": "stdout",
+      "text": "Skipping \"install\" command...",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123245,
+      "date": 1791851123245,
+      "type": "stdout",
+      "text": "{",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"schemaVersion\": \"1.0\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"previewOnly\": true,",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"sourceCommitSha\": \"d36672ccd1b102c98b225c65f6fd1d0f21ca97f0\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"sourceBranch\": \"feature/rrcc-hantang-ui-refinement-20261013\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"deploymentEnvironment\": \"preview\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"artifact\": {",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "    \"source\": \"preview/RRCC-Hantang-4-Center-Preview-v1.11.html\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "    \"output\": \"index.html\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "    \"sha256\": \"ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "    \"sizeBytes\": 11805134",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  },",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"generatedAt\": \"2026-10-13T00:25:23.227Z\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"status\": \"PASS\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"checkOnly\": false,",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123246,
+      "date": 1791851123246,
+      "type": "stdout",
+      "text": "  \"files\": [",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123247,
+      "date": 1791851123247,
+      "type": "stdout",
+      "text": "    \"deployment-meta.json\",",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123247,
+      "date": 1791851123247,
+      "type": "stdout",
+      "text": "    \"index.html\"",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123247,
+      "date": 1791851123247,
+      "type": "stdout",
+      "text": "  ]",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123247,
+      "date": 1791851123247,
+      "type": "stdout",
+      "text": "}",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123314,
+      "date": 1791851123314,
+      "type": "stderr",
+      "text": "Build Completed in /vercel/output [1s]",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851123351,
+      "date": 1791851123351,
+      "type": "stdout",
+      "text": "Deploying outputs...",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851124741,
+      "date": 1791851124741,
+      "type": "stdout",
+      "text": "Deployment completed",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851124745,
+      "date": 1791851124745,
+      "type": "stdout",
+      "text": "Creating build cache...",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    },
+    {
+      "created": 1791851125365,
+      "date": 1791851125365,
+      "type": "stdout",
+      "text": "Skipping cache upload because no files were prepared",
+      "info": {
+        "type": "build",
+        "name": "bld_8baoavltu",
+        "entrypoint": "."
+      }
+    }
+  ],
+  "metadataHttp": {
+    "status": 200,
+    "contentType": "application/json; charset=utf-8",
+    "metadata": {
+      "schemaVersion": "1.0",
+      "previewOnly": true,
+      "sourceCommitSha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0",
+      "sourceBranch": "feature/rrcc-hantang-ui-refinement-20261013",
+      "deploymentEnvironment": "preview",
+      "artifact": {
+        "source": "preview/RRCC-Hantang-4-Center-Preview-v1.11.html",
+        "output": "index.html",
+        "sha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+        "sizeBytes": 11805134
+      },
+      "generatedAt": "2026-10-13T00:25:23.227Z"
+    }
+  },
+  "guards": {
+    "preview": true,
+    "sourceSha": true,
+    "ready": true,
+    "noProductionLive": true,
+    "onlyExistingCanceledProduction": true,
+    "ssoRetained": true
+  },
+  "credentialsOmitted": true
+}

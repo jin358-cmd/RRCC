@@ -1,0 +1,30 @@
+/* Compact actions lead the activity toolbar. No scope control in the side drawer. */
+#stage .workspace-toolbar { align-items: center; }
+#stage .workspace-toolbar .hero-controls {
+  order: 0;
+  padding-left: 0;
+  padding-right: .85rem;
+  border-left: 0;
+  border-right: 1px solid #dce8f4;
+  margin-left: 0;
+  justify-content: flex-start;
+}
+#stage .workspace-toolbar .toolbar-activity { order: 1; }
+.view-source-footer { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid #d9e6f1; color: #617a93; font-size: .78rem; line-height: 1.6; }
+.view-source-footer > :first-child { margin-top: 0; }
+#kpi-library-dialog > .view-source-footer { padding: 1rem 1.3rem; margin: 0; background: #f6f9fc; }
+#stage #kpis .kpi-card.recommended:not(.selected) { background: linear-gradient(150deg, #fffbea, #fff1bd); border-color: #e6c96a; }
+#stage #kpis .kpi-card.recommended:not(.selected) .kpi-value { color: #5d4914; }
+.kpi-recommendation-label { display: inline-block; max-width: 100%; margin-top: .25rem; padding: .14rem .35rem; border-radius: 4px; color: #72580c; background: #ffeaa0; font-size: .64rem; line-height: 1.4; font-weight: 650; }
+.kpi-card.selected .kpi-recommendation-label { color: #fff4b2; background: transparent; }
+#kpi-library-dialog .kpi-library-master-card.recommended:not(.is-selected) { background: linear-gradient(150deg,#fffbea,#fff1bd); border-color:#e6c96a; }
+.kpi-library-recommendation { color:#72580c; font-size:.74rem; font-weight:650; }
+.reduction-guidance { border: 1px solid #e8d28b; background: #fffbeb; border-radius: 8px; padding: .85rem 1rem; color: #66521e; font-size: .76rem; line-height: 1.65; }
+.reduction-guidance summary { cursor: pointer; font-weight: 700; }
+.reduction-guidance p { margin-top: .5rem; }
+.reduction-guidance article { padding: .6rem 0; border-top: 1px solid #eee0b4; }
+.reduction-guidance article strong { display: block; }
+@media(max-width:960px){
+  #stage .workspace-toolbar .hero-controls { flex: 1 1 100%; width: 100%; border-right: 0; padding-right: 0; }
+  #stage .workspace-toolbar .toolbar-activity { flex: 1 1 100%; }
+}

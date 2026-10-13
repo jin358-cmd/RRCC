@@ -1,0 +1,732 @@
+{
+  "revision": "v1.5",
+  "verifiedAt": "2026-10-12T19:51:10.027Z",
+  "surface": "Codex in-app browser / self-contained v1.5 HTML over localhost",
+  "viewportDesktop": {
+    "width": 1920,
+    "height": 1080
+  },
+  "status": "PASS_WITH_EXPLICIT_PENDING_GATES",
+  "validAssertions": 84,
+  "observations": 3,
+  "results": [
+    {
+      "name": "Registry all 19 / pending 7 disabled",
+      "status": "PASS"
+    },
+    {
+      "name": "Material primary has 9",
+      "status": "PASS"
+    },
+    {
+      "name": "Verification primary has 3",
+      "status": "PASS"
+    },
+    {
+      "name": "Shared references has 12",
+      "status": "PASS"
+    },
+    {
+      "name": "Search filters canonical label",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel leaves default six",
+      "status": "PASS"
+    },
+    {
+      "name": "1920 wider sidebar with larger unclipped text",
+      "status": "OBSERVATION",
+      "details": {
+        "expanded": "true",
+        "font": "17.8px",
+        "overflow": false,
+        "width": 310.7386169433594
+      },
+      "reason": "Geometry sampled during 220ms CSS expansion transition, not a settled-width acceptance check."
+    },
+    {
+      "name": "1920 settled sidebar width/font/containment",
+      "status": "PASS",
+      "details": {
+        "expanded": "true",
+        "font": "17.8px",
+        "overflow": false,
+        "width": 326.3991394042969
+      }
+    },
+    {
+      "name": "Full material table retains 2486 rows and 5 displayed columns",
+      "status": "PASS"
+    },
+    {
+      "name": "Full table default page 50",
+      "status": "PASS"
+    },
+    {
+      "name": "Pagination preserves source row 50",
+      "status": "PASS"
+    },
+    {
+      "name": "Search finds row outside current page",
+      "status": "PASS"
+    },
+    {
+      "name": "Filtered row opens correct complete details",
+      "status": "PASS"
+    },
+    {
+      "name": "All mode displays all 2486 material rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Explicit source switch persists September and avoids stacked dialogs",
+      "status": "PASS"
+    },
+    {
+      "name": "Keyboard sort uses canonical IDs without duplication",
+      "status": "PASS",
+      "details": [
+        "RRCC-KPI-002",
+        "RRCC-KPI-001",
+        "RRCC-KPI-003",
+        "RRCC-KPI-004",
+        "RRCC-KPI-005",
+        "RRCC-KPI-006"
+      ]
+    },
+    {
+      "name": "Six canonical cards applied with expected values",
+      "status": "PASS"
+    },
+    {
+      "name": "Canonical right panel shows source formula and 18 calculation rows",
+      "status": "PASS"
+    },
+    {
+      "name": "Canonical complete modal has 18 rows with provenance",
+      "status": "PASS"
+    },
+    {
+      "name": "Canonical row opens full original batch and material fields",
+      "status": "PASS"
+    },
+    {
+      "name": "Source definition modal includes full canonical SHA",
+      "status": "PASS"
+    },
+    {
+      "name": "Canonical ordering survives reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Other Center has independent default six",
+      "status": "PASS"
+    },
+    {
+      "name": "Same canonical Card ID has same value in Verification",
+      "status": "PASS"
+    },
+    {
+      "name": "Canonical A returns to actual old KPI before B opens",
+      "status": "PASS",
+      "details": {
+        "origin": {
+          "id": "kpi-verification-8",
+          "x": 280.9232864379883,
+          "y": 545.9019622802734
+        },
+        "flight": {
+          "renderer": "webgl-mesh",
+          "source": "kpi-verification-8",
+          "x": 280.9232864379883,
+          "y": 545.9019622802734
+        }
+      }
+    },
+    {
+      "name": "Click inside keeps panel open",
+      "status": "PASS"
+    },
+    {
+      "name": "Same KPI remains open",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid canonical changes keep final requested KPI",
+      "status": "PASS"
+    },
+    {
+      "name": "Dashboard non-action background closes with Genie",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty selection clears KPI and right panel DOM",
+      "status": "PASS"
+    },
+    {
+      "name": "Stored empty selection remains empty after reload",
+      "status": "PASS"
+    },
+    {
+      "name": "Empty configuration has working recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "Source and demonstration preferences are separate",
+      "status": "PASS"
+    },
+    {
+      "name": "overview seven context-specific functions",
+      "status": "PASS",
+      "details": [
+        "總覽儀表板",
+        "案場總覽",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況",
+        "異常追蹤",
+        "管理報表"
+      ]
+    },
+    {
+      "name": "overview / 總覽儀表板 opens complete available view",
+      "status": "OBSERVATION",
+      "details": {
+        "charts": 0,
+        "open": false,
+        "title": ""
+      },
+      "reason": "First pointer activation occurred while collapsed sidebar expanded, focusing project selector; retry using supported keyboard activation of named function."
+    },
+    {
+      "name": "overview seven context-specific functions",
+      "status": "PASS",
+      "details": [
+        "總覽儀表板",
+        "案場總覽",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況",
+        "異常追蹤",
+        "管理報表"
+      ]
+    },
+    {
+      "name": "overview / 總覽儀表板 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "進行中工程案",
+        "total": "8"
+      }
+    },
+    {
+      "name": "overview / 案場總覽 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "進行中工程案",
+        "total": "8"
+      }
+    },
+    {
+      "name": "overview / 材料與供應鏈 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "最近材料申報",
+        "total": "2486"
+      }
+    },
+    {
+      "name": "overview / 申報進度 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "最近材料申報",
+        "total": "2486"
+      }
+    },
+    {
+      "name": "overview / 驗證概況 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "驗證案件",
+        "total": "469"
+      }
+    },
+    {
+      "name": "overview / 異常追蹤 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "近期異常案件",
+        "total": "3"
+      }
+    },
+    {
+      "name": "overview / 管理報表 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 1,
+        "open": true,
+        "title": "材料申報趨勢"
+      }
+    },
+    {
+      "name": "overview KPI, main and right change together",
+      "status": "PASS"
+    },
+    {
+      "name": "material seven context-specific functions",
+      "status": "PASS",
+      "details": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ]
+    },
+    {
+      "name": "material / 材料清單 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "材料清單",
+        "total": "2486"
+      }
+    },
+    {
+      "name": "material / 供應商管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "供應商申報狀態",
+        "total": "48"
+      }
+    },
+    {
+      "name": "material / 材料申報 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "最近材料申報",
+        "total": "2486"
+      }
+    },
+    {
+      "name": "material / 文件管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "材料文件索引",
+        "total": "2400"
+      }
+    },
+    {
+      "name": "material / 材料分類 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 1,
+        "open": true,
+        "title": "材料類別分布"
+      }
+    },
+    {
+      "name": "material / 異常處理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "材料異常追蹤",
+        "total": "7"
+      }
+    },
+    {
+      "name": "material / 報表分析 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 1,
+        "open": true,
+        "title": "材料申報趨勢"
+      }
+    },
+    {
+      "name": "material KPI, main and right change together",
+      "status": "PASS"
+    },
+    {
+      "name": "verification seven context-specific functions",
+      "status": "PASS",
+      "details": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ]
+    },
+    {
+      "name": "verification / 待驗證 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "待驗證案件",
+        "total": "32"
+      }
+    },
+    {
+      "name": "verification / 驗證案件 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "驗證案件",
+        "total": "469"
+      }
+    },
+    {
+      "name": "verification / 文件審查 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "材料文件索引",
+        "total": "2400"
+      }
+    },
+    {
+      "name": "verification / 退件管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "退件管理",
+        "total": "6"
+      }
+    },
+    {
+      "name": "verification / 異常追蹤 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "異常追蹤",
+        "total": "3"
+      }
+    },
+    {
+      "name": "verification / 驗證紀錄 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "最近驗證紀錄",
+        "total": "428"
+      }
+    },
+    {
+      "name": "verification / 報表分析 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 1,
+        "open": true,
+        "title": "驗證案件趨勢"
+      }
+    },
+    {
+      "name": "verification KPI, main and right change together",
+      "status": "PASS"
+    },
+    {
+      "name": "management seven context-specific functions",
+      "status": "PASS",
+      "details": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限",
+        "規則設定",
+        "系統設定",
+        "報表中心"
+      ]
+    },
+    {
+      "name": "management / 使用者管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "5",
+        "open": true,
+        "title": "使用者管理",
+        "total": "186"
+      }
+    },
+    {
+      "name": "management / 組織管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "組織管理",
+        "total": "8"
+      }
+    },
+    {
+      "name": "management / 供應商管理 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "供應商申報狀態",
+        "total": "48"
+      }
+    },
+    {
+      "name": "management / 角色與權限 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "角色與權限",
+        "total": "186"
+      }
+    },
+    {
+      "name": "management / 規則設定 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "規則設定",
+        "total": "12"
+      }
+    },
+    {
+      "name": "management / 系統設定 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 0,
+        "columns": "4",
+        "open": true,
+        "title": "平台系統狀態",
+        "total": "1"
+      }
+    },
+    {
+      "name": "management / 報表中心 opens complete available view",
+      "status": "PASS",
+      "details": {
+        "charts": 1,
+        "open": true,
+        "title": "使用者／供應商趨勢"
+      }
+    },
+    {
+      "name": "management KPI, main and right change together",
+      "status": "PASS"
+    },
+    {
+      "name": "320 dashboard has no page-wide horizontal overflow",
+      "status": "PASS",
+      "details": {
+        "main": 240.9943084716797,
+        "scroll": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "name": "320 library stays within viewport with no internal page-width overflow",
+      "status": "PASS",
+      "details": {
+        "client": 289,
+        "open": true,
+        "right": 312.99713373184204,
+        "scroll": 289,
+        "width": 305.9942932128906,
+        "x": 7.002840518951416
+      }
+    },
+    {
+      "name": "390 dashboard has no page-wide horizontal overflow",
+      "status": "PASS",
+      "details": {
+        "main": 310.9942932128906,
+        "scroll": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "390 library stays within viewport with no internal page-width overflow",
+      "status": "OBSERVATION",
+      "details": {
+        "client": 0,
+        "open": false,
+        "right": 0,
+        "scroll": 0,
+        "width": 0,
+        "x": 0
+      },
+      "reason": "Geometry assertion lacked open guard; a sidebar overlay intercepted pointer click. Superseded by explicit keyboard-open check below."
+    },
+    {
+      "name": "320 settled Dashboard width",
+      "status": "PASS",
+      "details": {
+        "scroll": 320,
+        "viewport": 320
+      }
+    },
+    {
+      "name": "320 open Library containment",
+      "status": "PASS",
+      "details": {
+        "client": 289,
+        "open": true,
+        "right": 312.99713373184204,
+        "scroll": 289,
+        "width": 305.9942932128906,
+        "x": 7.002840518951416
+      }
+    },
+    {
+      "name": "390 settled Dashboard width",
+      "status": "PASS",
+      "details": {
+        "scroll": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "390 open Library containment",
+      "status": "PASS",
+      "details": {
+        "client": 359,
+        "open": true,
+        "right": 382.9971337318421,
+        "scroll": 359,
+        "width": 375.9942932128906,
+        "x": 7.002840518951416
+      }
+    },
+    {
+      "name": "768 settled Dashboard width",
+      "status": "PASS",
+      "details": {
+        "scroll": 768,
+        "viewport": 768
+      }
+    },
+    {
+      "name": "768 open Library containment",
+      "status": "PASS",
+      "details": {
+        "client": 727,
+        "open": true,
+        "right": 756.1789264678955,
+        "scroll": 727,
+        "width": 744.1760864257812,
+        "x": 12.002840042114258
+      }
+    },
+    {
+      "name": "1440 settled Dashboard width",
+      "status": "PASS",
+      "details": {
+        "scroll": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "1440 open Library containment",
+      "status": "PASS",
+      "details": {
+        "client": 1375,
+        "open": true,
+        "right": 1415.994306564331,
+        "scroll": 1375,
+        "width": 1391.9957275390625,
+        "x": 23.998579025268555
+      }
+    },
+    {
+      "name": "2560 settled Dashboard width",
+      "status": "PASS",
+      "details": {
+        "scroll": 2560,
+        "viewport": 2560
+      }
+    },
+    {
+      "name": "2560 open Library containment",
+      "status": "PASS",
+      "details": {
+        "client": 1703,
+        "open": true,
+        "right": 2139.9998779296875,
+        "scroll": 1703,
+        "width": 1719.9998779296875,
+        "x": 420
+      }
+    },
+    {
+      "name": "CSV exports all 2486 records despite one-row search",
+      "status": "PASS",
+      "details": {
+        "dataRows": 2486,
+        "filteredRows": 1
+      }
+    },
+    {
+      "name": "Source entry has one modal and no page errors after bubbling fix",
+      "status": "PASS"
+    }
+  ],
+  "consoleErrors": [],
+  "pending": [
+    "Native pointer drag/real touch/OS reduced-motion manual Owner acceptance",
+    "Seven new KPI formal names and mapping",
+    "Production authentication/RBAC/tenant isolation",
+    "Owner visual acceptance"
+  ],
+  "scope": "Real DOM reads, supported click/keyboard actions, screenshot and CSV readback. Does not claim native drag or production verification."
+}

@@ -1,0 +1,317 @@
+{
+  "verifiedAt": "2026-10-13T08:36:37.934Z",
+  "url": "https://rrcc-eeuuwfhyl-tjc1.vercel.app/?data-mode=demo#overview",
+  "sourceCommit": "2ad854968754fbd63003a3248053e337c96bb182",
+  "regression": [
+    {
+      "before": {
+        "center": "overview",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "overview",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "material",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "material",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "verification",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "verification",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "management",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "management",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    }
+  ],
+  "alignment": {
+    "align": [
+      {
+        "diff": 0,
+        "label": "開啟 KPI 卡片櫃"
+      },
+      {
+        "diff": 0,
+        "label": "總覽儀表板"
+      },
+      {
+        "diff": 0,
+        "label": "案場總覽"
+      },
+      {
+        "diff": 0,
+        "label": "材料與供應鏈"
+      },
+      {
+        "diff": 0,
+        "label": "申報進度"
+      },
+      {
+        "diff": 0,
+        "label": "驗證概況"
+      },
+      {
+        "diff": 0,
+        "label": "異常追蹤"
+      },
+      {
+        "diff": 0,
+        "label": "管理報表"
+      },
+      {
+        "diff": 0,
+        "label": "我的任務"
+      },
+      {
+        "diff": 0,
+        "label": "通知訊息"
+      },
+      {
+        "diff": 0,
+        "label": "資料庫"
+      }
+    ],
+    "center": "overview",
+    "chartY": 784.3323364257812,
+    "counts": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)"
+      }
+    ],
+    "kpiRows": [
+      192,
+      443
+    ],
+    "scopeVisible": false,
+    "slots": 12,
+    "toolbar": [
+      {
+        "name": "scope-button",
+        "x": 107.55681610107422
+      },
+      {
+        "name": "period-select",
+        "x": 281.2215881347656
+      },
+      {
+        "name": "export-button",
+        "x": 381.7684631347656
+      },
+      {
+        "name": "toolbar-activity",
+        "x": 532.2371826171875
+      }
+    ],
+    "width": 1920,
+    "yellow": 4
+  },
+  "library": {
+    "arrowStroke": "3.4",
+    "confirmedRecommendations": 12,
+    "footerLast": true,
+    "pending": 2,
+    "unsavedRetained": "線上未儲存測試"
+  },
+  "sidebarFirstStage": {
+    "dialogs": 0,
+    "drawer": "true"
+  },
+  "paging": {
+    "firstRows": 50,
+    "footerLast": true,
+    "page": "第 2 / 4 頁",
+    "secondRows": 50
+  },
+  "csv": {
+    "downloaded": true,
+    "bytes": 606,
+    "searchResultRows": 1,
+    "exportRows": 8,
+    "includesEighthProject": true
+  },
+  "sourceFooter": {
+    "rows": 8,
+    "last": true
+  },
+  "genie": {
+    "renderer": "webgl-mesh",
+    "segments": 48,
+    "duration": 1166,
+    "completed": true,
+    "selectedCount": 1,
+    "anchor": {
+      "x": 234.3075180053711,
+      "y": 307.5816650390625
+    }
+  },
+  "console": [],
+  "scope": "Actual CUA keyboard and DOM geometry. Native pointer hover/drag, Canvas/reduced motion and Owner visual acceptance not recertified."
+}

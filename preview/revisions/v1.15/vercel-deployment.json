@@ -1,0 +1,27 @@
+{
+  "verifiedAt": "2026-10-13T08:33:19.401Z",
+  "evidenceTier": "AUTHENTICATED_VERCEL_DEPLOYMENT_READBACK_NOT_BROWSER_OR_OWNER_ACCEPTANCE",
+  "teamId": "team_Aep4PXnmiXE5276HRkoQrHtF",
+  "projectId": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+  "projectName": "rrcc",
+  "deploymentId": "dpl_7McdFEumnSPK85eeFd2EnbqBfseP",
+  "state": "READY",
+  "target": null,
+  "environment": "Preview",
+  "url": "https://rrcc-eeuuwfhyl-tjc1.vercel.app/",
+  "gitCommitSha": "2ad854968754fbd63003a3248053e337c96bb182",
+  "gitBranch": "feature/rrcc-hantang-ui-refinement-20261013",
+  "source": "git",
+  "createdAt": "2026-10-13T08:32:33.655Z",
+  "buildingAt": "2026-10-13T08:32:38.689Z",
+  "readyAt": "2026-10-13T08:32:47.891Z",
+  "checks": {
+    "exactDeployment": true,
+    "exactProject": true,
+    "ready": true,
+    "previewTarget": true,
+    "exactSourceSha": true,
+    "exactBranch": true
+  },
+  "scope": "Read-only get_deployment scoped to the Owner-authorized existing Team and deployment; no create, redeploy, promote, cancel, domain or security changes. No credentials or signed access URLs retained."
+}

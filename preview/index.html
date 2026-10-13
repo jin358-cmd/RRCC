@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232584e7'/%3E%3Cpath d='M9 9l14 14M23 9L9 23' stroke='white' stroke-width='4'/%3E%3C/svg%3E">
+  <meta name="description" content="RRCC × 漢唐集成 4-Center Demonstration Preview — 半導體工程、材料、驗證與平台治理。">
+  <title>RRCC × 漢唐集成｜4-Center Demonstration Preview</title>
+  <link rel="stylesheet" href="preview.css">
+  <link rel="stylesheet" href="panel-motion.css">
+  <link rel="stylesheet" href="sidebar.css">
+  <link rel="stylesheet" href="presentation-mode.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="kpi-settings.css">
+  <link rel="stylesheet" href="chart-motion.css">
+  <link rel="stylesheet" href="full-data-view.css">
+  <link rel="stylesheet" href="kpi-library.css">
+  <link rel="stylesheet" href="kpi-library-integration.css">
+  <link rel="stylesheet" href="workspace-refinement.css">
+  <link rel="stylesheet" href="material-flow.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.8.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.9.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.10.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.11.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.12.css">
+  <link rel="stylesheet" href="interaction-refinement-v1.13.css">
+  <link rel="stylesheet" href="sidebar-click-v1.14.css">
+  <link rel="stylesheet" href="workspace-v1.14.css">
+  <link rel="stylesheet" href="sidebar-alignment-v1.15.css">
+  <link rel="stylesheet" href="kpi-drafts-v1.15.css">
+  <link rel="stylesheet" href="workspace-v1.15.css">
+  <script src="center-data.js" defer></script>
+  <script src="demo-data.js" defer></script>
+  <script src="presentation-data.js" defer></script>
+  <script src="merged-center-data.js" defer></script>
+  <script src="presentation-center-data.js" defer></script>
+  <script src="reference-data.js" defer></script>
+  <script src="kpi-catalog.js" defer></script>
+  <script src="kpi-settings.js" defer></script>
+  <script src="kpi-library-data.js" defer></script>
+  <script src="kpi-library-binding.js" defer></script>
+  <script src="tsmc-reference-data.js" defer></script>
+  <script src="tsmc-sustainability.js" defer></script>
+  <script src="recommendations-v1.15.js" defer></script>
+  <script src="kpi-library.js" defer></script>
+  <script src="full-data-view.js" defer></script>
+  <script src="material-flow.js" defer></script>
+  <script src="chart-motion.js" defer></script>
+  <script src="genie.js" defer></script>
+  <script src="panel-motion.js" defer></script>
+  <script src="preview.js" defer></script>
+  <script src="sidebar.js" defer></script>
+  <script src="view-footers-v1.15.js" defer></script>
+</head>
+<body>
+  <div id="viewport">
+    <div id="stage">
+      <header class="header" data-fixed="header">
+        <a class="brand" href="#overview" aria-label="漢唐集成 × RRCC 總覽中心">
+          <div class="brand-line"><strong class="hantang">漢唐集成</strong><span class="brand-cross">×</span><strong>RRCC</strong></div>
+          <span class="brand-sub">範疇三管理平台 <i></i> Scope 3 Management Platform</span>
+        </a>
+        <nav id="center-nav" class="center-nav" aria-label="工作中心切換" data-fixed="navigation"></nav>
+        <div class="header-tools">
+          <button id="search-button" class="icon-button" aria-label="搜尋平台" title="搜尋平台（Ctrl+K）"></button>
+          <span class="tool-divider"></span>
+          <button id="notification-button" class="icon-button notification-button" aria-label="通知訊息，3 則"></button>
+          <span class="tool-divider"></span>
+          <button id="profile-button" class="profile" aria-label="Jin Chen 使用者選單"><span class="avatar">JC</span><span><strong>Jin Chen</strong></span></button>
+        </div>
+      </header>
+      <aside class="sidebar" data-fixed="sidebar">
+        <label class="project-selector"><span class="sr-only">選擇案場</span><select id="project-select"><option value="all">全部案場</option><option value="tainan">台南 A 案｜無塵室新建</option><option value="hsinchu">新竹 B 案｜機電整合</option><option value="taichung">台中 C 案｜製程擴建</option></select></label>
+        <nav class="sidebar-library-nav" aria-label="KPI 卡片管理"><button id="kpi-settings-button" class="sidebar-library-button" aria-label="設定 KPI 卡片" aria-haspopup="dialog" title="KPI 卡片櫃"><span class="nav-label">KPI 卡片櫃</span></button></nav>
+        <div class="sidebar-heading"><span id="sidebar-label">全局工作台</span><span class="sidebar-code" id="sidebar-code">01</span></div>
+        <nav id="business-nav" class="business-nav" aria-label="中心功能"></nav>
+        <div class="sidebar-separator"></div>
+        <div class="sidebar-heading common-heading">協作與資源</div>
+        <nav class="common-nav" aria-label="共用功能">
+          <button data-common="我的任務" data-icon="clipboard">我的任務<span class="count">5</span></button>
+          <button data-common="通知訊息" data-icon="bell">通知訊息<span class="count">3</span></button>
+          <button data-common="資料庫" data-icon="database">資料庫</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="rrcc-signature"><span class="signature-mark"><i></i><i></i><i></i><i></i></span><div><strong>RRCC</strong><small>Reduce Risk<br>Create Clarity<br>Build a Cleaner Tomorrow</small></div></div>
+          <div class="preview-label"><span></span>4-CENTER DEMONSTRATION</div>
+          <p>介面預覽 · 展示資料</p>
+        </div>
+      </aside>
+      <main class="workspace">
+        <section class="workspace-toolbar panel" aria-label="最新動態與報表工作列">
+          <div class="hero-controls"><button id="scope-button" class="filter-button" aria-haspopup="dialog">全部案場<span id="scope-chevron"></span></button><label class="filter-date"><span id="calendar-icon"></span><select id="period-select" aria-label="選擇月份"><option value="2026-10">2026-10</option><option value="2026-09">2026-09</option><option value="2026-08">2026-08</option></select></label><button id="export-button" class="export-button"></button></div>
+          <div class="toolbar-activity"><h2>最新動態</h2><div id="activity-strip" aria-label="近期活動"></div></div>
+        </section>
+        <button id="right-panel-trigger" class="right-panel-trigger" data-restore-right aria-controls="right-panel" aria-expanded="false" aria-label="展開 KPI 詳細資訊">KPI 詳細資訊</button>
+        <div class="content-layout right-closed">
+          <div class="dashboard-main" data-region="main">
+            <section id="kpis" class="kpis" aria-label="中心核心指標" data-region="kpis"></section>
+            <details id="reduction-guidance" class="reduction-guidance"></details>
+            <div class="chart-row" data-fixed="chart-grid">
+              <section class="panel trend-panel"><div class="panel-head"><h2 id="trend-title"></h2><button class="more-icon" data-detail="trend" aria-label="查看趨勢詳細資訊">···</button></div><div id="trend-legend" class="chart-legend"></div><div id="trend-chart" class="trend-chart"></div></section>
+              <section class="panel distribution-panel"><div class="panel-head"><h2 id="distribution-title"></h2><button class="more-icon" data-detail="distribution" aria-label="查看分布詳細資訊">···</button></div><div id="distribution-chart" class="distribution-chart"></div></section>
+            </div>
+            <div class="table-row" data-fixed="table-grid">
+              <section class="panel primary-table-panel"><div class="panel-head"><h2 id="table-title" class="accent-title"></h2><button class="text-link" data-detail="table">查看全部 <span>›</span></button></div><div id="primary-table" class="data-table"></div></section>
+              <div class="secondary-stack">
+                <section class="panel secondary-table-panel"><div class="panel-head"><h2 id="secondary-title" class="accent-title orange-accent"></h2><button class="text-link" data-detail="secondary">查看更多 <span>›</span></button></div><div id="secondary-table" class="data-table compact"></div></section>
+                <section class="panel secondary-table-panel"><div class="panel-head"><h2 id="tertiary-title" class="accent-title"></h2><button class="text-link" data-detail="tertiary">查看更多 <span>›</span></button></div><div id="tertiary-table" class="data-table compact"></div></section>
+              </div>
+            </div>
+          </div>
+          <aside id="right-panel" class="right-panel" data-region="right" aria-label="中心詳細資訊" data-fixed="right-panel"></aside>
+        </div>
+        <footer class="footer"><span>v3.2 <i></i> RRCC Scope 3 Management Platform <span class="footer-preview">· Demonstration Preview</span> <button id="data-mode-toggle" class="data-mode-toggle" aria-pressed="true" title="切換合成展示資料與原始 JSON 來源模式">DEMO 合成展示資料</button> <button id="public-reference-button" class="data-mode-toggle">公開參考數據</button></span><span>Clean Supply Chain <b>·</b> Responsible Engineering <b>·</b> Sustainable Future</span></footer>
+      </main>
+      <div id="toast" class="toast" role="status" aria-live="polite"></div>
+      <dialog id="detail-dialog" class="detail-dialog"><div class="dialog-heading"><div><span id="dialog-context" class="eyebrow"></span><h2 id="dialog-title"></h2></div><button id="dialog-close" class="icon-button" aria-label="關閉詳細資訊"></button></div><div id="dialog-content"></div><div class="dialog-foot"><span>4-Center Demonstration Preview · 展示資料</span><button id="dialog-done" class="primary-button">完成</button></div></dialog>
+      <dialog id="search-dialog" class="search-dialog"><div class="search-input-wrap"><span id="search-icon"></span><input id="search-input" placeholder="搜尋中心、材料、案場或功能…" aria-label="搜尋平台內容"><button id="search-close" aria-label="關閉搜尋">Esc</button></div><div class="search-hint">工作中心與功能</div><div id="search-results"></div><div class="search-footer">↑ ↓ 選擇 <span>Enter 開啟</span><span>Esc 關閉</span></div></dialog>
+    </div>
+  </div>
+</body>
+</html>

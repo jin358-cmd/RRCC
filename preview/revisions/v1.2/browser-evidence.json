@@ -1,0 +1,2566 @@
+{
+  "revision": "RRCC-NOVA-UI-20261013-002 v1.2",
+  "engine": "Codex IAB Chromium",
+  "checks": [
+    {
+      "name": "overview initial collapsed",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": null,
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview A opens",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": null,
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview inside stays open",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": null,
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview same A no replay",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": null,
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview A blank closes",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 1,
+          "maxRenderMs": 4.699999988079071,
+          "meanRenderMs": 0.5513888872745965,
+          "preparationMs": 27,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview A remains during B return",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 1,
+          "maxRenderMs": 4.699999988079071,
+          "meanRenderMs": 0.5513888872745965,
+          "preparationMs": 27,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 2,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "1",
+        "phase": "closing",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview B auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 2,
+          "maxRenderMs": 1,
+          "meanRenderMs": 0.4638888891786337,
+          "preparationMs": 0.7000000029802322,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-1"
+      }
+    },
+    {
+      "name": "overview C auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 3,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.3685714298060962,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "2",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-2"
+      }
+    },
+    {
+      "name": "overview close returns C",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 4,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3588235288420144,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "2",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-2"
+      }
+    },
+    {
+      "name": "material initial collapsed",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 4,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3588235288420144,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "material A opens",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 4,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3588235288420144,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material inside stays open",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 4,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3588235288420144,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material same A no replay",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 4,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3588235288420144,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material A blank closes",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 5,
+          "maxRenderMs": 1.2000000029802322,
+          "meanRenderMs": 0.3958333333333333,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material A remains during B return",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 5,
+          "maxRenderMs": 1.2000000029802322,
+          "meanRenderMs": 0.3958333333333333,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-0",
+        "layers": 2,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "1",
+        "phase": "closing",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material B auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月收料總量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 6,
+          "maxRenderMs": 1.0999999940395355,
+          "meanRenderMs": 0.4777777776536014,
+          "preparationMs": 0.3999999910593033,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-1"
+      }
+    },
+    {
+      "name": "material C auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月使用總量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 7,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.38857142754963464,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-1",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "2",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-2"
+      }
+    },
+    {
+      "name": "material close returns C",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月使用總量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 8,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.364705882528249,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "2",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-2"
+      }
+    },
+    {
+      "name": "verification initial collapsed",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "驗證案件",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 8,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.364705882528249,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "name": "verification A opens",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "追溯率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 8,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.364705882528249,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification inside stays open",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "追溯率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 8,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.364705882528249,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification same A no replay",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "追溯率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 8,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.364705882528249,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification A blank closes",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "追溯率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 9,
+          "maxRenderMs": 2.299999997019768,
+          "meanRenderMs": 0.49305555576251614,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification A remains during B return",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "追溯率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 9,
+          "maxRenderMs": 2.299999997019768,
+          "meanRenderMs": 0.49305555576251614,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-0",
+        "layers": 2,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "1",
+        "phase": "closing",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification B auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "等級率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 10,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3930555567559269,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-1"
+      }
+    },
+    {
+      "name": "verification C auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "合規率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 11,
+          "maxRenderMs": 1.0999999940395355,
+          "meanRenderMs": 0.5414285710879735,
+          "preparationMs": 0.10000000894069672,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-1",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "2",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-2"
+      }
+    },
+    {
+      "name": "verification close returns C",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "合規率樣本平均",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 12,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3955882347243674,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "2",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-2"
+      }
+    },
+    {
+      "name": "management initial collapsed",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "系統狀態",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 12,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3955882347243674,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-3"
+      }
+    },
+    {
+      "name": "management A opens",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "使用者數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 12,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3955882347243674,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-0"
+      }
+    },
+    {
+      "name": "management inside stays open",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "使用者數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 12,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3955882347243674,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-0"
+      }
+    },
+    {
+      "name": "management same A no replay",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "使用者數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 12,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3955882347243674,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-2",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-0"
+      }
+    },
+    {
+      "name": "management A blank closes",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "使用者數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 13,
+          "maxRenderMs": 0.9000000059604645,
+          "meanRenderMs": 0.40277777881258064,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-0"
+      }
+    },
+    {
+      "name": "management A remains during B return",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "使用者數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 13,
+          "maxRenderMs": 0.9000000059604645,
+          "meanRenderMs": 0.40277777881258064,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-0",
+        "layers": 2,
+        "mainWidth": 1196.0084228515625,
+        "metric": "0",
+        "pending": "1",
+        "phase": "closing",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-0"
+      }
+    },
+    {
+      "name": "management B auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "組織／供應商",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 14,
+          "maxRenderMs": 1,
+          "meanRenderMs": 0.3763888885991441,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-1"
+      }
+    },
+    {
+      "name": "management C auto opens",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "權限異常",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 15,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.34000000017029897,
+          "preparationMs": 0.3999999910593033,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-1",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "2",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-2"
+      }
+    },
+    {
+      "name": "management close returns C",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "權限異常",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 16,
+          "maxRenderMs": 0.7000000029802322,
+          "meanRenderMs": 0.38676470649593014,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "2",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-2"
+      }
+    },
+    {
+      "name": "overview rapid A-B-C-D last wins",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "當月廠務紀錄",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 17,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.4069444454378552,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-3"
+      }
+    },
+    {
+      "name": "overview queued switch back to current cancels",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "當月廠務紀錄",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 17,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.4069444454378552,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-3",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-3"
+      }
+    },
+    {
+      "name": "overview pending new KPI cancelled by blank",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "當月廠務紀錄",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1068,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 66,
+          "id": 19,
+          "maxRenderMs": 1,
+          "meanRenderMs": 0.35606060673793155,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1137.3756561279297,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-3",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-3"
+      }
+    },
+    {
+      "name": "material rapid A-B-C-D last wins",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 20,
+          "maxRenderMs": 1,
+          "meanRenderMs": 0.3902777770741118,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "material queued switch back to current cancels",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 20,
+          "maxRenderMs": 1,
+          "meanRenderMs": 0.3902777770741118,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-3",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "material pending new KPI cancelled by blank",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1068,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 66,
+          "id": 22,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4878787879239429,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1137.3756561279297,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-material-3",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "verification rapid A-B-C-D last wins",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "驗證案件",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 23,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3361111113594638,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "name": "verification queued switch back to current cancels",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "驗證案件",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 23,
+          "maxRenderMs": 0.7999999970197678,
+          "meanRenderMs": 0.3361111113594638,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-3",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "name": "verification pending new KPI cancelled by blank",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "label": "驗證案件",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1068,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 66,
+          "id": 25,
+          "maxRenderMs": 1.4000000059604645,
+          "meanRenderMs": 0.3560606065121564,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1137.3756561279297,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-verification-3",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-verification-3"
+      }
+    },
+    {
+      "name": "management rapid A-B-C-D last wins",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "系統狀態",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 26,
+          "maxRenderMs": 1.0999999940395355,
+          "meanRenderMs": 0.4680555547691054,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-0",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-3"
+      }
+    },
+    {
+      "name": "management queued switch back to current cancels",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "系統狀態",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 26,
+          "maxRenderMs": 1.0999999940395355,
+          "meanRenderMs": 0.4680555547691054,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-3",
+        "layers": 0,
+        "mainWidth": 1196.0084228515625,
+        "metric": "3",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-3"
+      }
+    },
+    {
+      "name": "management pending new KPI cancelled by blank",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "label": "系統狀態",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1068,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 66,
+          "id": 28,
+          "maxRenderMs": 1.2999999970197678,
+          "meanRenderMs": 0.3969696972406272,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1137.3756561279297,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-management-3",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-management-3"
+      }
+    },
+    {
+      "name": "Canvas fallback mesh actual rendering",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 1,
+          "maxRenderMs": 10.699999988079073,
+          "meanRenderMs": 0.8342857135193689,
+          "preparationMs": 0.19999998807907104,
+          "progress": 1,
+          "renderer": "canvas-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "1",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-1"
+      }
+    },
+    {
+      "name": "Forced reduced-motion close path",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 0,
+          "id": 1,
+          "maxRenderMs": 0,
+          "meanRenderMs": 0,
+          "preparationMs": 0,
+          "renderer": "reduced-motion",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "Actual KPI 0 return coordinate",
+      "status": "PASS",
+      "expected": {
+        "x": 230.6214370727539,
+        "y": 288.9950180053711
+      },
+      "errorPx": 0,
+      "actual": {
+        "center": "overview",
+        "label": "來源案場數量",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1169,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 72,
+          "id": 1,
+          "maxRenderMs": 2.5,
+          "meanRenderMs": 0.4624999987168445,
+          "preparationMs": 8.200000002980232,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 230.6214370727539,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "0",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "Actual KPI 1 return coordinate",
+      "status": "PASS",
+      "expected": {
+        "x": 532.8728485107422,
+        "y": 288.9950180053711
+      },
+      "errorPx": 0,
+      "actual": {
+        "center": "overview",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1134,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 70,
+          "id": 2,
+          "maxRenderMs": 0.9000000059604645,
+          "meanRenderMs": 0.4228571427719934,
+          "preparationMs": 0.20000000298023224,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 532.8728485107422,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "1",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-1"
+      }
+    },
+    {
+      "name": "Actual KPI 2 return coordinate",
+      "status": "PASS",
+      "expected": {
+        "x": 835.1242523193359,
+        "y": 288.9950180053711
+      },
+      "errorPx": 0,
+      "actual": {
+        "center": "overview",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1100,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 68,
+          "id": 3,
+          "maxRenderMs": 1.2000000029802322,
+          "meanRenderMs": 0.5147058812572676,
+          "preparationMs": 0.30000001192092896,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 835.1242523193359,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-2",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "2",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-2"
+      }
+    },
+    {
+      "name": "Actual KPI 3 return coordinate",
+      "status": "PASS",
+      "expected": {
+        "x": 1137.3756561279297,
+        "y": 288.9950180053711
+      },
+      "errorPx": 0,
+      "actual": {
+        "center": "overview",
+        "label": "當月廠務紀錄",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1068,
+          "edge": "left",
+          "element": "right-panel",
+          "frames": 66,
+          "id": 4,
+          "maxRenderMs": 0.9000000059604645,
+          "meanRenderMs": 0.42727272686633194,
+          "preparationMs": 0.29999999701976776,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1137.3756561279297,
+            "y": 288.9950180053711
+          }
+        },
+        "lastSource": "kpi-overview-3",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-overview-3"
+      }
+    },
+    {
+      "name": "Fixed right entry uses its own coordinate",
+      "status": "PASS",
+      "expected": {
+        "x": 1903.5049047470093,
+        "y": 374.9893226623535
+      },
+      "actual": {
+        "center": "overview",
+        "label": "當月廠務紀錄",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1047,
+          "edge": "right",
+          "element": "right-panel",
+          "frames": 64,
+          "id": 5,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4859375006053597,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1903.5049047470093,
+            "y": 374.9893226623535
+          }
+        },
+        "lastSource": "right-panel-trigger",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "right-panel-trigger"
+      }
+    },
+    {
+      "name": "Resize during return keeps latest B and clears overlays",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "label": "材料主檔類型",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1047,
+          "edge": "right",
+          "element": "right-panel",
+          "frames": 64,
+          "id": 5,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4859375006053597,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1903.5049047470093,
+            "y": 374.9893226623535
+          }
+        },
+        "lastSource": "kpi-overview-0",
+        "layers": 0,
+        "mainWidth": 996.6736450195312,
+        "metric": "1",
+        "pending": "",
+        "phase": "open",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 53.33214569091797,
+        "source": "kpi-overview-1"
+      }
+    },
+    {
+      "name": "Center switch cancels previous center return",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1047,
+          "edge": "right",
+          "element": "right-panel",
+          "frames": 64,
+          "id": 5,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4859375006053597,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1903.5049047470093,
+            "y": 374.9893226623535
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1510.0081787109375,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 53.33214569091797,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "Sidebar hover and keyboard overlay do not move main grid",
+      "status": "PASS",
+      "expanded": "true",
+      "mainBefore": 1812.0098876953125,
+      "mainDuring": 1812.0098876953125
+    },
+    {
+      "name": "Sidebar Escape collapse does not re-open on returned focus",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1047,
+          "edge": "right",
+          "element": "right-panel",
+          "frames": 64,
+          "id": 5,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4859375006053597,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1903.5049047470093,
+            "y": 374.9893226623535
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 231.9957275390625,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "Sidebar mouse leave auto collapses",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "label": "當月材料批次",
+        "lastFlight": {
+          "cancelled": false,
+          "completed": true,
+          "duration": 1047,
+          "edge": "right",
+          "element": "right-panel",
+          "frames": 64,
+          "id": 5,
+          "maxRenderMs": 1.6000000089406967,
+          "meanRenderMs": 0.4859375006053597,
+          "preparationMs": 0.4000000059604645,
+          "progress": 1,
+          "renderer": "webgl-mesh",
+          "segments": 48,
+          "target": {
+            "x": 1903.5049047470093,
+            "y": 374.9893226623535
+          }
+        },
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "mainWidth": 1812.0098876953125,
+        "metric": "3",
+        "pending": "",
+        "phase": "closed",
+        "sidebarExpanded": "false",
+        "sidebarWidth": 63.99857711791992,
+        "source": "kpi-material-3"
+      }
+    },
+    {
+      "name": "material-August-filter",
+      "status": "PASS",
+      "actual": {
+        "text": "材料主檔類型\n6類\n示範來源\n2026-08\n↗\n當月收料總量\n242,390kg\n示範來源\n2026-08\n↗\n當月使用總量\n201,454kg\n示範來源\n2026-08\n↗\n當月材料批次\n18筆\n示範來源\n2026-08\n↗"
+      }
+    },
+    {
+      "name": "material-September-project-A",
+      "status": "PASS",
+      "actual": {
+        "text": "材料主檔類型\n6類\n示範來源\n2026-09\n↗\n當月收料總量\n109,260kg\n示範來源\n2026-09\n↗\n當月使用總量\n90,102kg\n示範來源\n2026-09\n↗\n當月材料批次\n6筆\n示範來源\n2026-09\n↗"
+      }
+    },
+    {
+      "name": "table-detail-preserves-six-filtered-rows",
+      "status": "PASS",
+      "actual": {
+        "rows": 6,
+        "motion": {
+          "center": "material",
+          "label": "當月收料總量",
+          "lastFlight": {
+            "cancelled": false,
+            "completed": true,
+            "duration": 1091,
+            "edge": "left",
+            "element": "right-panel",
+            "frames": 67,
+            "id": 21,
+            "maxRenderMs": 1,
+            "meanRenderMs": 0.30597014925373134,
+            "preparationMs": 0.29999999701976776,
+            "progress": 1,
+            "renderer": "webgl-mesh",
+            "segments": 48,
+            "target": {
+              "x": 1516.5008544921875,
+              "y": 385.32669830322266
+            }
+          },
+          "lastSource": "kpi-overview-3",
+          "layers": 0,
+          "mainWidth": 1594.677978515625,
+          "metric": "1",
+          "pending": "",
+          "phase": "open",
+          "sidebarExpanded": "false",
+          "sidebarWidth": 85.33143615722656,
+          "source": "kpi-material-1"
+        }
+      }
+    },
+    {
+      "name": "row-JSON-provenance-and-full-hashes",
+      "status": "PASS",
+      "actual": {
+        "pointer": "/data/rows/36"
+      }
+    },
+    {
+      "name": "CSV-export-six-project-rows",
+      "status": "PASS",
+      "actual": {
+        "rows": 6
+      }
+    },
+    {
+      "name": "search-role-route-no-fabricated-records",
+      "status": "PASS",
+      "actual": {
+        "center": "management"
+      }
+    },
+    {
+      "name": "table-all-18-rows-not-preview-five",
+      "status": "PASS",
+      "actual": {
+        "rows": 18
+      }
+    },
+    {
+      "name": "overview-quick-source-action",
+      "status": "PASS",
+      "actual": {
+        "title": "案場來源與當月材料概況",
+        "phase": "open"
+      }
+    },
+    {
+      "name": "material-quick-source-action",
+      "status": "PASS",
+      "actual": {
+        "title": "材料批次來源紀錄",
+        "phase": "open"
+      }
+    },
+    {
+      "name": "verification-quick-source-action",
+      "status": "PASS",
+      "actual": {
+        "title": "率欄位原始樣本（非驗證結果）",
+        "phase": "open"
+      }
+    },
+    {
+      "name": "management-quick-source-action",
+      "status": "PASS",
+      "actual": {
+        "title": "跨版完全相同紀錄去重",
+        "phase": "open"
+      }
+    },
+    {
+      "name": "self-contained-artifact-HTTP-load",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "externalScripts": 0,
+        "externalStyles": 0,
+        "initialPhase": "closed",
+        "values": "來源案場數量\n3案場\n示範來源\n2026-09\n↗\n材料主檔類型\n6類\n示範來源\n2026-09\n↗\n當月材料批次\n18筆\n示範來源\n2026-09\n↗\n當月廠務紀錄\n3筆\n示範來源\n2026-09\n↗"
+      }
+    },
+    {
+      "name": "self-contained-artifact-actual-Genie",
+      "status": "PASS",
+      "actual": {
+        "cancelled": false,
+        "completed": true,
+        "duration": 1180,
+        "edge": "left",
+        "element": "right-panel",
+        "frames": 72,
+        "id": 1,
+        "maxRenderMs": 1.7000000029802322,
+        "meanRenderMs": 0.4500000011175871,
+        "preparationMs": 10.200000002980232,
+        "progress": 1,
+        "renderer": "webgl-mesh",
+        "segments": 48,
+        "target": {
+          "x": 307.4952697753906,
+          "y": 385.32669830322266
+        }
+      }
+    },
+    {
+      "name": "final-artifact-overview-context",
+      "status": "PASS",
+      "actual": {
+        "center": "overview",
+        "kpiCount": 4,
+        "sidebarCount": 7,
+        "rightOverflow": false
+      }
+    },
+    {
+      "name": "final-artifact-material-context",
+      "status": "PASS",
+      "actual": {
+        "center": "material",
+        "kpiCount": 4,
+        "sidebarCount": 7,
+        "rightOverflow": false
+      }
+    },
+    {
+      "name": "final-artifact-verification-context",
+      "status": "PASS",
+      "actual": {
+        "center": "verification",
+        "kpiCount": 4,
+        "sidebarCount": 7,
+        "rightOverflow": false
+      }
+    },
+    {
+      "name": "final-artifact-management-context",
+      "status": "PASS",
+      "actual": {
+        "center": "management",
+        "kpiCount": 4,
+        "sidebarCount": 7,
+        "rightOverflow": false
+      }
+    },
+    {
+      "name": "four-center-shared-layout-geometry",
+      "status": "PASS",
+      "actual": {
+        "identical": true
+      }
+    },
+    {
+      "name": "browser-console-final",
+      "status": "PASS",
+      "actual": {
+        "entries": []
+      }
+    }
+  ],
+  "pages": [
+    {
+      "center": "overview",
+      "geometry": {
+        "#kpis": [
+          114.66,
+          282.66,
+          1594.68,
+          205.33
+        ],
+        "#right-panel": [
+          1733.33,
+          282.66,
+          797.34,
+          1098.66
+        ],
+        ".chart-row": [
+          114.66,
+          503.99,
+          1594.68,
+          375.99
+        ],
+        ".dashboard-main": [
+          114.66,
+          282.66,
+          1594.68,
+          1098.66
+        ],
+        ".header": [
+          0,
+          0,
+          2560,
+          122.66
+        ],
+        ".sidebar": [
+          0,
+          122.66,
+          85.33,
+          1317.34
+        ],
+        ".table-row": [
+          114.66,
+          895.98,
+          1594.68,
+          413.33
+        ]
+      },
+      "kpis": [
+        "來源案場數量\n3案場\n示範來源\n2026-09\n↗",
+        "材料主檔類型\n6類\n示範來源\n2026-09\n↗",
+        "當月材料批次\n18筆\n示範來源\n2026-09\n↗",
+        "當月廠務紀錄\n3筆\n示範來源\n2026-09\n↗"
+      ],
+      "right": "來源與 KPI 詳細資訊\n來源案場數量\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n3案場\nV1 + V2\n來源標記，非同比\n未定義管理目標\nNO DATA\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n計算與來源限制\n計算：所選範圍 /data/projects 唯一 id 數；不是在建工程案件數。\n月份趨勢依各月材料批次的唯一 project 數。\nJSON Pointer：/data/projects/0；/data/projects/1；共 57 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出案場來源摘要\n檢視來源案場\n開啟驗證來源概況\n查看資料來源索引",
+      "rightOverflow": false,
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況",
+        "異常追蹤",
+        "管理報表"
+      ],
+      "title": "Overview Center 總覽全局"
+    },
+    {
+      "center": "material",
+      "geometry": {
+        "#kpis": [
+          114.66,
+          282.66,
+          1594.68,
+          205.33
+        ],
+        "#right-panel": [
+          1733.33,
+          282.66,
+          797.34,
+          1098.66
+        ],
+        ".chart-row": [
+          114.66,
+          503.99,
+          1594.68,
+          375.99
+        ],
+        ".dashboard-main": [
+          114.66,
+          282.66,
+          1594.68,
+          1098.66
+        ],
+        ".header": [
+          0,
+          0,
+          2560,
+          122.66
+        ],
+        ".sidebar": [
+          0,
+          122.66,
+          85.33,
+          1317.34
+        ],
+        ".table-row": [
+          114.66,
+          895.98,
+          1594.68,
+          413.33
+        ]
+      },
+      "kpis": [
+        "材料主檔類型\n6類\n示範來源\n2026-09\n↗",
+        "當月收料總量\n267,530kg\n示範來源\n2026-09\n↗",
+        "當月使用總量\n221,338kg\n示範來源\n2026-09\n↗",
+        "當月材料批次\n18筆\n示範來源\n2026-09\n↗"
+      ],
+      "right": "來源與 KPI 詳細資訊\n當月材料批次\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n18筆\nV1 + V2\n來源標記，非同比\n未定義管理目標\nNO DATA\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n計算與來源限制\n計算：當月去重後 rows 筆數；不是申報完成率。\nJSON Pointer：/data/rows/36；/data/rows/37；共 54 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出材料批次來源\n檢視材料批次\n檢視材料主檔\n查看資料來源索引",
+      "rightOverflow": false,
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "title": "Material Center 材料生命週期"
+    },
+    {
+      "center": "verification",
+      "geometry": {
+        "#kpis": [
+          114.66,
+          282.66,
+          1594.68,
+          205.33
+        ],
+        "#right-panel": [
+          1733.33,
+          282.66,
+          797.34,
+          1098.66
+        ],
+        ".chart-row": [
+          114.66,
+          503.99,
+          1594.68,
+          375.99
+        ],
+        ".dashboard-main": [
+          114.66,
+          282.66,
+          1594.68,
+          1098.66
+        ],
+        ".header": [
+          0,
+          0,
+          2560,
+          122.66
+        ],
+        ".sidebar": [
+          0,
+          122.66,
+          85.33,
+          1317.34
+        ],
+        ".table-row": [
+          114.66,
+          895.98,
+          1594.68,
+          413.33
+        ]
+      },
+      "kpis": [
+        "追溯率樣本平均\n94%\n示範來源\n2026-09\n↗",
+        "等級率樣本平均\n91%\n示範來源\n2026-09\n↗",
+        "合規率樣本平均\n96.1%\n示範來源\n2026-09\n↗",
+        "驗證案件\nNO DATA\n來源未提供\nNO DATA\n↗"
+      ],
+      "right": "來源與 KPI 詳細資訊\n追溯率樣本平均\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n94%\nV1 + V2\n來源標記，非同比\n未定義管理目標\nNO DATA\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n計算與來源限制\n計算：traceRate 有效原始樣本算術平均 × 100，n=18。\n不加權；不是已驗證案件數、通過率或驗證完成率。\nJSON Pointer：/data/rows/36/traceRate；/data/rows/37/traceRate；共 54 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n檢視驗證案件（NO DATA）\n檢視率欄位樣本\n檢視來源欄位限制\n匯出驗證來源摘要",
+      "rightOverflow": false,
+      "sidebar": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "title": "Verification Center 驗證與合規"
+    },
+    {
+      "center": "management",
+      "geometry": {
+        "#kpis": [
+          114.66,
+          282.66,
+          1594.68,
+          205.33
+        ],
+        "#right-panel": [
+          1733.33,
+          282.66,
+          797.34,
+          1098.66
+        ],
+        ".chart-row": [
+          114.66,
+          503.99,
+          1594.68,
+          375.99
+        ],
+        ".dashboard-main": [
+          114.66,
+          282.66,
+          1594.68,
+          1098.66
+        ],
+        ".header": [
+          0,
+          0,
+          2560,
+          122.66
+        ],
+        ".sidebar": [
+          0,
+          122.66,
+          85.33,
+          1317.34
+        ],
+        ".table-row": [
+          114.66,
+          895.98,
+          1594.68,
+          413.33
+        ]
+      },
+      "kpis": [
+        "使用者數量\nNO DATA\n來源未提供\nNO DATA\n↗",
+        "組織／供應商\nNO DATA\n來源未提供\nNO DATA\n↗",
+        "權限異常\nNO DATA\n來源未提供\nNO DATA\n↗",
+        "系統狀態\nNO DATA\n來源未提供\nNO DATA\n↗"
+      ],
+      "right": "來源與 KPI 詳細資訊\n系統狀態\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\nNO DATA\n來源未提供\n來源標記，非同比\n未定義管理目標\nNO DATA\n資料來源\nNO DATA\n來源月份趨勢\n2026\nNO DATA · 來源未提供時間序列\n計算與來源限制\nV1 / V2 JSON 均未提供 systemStatus，不以材料紀錄推算平台營運狀態。\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\nNO DATA · 未提供營運資料\n\n來源不含對應業務集合，未補造人員、驗證案件或系統狀態。\n\n來源檢視操作\n檢視資料來源\n檢視去重結果\n檢視資料缺口\n匯出來源治理摘要",
+      "rightOverflow": false,
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限",
+        "規則設定",
+        "系統設定",
+        "報表中心"
+      ],
+      "title": "Management Center 平台治理管理"
+    }
+  ],
+  "verifiedAt": "2026-10-12T18:47:39.706Z",
+  "status": "PASS_WITH_DECLARED_SCOPE",
+  "testedArtifact": "preview/RRCC-Hantang-4-Center-Preview-v1.2.html (HTTP-served exact self-contained artifact)",
+  "viewport": {
+    "width": 2560,
+    "height": 1440
+  },
+  "limitations": [
+    "Original split sources tested first; final artifact rechecked after provenance-only adapter correction.",
+    "file: protocol blocked by automation; double-click was not tested.",
+    "Canvas and reduced-motion paths forced with diagnostic query parameters; OS preference and physical touch not changed.",
+    "Node touch/low-performance event tests are not physical hardware acceptance.",
+    "Snapshot failure intentionally uses simplified DOM fail-safe, not a claimed 48-band mesh.",
+    "Owner visual acceptance and Production are separate gates."
+  ],
+  "harnessCorrections": [
+    "Offline close selector corrected from nonexistent data-close-right to observed data-collapse-right.",
+    "Renderer assertion corrected from shorthand webgl to observed diagnostic webgl-mesh; actual render succeeded throughout."
+  ]
+}

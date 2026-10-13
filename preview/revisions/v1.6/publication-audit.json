@@ -1,0 +1,165 @@
+{
+  "verifiedAt": "2026-10-12T20:38:51.688Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 31,
+  "textFiles": 21,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 2697,
+      "sha256": "b4c61e70d8c77ab18145941e39636fe2d324d8e1ca6c6dbe3fee89131bd471ee"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-event.md",
+      "bytes": 584,
+      "sha256": "58c02c6b80647298cc9606b9c92ac73a7285463d48c7489444d27ae1d7adb0b1"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-evidence.md",
+      "bytes": 1097,
+      "sha256": "023cbebabe4cf18ab50805fff563e424e3a9a083294e7ae18606a7086624ec6f"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-resolution.md",
+      "bytes": 723,
+      "sha256": "f643a79b8dec1ffcc30fa1496b79c45e87daa72699a74b9f0ac74eb0c81ad2e1"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-verification.md",
+      "bytes": 1160,
+      "sha256": "1d154caa758de9a0e1b8e6a343bbbbf568ecc0ad3192e26fd6a1e59ab61f6dd9"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.6.md",
+      "bytes": 6690,
+      "sha256": "092396d11054838c33533a813df35fd3218fdfd3c736eb42443b47e4d3c35494"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.6.html",
+      "bytes": 11716794,
+      "sha256": "60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9"
+    },
+    {
+      "file": "preview/assets/green-fab-v1.6-prompt.md",
+      "bytes": 2892,
+      "sha256": "304769ad72ca3948e7cc4daa88b7a6bf8e7e4ee78d119465d09472071612a213"
+    },
+    {
+      "file": "preview/assets/green-fab-v1.6.png",
+      "bytes": 2581585,
+      "sha256": "29e4407884bab45ae8d1025690d988b05d95a020f9ddf28e34f8ffa7e7f7ec05"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 9708,
+      "sha256": "9105b3caed1bced87fa31782cd9fb00be6c9d5008a40e0634ea7fa8111fffe45"
+    },
+    {
+      "file": "preview/kpi-catalog.js",
+      "bytes": 12823,
+      "sha256": "a290b6d278b6a96fd47628cbe24a02073f89cb84db9dcac73e22a7c3c534ee2e"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3198,
+      "sha256": "a1fdbb4d7d90692ba41d2bd4be6e30c01a981fb26420e9e553501113b6610e35"
+    },
+    {
+      "file": "preview/presentation-center-data.js",
+      "bytes": 28836,
+      "sha256": "2d5b6edda78c5725cf99768744288020055609596cee37b287f969306104e957"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 55859,
+      "sha256": "fa4d50c2683bcdeb0135129bc68f95b2db8b4466f00c42131d4202cc1430dbdd"
+    },
+    {
+      "file": "preview/revisions/v1.6/README.md",
+      "bytes": 3760,
+      "sha256": "3ce3cff442590cdf835f2c3ec0c24e75971e408d7f851fa47cb85a3d73afba42"
+    },
+    {
+      "file": "preview/revisions/v1.6/browser-interaction-evidence.json",
+      "bytes": 25511,
+      "sha256": "d805d32bf70ce661840dc947cc2bb0aacf71902b6f7a4fee81ec84fe8e84693a"
+    },
+    {
+      "file": "preview/revisions/v1.6/local-test-evidence.json",
+      "bytes": 56007,
+      "sha256": "13b78c8e7d0c549d6ef6c696e519b6f10b70ea8f789c22f639b687844fa8aab6"
+    },
+    {
+      "file": "preview/revisions/v1.6/publication-audit.json",
+      "bytes": 5590,
+      "sha256": "a226864ecd88a03360203ed18e7bbf8086f5635b9f75f5827372d57467f1f14f"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/01-overview.png",
+      "bytes": 172540,
+      "sha256": "f1ef162d66748f3f1069b054f7b1b1128ddaa0250b493d1fea6d5ff09414c7b6"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/02-material.png",
+      "bytes": 193445,
+      "sha256": "3dfb4749e9ccd318923d73ce41bdeac5cdddcd2cebc2990e64cecb2d025caf33"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/03-verification.png",
+      "bytes": 193481,
+      "sha256": "e9ca63e830d37e28c2b081bfeb70bc6844b3247fc96b40eb799f6cbc8d782f71"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/04-management.png",
+      "bytes": 187577,
+      "sha256": "e5edbc80f1b53ada9f24ed53ce43aab758a32777ba0cfcc8e5024797e9d304df"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/05-full-material-view.png",
+      "bytes": 156036,
+      "sha256": "dd114d9fdc4be8f43e0e58ca3203eeda3f89184151c8a1ec80af43ff426cc116"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/06-expanded-sidebar.png",
+      "bytes": 189953,
+      "sha256": "23690b2d77e7e4e64936905eabbbb79a030c5ab81b2fd187ab5245f93db698de"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/07-mobile-toolbar.png",
+      "bytes": 41413,
+      "sha256": "a977d51c4297a372f2716e7a17557ecea2f341d6a8457e5d346b12d775aa0a57"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/08-overview-right-panel.png",
+      "bytes": 187205,
+      "sha256": "0568b74d2049589422a3464def7da8484eaa296a59588fade26a489ae3514ec8"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/09-left-entry-library.png",
+      "bytes": 95575,
+      "sha256": "f63bdfecbd4dfa75eff67af418e6657f36941ae41cb9b1f8da8f7b7b0d783843"
+    },
+    {
+      "file": "preview/workspace-refinement.css",
+      "bytes": 9473,
+      "sha256": "e452ea11465bf66427789c13d4021d7fa270d0732bf633332460599d30d97fa9"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16683,
+      "sha256": "96babf81680891025582ff12e33325b333de73fd62662e10da31f834fa2314a5"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11423,
+      "sha256": "7440f382425270e254e0012bb4aebd6d48195bd100a7d34afc7714c9b0710460"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 3577,
+      "sha256": "59331e79f0e485b3fa17ee3ac8eef2367caae174d9043cbaaefb4e350635dca5"
+    }
+  ]
+}

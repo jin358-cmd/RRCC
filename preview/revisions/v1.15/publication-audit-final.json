@@ -1,0 +1,240 @@
+{
+  "verifiedAt": "2026-10-13T08:30:51.670Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 46,
+  "textFiles": 41,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 4771,
+      "sha256": "152d74541f8f9c78e6c17972ee71af92a17926931b5214771791f68c600079c7"
+    },
+    {
+      "file": "docs/verification/owner-v1.15.md",
+      "bytes": 4819,
+      "sha256": "d1551303b4294c689333a95ea7057065f311acea76f9f0e4c900031e890b75ae"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.15.html",
+      "bytes": 11847060,
+      "sha256": "5a1a2d785ae438262682ff5a0453ec2e898e73ca74177dc310545b6f5a4e6752"
+    },
+    {
+      "file": "preview/full-data-view.css",
+      "bytes": 6491,
+      "sha256": "438c003f1011222315f22b4af3a65d35749e5046636c05f9950b409326586bf8"
+    },
+    {
+      "file": "preview/full-data-view.js",
+      "bytes": 11614,
+      "sha256": "189b76633f454a37b1de664f2d0a76d80ffedfb8a3119cb0b45184aa1defaf30"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10712,
+      "sha256": "1948cb64212bbcd87b0592cc9518d84729270558f405d4809cb87ad0ffb67f52"
+    },
+    {
+      "file": "preview/kpi-drafts-v1.15.css",
+      "bytes": 3467,
+      "sha256": "3f686316d705dda24eb9ef0bbbea350fcbf5ffa07252df6a97abf99618307e7d"
+    },
+    {
+      "file": "preview/kpi-library.js",
+      "bytes": 46227,
+      "sha256": "aab94186be321831d4d16000bb0752f69afc14cc1d60eceaccdb5c21c67a01aa"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3981,
+      "sha256": "d7b412a079812e778d1835d411e674f1abcfe4f1f6202938203e19f50e4f4d96"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 63260,
+      "sha256": "a875a75c73d7b11f9e7b2a34c5a7599e55f5a84b8384287ea792957f9e6cc4f2"
+    },
+    {
+      "file": "preview/recommendations-v1.15.js",
+      "bytes": 2580,
+      "sha256": "7d9ab7bf6be38220f9636365da3a7d0cbe0a74825d1048a470ab6bddd807d689"
+    },
+    {
+      "file": "preview/revisions/v1.15/README.md",
+      "bytes": 987,
+      "sha256": "ef5152288c16e59eb308d0b15f71b6ab21df14eb08108b13ccfdad65b8392a7d"
+    },
+    {
+      "file": "preview/revisions/v1.15/browser-local.json",
+      "bytes": 10566,
+      "sha256": "2f9024ea2e7baa769657e064f3ab641eb170d27f9e5c32771c59a1d2b5398911"
+    },
+    {
+      "file": "preview/revisions/v1.15/desktop-alignment-local.json",
+      "bytes": 771,
+      "sha256": "4354f7fc9f19d3fcefd016c05eeaf45587ad3590deb0a4c70d88c7b591d2ba63"
+    },
+    {
+      "file": "preview/revisions/v1.15/draft-redraw-local.json",
+      "bytes": 281,
+      "sha256": "0bb41b32137d9459de7e83667a6b882060ab2b80aaf00731c3900410ecd7b26a"
+    },
+    {
+      "file": "preview/revisions/v1.15/library-local-final.jpg",
+      "bytes": 169541,
+      "sha256": "ad84b8ce7515695c8f48e6969cfd18abda750494ca4609de5aac31dab48c5f4c"
+    },
+    {
+      "file": "preview/revisions/v1.15/library-local.jpg",
+      "bytes": 132719,
+      "sha256": "3089bad65f0372c705c0d3be14b5bc3ae17bc00188e387edbe142448764773c7"
+    },
+    {
+      "file": "preview/revisions/v1.15/local-test-evidence-02.json",
+      "bytes": 97247,
+      "sha256": "44bcbd6c893b123fb4b306731967491b2c37d5c81cfcee3f79e96baca8fc90b0"
+    },
+    {
+      "file": "preview/revisions/v1.15/local-test-evidence-03.json",
+      "bytes": 98207,
+      "sha256": "9a3e867528f2c7aa8609ec34a729160380a4bd8b62a696b847d7727ab99c7cc7"
+    },
+    {
+      "file": "preview/revisions/v1.15/local-test-evidence.json",
+      "bytes": 95528,
+      "sha256": "5f66cf18ee32eb9687db3ef2429788a53e6a646631e4bf5426b23795a2a5d382"
+    },
+    {
+      "file": "preview/revisions/v1.15/overview-local-september.jpg",
+      "bytes": 166112,
+      "sha256": "8b1215289037522fbf8968748ea38d53ad5a555e203854ee8c31496d7d9f01fd"
+    },
+    {
+      "file": "preview/revisions/v1.15/overview-local.jpg",
+      "bytes": 160665,
+      "sha256": "6fbfcca7c02b19fd9be71aa902a9edf7d0df96f65301fdb7d258b095765eb2b1"
+    },
+    {
+      "file": "preview/revisions/v1.15/publication-audit.json",
+      "bytes": 7414,
+      "sha256": "4c422d60a2020965cae4a12fb4d581f3dcfe15c29c6f29222912d4bf09d57975"
+    },
+    {
+      "file": "preview/revisions/v1.15/responsive-local.json",
+      "bytes": 301,
+      "sha256": "94d81557b88a6ddfaa711e6e613326814aadd7145922e397a31b1654cbec7c44"
+    },
+    {
+      "file": "preview/revisions/v1.15/sidebar-local.jpg",
+      "bytes": 157593,
+      "sha256": "8447266d55d5384844b0cebc8c3760b776e184663dd9f41e494feadaae7bf167"
+    },
+    {
+      "file": "preview/sidebar-alignment-v1.15.css",
+      "bytes": 5645,
+      "sha256": "64e3b421db9a868120be1da8abcd2993a67dd85eeb5ffc755fe4c616474fa0d0"
+    },
+    {
+      "file": "preview/sidebar.js",
+      "bytes": 12930,
+      "sha256": "18119335ef37792401c22a28a28896f5f0cc12ce5fe716de2d1995ece650377f"
+    },
+    {
+      "file": "preview/view-footers-v1.15.js",
+      "bytes": 1837,
+      "sha256": "110c0e3b258ae888c63af94442183fa2aa7cd88b37faf8b225f70ba4cf6077f5"
+    },
+    {
+      "file": "preview/workspace-v1.15.css",
+      "bytes": 2084,
+      "sha256": "befe9f80747e9d71ce609729682bf0457c330b818d1bea11283db6880c8dbc3a"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6604,
+      "sha256": "8f7f8a2ab5c0b5889ed04688a7b1fbc087a779b0a6bdbcf9c7d4aa6a074407a4"
+    },
+    {
+      "file": "scripts/test-full-data-view.mjs",
+      "bytes": 15973,
+      "sha256": "7502171538603b24c3101e1c9dcc56e6951a7d3e1de9441e0cc38552fdb2dd00"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.12.mjs",
+      "bytes": 9702,
+      "sha256": "11e77f3a67a1fda254b52231098fe8ab096d80201d7b51308c6c35fae486b818"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.13.mjs",
+      "bytes": 8241,
+      "sha256": "2b946f31a7570523b9f1f93d0fbeb7df7165024a85c03555fbbf255324cbf8b3"
+    },
+    {
+      "file": "scripts/test-kpi-drafts-v1.15.mjs",
+      "bytes": 18029,
+      "sha256": "5036df35901ef8292d24439fce519f9ac6d6eec2c4051872ccd6878aa69448fd"
+    },
+    {
+      "file": "scripts/test-kpi-library-ui.mjs",
+      "bytes": 25725,
+      "sha256": "cc35a42151798e7795fbd19dfeb58efeaf76f45001c443e9e24a71c29c4dd001"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12777,
+      "sha256": "72dc16a666135cfcaae7e47dd4acb249bff4d815aad046974f57a5587de28ff4"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 17210,
+      "sha256": "7db76db52bdc6f36239c075daa176066ddb624bf83b05979dbaf875cfb0d0e95"
+    },
+    {
+      "file": "scripts/test-provenance-footer-v1.15.mjs",
+      "bytes": 7913,
+      "sha256": "f9b74c2a0806e5d251478874d6fb1b8a1a7935d33a9b43e514534f354ea2fe0b"
+    },
+    {
+      "file": "scripts/test-sidebar-alignment-v1.15.mjs",
+      "bytes": 4387,
+      "sha256": "e8b27a694b02b61cf7d6c5220fb18e9461f35c072798dc422ba2f214d0379c66"
+    },
+    {
+      "file": "scripts/test-sidebar.mjs",
+      "bytes": 22358,
+      "sha256": "1cfc3ef19b3a3890d678d4b94544cf90ae1ebf3bef012401a4eb5d5931649e23"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6954,
+      "sha256": "02fc83a8d2d7d02f39dc41dde49582af371ddb33bf0932d2bbc3b4d8be03771f"
+    },
+    {
+      "file": "scripts/test-view-footers-v1.15.mjs",
+      "bytes": 14501,
+      "sha256": "1999c5b756ac0efaf9adc224579fcebb548d06ca5064bed225d10194057abfb0"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11717,
+      "sha256": "54054477a3d5b6313dd65df9b28568611361b2d04b410e49c2ec00ff552fb52d"
+    },
+    {
+      "file": "scripts/test-workspace-v1.14.mjs",
+      "bytes": 9110,
+      "sha256": "437bcafe50a44e92f795f22d9159744f81039a8f82843f8d5f0e6348a2c08bd1"
+    },
+    {
+      "file": "scripts/test-workspace-v1.15.mjs",
+      "bytes": 3824,
+      "sha256": "ab116857f1a2d1b48aa67edf407d28e53776e3d6955b3e4ce23f306ebd5195dc"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 5723,
+      "sha256": "1113147e934772bf23f4e194d12a29c754b679d9421ff6ad6ea88696be43f468"
+    }
+  ]
+}

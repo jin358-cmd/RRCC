@@ -1,0 +1,787 @@
+{
+  "revision": "v1.6",
+  "startedAt": "2026-10-12T20:31:24.782Z",
+  "evidenceTier": "ACTUAL_BROWSER_UI_AND_READ_ONLY_DOM",
+  "checks": [
+    {
+      "name": "No hero workspace eyebrow or exact Demo suffix",
+      "status": "PASS",
+      "observed": "Overview Center 總覽全局"
+    },
+    {
+      "name": "Activity and filters form one toolbar above six KPI cards",
+      "status": "PASS",
+      "observed": {
+        "activeShadow": "rgb(23, 60, 94) 4px 0px 0px 0px inset",
+        "activityCount": 3,
+        "controls": [
+          "filter-date",
+          "scope-button",
+          "export-button"
+        ],
+        "counts": [
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "8"
+          },
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "32"
+          },
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "3"
+          }
+        ],
+        "exactDemo": false,
+        "eyebrow": false,
+        "header": {
+          "b": 99.8366470336914,
+          "h": 99.8366470336914,
+          "w": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "kpis": {
+          "b": 490.1775512695313,
+          "h": 185.5965881347656,
+          "w": 1787.2442626953125,
+          "x": 90.87357330322266,
+          "y": 304.5809631347656
+        },
+        "libraryInLeft": true,
+        "nav": {
+          "b": 97.93323516845705,
+          "h": 74.19033813476562,
+          "w": 1230.9375,
+          "x": 365.4332275390625,
+          "y": 23.742897033691406
+        },
+        "photo": true,
+        "scroll": 1920,
+        "six": 6,
+        "tabStyle": {
+          "radius": "12px 12px 8px 8px",
+          "shadow": "rgb(144, 204, 255) 0px 1px 0px 0px inset, rgb(20, 105, 191) 0px -2px 0px 0px inset, rgba(33, 123, 195, 0.17) 0px 4px 12px 0px"
+        },
+        "title": "Overview Center 總覽全局",
+        "toolbar": {
+          "b": 285.3835144042969,
+          "h": 69.55255126953125,
+          "w": 1787.2442626953125,
+          "x": 90.87357330322266,
+          "y": 215.8309631347656
+        },
+        "width": 1920
+      }
+    },
+    {
+      "name": "Library entry moved into left sidebar and controls retain date/project/export order",
+      "status": "PASS",
+      "observed": [
+        "filter-date",
+        "scope-button",
+        "export-button"
+      ]
+    },
+    {
+      "name": "Center tabs meet header border with rounded shadow surfaces",
+      "status": "PASS",
+      "observed": {
+        "header": {
+          "b": 99.8366470336914,
+          "h": 99.8366470336914,
+          "w": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "nav": {
+          "b": 97.93323516845705,
+          "h": 74.19033813476562,
+          "w": 1230.9375,
+          "x": 365.4332275390625,
+          "y": 23.742897033691406
+        },
+        "style": {
+          "radius": "12px 12px 8px 8px",
+          "shadow": "rgb(144, 204, 255) 0px 1px 0px 0px inset, rgb(20, 105, 191) 0px -2px 0px 0px inset, rgba(33, 123, 195, 0.17) 0px 4px 12px 0px"
+        }
+      }
+    },
+    {
+      "name": "Large red rail count typography and dark active indicator",
+      "status": "PASS",
+      "observed": {
+        "counts": [
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "8"
+          },
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "32"
+          },
+          {
+            "color": "rgb(191, 39, 53)",
+            "size": "17px",
+            "text": "3"
+          }
+        ],
+        "indicator": "rgb(23, 60, 94) 4px 0px 0px 0px inset"
+      }
+    },
+    {
+      "name": "Self-contained green photo and desktop no horizontal overflow",
+      "status": "PASS",
+      "observed": {
+        "photo": true,
+        "scroll": 1920,
+        "width": 1920
+      }
+    },
+    {
+      "name": "Moved date/project controls update Dashboard to July / Tainan A",
+      "status": "PASS",
+      "observed": {
+        "activity": "09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過",
+        "month": "2026-07",
+        "project": "台南 A 案",
+        "values": [
+          "1案場",
+          "269項",
+          "5件",
+          "94.4%",
+          "43件",
+          "5家"
+        ]
+      }
+    },
+    {
+      "name": "Moved report export retains complete scoped table CSV",
+      "status": "PASS",
+      "observed": {
+        "columns": 5,
+        "dataRows": 1,
+        "progress": "50%"
+      }
+    },
+    {
+      "name": "overview: Center-specific Sidebar / KPI / Main / activity and shared toolbar",
+      "status": "PASS",
+      "observed": {
+        "activity": "09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過",
+        "center": "overview",
+        "demoSuffix": false,
+        "eyebrow": false,
+        "kpis": [
+          "案場數量",
+          "材料總數",
+          "待驗證案件",
+          "申報完成率",
+          "已驗證案件",
+          "供應商數量"
+        ],
+        "month": "2026-07",
+        "scope": "台南 A 案",
+        "side": "總覽儀表板案場總覽1材料與供應鏈申報進度驗證概況5異常追蹤管理報表",
+        "table": "進行中工程案",
+        "title": "Overview Center 總覽全局",
+        "toolbarAbove": true
+      }
+    },
+    {
+      "name": "material: Center-specific Sidebar / KPI / Main / activity and shared toolbar",
+      "status": "PASS",
+      "observed": {
+        "activity": "16:20台南 A 案 潔淨室高架地板 17型 申報完成16:20台南 A 案 潔淨室高架地板 25型 申報完成16:20台南 A 案 潔淨室高架地板 01型 申報完成",
+        "center": "material",
+        "demoSuffix": false,
+        "eyebrow": false,
+        "kpis": [
+          "材料總數",
+          "待申報材料",
+          "供應商數量",
+          "申報完成率",
+          "已申報材料",
+          "材料文件數量"
+        ],
+        "month": "2026-07",
+        "scope": "台南 A 案",
+        "side": "材料清單供應商管理5材料申報15文件管理材料分類異常處理1報表分析",
+        "table": "最近材料申報",
+        "title": "Material Center 材料生命週期",
+        "toolbarAbove": true
+      }
+    },
+    {
+      "name": "verification: Center-specific Sidebar / KPI / Main / activity and shared toolbar",
+      "status": "PASS",
+      "observed": {
+        "activity": "09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過09:40台南 A 案 · 驗證通過",
+        "center": "verification",
+        "demoSuffix": false,
+        "eyebrow": false,
+        "kpis": [
+          "待驗證案件",
+          "已驗證案件",
+          "退件／異常",
+          "驗證完成率",
+          "退件補正",
+          "驗證異常"
+        ],
+        "month": "2026-07",
+        "scope": "台南 A 案",
+        "side": "待驗證5驗證案件文件審查254退件管理1異常追蹤驗證紀錄報表分析",
+        "table": "待驗證案件",
+        "title": "Verification Center 驗證與合規",
+        "toolbarAbove": true
+      }
+    },
+    {
+      "name": "management: Center-specific Sidebar / KPI / Main / activity and shared toolbar",
+      "status": "PASS",
+      "observed": {
+        "activity": "08:00資料備份檢核完成16:00資料備份檢核完成",
+        "center": "management",
+        "demoSuffix": false,
+        "eyebrow": false,
+        "kpis": [
+          "使用者數量",
+          "組織／供應商",
+          "權限提醒",
+          "系統可用率",
+          "供應商數量",
+          "管理待辦"
+        ],
+        "month": "2026-07",
+        "scope": "台南 A 案",
+        "side": "使用者管理組織管理供應商管理角色與權限1規則設定系統設定1報表中心",
+        "table": "最近管理活動",
+        "title": "Management Center 平台治理管理",
+        "toolbarAbove": true
+      }
+    },
+    {
+      "name": "overview: right KPI content / green selection / preserved provenance / 2-to-1 ratio",
+      "status": "PASS",
+      "observed": {
+        "center": "overview",
+        "expected": "案場數量1案場本期展示本期數值↗",
+        "label": "案場數量",
+        "main": 1178.693115234375,
+        "notice": true,
+        "right": 589.3536987304688,
+        "selected": "案場數量1案場本期展示本期數值↗",
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))",
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview: KPI A Genie return then B opens without source mismatch",
+      "status": "PASS",
+      "observed": {
+        "expected": "材料總數",
+        "flight": "{\"id\":1,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":397.37925720214844},\"duration\":1167,\"renderer\":\"webgl-mesh\",\"frames\":71,\"meanRenderMs\":1.216901407905028,\"maxRenderMs\":10.5,\"preparationMs\":43.900000005960464,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+        "label": "材料總數",
+        "metric": "1",
+        "renderer": "webgl-mesh",
+        "returnX": "280.9232864379883",
+        "source": "kpi-overview-0"
+      }
+    },
+    {
+      "name": "overview: blank area returns B and releases dashboard width",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "motion": "closed"
+      }
+    },
+    {
+      "name": "material: right KPI content / green selection / preserved provenance / 2-to-1 ratio",
+      "status": "PASS",
+      "observed": {
+        "center": "material",
+        "expected": "材料總數269項本期展示本期數值↗",
+        "label": "材料總數",
+        "main": 1178.693115234375,
+        "notice": true,
+        "right": 589.3536987304688,
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))"
+      }
+    },
+    {
+      "name": "material: KPI A Genie return then B opens without source mismatch",
+      "status": "PASS",
+      "observed": {
+        "expected": "待申報材料",
+        "flight": "{\"id\":3,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":397.37925720214844},\"duration\":1167,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":0.6569444441960918,\"maxRenderMs\":2.2000000029802322,\"preparationMs\":22.5,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+        "label": "待申報材料",
+        "metric": "1",
+        "renderer": "webgl-mesh",
+        "returnX": "280.9232864379883",
+        "source": "kpi-material-0"
+      }
+    },
+    {
+      "name": "material: blank area returns B and releases dashboard width",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "lastSource": "kpi-material-1",
+        "layers": 0,
+        "motion": "closed"
+      }
+    },
+    {
+      "name": "verification: right KPI content / green selection / preserved provenance / 2-to-1 ratio",
+      "status": "PASS",
+      "observed": {
+        "center": "verification",
+        "expected": "待驗證案件5件本期展示本期數值↗",
+        "label": "待驗證案件",
+        "main": 1178.693115234375,
+        "notice": true,
+        "right": 589.3536987304688,
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))"
+      }
+    },
+    {
+      "name": "verification: KPI A Genie return then B opens without source mismatch",
+      "status": "PASS",
+      "observed": {
+        "expected": "已驗證案件",
+        "flight": "{\"id\":5,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":397.37925720214844},\"duration\":1167,\"renderer\":\"webgl-mesh\",\"frames\":3,\"meanRenderMs\":0.6999999980131785,\"maxRenderMs\":0.8999999910593033,\"preparationMs\":1.2999999970197678,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+        "label": "已驗證案件",
+        "metric": "1",
+        "source": "kpi-verification-0"
+      }
+    },
+    {
+      "name": "verification: blank area returns B and releases dashboard width",
+      "status": "PASS",
+      "observed": "closed"
+    },
+    {
+      "name": "management: right KPI content / green selection / preserved provenance / 2-to-1 ratio",
+      "status": "PASS",
+      "observed": {
+        "label": "使用者數量",
+        "main": 1178.693115234375,
+        "notice": true,
+        "right": 589.3536987304688,
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))"
+      }
+    },
+    {
+      "name": "management: KPI A Genie return then B opens without source mismatch",
+      "status": "PASS",
+      "observed": {
+        "expected": "組織／供應商",
+        "label": "組織／供應商",
+        "lastSource": "kpi-management-0",
+        "metric": "1"
+      }
+    },
+    {
+      "name": "management: blank area returns B and releases dashboard width",
+      "status": "PASS",
+      "observed": "closed"
+    },
+    {
+      "name": "Left Library opens current Center, 19 Registry entries and 7 disabled pending slots",
+      "status": "PASS",
+      "observed": "統一 KPI 卡片櫃"
+    },
+    {
+      "name": "Library Material primary filter remains nine canonical cards",
+      "status": "PASS",
+      "observed": 9
+    },
+    {
+      "name": "Library Verification primary filter remains three canonical cards",
+      "status": "PASS",
+      "observed": 3
+    },
+    {
+      "name": "Library search finds one shared data source card",
+      "status": "PASS",
+      "observed": "RRCC-KPI-001\n材料中心\n材料需求\n86,935\nkg\n\nV1 / V2 可追溯來源\n\n定義、來源與版本"
+    },
+    {
+      "name": "Left function opens complete scoped material viewer with provenance",
+      "status": "PASS",
+      "observed": "材料清單"
+    },
+    {
+      "name": "Complete material viewer can display all 269 rows without preview truncation",
+      "status": "PASS",
+      "observed": 269
+    },
+    {
+      "name": "Sidebar keyboard focus expands width/text while preserving 64px permanent rail",
+      "status": "PASS",
+      "observed": {
+        "expanded": true,
+        "font": "17.8px",
+        "libraryVisible": true,
+        "mainX": 63.99857711791992,
+        "width": 326.3991394042969
+      }
+    },
+    {
+      "name": "1440px responsive toolbar and dashboard stay within viewport",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "control": {
+          "bottom": 238.1533966064453,
+          "right": 1390.3976135253906,
+          "w": 363.0255432128906,
+          "x": 1027.3720703125,
+          "y": 200.7457275390625
+        },
+        "eyebrow": false,
+        "kpis": {
+          "bottom": 456.1647644042969,
+          "right": 1404.8365859985352,
+          "w": 1320.6817626953125,
+          "x": 84.15482330322266,
+          "y": 263.7997131347656
+        },
+        "labels": [
+          "總覽中心",
+          "材料中心",
+          "驗證中心",
+          "管理中心"
+        ],
+        "library": true,
+        "scroll": 1440,
+        "six": 6,
+        "toolbar": {
+          "bottom": 249.4033966064453,
+          "right": 1404.8365859985352,
+          "w": 1320.6817626953125,
+          "x": 84.15482330322266,
+          "y": 189.4957275390625
+        },
+        "width": 1440
+      }
+    },
+    {
+      "name": "960px responsive toolbar and dashboard stay within viewport",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "control": {
+          "bottom": 342.07386016845703,
+          "right": 915.3408737182616,
+          "w": 821.6903076171875,
+          "x": 93.65056610107422,
+          "y": 296.171875
+        },
+        "eyebrow": false,
+        "kpis": {
+          "bottom": 680.7243957519531,
+          "right": 928.9985733032228,
+          "w": 849.0056762695312,
+          "x": 79.9928970336914,
+          "y": 366.725830078125
+        },
+        "labels": [
+          "總覽中心",
+          "材料中心",
+          "驗證中心",
+          "管理中心"
+        ],
+        "library": true,
+        "scroll": 960,
+        "six": 6,
+        "toolbar": {
+          "bottom": 352.72725677490234,
+          "right": 928.9985733032228,
+          "w": 849.0056762695312,
+          "x": 79.9928970336914,
+          "y": 243.74998474121097
+        },
+        "width": 960
+      }
+    },
+    {
+      "name": "640px responsive toolbar and dashboard stay within viewport",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "control": {
+          "bottom": 404.2897415161133,
+          "right": 600.8380355834961,
+          "w": 512.6846313476562,
+          "x": 88.15340423583984,
+          "y": 358.38775634765625
+        },
+        "eyebrow": false,
+        "kpis": {
+          "bottom": 983.06103515625,
+          "right": 612.9971237182617,
+          "w": 537.0028076171875,
+          "x": 75.99431610107422,
+          "y": 428.444580078125
+        },
+        "labels": [
+          "總覽中心",
+          "材料中心",
+          "驗證中心",
+          "管理中心"
+        ],
+        "library": true,
+        "scroll": 640,
+        "six": 6,
+        "toolbar": {
+          "bottom": 416.44883728027344,
+          "right": 612.9971237182617,
+          "w": 537.0028076171875,
+          "x": 75.99431610107422,
+          "y": 253.74998474121097
+        },
+        "width": 640
+      }
+    },
+    {
+      "name": "375px responsive toolbar and dashboard stay within viewport",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "control": {
+          "bottom": 507.17327880859375,
+          "right": 335.83805084228516,
+          "w": 247.6846466064453,
+          "x": 88.15340423583984,
+          "y": 378.7854919433594
+        },
+        "eyebrow": false,
+        "kpis": {
+          "bottom": 1401.3067626953125,
+          "right": 347.99715423583984,
+          "w": 272.0028381347656,
+          "x": 75.99431610107422,
+          "y": 531.328125
+        },
+        "labels": [
+          "總覽中心",
+          "材料中心",
+          "驗證中心",
+          "管理中心"
+        ],
+        "library": true,
+        "scroll": 375,
+        "six": 6,
+        "toolbar": {
+          "bottom": 519.3323516845703,
+          "right": 347.99715423583984,
+          "w": 272.0028381347656,
+          "x": 75.99431610107422,
+          "y": 274.147705078125
+        },
+        "width": 375
+      }
+    },
+    {
+      "name": "320px responsive toolbar and dashboard stay within viewport",
+      "status": "PASS",
+      "observed": {
+        "closed": true,
+        "control": {
+          "bottom": 507.17327880859375,
+          "right": 280.83805084228516,
+          "w": 192.6846466064453,
+          "x": 88.15340423583984,
+          "y": 378.7854919433594
+        },
+        "eyebrow": false,
+        "kpis": {
+          "bottom": 1401.3067626953125,
+          "right": 292.99715423583984,
+          "w": 217.0028381347656,
+          "x": 75.99431610107422,
+          "y": 531.328125
+        },
+        "labels": [
+          "總覽中心",
+          "材料中心",
+          "驗證中心",
+          "管理中心"
+        ],
+        "library": true,
+        "scroll": 320,
+        "six": 6,
+        "toolbar": {
+          "bottom": 519.3323516845703,
+          "right": 292.99715423583984,
+          "w": 217.0028381347656,
+          "x": 75.99431610107422,
+          "y": 274.147705078125
+        },
+        "width": 320
+      }
+    },
+    {
+      "name": "Final overview selected KPI remains green and only one right panel is open",
+      "status": "PASS",
+      "observed": {
+        "activeDialogs": 0,
+        "panel": "open",
+        "roots": [
+          {
+            "aria": "false",
+            "id": "trend-chart",
+            "phase": "ready",
+            "text": " 申報完成：3007月8月9月10月本機資料已讀取"
+          },
+          {
+            "aria": "false",
+            "id": "distribution-chart",
+            "phase": "ready",
+            "text": " 100%1個案場無塵室新建100%本機資料已讀取"
+          },
+          {
+            "aria": "false",
+            "id": "",
+            "phase": "ready",
+            "text": "7月8月9月10月本機資料已讀取"
+          }
+        ],
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))"
+      }
+    },
+    {
+      "name": "Clicking inside right panel keeps it open",
+      "status": "PASS",
+      "observed": "open"
+    },
+    {
+      "name": "Main and right charts complete local animated loading lifecycle",
+      "status": "PASS",
+      "observed": [
+        {
+          "busy": "false",
+          "id": "trend-chart",
+          "phase": "ready"
+        },
+        {
+          "busy": "false",
+          "id": "distribution-chart",
+          "phase": "ready"
+        },
+        {
+          "busy": "false",
+          "id": "progress-track rrcc-chart-motion",
+          "phase": "ready"
+        },
+        {
+          "busy": "false",
+          "id": "right-progress rrcc-chart-motion",
+          "phase": "ready"
+        },
+        {
+          "busy": "false",
+          "id": "right-spark rrcc-chart-motion",
+          "phase": "ready"
+        }
+      ]
+    },
+    {
+      "name": "Browser has no script errors during v1.6 interactions",
+      "status": "PASS",
+      "observed": []
+    }
+  ],
+  "observations": [
+    {
+      "name": "Toolbar report export downloads scoped CSV with explicit provenance",
+      "status": "OBSERVATION_TEST_EXPECTATION",
+      "observed": {
+        "bytes": 76,
+        "scopedJuly": false,
+        "sourceDisclaimer": false
+      },
+      "resolution": "Export preserves the existing table-only CSV schema (five columns, one scoped Tainan row). Date/provenance are displayed in the UI and details, not additional CSV metadata; no change requested to export schema."
+    },
+    {
+      "name": "overview: blank area returns B and releases dashboard width",
+      "status": "OBSERVATION_TEST_TIMING",
+      "observed": {
+        "closed": false,
+        "lastSource": "kpi-overview-1",
+        "layers": 0,
+        "motion": "closing"
+      },
+      "resolution": "A hidden-state query on a conditional [data-motion=closed] selector returns while the selector is absent. Replaced with attached-state wait, then verified final closed phase and released width."
+    },
+    {
+      "name": "material: right KPI content / green selection / preserved provenance / 2-to-1 ratio",
+      "status": "OBSERVATION_TEST_EXPECTATION",
+      "observed": {
+        "center": "material",
+        "expected": "材料總數269項本期展示本期數值↗",
+        "label": "材料總數",
+        "main": 1178.693115234375,
+        "notice": true,
+        "right": 589.3536987304688,
+        "selected": "材料總數269項本期展示本期數值↗",
+        "selectedBg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))",
+        "source": "kpi-material-0"
+      },
+      "resolution": "Selected cards use the retained solid green gradient rgb(0,157,122) → rgb(19,175,142), not a pale green assumed by the assertion. Corrected to the actual retained green surface."
+    },
+    {
+      "name": "Verification B locator wait deadline",
+      "status": "OBSERVATION_BROWSER_WAIT",
+      "resolution": "Subsequent DOM read confirmed phase=open, metric=1, selected=kpi-verification-1 and completed webgl-mesh Genie flight from A; no product state mismatch."
+    },
+    {
+      "name": "Management B locator wait deadline",
+      "status": "OBSERVATION_BROWSER_WAIT",
+      "resolution": "Separate DOM read confirms completed WebGL 48-segment flight and phase=open/metric=1. Continuing from observed final state."
+    },
+    {
+      "name": "Left Library opens current Center, 19 Registry entries and 7 disabled pending slots",
+      "status": "OBSERVATION_TEST_LOCATOR",
+      "observed": "統一 KPI 卡片櫃",
+      "resolution": "Corrected test locator from nonexistent .library-card to authored .kpi-library-master-card; visible dialog already contained all 19 cards."
+    },
+    {
+      "name": "Full viewer page-size locator",
+      "status": "OBSERVATION_TEST_LOCATOR",
+      "resolution": "UI label text is 每頁顯示; accessible select name is 每頁顯示列數. Retargeted to observed complete name."
+    }
+  ],
+  "screenshots": [
+    "screenshots/01-overview.png",
+    "screenshots/02-material.png",
+    "screenshots/03-verification.png",
+    "screenshots/04-management.png",
+    "screenshots/05-full-material-view.png",
+    "screenshots/06-expanded-sidebar.png",
+    "screenshots/07-mobile-toolbar.png",
+    "screenshots/08-overview-right-panel.png",
+    "screenshots/09-left-entry-library.png"
+  ],
+  "completedAt": "2026-10-12T20:36:43.388Z",
+  "summary": {
+    "passed": 40,
+    "failed": 0,
+    "observations": 7
+  },
+  "limits": [
+    "No native pointer drag/real touch or hover acceptance was added; retained model tests and actual keyboard opening/filter interactions were checked.",
+    "Responsive checks use desktop browser viewport overrides at 1920,1440,960,640,375,320, not physical mobile devices.",
+    "No Production, Vercel deployment, main merge, SSO/RBAC/tenant-isolation acceptance."
+  ]
+}

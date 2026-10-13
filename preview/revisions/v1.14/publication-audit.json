@@ -1,0 +1,175 @@
+{
+  "verifiedAt": "2026-10-13T07:58:23.707Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 33,
+  "textFiles": 32,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/verification/owner-v1.14.md",
+      "bytes": 4226,
+      "sha256": "cad3bb2fc4f3eac576729eed511b814db1c058faf47afc14b7fb76ca25a70280"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.14.html",
+      "bytes": 11814918,
+      "sha256": "afbcc5de7f72e7767373a022d2f4d36a6651fc6523b7d5d137f38bd3fbd58801"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10350,
+      "sha256": "6e93289078866270cba609e361babbe8814aa6602a8241e888dc52de16dbc193"
+    },
+    {
+      "file": "preview/kpi-catalog.js",
+      "bytes": 12825,
+      "sha256": "acf09c0ec3260c4c1a525a36577e1d73fceea046c5b9420f8c10b6b099d3fffd"
+    },
+    {
+      "file": "preview/kpi-library.js",
+      "bytes": 34029,
+      "sha256": "0a91b51f4ea7d12e32d2e010ef27c868a9a6a1498805ad7004af28881b96408d"
+    },
+    {
+      "file": "preview/kpi-settings.js",
+      "bytes": 10608,
+      "sha256": "95c332885a5a2ff3a6cba1a08f92e2cc8a4933204354e936be0369059d66311b"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3855,
+      "sha256": "40cf4db785318c91df265508e8900fee0a882348684576113e7fa7497c290061"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 62494,
+      "sha256": "8a87d2e1fff07775632380a5967f51c3d479e6fd87e8f200f527ef7200c16840"
+    },
+    {
+      "file": "preview/revisions/v1.14/local-browser-evidence.json",
+      "bytes": 21888,
+      "sha256": "ab04ae069d6c7138081fede5f0682ea616ec8e5250e5278bc1a70e434f5e6861"
+    },
+    {
+      "file": "preview/revisions/v1.14/local-genie-evidence.json",
+      "bytes": 378,
+      "sha256": "c25644a48aa4b7998a63867342f4a05e93a90ec8545faf10ea1a4dd2a1d46364"
+    },
+    {
+      "file": "preview/revisions/v1.14/local-responsive-evidence.json",
+      "bytes": 619,
+      "sha256": "1b416ecda006edf0e1c47b563ad1af9a1bba056dca1e7f5a101c189e74ae7c1a"
+    },
+    {
+      "file": "preview/revisions/v1.14/local-test-evidence-02.json",
+      "bytes": 87014,
+      "sha256": "a6e034dfbdbbfd26bd588dab0959a62b6a6114949b361fc8bc861195f326e3d3"
+    },
+    {
+      "file": "preview/revisions/v1.14/local-test-evidence.json",
+      "bytes": 86857,
+      "sha256": "9d0bb8c1e681a0fa5c840d13d429b89ef158742b3de027718ffc199f24988fa1"
+    },
+    {
+      "file": "preview/revisions/v1.14/overview-local.png",
+      "bytes": 94196,
+      "sha256": "b011df85e07c730b38c5e76757d85d145291012df4cef46735b1703515f31c4d"
+    },
+    {
+      "file": "preview/sidebar-click-v1.14.css",
+      "bytes": 3617,
+      "sha256": "73d22ac74e12318afce3d5ed96523faa3e373eda92e75fcbc416a105549f8d8a"
+    },
+    {
+      "file": "preview/sidebar.js",
+      "bytes": 9658,
+      "sha256": "09a090a203e72d31bfe5dd63beb333b0b90d32842e3e5079bce136d5345c7023"
+    },
+    {
+      "file": "preview/workspace-v1.14.css",
+      "bytes": 3121,
+      "sha256": "cef98abfe0fc72cddb97e73f9d016ad004d165e9767f033983ba6225da25f930"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6604,
+      "sha256": "5276db4fc4efcd4e3b197fe3f0b9cd4661836324aab4d01ca3c905068f90b8ec"
+    },
+    {
+      "file": "scripts/test-brand-alignment.mjs",
+      "bytes": 1601,
+      "sha256": "b43e742343ea8e61a40725867823e75cd2f9fced8ce96593fd81d0d76fe13d5d"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.12.mjs",
+      "bytes": 9441,
+      "sha256": "c82d18d32e3a80e68e9d5054121218425965129390d8df986bbcfe1d6b89d9a3"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.13.mjs",
+      "bytes": 7973,
+      "sha256": "5c3a24549c8c5a0b6409fb0eae55cc57209d29de0ef9a70db31048b7f7802e43"
+    },
+    {
+      "file": "scripts/test-kpi-catalog.mjs",
+      "bytes": 10505,
+      "sha256": "153edd73c9842ec6a4a5692b3af2aae32cfc9b7df88898fd7feef862bda55df3"
+    },
+    {
+      "file": "scripts/test-kpi-dashboard-drag.mjs",
+      "bytes": 15518,
+      "sha256": "b9bd57c4cebe31169cb37fb2bd4e41fc1bd6a5aa2b692d8d45531386986c940c"
+    },
+    {
+      "file": "scripts/test-kpi-library-ui.mjs",
+      "bytes": 24398,
+      "sha256": "141a44cf053ccb8a97a894ed156f0cc916f937ea80934ab7258965b486689c79"
+    },
+    {
+      "file": "scripts/test-kpi-settings.mjs",
+      "bytes": 13008,
+      "sha256": "5893a37c0b77e8817c97febb9c6c6a6fa6aaf672e9bbf309bc08c1ef757fe5fe"
+    },
+    {
+      "file": "scripts/test-kpi-twelve-v1.14.mjs",
+      "bytes": 9942,
+      "sha256": "4cc0487f1ff0fda4aa88fdac29be59b657d4049d77d8032b99fbfd1afbb1acef"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12698,
+      "sha256": "86d08668090e6ce55c17e38299a4e5694e6999b845f4e56eb3421ba7e55d3269"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 17079,
+      "sha256": "af9ee2d2a8c87f37fd3f231d0800f897e7f86be2b543d3af7e7cfee33064d0ec"
+    },
+    {
+      "file": "scripts/test-sidebar.mjs",
+      "bytes": 19683,
+      "sha256": "7c4fa3cef5d5359258cdf66b7605a3516d2caa520e0e83658a7d7271483e45f3"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6954,
+      "sha256": "4a107ee120dda4963f433d2dce188dffc8ed8ce327163398b22cd14b77717e7a"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11639,
+      "sha256": "77d2ff34124600d8bed3eadd00bc44f271a6e9468136fe09fc8c89b59d85674b"
+    },
+    {
+      "file": "scripts/test-workspace-v1.14.mjs",
+      "bytes": 9007,
+      "sha256": "a6df64355bebd79248995b0026d047de93d8914a075491ab32c83758fab7daa3"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 5434,
+      "sha256": "6fa1b343bdf9b70a2f1775e755dcbd796f3eeac9689e4db2ce6d51b99a6f7a61"
+    }
+  ]
+}

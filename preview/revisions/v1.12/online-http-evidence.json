@@ -1,0 +1,64 @@
+{
+  "observedAt": "2026-10-13T00:45:47.969Z",
+  "url": "https://rrcc-5g204rz1d-tjc1.vercel.app/",
+  "deployment": {
+    "id": "dpl_6XGJuw9qMSnqfFmfLwnJqqcMq9Q6",
+    "name": "rrcc",
+    "url": "rrcc-5g204rz1d-tjc1.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1791852303908,
+    "creator": {
+      "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+      "username": "jin358-6510"
+    },
+    "project": {
+      "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+      "name": "rrcc",
+      "framework": null
+    },
+    "meta": {
+      "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+      "githubCommitSha": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428",
+      "githubCommitMessage": "feat: use light-gray Center tabs and remove source summary banner",
+      "githubRepo": "RRCC",
+      "githubOrg": "jin358-cmd"
+    },
+    "alias": [
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "target": null,
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1791852305302,
+    "ready": 1791852310952,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "requestToolbarDisabled": true,
+  "httpStatus": 200,
+  "contentType": "text/html; charset=utf-8",
+  "bytes": 11804912,
+  "sha256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1",
+  "expectedBytes": 11804912,
+  "expectedSHA256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1",
+  "exactMatch": true,
+  "metadataStatus": 200,
+  "metadata": {
+    "schemaVersion": "1.0",
+    "previewOnly": true,
+    "sourceCommitSha": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428",
+    "sourceBranch": "feature/rrcc-hantang-ui-refinement-20261013",
+    "deploymentEnvironment": "preview",
+    "artifact": {
+      "source": "preview/RRCC-Hantang-4-Center-Preview-v1.12.html",
+      "output": "index.html",
+      "sha256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1",
+      "sizeBytes": 11804912
+    },
+    "generatedAt": "2026-10-13T00:45:10.019Z"
+  },
+  "sourceCommitMatch": false
+}

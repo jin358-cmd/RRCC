@@ -1,0 +1,26 @@
+{
+  "verifiedAt": "2026-10-13T08:33:58.163Z",
+  "url": "https://rrcc-eeuuwfhyl-tjc1.vercel.app/",
+  "httpStatus": 200,
+  "bytes": 11847060,
+  "sha256": "5a1a2d785ae438262682ff5a0453ec2e898e73ca74177dc310545b6f5a4e6752",
+  "localSha256": "5a1a2d785ae438262682ff5a0453ec2e898e73ca74177dc310545b6f5a4e6752",
+  "byteMatch": true,
+  "metadataStatus": 200,
+  "metadata": {
+    "schemaVersion": "1.0",
+    "previewOnly": true,
+    "sourceCommitSha": "2ad854968754fbd63003a3248053e337c96bb182",
+    "sourceBranch": "feature/rrcc-hantang-ui-refinement-20261013",
+    "deploymentEnvironment": "preview",
+    "artifact": {
+      "source": "preview/RRCC-Hantang-4-Center-Preview-v1.15.html",
+      "output": "index.html",
+      "sha256": "5a1a2d785ae438262682ff5a0453ec2e898e73ca74177dc310545b6f5a4e6752",
+      "sizeBytes": 11847060
+    },
+    "generatedAt": "2026-10-13T08:32:47.006Z"
+  },
+  "protectedAccess": "Existing scoped Vercel temporary authentication; credentials held in memory only; deployment protection unchanged",
+  "skipToolbar": "Single-request header to omit Vercel toolbar injection for exact source-byte comparison"
+}

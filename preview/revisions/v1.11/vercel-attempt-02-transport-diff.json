@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-10-13T00:32:32.117Z",
+  "status": 200,
+  "originalBytes": 11805134,
+  "responseBytes": 11805297,
+  "commonPrefixBytes": 11805134,
+  "commonSuffixBytes": 0,
+  "sourceDifferenceBytes": 0,
+  "responseDifferenceBytes": 163,
+  "insertedMarkup": "<script async data-explicit-opt-in=\"true\" data-deployment-id=\"dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW\" src=\"https://vercel.live/_next-live/feedback/feedback.js\"></script>",
+  "sourceUnchanged": true,
+  "normalizedSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+  "rawSha256": "b225db7e18e903ac45677a16f7efbcf9b2c7e83b546a5529a07120a078a09079",
+  "noCredentialsPersisted": true
+}

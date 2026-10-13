@@ -1,0 +1,140 @@
+{
+  "verifiedAt": "2026-10-12T21:40:44.731Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 26,
+  "textFiles": 25,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 3936,
+      "sha256": "bda4a535952f90e20efeee0b389ef00583657be53d48524a3be25e7c544f7a3a"
+    },
+    {
+      "file": "data/demo/rrcc-tsmc-sustainability-v1.10.json",
+      "bytes": 6200,
+      "sha256": "737528b1b151db0b85b476cdde54fbbeaded14a469c0ef7ee9cea51a76018a2d"
+    },
+    {
+      "file": "docs/verification/owner-v1.10.md",
+      "bytes": 5542,
+      "sha256": "355dd424ccd0d2600bbf4ec6a2d3002149f6634e6e7ee37af5695974e9d05514"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.10.html",
+      "bytes": 11801849,
+      "sha256": "7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344"
+    },
+    {
+      "file": "preview/index.html",
+      "bytes": 10530,
+      "sha256": "ebf7b84a780d779194dfce8922ad787e7acfc86648339e613012a02c9d4191d0"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.10.css",
+      "bytes": 9533,
+      "sha256": "bf9d92c5e4917a195b7beb80d6a5d7f25e7d50fd2b0dc8433bfbf974d9a3b605"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "bytes": 3702,
+      "sha256": "808874a749364e7deaebdb648cd57e15836450c7c3defb397177792239f46b92"
+    },
+    {
+      "file": "preview/preview.js",
+      "bytes": 63083,
+      "sha256": "bac63edc4339e280696b26472fed971a12d657951bf44a1c40bf6b5bfea7c257"
+    },
+    {
+      "file": "preview/revisions/v1.10/README.md",
+      "bytes": 1623,
+      "sha256": "6135e0f664bed5a80f668566e95345c11250c77b9a430c9173829479a5b50c2e"
+    },
+    {
+      "file": "preview/revisions/v1.10/browser-interaction-evidence.json",
+      "bytes": 15171,
+      "sha256": "f0b1b32d3976f0e3409b8dbf444c0cfb227402b1d2b15ec172fc2eb693eb18e6"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence-delivery.json",
+      "bytes": 74499,
+      "sha256": "c2c4fef0a3a62936bf92c3eba1fcc90e03409b6cebdd47c2e37c6c28e94972c5"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence-final.json",
+      "bytes": 74499,
+      "sha256": "6e1c10bc5b34c3b8119cd8c1623d6fced48a5a6b50ed8eb6e2baf7bbed5af953"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence.json",
+      "bytes": 108921,
+      "sha256": "a07d11f096cbe5bf6fde3ee600134a057854bf9ecd72ffaacccdc8db265a95cf"
+    },
+    {
+      "file": "preview/revisions/v1.10/material-public-reference.png",
+      "bytes": 231405,
+      "sha256": "cec15398d9442aa48ddfbc7a86aa2c6ec7b49dbd9782236b721e1bf56134f281"
+    },
+    {
+      "file": "preview/tsmc-reference-data.js",
+      "bytes": 4807,
+      "sha256": "d6cbab44e7b372d318162eea09fe5a22545141a6d5cdc0b25e969e791c796666"
+    },
+    {
+      "file": "preview/tsmc-sustainability.js",
+      "bytes": 17067,
+      "sha256": "17320b3a7fda1ce2401ec5232865fbccbba373fd6afab0049c0b47d194ee82e2"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "bytes": 6604,
+      "sha256": "d6fe994af131a5cb476a472af221758b6e334c4c4ecaa1b07422733c772603fd"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.10.mjs",
+      "bytes": 5911,
+      "sha256": "6fc3b58c615bcbf63ba303603eb759af90572aee81a21d27e75543df15cf4bcc"
+    },
+    {
+      "file": "scripts/test-kpi-editor-integration.mjs",
+      "bytes": 2714,
+      "sha256": "1a93a28dbefb7791537d0f61a26cc17ed277ab474727aa504a0d549234d5ebf6"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "bytes": 12540,
+      "sha256": "811be9ca8c17823ece9b1c05049e11ffb34617fa99b1b00c45ecf3707badd0d9"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "bytes": 16859,
+      "sha256": "0faa2408b506dd9846eff4fdbfd4c3c8878fabda3574311ecc4cf1755cf13682"
+    },
+    {
+      "file": "scripts/test-tsmc-sustainability.mjs",
+      "bytes": 10491,
+      "sha256": "571a92fc194266e4e851f420df684415a75f7769f118319be1c66629ceea1f35"
+    },
+    {
+      "file": "scripts/test-tsmc-ui-integration.mjs",
+      "bytes": 3072,
+      "sha256": "0be2ce49021a57363984a297973791a269186f622f9f4b112a1eec1e949912f6"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "bytes": 6954,
+      "sha256": "5baaa4a918113ad86985bfc992f619d2618e3054a38c858959f3810c97394b14"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "bytes": 11554,
+      "sha256": "3216d60b2911984c2ba3ded3bb0fdd8bc9929d7cdc79d6ad52ed3c7ee762ade1"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "bytes": 5094,
+      "sha256": "85e1c62aba3181be12a4c02a448a1f413b78387bf762b5055835590b02db30ec"
+    }
+  ]
+}

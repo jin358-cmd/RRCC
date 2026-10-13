@@ -1,0 +1,95 @@
+/* Fixed icon rail + separate click-pinned navigation overlay. */
+#stage.sidebar-click-navigation .sidebar {
+  position: fixed;
+  top: var(--header-height, 92px);
+  bottom: 0;
+  left: 0;
+  z-index: 61;
+  width: 64px;
+  min-width: 64px;
+  padding: 1rem 10px;
+  transition: none;
+}
+#stage.sidebar-click-navigation .sidebar .sidebar-center-marker { cursor: pointer; }
+#stage.sidebar-click-navigation .sidebar-menu-panel {
+  position: fixed;
+  top: var(--header-height, 92px);
+  bottom: 0;
+  left: 64px;
+  z-index: 60;
+  width: min(clamp(336px, 20vw, 400px), calc(100vw - 64px));
+  padding: 1.1rem 1rem 1.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: linear-gradient(120deg, #f1f8ff, #e5f2ff 75%, #dcecff);
+  border-right: 1px solid #c3d9ee;
+  box-shadow: 12px 0 30px rgb(32 77 126 / 16%);
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateX(calc(-100% - 1px));
+  transition: transform 220ms cubic-bezier(.2, .7, .2, 1), visibility 0s 220ms;
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel.is-open {
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(0);
+  transition-delay: 0s;
+}
+.sidebar-menu-title { margin: 0; font-size: 1.18rem; font-weight: 750; color: #183e5f; }
+.sidebar-menu-hint { margin: .45rem 0 1rem; color: #5a7796; font-size: .76rem; line-height: 1.6; }
+.sidebar-menu-panel .project-selector { margin-bottom: 1rem; }
+.sidebar-menu-panel .sidebar-library-nav { margin: 0 0 .9rem; }
+.sidebar-menu-panel .common-nav { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #c5dced; }
+#stage.sidebar-click-navigation .sidebar-menu-panel :is(.business-nav, .common-nav, .sidebar-library-nav) button {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  min-height: 3.1rem;
+  padding: .65rem .85rem;
+  gap: .85rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  color: #284f73;
+  background: transparent;
+  box-shadow: none;
+  text-align: left;
+  font-size: clamp(18px, calc(.25vw + 14px), 21px);
+  font-weight: 600;
+  line-height: 1.45;
+  transition: background 140ms ease, color 140ms ease, box-shadow 140ms ease;
+}
+.sidebar-menu-panel .nav-label { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+.sidebar-menu-panel .ico { width: 1.35rem; height: 1.35rem; flex: 0 0 auto; }
+#stage.sidebar-click-navigation .sidebar-menu-panel :is(.business-nav, .common-nav, .sidebar-library-nav) button.active {
+  color: #1665b7;
+  background: #d9eafb;
+  box-shadow: inset 3px 0 #267fd0;
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel :is(.business-nav, .common-nav, .sidebar-library-nav) button:is(:hover, :focus-visible) {
+  color: #fff;
+  background: linear-gradient(145deg, #459df6, #217edb);
+  border-color: #2f8be3;
+  box-shadow: inset 0 1px 0 #ffffff5c, 0 3px 9px #1d72b929;
+  outline-offset: 2px;
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel :is(.nav-count, .count) {
+  margin-left: auto;
+  min-width: 1.45rem;
+  height: auto;
+  padding: 1px 4px;
+  color: #bf2735;
+  background: #fff6f3;
+  border: 1px solid #efcfc9;
+  border-radius: 5px;
+  font-size: .88rem;
+  font-weight: 750;
+  flex-shrink: 0;
+}
+/* Retire the former yellow sweep without moving the rail or its icons. */
+#stage.sidebar-click-navigation .sidebar :is(.business-nav button, .common-nav button, #kpi-settings-button)::after,
+#stage.sidebar-click-navigation .sidebar-menu-panel button::after { content: none; animation: none; }
+@media (prefers-reduced-motion: reduce) {
+  #stage.sidebar-click-navigation .sidebar-menu-panel,
+  #stage.sidebar-click-navigation .sidebar-menu-panel button { transition: none; }
+}

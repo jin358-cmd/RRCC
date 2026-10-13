@@ -1,0 +1,19 @@
+{
+  "deploymentId": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+  "sourceCommit": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0",
+  "sourceMode": "SYNTHETIC_DEMO",
+  "center": "material",
+  "scope": "all",
+  "period": "2026-10",
+  "searchAtExport": "MAT-00171",
+  "visibleSearchRows": 1,
+  "downloadedFile": "RRCC_material_all_2026-10_SYNTHETIC_DEMO (2).csv",
+  "bytes": 262279,
+  "rowsParsedByPowerShellImportCsv": 2486,
+  "columns": ["材料編號／名稱", "供應商", "案場", "申報日期", "狀態"],
+  "utf8Bom": true,
+  "sha256": "e2ef1264a616fcc004f4e882e593cf3c38682de84dd69ff8b5dd6ef6ca374acb",
+  "fullDataNotOnlyPageOrSearch": true,
+  "status": "PASS",
+  "note": "Actual browser download; duplicated filename suffix added by browser. Synthetic demo, not official declarations."
+}

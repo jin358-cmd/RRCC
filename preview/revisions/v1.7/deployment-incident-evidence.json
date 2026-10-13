@@ -1,0 +1,315 @@
+{
+  "documentId": "RRCC-NOVA-VERCEL-20261013-004",
+  "revision": "v1.7",
+  "verifiedAt": "2026-10-12T20:54:07.794Z",
+  "authorization": {
+    "preview": true,
+    "production": false,
+    "mainMerge": false
+  },
+  "requested": {
+    "teamId": "team_Aep4PXnmiXE5276HRkoQrHtF",
+    "requestBody": {
+      "name": "rrcc",
+      "project": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+      "gitSource": {
+        "type": "github",
+        "repoId": 1415446770,
+        "ref": "feature/rrcc-hantang-ui-refinement-20261013",
+        "sha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e"
+      },
+      "projectSettings": {
+        "framework": null,
+        "rootDirectory": null,
+        "buildCommand": "node scripts/build-vercel-preview.mjs",
+        "installCommand": "",
+        "outputDirectory": "dist",
+        "nodeVersion": "24.x"
+      },
+      "meta": {
+        "rrccAuthorization": "RRCC-NOVA-VERCEL-20261013-004",
+        "rrccScope": "Preview only; no Production or main merge"
+      },
+      "withLatestCommit": false
+    }
+  },
+  "targetWasOmitted": true,
+  "createResponse": {
+    "deployment": {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "name": "rrcc",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "type": "LAMBDAS",
+      "state": "INITIALIZING",
+      "createdAt": 1791838349180,
+      "creator": {
+        "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+        "username": "jin358-6510"
+      },
+      "project": {
+        "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+        "name": "rrcc",
+        "framework": null
+      },
+      "meta": {
+        "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+        "githubCommitSha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e",
+        "githubCommitMessage": "feat: align RRCC branding and prepare Preview-only Vercel build v1.7",
+        "githubRepo": "RRCC",
+        "githubOrg": "jin358-cmd"
+      },
+      "alias": [
+        "rrcc-tjc1.vercel.app",
+        "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1791838349180,
+      "readyState": "INITIALIZING"
+    }
+  },
+  "cancellation": {
+    "tool": "cancel_deployment",
+    "result": "CANCELED",
+    "confirmedByDeploymentReadback": true
+  },
+  "deploymentReadback": {
+    "deployment": {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "name": "rrcc",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "type": "LAMBDAS",
+      "state": "CANCELED",
+      "createdAt": 1791838349180,
+      "creator": {
+        "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+        "username": "jin358-6510"
+      },
+      "project": {
+        "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+        "name": "rrcc",
+        "framework": null
+      },
+      "meta": {
+        "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+        "githubCommitSha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e",
+        "githubCommitMessage": "feat: align RRCC branding and prepare Preview-only Vercel build v1.7",
+        "githubRepo": "RRCC",
+        "githubOrg": "jin358-cmd"
+      },
+      "alias": [
+        "rrcc-tjc1.vercel.app",
+        "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+      ],
+      "target": "production",
+      "regions": [
+        "iad1"
+      ],
+      "buildingAt": 1791838353465,
+      "ready": 1791838356661,
+      "readyState": "CANCELED"
+    }
+  },
+  "projectReadback": {
+    "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+    "name": "rrcc",
+    "framework": null,
+    "accountId": "team_Aep4PXnmiXE5276HRkoQrHtF",
+    "createdAt": 1791837980929,
+    "updatedAt": 1791838349298,
+    "nodeVersion": "24.x",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "createdAt": 1791838349180,
+      "readyState": "CANCELED",
+      "target": "production"
+    },
+    "domains": [
+      "rrcc-tjc1.vercel.app",
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "passwordProtection": {
+      "enabled": false,
+      "deploymentType": null
+    },
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    },
+    "trustedIps": {
+      "enabled": false,
+      "deploymentType": null,
+      "addresses": [],
+      "protectionMode": null
+    }
+  },
+  "deploymentList": {
+    "deployments": {
+      "pagination": {
+        "count": 1,
+        "prev": 1791838349180
+      },
+      "deployments": [
+        {
+          "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+          "name": "rrcc",
+          "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+          "created": 1791838349180,
+          "state": "CANCELED",
+          "target": "production",
+          "creator": {
+            "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+            "username": "jin358-6510"
+          },
+          "meta": {
+            "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+            "githubCommitSha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e",
+            "githubCommitMessage": "feat: align RRCC branding and prepare Preview-only Vercel build v1.7",
+            "githubRepo": "RRCC",
+            "githubOrg": "jin358-cmd"
+          },
+          "inspectorUrl": "https://vercel.com/tjc1/rrcc/GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+          "isRollbackCandidate": false
+        }
+      ]
+    }
+  },
+  "deploymentAliases": {
+    "aliases": [
+      {
+        "uid": "97832d8a79a5d8c98040b212b0ae446a5f914498c115c2e0a3cbc4c078e5b903d40ae96f1aff2079cb7b0de0ba9f408cf446d6a8b7d38ac4b57edd65f0e2b850",
+        "alias": "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app",
+        "created": "2026-10-12T20:52:29.320Z",
+        "redirect": null
+      }
+    ]
+  },
+  "projectDomains": {
+    "domains": [
+      {
+        "name": "rrcc-sand.vercel.app",
+        "apexName": "vercel.app",
+        "projectId": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+        "redirect": null,
+        "gitBranch": null,
+        "customEnvironmentId": null,
+        "updatedAt": 1791837980766,
+        "createdAt": 1791837980766,
+        "verified": true
+      }
+    ],
+    "pagination": {
+      "count": 1,
+      "next": null,
+      "prev": 1791837980766
+    }
+  },
+  "buildEvents": {
+    "events": [
+      {
+        "created": 1791838353092,
+        "date": 1791838353092,
+        "type": "stdout",
+        "text": "Running build in Washington, D.C., USA (East) – iad1",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838353093,
+        "date": 1791838353093,
+        "type": "stdout",
+        "text": "Build machine configuration: 2 cores, 8 GB",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838353290,
+        "date": 1791838353290,
+        "type": "stdout",
+        "text": "Cloning github.com/jin358-cmd/RRCC (Branch: feature/rrcc-hantang-ui-refinement-20261013, Commit: 7895fed)",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838353292,
+        "date": 1791838353292,
+        "type": "stdout",
+        "text": "Previous build caches not available.",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838356208,
+        "date": 1791838356208,
+        "type": "stdout",
+        "text": "Cloning completed: 2.918s",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838357994,
+        "date": 1791838357994,
+        "type": "stdout",
+        "text": "Running \"vercel build\"",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      },
+      {
+        "created": 1791838358018,
+        "date": 1791838358018,
+        "type": "stderr",
+        "text": "Vercel CLI 62.7.0",
+        "info": {
+          "type": "build",
+          "name": "bld_hdnvx6nhh",
+          "entrypoint": "."
+        }
+      }
+    ]
+  },
+  "checks": {
+    "sourceFeatureShaMatches": true,
+    "cancelConfirmed": true,
+    "projectNotLive": true,
+    "previewTarget": false,
+    "onlineReadbackPassed": false
+  },
+  "conclusion": "NOT PASS: documented omitted-target Preview request returned production target. Immediately canceled. No further deployment attempted; Owner direction required. Production-target and inactive GitHub records are retained, not erased.",
+  "online": {
+    "http": "302 Vercel SSO redirect from canceled hostname; not Dashboard HTTP success",
+    "fourCenters": "NOT RUN",
+    "library": "NOT RUN",
+    "genie": "NOT RUN",
+    "csv": "NOT RUN",
+    "browserErrors": "NOT VERIFIED"
+  },
+  "recoveryQueue": [
+    "Confirm explicit target preview on this connector without creating another deployment",
+    "Owner direction before retry",
+    "Resolve discrepant alias/domain API projections",
+    "Run full online interaction and HTML/SHA readback after a genuine Preview reaches READY"
+  ],
+  "ownerVerification": "REQUIRED"
+}

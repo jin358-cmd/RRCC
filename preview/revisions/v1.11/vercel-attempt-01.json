@@ -1,0 +1,95 @@
+{
+  "recordedAt": "2026-10-13T00:18:56.467Z",
+  "scope": "Owner-renewed Preview-only retry; exact Git source; no main merge, no Production deployment",
+  "request": {
+    "teamId": "team_Aep4PXnmiXE5276HRkoQrHtF",
+    "requestBody": {
+      "name": "rrcc",
+      "project": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+      "target": "preview",
+      "gitSource": {
+        "type": "github",
+        "repoId": "1415446770",
+        "ref": "feature/rrcc-hantang-ui-refinement-20261013",
+        "sha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0"
+      },
+      "projectSettings": {
+        "framework": null,
+        "rootDirectory": null,
+        "buildCommand": "node scripts/build-vercel-preview.mjs",
+        "installCommand": "",
+        "outputDirectory": "dist"
+      },
+      "meta": {
+        "rrccReviewVersion": "v1.11",
+        "rrccRequestedEnvironment": "preview",
+        "rrccSourceArtifactSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413"
+      }
+    }
+  },
+  "response": {
+    "message": "Vercel API request failed (400: bad_request). Invalid request: `target` should be 'production', 'staging', or a custom environment identifier.",
+    "recovery": "Check the API message, arguments, target team and resource state. Correct the request before retrying.",
+    "remediation": {
+      "actor": "agent",
+      "action": "correct_request"
+    },
+    "status": 400,
+    "code": "bad_request",
+    "operation": "POST /v13/deployments",
+    "requestId": "hnd1:sfo1::9dbjl-1791850628629-417a6f300355"
+  },
+  "projectBefore": {
+    "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+    "name": "rrcc",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "createdAt": 1791838349180,
+      "readyState": "CANCELED",
+      "target": "production"
+    },
+    "domains": [
+      "rrcc-tjc1.vercel.app",
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    }
+  },
+  "projectAfter": {
+    "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+    "name": "rrcc",
+    "accountId": "team_Aep4PXnmiXE5276HRkoQrHtF",
+    "live": false,
+    "latestDeployment": {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "createdAt": 1791838349180,
+      "readyState": "CANCELED",
+      "target": "production"
+    },
+    "domains": [
+      "rrcc-tjc1.vercel.app",
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    }
+  },
+  "checks": {
+    "noNewDeployment": true,
+    "noLiveDeployment": true,
+    "noDomainProjectionChange": true
+  },
+  "recovery": {
+    "status": "STOPPED_AFTER_EXPLICIT_PREVIEW_REJECTION",
+    "cliNotSafe": "Official client strips explicit preview target before POST; not used.",
+    "legacyStagingNotUsed": true,
+    "browserDashboard": "Redirected to Vercel login; Owner sign-in required for UI-only investigation.",
+    "onlineDashboardVerification": "NOT RUN; no new URL or deployment created."
+  }
+}

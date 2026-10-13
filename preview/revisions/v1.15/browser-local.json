@@ -1,0 +1,497 @@
+{
+  "verifiedAt": "2026-10-13T08:22:38.449Z",
+  "smallViewportAlignment": {
+    "counts": [
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)",
+        "text": "8"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)",
+        "text": "35"
+      },
+      {
+        "bg": "rgba(0, 0, 0, 0)",
+        "border": "0px",
+        "color": "rgb(191, 39, 53)",
+        "text": "3"
+      }
+    ],
+    "expanded": "true",
+    "height": 536,
+    "rows": [
+      {
+        "diff": 0,
+        "drawerCenter": 242.990047454834,
+        "label": "開啟 KPI 卡片櫃",
+        "railCenter": 242.990047454834
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 302.98293685913086,
+        "label": "總覽儀表板",
+        "railCenter": 302.98293685913086
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 362.97582626342773,
+        "label": "案場總覽",
+        "railCenter": 362.97582626342773
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 422.96874618530273,
+        "label": "材料與供應鏈",
+        "railCenter": 422.96874618530273
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 482.9616355895996,
+        "label": "申報進度",
+        "railCenter": 482.9616355895996
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 542.9545555114746,
+        "label": "驗證概況",
+        "railCenter": 542.9545555114746
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 602.9474143981934,
+        "label": "異常追蹤",
+        "railCenter": 602.9474143981934
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 662.9403343200684,
+        "label": "管理報表",
+        "railCenter": 662.9403343200684
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 743.9204368591309,
+        "label": "我的任務",
+        "railCenter": 743.9204368591309
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 803.9132957458496,
+        "label": "通知訊息",
+        "railCenter": 803.9132957458496
+      },
+      {
+        "diff": 0,
+        "drawerCenter": 863.9062156677246,
+        "label": "資料庫",
+        "railCenter": 863.9062156677246
+      }
+    ],
+    "scopeVisible": false,
+    "toolbar": [
+      {
+        "name": "scope-button",
+        "x": 88.15340423583984
+      },
+      {
+        "name": "period-select",
+        "x": 251.4133453369141
+      },
+      {
+        "name": "export-button",
+        "x": 340.9729919433594
+      },
+      {
+        "name": "toolbar-activity",
+        "x": 88.15340423583984
+      }
+    ],
+    "width": 490,
+    "yellow": 4
+  },
+  "desktopAlignment": [
+    {
+      "align": [
+        {
+          "diff": 0,
+          "label": "開啟 KPI 卡片櫃"
+        },
+        {
+          "diff": 0,
+          "label": "總覽儀表板"
+        },
+        {
+          "diff": 0,
+          "label": "案場總覽"
+        },
+        {
+          "diff": 0,
+          "label": "材料與供應鏈"
+        },
+        {
+          "diff": 0,
+          "label": "申報進度"
+        },
+        {
+          "diff": 0,
+          "label": "驗證概況"
+        },
+        {
+          "diff": 0,
+          "label": "異常追蹤"
+        },
+        {
+          "diff": 0,
+          "label": "管理報表"
+        },
+        {
+          "diff": 0,
+          "label": "我的任務"
+        },
+        {
+          "diff": 0,
+          "label": "通知訊息"
+        },
+        {
+          "diff": 0,
+          "label": "資料庫"
+        }
+      ],
+      "center": "overview",
+      "chartY": 237.96873474121097,
+      "counts": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        }
+      ],
+      "kpiRows": [
+        -355,
+        -104
+      ],
+      "scopeVisible": false,
+      "slots": 12,
+      "toolbar": [
+        {
+          "name": "scope-button",
+          "x": 107.55681610107422
+        },
+        {
+          "name": "period-select",
+          "x": 281.2215881347656
+        },
+        {
+          "name": "export-button",
+          "x": 381.7684631347656
+        },
+        {
+          "name": "toolbar-activity",
+          "x": 532.2371826171875
+        }
+      ],
+      "width": 1920,
+      "yellow": 4,
+      "phase": "closed"
+    },
+    {
+      "align": [
+        {
+          "diff": 0,
+          "label": "開啟 KPI 卡片櫃"
+        },
+        {
+          "diff": 0,
+          "label": "總覽儀表板"
+        },
+        {
+          "diff": 0,
+          "label": "案場總覽"
+        },
+        {
+          "diff": 0,
+          "label": "材料與供應鏈"
+        },
+        {
+          "diff": 0,
+          "label": "申報進度"
+        },
+        {
+          "diff": 0,
+          "label": "驗證概況"
+        },
+        {
+          "diff": 0,
+          "label": "異常追蹤"
+        },
+        {
+          "diff": 0,
+          "label": "管理報表"
+        },
+        {
+          "diff": 0,
+          "label": "我的任務"
+        },
+        {
+          "diff": 0,
+          "label": "通知訊息"
+        },
+        {
+          "diff": 0,
+          "label": "資料庫"
+        }
+      ],
+      "center": "overview",
+      "chartY": 759.7869262695312,
+      "counts": [
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        },
+        {
+          "bg": "rgba(0, 0, 0, 0)",
+          "border": "0px",
+          "color": "rgb(191, 39, 53)"
+        }
+      ],
+      "kpiRows": [
+        167,
+        418
+      ],
+      "scopeVisible": false,
+      "slots": 12,
+      "toolbar": [
+        {
+          "name": "scope-button",
+          "x": 107.55681610107422
+        },
+        {
+          "name": "period-select",
+          "x": 281.2215881347656
+        },
+        {
+          "name": "export-button",
+          "x": 381.7684631347656
+        },
+        {
+          "name": "toolbar-activity",
+          "x": 532.2371826171875
+        }
+      ],
+      "width": 1920,
+      "yellow": 4,
+      "phase": "opened"
+    }
+  ],
+  "regression": [
+    {
+      "before": {
+        "center": "overview",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "overview",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "material",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "material",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "verification",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "verification",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    },
+    {
+      "before": {
+        "center": "management",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      },
+      "after": {
+        "center": "management",
+        "chartDocumentY": 784,
+        "height": 1080,
+        "menu": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "rows": [
+          192,
+          443
+        ],
+        "slots": 12,
+        "width": 1920,
+        "yellow": 4
+      }
+    }
+  ],
+  "draftSaveReset": "Owner editing test saved, pending disabled, then reset",
+  "library": {
+    "pending": 2,
+    "yellow": 12,
+    "arrowStroke": 3.4,
+    "provenanceFooterLast": true
+  },
+  "sourceTable": {
+    "rows": 8,
+    "footerLast": true,
+    "preservedLabel": "合成 Demo · 非 RRCC／漢唐實際營運資料"
+  },
+  "scope": "Actual CUA keyboard/DOM geometry; native pointer hover/drag not claimed"
+}

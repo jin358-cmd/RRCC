@@ -1,0 +1,20 @@
+{
+  "verifiedAt": "2026-10-13T08:36:53.581Z",
+  "projectId": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+  "name": "rrcc",
+  "live": false,
+  "domains": [
+    "rrcc-tjc1.vercel.app",
+    "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+  ],
+  "ssoProtection": {
+    "enabled": true,
+    "deploymentType": "all_except_custom_domains"
+  },
+  "unchanged": {
+    "live": true,
+    "domains": true,
+    "sso": true
+  },
+  "scope": "Project protection/domains readback only; not a certification of all historical deployment records"
+}

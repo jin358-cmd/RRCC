@@ -1,0 +1,356 @@
+{
+  "revision": "v1.10",
+  "verifiedAt": "2026-10-12T21:39:43.102Z",
+  "evidenceTier": "ACTUAL_LOCAL_SELF_CONTAINED_BROWSER_UI_AND_DOWNLOAD_READBACK",
+  "checks": [
+    {
+      "check": "source-three-sites",
+      "led": {
+        "direction": "alternate",
+        "iterations": "infinite",
+        "name": "rrcc-center-led-shuttle"
+      },
+      "rows": [
+        "南科示範案場 A潔淨室與空調2026-096109,260",
+        "高雄示範案場 B機電及電力2026-09688,480",
+        "竹科示範案場 C製程與廠務2026-09669,790"
+      ],
+      "scope": "全部案場",
+      "toolbar": [
+        "scope-button",
+        "period-select",
+        "export-button"
+      ]
+    },
+    {
+      "body": {
+        "size": "18.9312px",
+        "subtitle": "24.128px"
+      },
+      "check": "tsmc2025-panel-and-colors",
+      "heading": {
+        "size": "25.6128px",
+        "weight": "750"
+      },
+      "links": [
+        "https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf"
+      ],
+      "right": "台積電公開年度 KPI 詳細資訊回收水量摘要範疇定義原始缺口官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。回收水量318.94 百萬 m³台積電 · 2025台積電 2025 年回收系統總回收水量；不同於新取水量，不是 RRCC 示範案場用水。官方來源 ↗查看全部公開參考與口徑 ↗總覽中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "scope": "台積電永續公開數據",
+      "selected": "回收水量318.94百萬 m³2025 年度實績台積電公開數據↗",
+      "unitColor": "rgb(255, 241, 118)",
+      "valueColor": "rgb(255, 241, 118)",
+      "year": "2025"
+    },
+    {
+      "check": "nav-led-position-a",
+      "left": "149.517px",
+      "navWidth": 1108.0184326171875,
+      "top": "0px",
+      "transform": "matrix(1, 0, 0, 1, -13.5164, 0)"
+    },
+    {
+      "center": "overview",
+      "check": "annual-center",
+      "hasWrongKgFlow": false,
+      "kpis": [
+        "製程水回收率86.2%2025 年度實績台積電公開數據↗",
+        "回收水量318.94百萬 m³2025 年度實績台積電公開數據↗",
+        "重大供應商594家2025 年度實績台積電公開數據↗",
+        "重大高風險供應商123家2025 年度實績台積電公開數據↗",
+        "單位產品耗水153.3L／十二吋晶圓當量—光罩數2025 年度實績台積電公開數據↗",
+        "第一階重大供應商396家2025 年度實績台積電公開數據↗"
+      ],
+      "primary": "2025 永續公開指標",
+      "rightSource": "TSMC 2025 Sustainability Report · p.111",
+      "rightText": "台積電公開年度 KPI 詳細資訊製程水回收率摘要範疇定義原始缺口官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。製程水回收率86.2 %台積電 · 2025台積電 2025 年平均製程水回收率；不是全部取水之廢水再利用比例。官方來源 ↗查看全部公開參考與口徑 ↗總覽中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "rows": 5,
+      "sidebar": [
+        "永續公開總覽",
+        "廠務用水公開數據",
+        "供應商分類",
+        "年度公開指標",
+        "口徑與資料界線",
+        "年度趨勢",
+        "官方來源"
+      ],
+      "title": "Overview Center 永續公開總覽",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "material",
+      "check": "annual-center",
+      "hasWrongKgFlow": false,
+      "kpis": [
+        "回收水量318.94百萬 m³2025 年度實績台積電公開數據↗",
+        "製程水回收率86.2%2025 年度實績台積電公開數據↗",
+        "單位產品耗水153.3L／十二吋晶圓當量—光罩數2025 年度實績台積電公開數據↗",
+        "第一階重大供應商396家2025 年度實績台積電公開數據↗",
+        "非第一階重大供應商冶煉廠198家2025 年度實績台積電公開數據↗",
+        "重大供應商594家2025 年度實績台積電公開數據↗"
+      ],
+      "primary": "2025 廠務用水公開數據",
+      "rightSource": "TSMC 2025 Sustainability Report · p.111",
+      "rightText": "台積電公開年度 KPI 詳細資訊回收水量摘要範疇定義原始缺口官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。回收水量318.94 百萬 m³台積電 · 2025台積電 2025 年回收系統總回收水量；不同於新取水量，不是 RRCC 示範案場用水。官方來源 ↗查看全部公開參考與口徑 ↗材料中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "rows": 3,
+      "sidebar": [
+        "水資源與採購",
+        "廠務用水公開數據",
+        "供應商分類",
+        "年度公開指標",
+        "口徑與資料界線",
+        "年度趨勢",
+        "官方來源"
+      ],
+      "title": "Material Center 水資源與採購",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "verification",
+      "check": "annual-center",
+      "hasWrongKgFlow": false,
+      "kpis": [
+        "重大高風險供應商123家2025 年度實績台積電公開數據↗",
+        "重大供應商594家2025 年度實績台積電公開數據↗",
+        "非第一階重大供應商冶煉廠198家2025 年度實績台積電公開數據↗",
+        "第一階重大供應商396家2025 年度實績台積電公開數據↗",
+        "製程水回收率86.2%2025 年度實績台積電公開數據↗",
+        "回收水量318.94百萬 m³2025 年度實績台積電公開數據↗"
+      ],
+      "primary": "2025 供應商公開分類",
+      "rightSource": "TSMC 2025 Sustainability Report · p.77",
+      "rightText": "台積電公開年度 KPI 詳細資訊重大高風險供應商摘要範疇定義原始缺口官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。重大高風險供應商123 家台積電 · 2025台積電 2025 年重大高風險供應商，是 594 家重大供應商子集合；不得另加為第三個組成項。官方來源 ↗查看全部公開參考與口徑 ↗驗證中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "rows": 4,
+      "sidebar": [
+        "供應商風險參考",
+        "廠務用水公開數據",
+        "供應商分類",
+        "年度公開指標",
+        "口徑與資料界線",
+        "年度趨勢",
+        "官方來源"
+      ],
+      "title": "Verification Center 供應商風險參考",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "management",
+      "check": "annual-center",
+      "hasWrongKgFlow": false,
+      "kpis": [
+        "重大供應商594家2025 年度實績台積電公開數據↗",
+        "第一階重大供應商396家2025 年度實績台積電公開數據↗",
+        "非第一階重大供應商冶煉廠198家2025 年度實績台積電公開數據↗",
+        "重大高風險供應商123家2025 年度實績台積電公開數據↗",
+        "製程水回收率86.2%2025 年度實績台積電公開數據↗",
+        "回收水量318.94百萬 m³2025 年度實績台積電公開數據↗"
+      ],
+      "primary": "2025 永續公開指標",
+      "rightSource": "TSMC 2025 Sustainability Report · p.77",
+      "rightText": "台積電公開年度 KPI 詳細資訊重大供應商摘要範疇定義原始缺口官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。重大供應商594 家台積電 · 2025台積電 2025 年重大供應商：396 家第一階重大供應商及 198 家非第一階冶煉廠；不是全部供應商。官方來源 ↗查看全部公開參考與口徑 ↗管理中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "rows": 5,
+      "sidebar": [
+        "永續治理參考",
+        "廠務用水公開數據",
+        "供應商分類",
+        "年度公開指標",
+        "口徑與資料界線",
+        "年度趨勢",
+        "官方來源"
+      ],
+      "title": "Management Center 永續治理參考",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "check": "nav-led-position-b",
+      "left": "569.56px",
+      "transform": "matrix(1, 0, 0, 1, -51.4884, 0)"
+    },
+    {
+      "check": "annual2024",
+      "kpis": [
+        "重大供應商609家2024 年度實績台積電公開數據↗",
+        "第一階重大供應商387家2024 年度實績台積電公開數據↗",
+        "非第一階重大供應商冶煉廠222家2024 年度實績台積電公開數據↗",
+        "重大高風險供應商112家2024 年度實績台積電公開數據↗",
+        "供應商稽核缺失結案率93%2024 年度實績台積電公開數據↗",
+        "製程水回收率88.1%2024 年度實績台積電公開數據↗"
+      ],
+      "trend": "重大供應商年度趨勢（2024–2024）",
+      "year": "2024",
+      "years": [
+        "家",
+        "0",
+        "200",
+        "400",
+        "600",
+        "700",
+        "2024"
+      ]
+    },
+    {
+      "check": "annual-source-dialog",
+      "geometry": {
+        "height": 877.4999389648438,
+        "width": 1247.9970703125
+      },
+      "text": "公開產業參考 · 非 RRCC／漢唐營運實績台積電官方 ESG 報告來源2 列具來源追溯資訊 · 點選資料列查看所有欄位目前範圍：管理中心 / 2025 / 台積電永續公開數據搜尋完整資料每頁顯示50 列100 列全部資料匯出完整資料完整資料 2 列 · 5 個原始欄位 · 符合搜尋 2 列年度報告／章節來源查核日期資料性質2025TSMC 2025 Sustainability Report · p.111https://esg.tsmc.com/file/public/e-APractitionerofGreenPower_2.pdf2026-10-13公開年度原值2025TSMC 2025 Sustainability Report · p.77https://esg.tsmc.com/file/public/e-AResponsiblePurchaser.pdf2026-10-13公開年度原值顯示第 1–2 列，共 2 列上一頁第 1 / 1 頁下一頁",
+      "title": "2025 官方報告與讀回來源"
+    },
+    {
+      "check": "annual-library-registry",
+      "master": 19,
+      "pending": 7,
+      "selected": 6,
+      "unmappedDisabled": true
+    },
+    {
+      "check": "preference-year-isolation-2024",
+      "count": 6,
+      "year": "2024"
+    },
+    {
+      "check": "preference-year-isolation-2025",
+      "count": 5,
+      "year": "2025"
+    },
+    {
+      "check": "downloaded-public-csv",
+      "path": "RRCC_management_tsmc-public_2025_PUBLIC_REFERENCE.csv",
+      "lines": 8,
+      "includesAnnualWater": true,
+      "includesSourceUrl": true,
+      "notDemoKg": true
+    },
+    {
+      "check": "preserved-site-filter",
+      "period": "2026-09",
+      "rows": [
+        "南科示範案場 A潔淨室與空調2026-096109,260"
+      ],
+      "scope": "南科示範案場 A"
+    },
+    {
+      "check": "preserved-site-filter",
+      "period": "2026-09",
+      "rows": [
+        "高雄示範案場 B機電及電力2026-09688,480"
+      ],
+      "scope": "高雄示範案場 B"
+    },
+    {
+      "check": "preserved-site-filter",
+      "period": "2026-09",
+      "rows": [
+        "竹科示範案場 C製程與廠務2026-09669,790"
+      ],
+      "scope": "竹科示範案場 C"
+    },
+    {
+      "center": "overview",
+      "check": "source-center-regression",
+      "flow": false,
+      "kpiCount": 6,
+      "period": "2026-09",
+      "primary": "案場來源與當月材料概況",
+      "rightHeading": "來源與 KPI 詳細資訊",
+      "scope": "全部案場",
+      "sidebar": 7,
+      "trend": "來源月份紀錄數（非營運案件）"
+    },
+    {
+      "center": "material",
+      "check": "source-center-regression",
+      "flow": true,
+      "kpiCount": 6,
+      "period": "2026-09",
+      "primary": "材料批次來源紀錄",
+      "rightHeading": "來源與 KPI 詳細資訊",
+      "scope": "全部案場",
+      "sidebar": 7,
+      "trend": "工程物料流向圖"
+    },
+    {
+      "center": "verification",
+      "check": "source-center-regression",
+      "flow": false,
+      "kpiCount": 6,
+      "period": "2026-09",
+      "primary": "驗證案件 · NO DATA",
+      "rightHeading": "來源與 KPI 詳細資訊",
+      "scope": "全部案場",
+      "sidebar": 7,
+      "trend": "來源率樣本算術平均（非完成率）"
+    },
+    {
+      "center": "management",
+      "check": "source-center-regression",
+      "flow": false,
+      "kpiCount": 6,
+      "period": "2026-09",
+      "primary": "資料來源索引（非管理活動）",
+      "rightHeading": "公開產業參考｜非本平台營運值",
+      "scope": "全部案場",
+      "sidebar": 7,
+      "trend": "資料月份覆蓋概況（非使用者趨勢）"
+    },
+    {
+      "check": "genie-blank-close-trigger",
+      "motion": "closing"
+    },
+    {
+      "check": "mobile-readable-public-kpi",
+      "headingSize": "24px",
+      "headingWeight": "750",
+      "ledWidth": "32.0739px",
+      "navWidth": 322.56390380859375,
+      "pageWidth": 375,
+      "referenceBody": "18px",
+      "scrollWidth": 375,
+      "value": "153.3 L／十二吋晶圓當量—光罩數"
+    },
+    {
+      "center": "overview",
+      "check": "final-annual-center-grid",
+      "kpis": 6,
+      "table": "2025 永續公開指標",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "material",
+      "check": "final-annual-center-grid",
+      "kpis": 6,
+      "table": "2025 廠務用水公開數據",
+      "trend": "年度回收水量趨勢（2021–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "verification",
+      "check": "final-annual-center-grid",
+      "kpis": 6,
+      "table": "2025 供應商公開分類",
+      "trend": "重大供應商年度趨勢（2024–2025）",
+      "year": "2025"
+    },
+    {
+      "center": "management",
+      "check": "final-annual-center-grid",
+      "kpis": 6,
+      "table": "2025 永續公開指標",
+      "trend": "重大供應商年度趨勢（2024–2025）",
+      "year": "2025"
+    }
+  ],
+  "consoleErrors": [],
+  "limits": [
+    "Native pointer drag and physical touch not retested; previous synthetic event tests are not native acceptance.",
+    "Reduced Motion verified by CSS contract, not browser emulation.",
+    "LED computed alternate/infinite motion and distinct positions observed; Owner visual acceptance remains required.",
+    "No Vercel deployment or live online acceptance."
+  ]
+}

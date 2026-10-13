@@ -1,0 +1,161 @@
+/* Shared vertical geometry: every rail icon and its drawer label share a row.
+   Load after sidebar-click-v1.14.css and the responsive/workspace styles. */
+#stage.sidebar-click-navigation {
+  --sidebar-row-height: clamp(56px, 3.2rem, 72px);
+  --sidebar-row-gap: 4px;
+  --sidebar-group-gap: 12px;
+  --sidebar-top-padding: 1rem;
+  --sidebar-bottom-space: 5rem;
+}
+#stage.sidebar-click-navigation .sidebar,
+#stage.sidebar-click-navigation .sidebar-menu-panel {
+  top: var(--header-height, 92px);
+  bottom: 0;
+  padding-top: var(--sidebar-top-padding);
+  padding-bottom: var(--sidebar-bottom-space);
+  overflow-y: auto;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+  scroll-padding-block: var(--sidebar-row-gap);
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel::-webkit-scrollbar { display: none; }
+#stage.sidebar-click-navigation .sidebar { width: 64px; min-width: 64px; }
+#stage.sidebar-click-navigation .sidebar .sidebar-center-marker,
+#stage.sidebar-click-navigation .sidebar-menu-panel .sidebar-menu-title {
+  display: flex;
+  align-items: center;
+  min-height: var(--sidebar-row-height);
+  height: var(--sidebar-row-height);
+  max-height: var(--sidebar-row-height);
+  margin: 0 0 var(--sidebar-row-gap);
+  padding-block: 0;
+  line-height: 1.25;
+  flex: 0 0 var(--sidebar-row-height);
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel .sidebar-menu-title { padding-inline: .85rem; }
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) .project-selector,
+#stage.sidebar-click-navigation .sidebar-menu-panel .sidebar-menu-hint,
+#stage.sidebar-click-navigation .sidebar .sidebar-heading { display: none !important; }
+#stage.sidebar-click-navigation .sidebar-menu-content { display: flex; flex-direction: column; }
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) :is(.sidebar-library-nav, .business-nav, .common-nav) {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sidebar-row-gap);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  flex: 0 0 auto;
+}
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) .sidebar-library-nav { margin-bottom: var(--sidebar-row-gap); }
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) .sidebar-separator {
+  display: block;
+  height: 1px;
+  min-height: 1px;
+  margin: var(--sidebar-group-gap) 0;
+  background: #c5dced;
+  flex: 0 0 1px;
+}
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) :is(.business-nav, .common-nav, .sidebar-library-nav) button {
+  height: var(--sidebar-row-height);
+  min-height: var(--sidebar-row-height);
+  max-height: var(--sidebar-row-height);
+  flex: 0 0 var(--sidebar-row-height);
+  box-sizing: border-box;
+  margin: 0;
+  padding-block: 0;
+  align-items: center;
+}
+#stage.sidebar-click-navigation .sidebar :is(.business-nav, .common-nav, .sidebar-library-nav) button {
+  display: flex;
+  width: 44px;
+  padding: 0;
+  justify-content: center;
+  gap: 0;
+}
+#stage.sidebar-click-navigation .sidebar:not(.sidebar-expanded) #kpi-settings-button {
+  width: 44px;
+  height: var(--sidebar-row-height);
+  min-height: var(--sidebar-row-height);
+  max-height: var(--sidebar-row-height);
+  padding: 0;
+}
+#stage.sidebar-click-navigation .sidebar :is(.business-nav, .common-nav, .sidebar-library-nav) button .ico {
+  width: 1.15rem;
+  height: 1.15rem;
+  margin: 0;
+  flex: 0 0 auto;
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel .nav-label {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-height: 2.5em;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+/* Equal tails preserve the rail signature and matching scroll ranges. */
+#stage.sidebar-click-navigation .sidebar .sidebar-bottom,
+#stage.sidebar-click-navigation .sidebar-menu-panel .sidebar-scroll-tail {
+  position: relative;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  min-height: var(--sidebar-row-height);
+  height: var(--sidebar-row-height);
+  margin: var(--sidebar-row-gap) 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex: 0 0 var(--sidebar-row-height);
+}
+/* Counts never cover an icon: the rail uses the clear upper-right row corner. */
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) :is(.nav-count, .count) {
+  color: #bf2735;
+  background: transparent;
+  background-image: none;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  text-shadow: none;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 750;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+#stage.sidebar-click-navigation .sidebar:not(.sidebar-expanded) :is(.nav-count, .count) {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: auto;
+  left: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  pointer-events: none;
+}
+#stage.sidebar-click-navigation .sidebar-menu-panel :is(.nav-count, .count) {
+  position: static;
+  margin-left: auto;
+  flex: 0 0 auto;
+}
+/* Both sides identify one logical row, including keyboard focus. */
+#stage.sidebar-click-navigation :is(.sidebar, .sidebar-menu-panel) :is(.business-nav, .common-nav, .sidebar-library-nav) button:is(:hover, :focus-visible, .sidebar-row-highlight) {
+  color: #fff;
+  background: linear-gradient(145deg, #459df6, #217edb);
+  border-color: #2f8be3;
+  box-shadow: inset 0 1px 0 #ffffff5c, 0 3px 9px #1d72b929;
+}
+#stage.sidebar-click-navigation .sidebar #kpi-settings-button:is(:hover, :focus-visible, .sidebar-row-highlight) {
+  color: #fff;
+  background: linear-gradient(145deg, #459df6, #217edb);
+  border-color: #2f8be3;
+  box-shadow: inset 0 1px 0 #ffffff5c, 0 3px 9px #1d72b929;
+}

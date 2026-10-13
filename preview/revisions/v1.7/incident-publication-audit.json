@@ -1,0 +1,55 @@
+{
+  "verifiedAt": "2026-10-12T20:56:05.163Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 9,
+  "textFiles": 9,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 3098,
+      "sha256": "ad42a71768a2edd283ea0dfe1fbd163c7497e0c8d9d3aca4cb18e0f389a23596"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-event.md",
+      "bytes": 2110,
+      "sha256": "b86c3a963b3577b54a849bbe6ddb8463a05ec1dfe32ac786e6e1e62de0e0f780"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-evidence.md",
+      "bytes": 3509,
+      "sha256": "7e9a95aeb2b914b2378878945abafb371908625620af8fc2bb66afbb58d1396c"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-resolution.md",
+      "bytes": 2247,
+      "sha256": "8848e5df5ed213077b71d8115315fe8d5401d920b8c1677a61820cf834fd5ecd"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-verification.md",
+      "bytes": 2456,
+      "sha256": "8fe59e66bdaaa1e63a034f6136e9d0faf5dabe2daae3cdcd484990d1ef6b2ec6"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.7-deployment-incident.json",
+      "bytes": 52114,
+      "sha256": "3519667d6b0cc9de86abb30e22b91c3970307e5fc6583c01412f91a0d334ebb1"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.7.md",
+      "bytes": 7119,
+      "sha256": "f74990926bcb2d1460f79df05b29353c4f8ed83cc8a867c50a7599cea99d33e6"
+    },
+    {
+      "file": "preview/revisions/v1.7/README.md",
+      "bytes": 1094,
+      "sha256": "805cd5fc3c3f94af66776c80dd75b0c6caab6871ec6972a1a487d06769c6e53e"
+    },
+    {
+      "file": "preview/revisions/v1.7/deployment-incident-evidence.json",
+      "bytes": 9349,
+      "sha256": "4781d65c4515728e407c4d38450695a1383b9cc85a2e4869900999861ed443ab"
+    }
+  ]
+}

@@ -1,0 +1,132 @@
+/* v1.5 complete-data modals: full values, readable type, and local table scrolling. */
+#detail-dialog {
+  width: min(1600px, 96vw);
+  max-width: 96vw;
+  max-height: 93dvh;
+}
+#detail-dialog[open] { display: flex; flex-direction: column; }
+#detail-dialog .dialog-heading, #detail-dialog .dialog-foot { flex: 0 0 auto; }
+#detail-dialog #dialog-content {
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: none;
+  overflow: auto;
+  font-size: clamp(16px, .9rem, 18px);
+  line-height: 1.65;
+}
+#detail-dialog #dialog-content h3 { font-size: clamp(18px, 1rem, 22px); }
+#detail-dialog .action-step { align-items: flex-start; }
+#detail-dialog .action-step > strong { flex: 0 0 min(12rem, 34%); white-space: normal; }
+#detail-dialog .action-step > div { min-width: 0; flex: 1 1 auto; }
+#detail-dialog #dialog-content td,
+#detail-dialog #dialog-content th,
+#detail-dialog #dialog-content .person strong,
+#detail-dialog #dialog-content .person small,
+#detail-dialog #dialog-content .source-reference,
+#detail-dialog #dialog-content .source-reference pre,
+#detail-dialog #dialog-content .source-reference code,
+#detail-dialog #dialog-content .action-step > div {
+  white-space: normal;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  max-width: none;
+}
+#detail-dialog #dialog-content .source-reference pre { overflow: auto; }
+#detail-dialog #dialog-content .data-table { max-width: 100%; overflow-x: auto; }
+#detail-dialog #dialog-content .data-table table { min-width: 650px; table-layout: auto; }
+#detail-dialog #dialog-content .data-table th,
+#detail-dialog #dialog-content .data-table td { font-size: clamp(16px, .9rem, 18px); height: auto; padding: .8rem .7rem; }
+
+.full-data-view { width: 100%; min-width: 0; }
+.full-table-source {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  margin-top: 1rem;
+  padding: .85rem 1rem;
+  border: 1px solid #cfe3f8;
+  border-left: 3px solid #2d88e5;
+  border-radius: 6px;
+  background: #f0f7ff;
+  color: #44688d;
+  font-size: clamp(14px, .8rem, 17px);
+  overflow-wrap: anywhere;
+}
+.full-table-source strong { color: #245683; font-weight: 650; }
+.full-data-view > [data-provenance-footer] { position: static; flex: 0 0 auto; }
+.full-table-context { margin-top: .6rem; font-size: clamp(14px, .8rem, 17px); color: #617d9c; }
+#dialog-content .full-table-schema-note { margin-top: .6rem; padding: .65rem .85rem; border: 1px solid #f1d5a8; background: #fff8ec; color: #92611f; }
+.full-table-toolbar { display: flex; flex-wrap: wrap; align-items: flex-end; gap: .8rem; margin: 1rem 0 .75rem; }
+.full-table-toolbar label { display: flex; flex-direction: column; gap: .35rem; font-size: clamp(15px, .85rem, 18px); font-weight: 600; color: #486a8c; }
+.full-table-search { flex: 1 1 20rem; min-width: 0; }
+.full-table-size { flex: 0 1 9rem; }
+.full-table-toolbar input,
+.full-table-toolbar select,
+.full-table-toolbar button,
+.full-table-pagination button {
+  min-height: 2.6rem;
+  border: 1px solid #bcd8f3;
+  border-radius: 5px;
+  background: #fff;
+  color: #285987;
+  padding: .5rem .75rem;
+  font-size: clamp(16px, .9rem, 18px);
+  line-height: 1.4;
+}
+.full-table-toolbar input { width: 100%; min-width: 0; font-weight: 400; }
+.full-table-toolbar select { width: 100%; }
+.full-table-toolbar button { background: #eef6ff; font-weight: 600; }
+.full-table-toolbar button:hover:not(:disabled), .full-table-pagination button:hover:not(:disabled) { background: #deedff; }
+.full-table-toolbar button:disabled, .full-table-pagination button:disabled { opacity: .45; cursor: default; }
+.full-data-view :is(input, select, button, [tabindex]):focus-visible { outline: 3px solid #2c8be6; outline-offset: 2px; }
+#dialog-content .full-table-summary { margin: .6rem 0; color: #385f85; font-size: clamp(15px, .85rem, 18px); }
+.full-table-scroll { width: 100%; max-width: 100%; overflow: auto; border: 1px solid #d6e5f5; border-radius: 6px; overscroll-behavior: contain; }
+#detail-dialog #dialog-content .full-data-table {
+  width: 100%;
+  min-width: max(100%, calc(var(--full-table-columns, 4) * 10rem));
+  table-layout: auto;
+  border-collapse: collapse;
+  font-size: clamp(16px, .9rem, 18px);
+}
+#detail-dialog #dialog-content .full-data-table th,
+#detail-dialog #dialog-content .full-data-table td {
+  height: auto;
+  padding: .8rem .85rem;
+  font-size: inherit;
+  line-height: 1.55;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+  border-bottom: 1px solid #e4edf7;
+}
+#detail-dialog #dialog-content .full-data-table th { position: sticky; top: 0; z-index: 1; background: #eaf3ff; color: #274f7b; font-weight: 650; }
+.full-data-table tr[data-row] { cursor: pointer; }
+.full-data-table tr[data-row]:hover, .full-data-table tr[data-row]:focus-visible { background: #edf6ff; }
+.full-data-table .person { align-items: flex-start; }
+.full-data-table .person > span:last-child { min-width: 0; }
+#detail-dialog #dialog-content .full-data-table .person strong,
+#detail-dialog #dialog-content .full-data-table .person small { font-size: inherit; }
+#detail-dialog #dialog-content .person small { display: block; color: #6b829c; }
+#detail-dialog #dialog-content .badge,
+#detail-dialog #dialog-content .progress-cell { font-size: inherit; white-space: normal; }
+.full-table-object { color: #375e85; font-size: .9em; white-space: normal; overflow-wrap: anywhere; }
+.full-table-null { color: #8597ab; font-size: .9em; }
+.full-table-empty td { text-align: center !important; color: #6f859d; padding: 2rem 1rem !important; }
+.full-table-pagination { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .8rem; margin-top: .85rem; font-size: clamp(15px, .85rem, 18px); color: #4c6c8e; }
+.full-table-pagination > div { display: flex; flex-wrap: wrap; align-items: center; gap: .7rem; }
+#dialog-content .full-table-feedback { font-size: clamp(14px, .8rem, 17px); margin-top: .6rem; min-height: 1.5em; color: #51799e; }
+
+@media (max-width: 640px) {
+  #detail-dialog { width: 96vw; max-height: 93dvh; }
+  #detail-dialog .dialog-heading { padding: .85rem; }
+  #detail-dialog .dialog-heading h2 { font-size: 20px; overflow-wrap: anywhere; }
+  #detail-dialog #dialog-content { padding: .85rem; }
+  #detail-dialog .dialog-foot { padding: .75rem .85rem; }
+  .full-table-search { flex-basis: 100%; }
+  .full-table-size { flex: 1 1 7rem; }
+  .full-table-toolbar button { flex: 1 1 9rem; }
+  .full-table-pagination > div { width: 100%; justify-content: space-between; }
+}

@@ -1,0 +1,13 @@
+/* Data remains readable/accessible; only visual geometry is animated. */
+.rrcc-chart-motion{position:relative}
+.rrcc-chart-motion svg rect{transform-box:fill-box;transform-origin:center bottom}
+.chart-read-status{position:absolute;right:10px;top:7px;display:inline-flex;align-items:center;gap:6px;max-width:calc(100% - 20px);padding:3px 7px;border:1px solid #d9e8f8;border-radius:4px;background:#f7fbffed;color:#507298;font-size:11px;font-weight:500;line-height:1.5;white-space:nowrap;pointer-events:none;z-index:2;transition:opacity .18s}
+.chart-read-status::before{content:'';width:6px;height:6px;flex:none;background:#3899eb;border-radius:50%;box-shadow:0 0 0 3px #3c97ea12}
+.rrcc-chart-motion[data-chart-phase="loading"]>.chart-read-status::before,.rrcc-chart-motion[data-chart-phase="reading"]>.chart-read-status::before{animation:rrcc-data-pulse .75s ease-in-out infinite}
+.rrcc-chart-motion[data-chart-phase="loading"]>svg,.rrcc-chart-motion[data-chart-phase="loading"]>.donut svg{opacity:.24}
+.rrcc-chart-motion[data-chart-phase="ready"]>.chart-read-status{opacity:0}
+.rrcc-chart-motion[data-chart-kind="progress"]>.chart-read-status{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);border:0;white-space:nowrap}
+.rrcc-chart-motion[data-chart-kind="progress"] i{transform-origin:left center}
+.right-spark>.chart-read-status{font-size:10px;right:2px;top:-4px;padding:2px 6px}
+@keyframes rrcc-data-pulse{0%,100%{opacity:.45;box-shadow:0 0 0 2px #3c97ea12}50%{opacity:1;box-shadow:0 0 0 4px #3c97ea16}}
+@media(prefers-reduced-motion:reduce){.chart-read-status{transition:none}.chart-read-status::before{animation:none!important}.rrcc-chart-motion[data-chart-phase="loading"]>svg,.rrcc-chart-motion[data-chart-phase="loading"]>.donut svg{opacity:1}}

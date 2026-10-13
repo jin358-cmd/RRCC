@@ -1,0 +1,1749 @@
+{
+  "verifiedAt": "2026-10-13T00:45:01.710Z",
+  "repository": "jin358-cmd/RRCC",
+  "branch": "feature/rrcc-hantang-ui-refinement-20261013",
+  "verifiedCommit": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428",
+  "mainCommit": "5e722c043c2164da5795e5a6523a6b3dfd946d59",
+  "pr": {
+    "baseRefName": "main",
+    "headRefName": "feature/rrcc-hantang-ui-refinement-20261013",
+    "headRefOid": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428",
+    "mergedAt": null,
+    "number": 1,
+    "state": "OPEN",
+    "url": "https://github.com/jin358-cmd/RRCC/pull/1"
+  },
+  "checks": {
+    "repository": true,
+    "publicRepository": true,
+    "writePermission": true,
+    "defaultBranch": true,
+    "mainUnchanged": true,
+    "mainReadmeOnly": true,
+    "headMatchesLocal": true,
+    "prHeadMatches": true,
+    "prOpenUnmerged": true,
+    "prBase": true,
+    "allFilesMatch": true,
+    "githubDeploymentRecordsPreviewOnly": false
+  },
+  "files": [
+    {
+      "file": ".gitignore",
+      "remoteSha256": "41a33e4b34886b2ee266ce50a33bc427d3ebbf712ea6e052b3173c703aa5975f",
+      "localSha256": "41a33e4b34886b2ee266ce50a33bc427d3ebbf712ea6e052b3173c703aa5975f",
+      "status": "PASS"
+    },
+    {
+      "file": "New/RRCC範疇三永續管理儀表板-1C.png",
+      "remoteSha256": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "localSha256": "98ef889f526b0ad5bd891c15573852ed18c7df643670d44dc939bcfa1363c040",
+      "status": "PASS"
+    },
+    {
+      "file": "README.md",
+      "remoteSha256": "86acf2f6191ca0d7e67ba23bf944532b7b537c6700dd93b6397536520c108ce6",
+      "localSha256": "86acf2f6191ca0d7e67ba23bf944532b7b537c6700dd93b6397536520c108ce6",
+      "status": "PASS"
+    },
+    {
+      "file": "data/demo/rrcc-hantang-merged-v1-v2.json",
+      "remoteSha256": "c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d",
+      "localSha256": "c8b56a201ea32d42112efda167cf114179d36b210e0ef2cc2ee47f8522af192d",
+      "status": "PASS"
+    },
+    {
+      "file": "data/demo/rrcc-hantang-presentation-demo.json",
+      "remoteSha256": "6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732",
+      "localSha256": "6265181caea607c95e18cee048792a4ed8797dc65594a7b907a780faa2424732",
+      "status": "PASS"
+    },
+    {
+      "file": "data/demo/rrcc-kpi-master-registry.json",
+      "remoteSha256": "8d142e9b8fe717be65895fe4b56d4d9a9615f2f95925a1bc1a5a484d0e3acd1a",
+      "localSha256": "8d142e9b8fe717be65895fe4b56d4d9a9615f2f95925a1bc1a5a484d0e3acd1a",
+      "status": "PASS"
+    },
+    {
+      "file": "data/demo/rrcc-public-references.json",
+      "remoteSha256": "44213474faf1046e2f56824cb85c7c1cb3a2fcd5cf4e4b5d12c42551e7b1a2fa",
+      "localSha256": "44213474faf1046e2f56824cb85c7c1cb3a2fcd5cf4e4b5d12c42551e7b1a2fa",
+      "status": "PASS"
+    },
+    {
+      "file": "data/demo/rrcc-tsmc-sustainability-v1.10.json",
+      "remoteSha256": "737528b1b151db0b85b476cdde54fbbeaded14a469c0ef7ee9cea51a76018a2d",
+      "localSha256": "737528b1b151db0b85b476cdde54fbbeaded14a469c0ef7ee9cea51a76018a2d",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/kpi-library-v1.5-event.md",
+      "remoteSha256": "32a7664670116509a00349a1dbaf625b56be1dd5c0b4a6cb6a1653ee79271022",
+      "localSha256": "32a7664670116509a00349a1dbaf625b56be1dd5c0b4a6cb6a1653ee79271022",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/kpi-library-v1.5-evidence.md",
+      "remoteSha256": "aad68693c0a30a7bb972dc23a20fe164b46705749e5aa6e0b1cb73b60be8a85d",
+      "localSha256": "aad68693c0a30a7bb972dc23a20fe164b46705749e5aa6e0b1cb73b60be8a85d",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/kpi-library-v1.5-resolution.md",
+      "remoteSha256": "c679f8bfe5fae9a4d123e35e33025659bf6b8d08e64b1600d206ecc7da42d244",
+      "localSha256": "c679f8bfe5fae9a4d123e35e33025659bf6b8d08e64b1600d206ecc7da42d244",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/kpi-library-v1.5-verification.md",
+      "remoteSha256": "ccca36574073a43ff2cdfbc77af664413a0086626b0549bbeeb3f51cc4a9865c",
+      "localSha256": "ccca36574073a43ff2cdfbc77af664413a0086626b0549bbeeb3f51cc4a9865c",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-event.md",
+      "remoteSha256": "a2e08b8519fca90b2b8e083d5951ccd7d0612e0986ad150761cc501d994b4b73",
+      "localSha256": "a2e08b8519fca90b2b8e083d5951ccd7d0612e0986ad150761cc501d994b4b73",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-evidence.md",
+      "remoteSha256": "3ca4c1c8c16a6a1984f6312bcb31007a63337d2fde36bad25799fa526272be32",
+      "localSha256": "3ca4c1c8c16a6a1984f6312bcb31007a63337d2fde36bad25799fa526272be32",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-resolution.md",
+      "remoteSha256": "1b169589a91c874d380af5b5d057839ffd924651732a168c82eabda9632a306a",
+      "localSha256": "1b169589a91c874d380af5b5d057839ffd924651732a168c82eabda9632a306a",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/ui-refinement-v1.2-verification.md",
+      "remoteSha256": "c299f5dd5468ce403cbddd45b8e2fa27b598e5f6928bec794927dc416181eda8",
+      "localSha256": "c299f5dd5468ce403cbddd45b8e2fa27b598e5f6928bec794927dc416181eda8",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-event.md",
+      "remoteSha256": "b86c3a963b3577b54a849bbe6ddb8463a05ec1dfe32ac786e6e1e62de0e0f780",
+      "localSha256": "b86c3a963b3577b54a849bbe6ddb8463a05ec1dfe32ac786e6e1e62de0e0f780",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-evidence.md",
+      "remoteSha256": "7e9a95aeb2b914b2378878945abafb371908625620af8fc2bb66afbb58d1396c",
+      "localSha256": "7e9a95aeb2b914b2378878945abafb371908625620af8fc2bb66afbb58d1396c",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-resolution.md",
+      "remoteSha256": "8848e5df5ed213077b71d8115315fe8d5401d920b8c1677a61820cf834fd5ecd",
+      "localSha256": "8848e5df5ed213077b71d8115315fe8d5401d920b8c1677a61820cf834fd5ecd",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/vercel-v1.7-verification.md",
+      "remoteSha256": "8fe59e66bdaaa1e63a034f6136e9d0faf5dabe2daae3cdcd484990d1ef6b2ec6",
+      "localSha256": "8fe59e66bdaaa1e63a034f6136e9d0faf5dabe2daae3cdcd484990d1ef6b2ec6",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-event.md",
+      "remoteSha256": "58c02c6b80647298cc9606b9c92ac73a7285463d48c7489444d27ae1d7adb0b1",
+      "localSha256": "58c02c6b80647298cc9606b9c92ac73a7285463d48c7489444d27ae1d7adb0b1",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-evidence.md",
+      "remoteSha256": "0d5a808ff7156e89df44c0bc48f76f74127a731a53101bf8b0a327b8ce3a9db7",
+      "localSha256": "0d5a808ff7156e89df44c0bc48f76f74127a731a53101bf8b0a327b8ce3a9db7",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-resolution.md",
+      "remoteSha256": "4c5a9699c16a01de6a82310eaa5886307c17a27af7f875fdb4bd252ffd0944ec",
+      "localSha256": "4c5a9699c16a01de6a82310eaa5886307c17a27af7f875fdb4bd252ffd0944ec",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/records/workspace-v1.6-verification.md",
+      "remoteSha256": "ab52050de12e3968d2c6b0d160322398c16409e589c49590c2e221fa18852cb5",
+      "localSha256": "ab52050de12e3968d2c6b0d160322398c16409e589c49590c2e221fa18852cb5",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/reference/Eva_Hands_R51_Rev2_Genie_Verification.md",
+      "remoteSha256": "bd80e93bda66e07d45ea24761ab31d5b164127f1c188dff239888708c8e26d56",
+      "localSha256": "bd80e93bda66e07d45ea24761ab31d5b164127f1c188dff239888708c8e26d56",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/reference/owner-instruction-alignment-v1.2.md",
+      "remoteSha256": "fbb49ab003f7440d2c09495e2ad765c6d7a740f2547d9558ca0223cfad6928dd",
+      "localSha256": "fbb49ab003f7440d2c09495e2ad765c6d7a740f2547d9558ca0223cfad6928dd",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.10-implementation.json",
+      "remoteSha256": "a9f4bc6babfb2b5317e3279d41b498e4b62a8bf42ef658c725d1a1e5fd5febc2",
+      "localSha256": "a9f4bc6babfb2b5317e3279d41b498e4b62a8bf42ef658c725d1a1e5fd5febc2",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.11-implementation.json",
+      "remoteSha256": "6898fa227d374d57ab066f646296b247b88e1b00ee86ea8cb451ab745773e933",
+      "localSha256": "6898fa227d374d57ab066f646296b247b88e1b00ee86ea8cb451ab745773e933",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.11-preview-publication.json",
+      "remoteSha256": "59ccee250a5d35e9fa3dfa56d652363fb07f8dc571b8c0da0f6ffdb5edddec21",
+      "localSha256": "59ccee250a5d35e9fa3dfa56d652363fb07f8dc571b8c0da0f6ffdb5edddec21",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.2.json",
+      "remoteSha256": "628505b5384ed328bcbdc33711b661f43e26716db7c12c1dbedf879fba506087",
+      "localSha256": "628505b5384ed328bcbdc33711b661f43e26716db7c12c1dbedf879fba506087",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.3.json",
+      "remoteSha256": "8036697e2fa7bae1fa4597cc5b944db3cf593f21a2d7f121b1242824dba30058",
+      "localSha256": "8036697e2fa7bae1fa4597cc5b944db3cf593f21a2d7f121b1242824dba30058",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.4.json",
+      "remoteSha256": "73a20e6bbbdf4cea74d8154d7b340b3fe723f0a1acb350dbe194e286d56e347e",
+      "localSha256": "73a20e6bbbdf4cea74d8154d7b340b3fe723f0a1acb350dbe194e286d56e347e",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.5.json",
+      "remoteSha256": "f5656b833b3a3a663a054e54803bab0d63d6d0364de559acd1a5dc95eb8f8f09",
+      "localSha256": "f5656b833b3a3a663a054e54803bab0d63d6d0364de559acd1a5dc95eb8f8f09",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.6.json",
+      "remoteSha256": "dfc04e3c381b071c3938c72b03f3d0b58bd81ad9339a3ae00059537d53315407",
+      "localSha256": "dfc04e3c381b071c3938c72b03f3d0b58bd81ad9339a3ae00059537d53315407",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.7-deployment-incident.json",
+      "remoteSha256": "3519667d6b0cc9de86abb30e22b91c3970307e5fc6583c01412f91a0d334ebb1",
+      "localSha256": "3519667d6b0cc9de86abb30e22b91c3970307e5fc6583c01412f91a0d334ebb1",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.8-implementation.json",
+      "remoteSha256": "68e98e39982f1c38151bb1583b626024fd758fecd8f300dab457aa8911bbb926",
+      "localSha256": "68e98e39982f1c38151bb1583b626024fd758fecd8f300dab457aa8911bbb926",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.9-implementation.json",
+      "remoteSha256": "d875b2ea4ba93ba10394d58aabb01e77c5ba9378492e690f46ba2061bf27d9cf",
+      "localSha256": "d875b2ea4ba93ba10394d58aabb01e77c5ba9378492e690f46ba2061bf27d9cf",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/json-merge-evidence.json",
+      "remoteSha256": "e18a3e87cafb6995ea5dbdbddcef0504c37f65ae2eaa9974f48665a3d241c26a",
+      "localSha256": "e18a3e87cafb6995ea5dbdbddcef0504c37f65ae2eaa9974f48665a3d241c26a",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/json-merge-report.md",
+      "remoteSha256": "0a9df5c7df5e2b0add5a564ec8e839dc35dad6f2bf8dd01331c765aa5a4111ec",
+      "localSha256": "0a9df5c7df5e2b0add5a564ec8e839dc35dad6f2bf8dd01331c765aa5a4111ec",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/kpi-master-registry-v1.5.md",
+      "remoteSha256": "fb9ebdf6b05470eb45ea77a626defdfff45580ebe51b1cd22b47bcb039fec137",
+      "localSha256": "fb9ebdf6b05470eb45ea77a626defdfff45580ebe51b1cd22b47bcb039fec137",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-v1.10.md",
+      "remoteSha256": "af35a602707322c8d26b750ddd9bb30cf03119fd40d77a727234cfdaa140f519",
+      "localSha256": "af35a602707322c8d26b750ddd9bb30cf03119fd40d77a727234cfdaa140f519",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-v1.11.md",
+      "remoteSha256": "9f2da11bdae3e56e298aef0e99dfb3e0b7a952a990806133d868a81ad793b9c0",
+      "localSha256": "9f2da11bdae3e56e298aef0e99dfb3e0b7a952a990806133d868a81ad793b9c0",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-v1.12.md",
+      "remoteSha256": "a94d7a64f252cd4b5aff91cfd510e172237ed9987e140ac658e4e18a1b52a8b9",
+      "localSha256": "a94d7a64f252cd4b5aff91cfd510e172237ed9987e140ac658e4e18a1b52a8b9",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-v1.8.md",
+      "remoteSha256": "454105b7010f31bf202441158da555c841a4d1b3e14b76072564bd51628264af",
+      "localSha256": "454105b7010f31bf202441158da555c841a4d1b3e14b76072564bd51628264af",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-v1.9.md",
+      "remoteSha256": "f9576c2a76db4c06b31cf664e6534bd11adcdca33bce9457ea40686a22a211d2",
+      "localSha256": "f9576c2a76db4c06b31cf664e6534bd11adcdca33bce9457ea40686a22a211d2",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.2.md",
+      "remoteSha256": "73270a4d7870d3250654893e8a0984c753cf3bb76781ee2ef8bc5601014040ce",
+      "localSha256": "73270a4d7870d3250654893e8a0984c753cf3bb76781ee2ef8bc5601014040ce",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.5.md",
+      "remoteSha256": "3097e46f2c77e1587c39d550405bbf6bc4cc31963386514adbbb599f30745593",
+      "localSha256": "3097e46f2c77e1587c39d550405bbf6bc4cc31963386514adbbb599f30745593",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/owner-verification-report-v1.6.md",
+      "remoteSha256": "440e0b35a1fb4ad020343d9bfe736d6ea3d3cd0b69c45060b3100ada4bd03dba",
+      "localSha256": "440e0b35a1fb4ad020343d9bfe736d6ea3d3cd0b69c45060b3100ada4bd03dba",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/pr-review-summary-v1.6.md",
+      "remoteSha256": "5da12fd04d1bdd4e999dcc4368a02cc7a34b53defbfc92e96ad248e0d1b46039",
+      "localSha256": "5da12fd04d1bdd4e999dcc4368a02cc7a34b53defbfc92e96ad248e0d1b46039",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/presentation-values-v1.3.md",
+      "remoteSha256": "29c07993ba8d10c5a8ef7df9b869ada86c1f6ed0dc9f98e928c56dfc1dbd7e6b",
+      "localSha256": "29c07993ba8d10c5a8ef7df9b869ada86c1f6ed0dc9f98e928c56dfc1dbd7e6b",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/public-reference-values-v1.4.md",
+      "remoteSha256": "95023664751ff73e9d8ec4ad26b040a1530c0c94924b2a4587e53eeac546ebde",
+      "localSha256": "95023664751ff73e9d8ec4ad26b040a1530c0c94924b2a4587e53eeac546ebde",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/pull-request-v1.2.md",
+      "remoteSha256": "347dbd8f36d9e5cf67ac26e5be065749a6dc5a47e9190a0d1539310b412b0c6c",
+      "localSha256": "347dbd8f36d9e5cf67ac26e5be065749a6dc5a47e9190a0d1539310b412b0c6c",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/ui-refinement-v1.4.md",
+      "remoteSha256": "728c838347242f5a78a1ea245eaaed84848f2623aaadbf0c381b810d9646325f",
+      "localSha256": "728c838347242f5a78a1ea245eaaed84848f2623aaadbf0c381b810d9646325f",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/vercel-eipp-v1.7.md",
+      "remoteSha256": "26a16280f3871c18e6e93e7f7070d3731818f97ee677041ee469cb5cb3b71589",
+      "localSha256": "26a16280f3871c18e6e93e7f7070d3731818f97ee677041ee469cb5cb3b71589",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.11-attempt-01.md",
+      "remoteSha256": "642654d913935ea46f9f0066e3dbed17833133f6cb03adb9ec8e6af6075db307",
+      "localSha256": "642654d913935ea46f9f0066e3dbed17833133f6cb03adb9ec8e6af6075db307",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.11-attempt-02.md",
+      "remoteSha256": "eb20ea2065699f4cbe26325d60b52c94646b3c0d1089e200d6f4e81985a96bc8",
+      "localSha256": "eb20ea2065699f4cbe26325d60b52c94646b3c0d1089e200d6f4e81985a96bc8",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.11-github-receipt.md",
+      "remoteSha256": "563615f716b1ab2dd7e448bc103c84612af101c59624e8b5c8d3eedc25be7726",
+      "localSha256": "563615f716b1ab2dd7e448bc103c84612af101c59624e8b5c8d3eedc25be7726",
+      "status": "PASS"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.7.md",
+      "remoteSha256": "f74990926bcb2d1460f79df05b29353c4f8ed83cc8a867c50a7599cea99d33e6",
+      "localSha256": "f74990926bcb2d1460f79df05b29353c4f8ed83cc8a867c50a7599cea99d33e6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/QA.md",
+      "remoteSha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "localSha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/README.md",
+      "remoteSha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8",
+      "localSha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Demonstration-v1.2.zip",
+      "remoteSha256": "ab63b16516e5113c5c27de4dbd03293f22399c04b0ac80b93de4f2414a8ebf66",
+      "localSha256": "ab63b16516e5113c5c27de4dbd03293f22399c04b0ac80b93de4f2414a8ebf66",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Demonstration.zip",
+      "remoteSha256": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "localSha256": "66bf7c372afc72adc470b03e1a41e5a9b946e75e432610b8779be583f1371975",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.10.html",
+      "remoteSha256": "7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344",
+      "localSha256": "7dc65b39c83f169817c0306622de59e4f2cb1ea2a8959fc776b9874bf16b8344",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.11.html",
+      "remoteSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+      "localSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.12.html",
+      "remoteSha256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1",
+      "localSha256": "5a2a5a681444d4bc59b9925a13e2979494b0aab4d87795fe05384411ec9701c1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.2.html",
+      "remoteSha256": "ee564d5519b574c01ec6df34f48fdeb31d6acd70d443b77a1c21e7b3ffffb008",
+      "localSha256": "ee564d5519b574c01ec6df34f48fdeb31d6acd70d443b77a1c21e7b3ffffb008",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.3.html",
+      "remoteSha256": "0b8acd8c98d6ad5fdf2c218fe774ad7ec1ed7fc0637bd91d9040a09045f85c4b",
+      "localSha256": "0b8acd8c98d6ad5fdf2c218fe774ad7ec1ed7fc0637bd91d9040a09045f85c4b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.4.html",
+      "remoteSha256": "12272e097aaafde79a95c89a2f7a7d61edcf6bf58a3a0fac7af6e2ca25b97863",
+      "localSha256": "12272e097aaafde79a95c89a2f7a7d61edcf6bf58a3a0fac7af6e2ca25b97863",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.5.html",
+      "remoteSha256": "01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852",
+      "localSha256": "01c3adc1f64bd0fc843634778f8cfc11c0c4f854079bba3801268ebcc5a5a852",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.6.html",
+      "remoteSha256": "60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9",
+      "localSha256": "60b147b974f341bd601a60dda4c2320c2b077edcafdf797ddda22dc0f1252dc9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.7.html",
+      "remoteSha256": "0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a",
+      "localSha256": "0b67d1e20a5442f82a5389bc80e7d77d002b1d3c449ba03545bd5110e161895a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.8.html",
+      "remoteSha256": "1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0",
+      "localSha256": "1aa7de36fc8aea625e01fe758acbd136075a1aa2e1c60d63a660b1906c97d7f0",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview-v1.9.html",
+      "remoteSha256": "3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5",
+      "localSha256": "3a80fe622edf1726988b0782591b8f0f2bc61f278ee5205415c8b91622c6cda5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/RRCC-Hantang-4-Center-Preview.html",
+      "remoteSha256": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "localSha256": "5c344354b409e01fc214cf09a3ff7129f74b7f5100108bdcb7a5066210884ae8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/assets/green-fab-v1.6-prompt.md",
+      "remoteSha256": "304769ad72ca3948e7cc4daa88b7a6bf8e7e4ee78d119465d09472071612a213",
+      "localSha256": "304769ad72ca3948e7cc4daa88b7a6bf8e7e4ee78d119465d09472071612a213",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/assets/green-fab-v1.6.png",
+      "remoteSha256": "29e4407884bab45ae8d1025690d988b05d95a020f9ddf28e34f8ffa7e7f7ec05",
+      "localSha256": "29e4407884bab45ae8d1025690d988b05d95a020f9ddf28e34f8ffa7e7f7ec05",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/center-data.js",
+      "remoteSha256": "0c51f1357e186b47c7309dc613815799cfe225096dcc2ec5d3062ca2376fcf4e",
+      "localSha256": "0c51f1357e186b47c7309dc613815799cfe225096dcc2ec5d3062ca2376fcf4e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/chart-motion.css",
+      "remoteSha256": "afc7aa642d7a411be7dcd05a68de823641ff74f778b348c75e3091474a2031f8",
+      "localSha256": "afc7aa642d7a411be7dcd05a68de823641ff74f778b348c75e3091474a2031f8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/chart-motion.js",
+      "remoteSha256": "56e04ac4965599fbafe6edd4a08501dc3c274b665cad6690d370d69a8b49d448",
+      "localSha256": "56e04ac4965599fbafe6edd4a08501dc3c274b665cad6690d370d69a8b49d448",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/demo-data.js",
+      "remoteSha256": "f6ae9ab2a1caf100d13b9a7c3c8b7b43d3585786dfb6963f80f6ba25350a4ec4",
+      "localSha256": "f6ae9ab2a1caf100d13b9a7c3c8b7b43d3585786dfb6963f80f6ba25350a4ec4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/full-data-view.css",
+      "remoteSha256": "42994989015e0fbbda3ca9bcd36abd996667f59623545eb3f7a09b0aa5422714",
+      "localSha256": "42994989015e0fbbda3ca9bcd36abd996667f59623545eb3f7a09b0aa5422714",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/full-data-view.js",
+      "remoteSha256": "920ef8da8209c0744989bff8b23d26c54fd36ad1299f1dadef5434e25f319c00",
+      "localSha256": "920ef8da8209c0744989bff8b23d26c54fd36ad1299f1dadef5434e25f319c00",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/genie.js",
+      "remoteSha256": "4f65fbaca28cd0ab911369dcb4329fa1e0b3805ce0083af900e26c334b1bd81f",
+      "localSha256": "4f65fbaca28cd0ab911369dcb4329fa1e0b3805ce0083af900e26c334b1bd81f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/index.html",
+      "remoteSha256": "71d7994945200eff530af4a617bbd042dc1951fb0ff8aeab0bec880bbb71ce88",
+      "localSha256": "71d7994945200eff530af4a617bbd042dc1951fb0ff8aeab0bec880bbb71ce88",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.10.css",
+      "remoteSha256": "bf9d92c5e4917a195b7beb80d6a5d7f25e7d50fd2b0dc8433bfbf974d9a3b605",
+      "localSha256": "bf9d92c5e4917a195b7beb80d6a5d7f25e7d50fd2b0dc8433bfbf974d9a3b605",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.11.css",
+      "remoteSha256": "5d06b4b213abc40e204530568a69afafd85704256591646c60edc5daaa26654c",
+      "localSha256": "5d06b4b213abc40e204530568a69afafd85704256591646c60edc5daaa26654c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.12.css",
+      "remoteSha256": "b6a22d774d903c317f539f3c179c88725be1e19c09018809345125a0b2945261",
+      "localSha256": "b6a22d774d903c317f539f3c179c88725be1e19c09018809345125a0b2945261",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.8.css",
+      "remoteSha256": "4b7a9b96cb25f410a5e86d6ee2ef96c1bd762852f0754ed7eb34807b7b55ed19",
+      "localSha256": "4b7a9b96cb25f410a5e86d6ee2ef96c1bd762852f0754ed7eb34807b7b55ed19",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/interaction-refinement-v1.9.css",
+      "remoteSha256": "536d16229a781690d00cfcada3234ee03883ddbee443a8dafa26a0ac60e57efa",
+      "localSha256": "536d16229a781690d00cfcada3234ee03883ddbee443a8dafa26a0ac60e57efa",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-catalog.js",
+      "remoteSha256": "a290b6d278b6a96fd47628cbe24a02073f89cb84db9dcac73e22a7c3c534ee2e",
+      "localSha256": "a290b6d278b6a96fd47628cbe24a02073f89cb84db9dcac73e22a7c3c534ee2e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-library-binding.js",
+      "remoteSha256": "0e8ce22e619084813c9938c4090c33a31a65bf20814943d407856e4e49924e00",
+      "localSha256": "0e8ce22e619084813c9938c4090c33a31a65bf20814943d407856e4e49924e00",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-library-data.js",
+      "remoteSha256": "de8e079459dc73c74120b3f69550ebdf66ff6398a52329f476ee67ed2e9366c0",
+      "localSha256": "de8e079459dc73c74120b3f69550ebdf66ff6398a52329f476ee67ed2e9366c0",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-library-integration.css",
+      "remoteSha256": "654b90a335cd31e7b7b723c86399704a7b02ad464dcd365b28a0668967d6999c",
+      "localSha256": "654b90a335cd31e7b7b723c86399704a7b02ad464dcd365b28a0668967d6999c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-library.css",
+      "remoteSha256": "4fff80c999f2866b49fe29b2e14cf87a79949996f441c6f761fa5843416eeaf2",
+      "localSha256": "4fff80c999f2866b49fe29b2e14cf87a79949996f441c6f761fa5843416eeaf2",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-library.js",
+      "remoteSha256": "b6ae89ec689c9016dbb2bcb7d6fede639b328fa60b7c4a8e7fb598039267729c",
+      "localSha256": "b6ae89ec689c9016dbb2bcb7d6fede639b328fa60b7c4a8e7fb598039267729c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-settings.css",
+      "remoteSha256": "20a6702831cdcc4c1f1a068b7130605a9bdccab834843f7d98db9b4927529434",
+      "localSha256": "20a6702831cdcc4c1f1a068b7130605a9bdccab834843f7d98db9b4927529434",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/kpi-settings.js",
+      "remoteSha256": "83d14004e11df7a52d6ac2c9d6f94e1cb32394e95b9e20061177f1b509b47925",
+      "localSha256": "83d14004e11df7a52d6ac2c9d6f94e1cb32394e95b9e20061177f1b509b47925",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/material-flow.css",
+      "remoteSha256": "204f4eb09932392c184850fa89c72b8185a27fdb6c223d87aae69b282b698a5f",
+      "localSha256": "204f4eb09932392c184850fa89c72b8185a27fdb6c223d87aae69b282b698a5f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/material-flow.js",
+      "remoteSha256": "0f5cbd4811dfc5696f6fe1ff0301a6eaf7d36fff473cfe3fd22d197386c9a4d4",
+      "localSha256": "0f5cbd4811dfc5696f6fe1ff0301a6eaf7d36fff473cfe3fd22d197386c9a4d4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/merged-center-data.js",
+      "remoteSha256": "00695ece5c4f74296c80abebd6dd58025d1572f62b9b3ab72f36b848b4429c0d",
+      "localSha256": "00695ece5c4f74296c80abebd6dd58025d1572f62b9b3ab72f36b848b4429c0d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/package-preview.mjs",
+      "remoteSha256": "2454f26950b8092ceae4e473662001c80515d8b765d1bedfe74c30bd01ba1d60",
+      "localSha256": "2454f26950b8092ceae4e473662001c80515d8b765d1bedfe74c30bd01ba1d60",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/panel-motion.css",
+      "remoteSha256": "9aa65867924eafe6ee5d16c5d81193da1e3a4bd1027fa99ac5ddc6692cf0be93",
+      "localSha256": "9aa65867924eafe6ee5d16c5d81193da1e3a4bd1027fa99ac5ddc6692cf0be93",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/panel-motion.js",
+      "remoteSha256": "04ca5490010407303ae760d8c4ee215af411bd48a7e4c4e03d72936191b28852",
+      "localSha256": "04ca5490010407303ae760d8c4ee215af411bd48a7e4c4e03d72936191b28852",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/presentation-center-data.js",
+      "remoteSha256": "2d5b6edda78c5725cf99768744288020055609596cee37b287f969306104e957",
+      "localSha256": "2d5b6edda78c5725cf99768744288020055609596cee37b287f969306104e957",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/presentation-data.js",
+      "remoteSha256": "9266cb2fdd41c82fdf20f7eb4f13d0909de86c52c25971dd03e467e1696d5243",
+      "localSha256": "9266cb2fdd41c82fdf20f7eb4f13d0909de86c52c25971dd03e467e1696d5243",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/presentation-mode.css",
+      "remoteSha256": "3f94814fd8218094dbb3d0cf8909fa6341f685e1a7fd25586774e7abf36848b7",
+      "localSha256": "3f94814fd8218094dbb3d0cf8909fa6341f685e1a7fd25586774e7abf36848b7",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/preview.css",
+      "remoteSha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c",
+      "localSha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/preview.js",
+      "remoteSha256": "d660bfcc80ca5cb24eeca385bed417e3cdc2a1dd9f9c028de7e1ce1a6b9f7d59",
+      "localSha256": "d660bfcc80ca5cb24eeca385bed417e3cdc2a1dd9f9c028de7e1ce1a6b9f7d59",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/qa-results.json",
+      "remoteSha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "localSha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/reference-data.js",
+      "remoteSha256": "0ff0fc9e81e5993e7a598b692a12c8cf3f665efce924de81ea327f5728a1e666",
+      "localSha256": "0ff0fc9e81e5993e7a598b692a12c8cf3f665efce924de81ea327f5728a1e666",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/responsive.css",
+      "remoteSha256": "7cd5512881da7ee31ef805b72471b1d834489d115e37fa1bc5750f762b5084e9",
+      "localSha256": "7cd5512881da7ee31ef805b72471b1d834489d115e37fa1bc5750f762b5084e9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/README.md",
+      "remoteSha256": "6135e0f664bed5a80f668566e95345c11250c77b9a430c9173829479a5b50c2e",
+      "localSha256": "6135e0f664bed5a80f668566e95345c11250c77b9a430c9173829479a5b50c2e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/browser-interaction-evidence.json",
+      "remoteSha256": "f0b1b32d3976f0e3409b8dbf444c0cfb227402b1d2b15ec172fc2eb693eb18e6",
+      "localSha256": "f0b1b32d3976f0e3409b8dbf444c0cfb227402b1d2b15ec172fc2eb693eb18e6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence-delivery.json",
+      "remoteSha256": "c2c4fef0a3a62936bf92c3eba1fcc90e03409b6cebdd47c2e37c6c28e94972c5",
+      "localSha256": "c2c4fef0a3a62936bf92c3eba1fcc90e03409b6cebdd47c2e37c6c28e94972c5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence-final.json",
+      "remoteSha256": "6e1c10bc5b34c3b8119cd8c1623d6fced48a5a6b50ed8eb6e2baf7bbed5af953",
+      "localSha256": "6e1c10bc5b34c3b8119cd8c1623d6fced48a5a6b50ed8eb6e2baf7bbed5af953",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/local-test-evidence.json",
+      "remoteSha256": "a07d11f096cbe5bf6fde3ee600134a057854bf9ecd72ffaacccdc8db265a95cf",
+      "localSha256": "a07d11f096cbe5bf6fde3ee600134a057854bf9ecd72ffaacccdc8db265a95cf",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/material-public-reference.png",
+      "remoteSha256": "cec15398d9442aa48ddfbc7a86aa2c6ec7b49dbd9782236b721e1bf56134f281",
+      "localSha256": "cec15398d9442aa48ddfbc7a86aa2c6ec7b49dbd9782236b721e1bf56134f281",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.10/publication-audit.json",
+      "remoteSha256": "0f088d5678e66c6ac0b8e90f139bcf282974df42181e6fd2686d4393d13b1367",
+      "localSha256": "0f088d5678e66c6ac0b8e90f139bcf282974df42181e6fd2686d4393d13b1367",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/README.md",
+      "remoteSha256": "7133338a541851e202a523da65bd691fff294c73f69988373eb923d007e11d58",
+      "localSha256": "7133338a541851e202a523da65bd691fff294c73f69988373eb923d007e11d58",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/VERCEL-PREVIEW.md",
+      "remoteSha256": "c46eabb26c10056118c08c7713d631c308dcaa8a43e83d5d62f9742ddfb32808",
+      "localSha256": "c46eabb26c10056118c08c7713d631c308dcaa8a43e83d5d62f9742ddfb32808",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/browser-interaction-evidence.json",
+      "remoteSha256": "1eca90c744980dae760cf660567b1a68e9ef786c3b11554f187df6e4700a982d",
+      "localSha256": "1eca90c744980dae760cf660567b1a68e9ef786c3b11554f187df6e4700a982d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/local-test-evidence.json",
+      "remoteSha256": "d17e02042304358d33e0bfec9e1a61fe68e94cf040f2caadd07d566e243b9fc1",
+      "localSha256": "d17e02042304358d33e0bfec9e1a61fe68e94cf040f2caadd07d566e243b9fc1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/material-selected-transparent.png",
+      "remoteSha256": "5e4b9d189ba326dac3564b28d65f089e6cb4caebe3d5de0dd4306204beaad7bc",
+      "localSha256": "5e4b9d189ba326dac3564b28d65f089e6cb4caebe3d5de0dd4306204beaad7bc",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/material-taller-detail.png",
+      "remoteSha256": "5e4cdef28fa14c02791553a8e9bc0743fb42f88a7354d58f2f627837eb9d08ac",
+      "localSha256": "5e4cdef28fa14c02791553a8e9bc0743fb42f88a7354d58f2f627837eb9d08ac",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/online-browser-evidence.json",
+      "remoteSha256": "de017c7dc6e09f4ef7814735d96fe1387c351d570844060adf3e8c806bd81815",
+      "localSha256": "de017c7dc6e09f4ef7814735d96fe1387c351d570844060adf3e8c806bd81815",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/online-csv-evidence.json",
+      "remoteSha256": "c91202b2a553f3d900a48740e3eda6ca9975642ff300c53c9fea7935d266016d",
+      "localSha256": "c91202b2a553f3d900a48740e3eda6ca9975642ff300c53c9fea7935d266016d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/overview-sidebar-indicator.png",
+      "remoteSha256": "338e7c0beb38cdf1654d394edf4b04ec55b210da46302cf2e0f79334bf3a950e",
+      "localSha256": "338e7c0beb38cdf1654d394edf4b04ec55b210da46302cf2e0f79334bf3a950e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/publication-audit.json",
+      "remoteSha256": "0b1cc9df7b92ceec277878345086728d14e4951fcf3196c7b4f3a551fea34d2e",
+      "localSha256": "0b1cc9df7b92ceec277878345086728d14e4951fcf3196c7b4f3a551fea34d2e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-01.json",
+      "remoteSha256": "7e9402c18d4655c022b32677ddb87fb0731da36535464eaf9d4a0049cd6cdec6",
+      "localSha256": "7e9402c18d4655c022b32677ddb87fb0731da36535464eaf9d4a0049cd6cdec6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-http-exact.json",
+      "remoteSha256": "8e89e8f37ad44cea6789fc739b1a4db6a56b880f0f3c6c4f5594fca7b01016d1",
+      "localSha256": "8e89e8f37ad44cea6789fc739b1a4db6a56b880f0f3c6c4f5594fca7b01016d1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-http-index.json",
+      "remoteSha256": "cc9804e1c80f8e66c30c0ae47f55af6fd8fd8e26884d3c268badcd6dee734ecc",
+      "localSha256": "cc9804e1c80f8e66c30c0ae47f55af6fd8fd8e26884d3c268badcd6dee734ecc",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-preview-selection.png",
+      "remoteSha256": "486d6211f542dcc820c0a3c63c986589bc2a0930c4b1bf3c4796eeefb8f4e807",
+      "localSha256": "486d6211f542dcc820c0a3c63c986589bc2a0930c4b1bf3c4796eeefb8f4e807",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-readback.json",
+      "remoteSha256": "a1d279fc2a5c32938f2a57d53edcffeb1e8fbcfa0e6bf922555acdea6c038614",
+      "localSha256": "a1d279fc2a5c32938f2a57d53edcffeb1e8fbcfa0e6bf922555acdea6c038614",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-ready.png",
+      "remoteSha256": "9818aa43fdd11ef5bffffc1e9364c4234dc4e6f4bb34ef1e29a1f1c71e31f16b",
+      "localSha256": "9818aa43fdd11ef5bffffc1e9364c4234dc4e6f4bb34ef1e29a1f1c71e31f16b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-transport-diff.json",
+      "remoteSha256": "f2c9e31ddd361b55d86edd7e7519d1880f51d0dc97da12e6b88428c2063f6599",
+      "localSha256": "f2c9e31ddd361b55d86edd7e7519d1880f51d0dc97da12e6b88428c2063f6599",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-login-handoff.png",
+      "remoteSha256": "6441ffed47dbc740c5e1859beac92edf853a3288f39eb4ec9b9afa3967303ffc",
+      "localSha256": "6441ffed47dbc740c5e1859beac92edf853a3288f39eb4ec9b9afa3967303ffc",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-publication-audit.json",
+      "remoteSha256": "05774c32436b6e14bb270512df9302c40570eb118797449ebb3a0da8b5c2910c",
+      "localSha256": "05774c32436b6e14bb270512df9302c40570eb118797449ebb3a0da8b5c2910c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-browser-evidence.json",
+      "remoteSha256": "640bd4316074e9571fb4e2df436cf7e78d4f68b7b663a490167e9dae29a1effc",
+      "localSha256": "640bd4316074e9571fb4e2df436cf7e78d4f68b7b663a490167e9dae29a1effc",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-test-evidence-02.json",
+      "remoteSha256": "ee157c92ff871663f61fec5bfc89d15b17fe5bc0ecb239c26fd2e9441014f819",
+      "localSha256": "ee157c92ff871663f61fec5bfc89d15b17fe5bc0ecb239c26fd2e9441014f819",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.12/local-test-evidence.json",
+      "remoteSha256": "667bf5f6a07a5058b9f6fea2125a1b4198b3dd619850a385a07c4f0a3bc99535",
+      "localSha256": "667bf5f6a07a5058b9f6fea2125a1b4198b3dd619850a385a07c4f0a3bc99535",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.12/overview-local.png",
+      "remoteSha256": "ca8cdba92999d444d2828a2c85a6c8bc5499a809e3fa3da6df98c95e52339550",
+      "localSha256": "ca8cdba92999d444d2828a2c85a6c8bc5499a809e3fa3da6df98c95e52339550",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.12/publication-audit.json",
+      "remoteSha256": "dd33a3ff112b85d7b9202ffcfa70eeb9d0be9d985729c09b0e8e3c00b34a70c2",
+      "localSha256": "dd33a3ff112b85d7b9202ffcfa70eeb9d0be9d985729c09b0e8e3c00b34a70c2",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/README.md",
+      "remoteSha256": "ed1a390a4f01e9c2a9be7e234d6ac8d02684a8d1866cd6c64508b4131bf1e0b3",
+      "localSha256": "ed1a390a4f01e9c2a9be7e234d6ac8d02684a8d1866cd6c64508b4131bf1e0b3",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/QA.md",
+      "remoteSha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "localSha256": "4b3217a0f5a24d35b9dec396cb41f72c20978f494f9e335edd985ee4227fec6e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/README.md",
+      "remoteSha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8",
+      "localSha256": "5a49efe656f3e5b4f08c98cfb32bb6a768bcae9cf39f1999f30a340d69f489c8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/index.html",
+      "remoteSha256": "78587401c904cfb58cdb49e95bf0ed4761517a82ea8bfa3fe15d073eef7ee5ef",
+      "localSha256": "78587401c904cfb58cdb49e95bf0ed4761517a82ea8bfa3fe15d073eef7ee5ef",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/package-preview.mjs",
+      "remoteSha256": "201d4942f4c30ef883f427364091d5495e7a5da30b3f8237a65992f29cb7a743",
+      "localSha256": "201d4942f4c30ef883f427364091d5495e7a5da30b3f8237a65992f29cb7a743",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/preview.css",
+      "remoteSha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c",
+      "localSha256": "f85dab93b93cfd6fb7556330b7262b683b037babc8f9ce816f2a059c6532243c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/preview.js",
+      "remoteSha256": "6cdfc20bf8fcd88d0d4116b961a3be325ede1e7058eb1594dbf8d6d0ab3add28",
+      "localSha256": "6cdfc20bf8fcd88d0d4116b961a3be325ede1e7058eb1594dbf8d6d0ab3add28",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/qa-results.json",
+      "remoteSha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "localSha256": "d8ebe3f7edccc7a8d94007bbfadd67a0b7e5094ac1fee1e0d16c6dc68c3e6cfa",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/before/展示包說明.md",
+      "remoteSha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d",
+      "localSha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/browser-evidence.json",
+      "remoteSha256": "fcb913a019ac18d779b55719356c2cc0931010876b3bfa03af5d57a3fc90689a",
+      "localSha256": "fcb913a019ac18d779b55719356c2cc0931010876b3bfa03af5d57a3fc90689a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/local-test-evidence.json",
+      "remoteSha256": "b3c2ae1cd853e759f5f33b59e18e37710b20d2aadcf7fb04779f89d9239fd6b5",
+      "localSha256": "b3c2ae1cd853e759f5f33b59e18e37710b20d2aadcf7fb04779f89d9239fd6b5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/publication-audit.json",
+      "remoteSha256": "10b18980bebe1f8887391c1340d869d0483a2589220c47b941005edc3e59ac81",
+      "localSha256": "10b18980bebe1f8887391c1340d869d0483a2589220c47b941005edc3e59ac81",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/01-Overview-Center.jpg",
+      "remoteSha256": "e86a61a86bd81d238602f1ea7efec1a1c298dbf5f471a7235b9c7c06ae25e17d",
+      "localSha256": "e86a61a86bd81d238602f1ea7efec1a1c298dbf5f471a7235b9c7c06ae25e17d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/02-Material-Center.jpg",
+      "remoteSha256": "02c1a4762093485e926b61eabdc0df701580396b259ecc1b942af00198aa82b4",
+      "localSha256": "02c1a4762093485e926b61eabdc0df701580396b259ecc1b942af00198aa82b4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/03-Verification-Center.jpg",
+      "remoteSha256": "ee2a095c82f28178f80b9dcba04060332836396cb15fbb0d7dac61c11e290de2",
+      "localSha256": "ee2a095c82f28178f80b9dcba04060332836396cb15fbb0d7dac61c11e290de2",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.2/screenshots/04-Management-Center.jpg",
+      "remoteSha256": "441ecb908cc385f3d219b14494eb9cc0c85218d567212e40682efb1f63bcc27d",
+      "localSha256": "441ecb908cc385f3d219b14494eb9cc0c85218d567212e40682efb1f63bcc27d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/README.md",
+      "remoteSha256": "01b74195d261d9d56fcd5a5cbb4707960a2525eefa397784389a7ff147534a5b",
+      "localSha256": "01b74195d261d9d56fcd5a5cbb4707960a2525eefa397784389a7ff147534a5b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/before/README.md",
+      "remoteSha256": "f50d837ffd9953c772e97035ab1d6cda800588d766414615f7bc8ea5326b98ee",
+      "localSha256": "f50d837ffd9953c772e97035ab1d6cda800588d766414615f7bc8ea5326b98ee",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/before/index.html",
+      "remoteSha256": "cd42f40b8f76277966b8995626847a15791d48a2a523348b2b7eabea091185f6",
+      "localSha256": "cd42f40b8f76277966b8995626847a15791d48a2a523348b2b7eabea091185f6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/before/package-preview.mjs",
+      "remoteSha256": "52f109e0e8146bde21bf571bbef4340390d3b6a011581bfd5cb01e33e049aae5",
+      "localSha256": "52f109e0e8146bde21bf571bbef4340390d3b6a011581bfd5cb01e33e049aae5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/before/preview.js",
+      "remoteSha256": "94a17e8a3561836ea7ed61a52e52323a2cbae13e7ae729c7fff76872b6d2248a",
+      "localSha256": "94a17e8a3561836ea7ed61a52e52323a2cbae13e7ae729c7fff76872b6d2248a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/browser-evidence.json",
+      "remoteSha256": "efa1e8672f17cc665f6cec01f9605b0758d61f65cc037c8901c2ea974adf1aad",
+      "localSha256": "efa1e8672f17cc665f6cec01f9605b0758d61f65cc037c8901c2ea974adf1aad",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/local-test-evidence.json",
+      "remoteSha256": "e1397f1fad8c46a291fd9851af5d7b50e0b00666197cc02090b120e900fbdcce",
+      "localSha256": "e1397f1fad8c46a291fd9851af5d7b50e0b00666197cc02090b120e900fbdcce",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/screenshots/management.png",
+      "remoteSha256": "41d961c446ad9492061adde49f37dc9f12183c4201a0fd805d9da5ab80724f7f",
+      "localSha256": "41d961c446ad9492061adde49f37dc9f12183c4201a0fd805d9da5ab80724f7f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/screenshots/material.png",
+      "remoteSha256": "7cf7917fb0326726cd8adf5f1cc9a2a35359aae82ee0f77cf05f49bd6982d72e",
+      "localSha256": "7cf7917fb0326726cd8adf5f1cc9a2a35359aae82ee0f77cf05f49bd6982d72e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/screenshots/overview.png",
+      "remoteSha256": "20b19ac054326f3c1a8f35efba9fbbea1a34050a53b5dea0bf723d5cd1a83046",
+      "localSha256": "20b19ac054326f3c1a8f35efba9fbbea1a34050a53b5dea0bf723d5cd1a83046",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.3/screenshots/verification.png",
+      "remoteSha256": "507bf6601e5bae9b9b2e1e4585a9552c008c28c0b5c981cfc8bb63a4fc0fb4ec",
+      "localSha256": "507bf6601e5bae9b9b2e1e4585a9552c008c28c0b5c981cfc8bb63a4fc0fb4ec",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/README.md",
+      "remoteSha256": "c598f2444b314e5f249732c0b085ee2cc69022da82e29b161e10a5223bb5d7d5",
+      "localSha256": "c598f2444b314e5f249732c0b085ee2cc69022da82e29b161e10a5223bb5d7d5",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/browser-interaction-evidence.json",
+      "remoteSha256": "eb98990639e6a6363c3e50e6705d355370c8c8bf6402291da5ccf35c6029dd06",
+      "localSha256": "eb98990639e6a6363c3e50e6705d355370c8c8bf6402291da5ccf35c6029dd06",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/local-test-evidence.json",
+      "remoteSha256": "110327ca901b74127792e7a18a90edb5902a84cfa5f0235f2daaa510abce713b",
+      "localSha256": "110327ca901b74127792e7a18a90edb5902a84cfa5f0235f2daaa510abce713b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/publication-audit.json",
+      "remoteSha256": "ffab37b60419131bb02d812a51fbf24d5c76b41ba3eea13cae94e31d4979e290",
+      "localSha256": "ffab37b60419131bb02d812a51fbf24d5c76b41ba3eea13cae94e31d4979e290",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/01-overview.png",
+      "remoteSha256": "01ecfb7f2dbaef960a74baab65e3fb8e6557b3ae81bb9c365ae7c9c029fd1e17",
+      "localSha256": "01ecfb7f2dbaef960a74baab65e3fb8e6557b3ae81bb9c365ae7c9c029fd1e17",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/02-material.png",
+      "remoteSha256": "c2e462962d78e346574e8ca5b2485dc91b5f5c60bcfefab5ab3e37a2a0df1796",
+      "localSha256": "c2e462962d78e346574e8ca5b2485dc91b5f5c60bcfefab5ab3e37a2a0df1796",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/03-verification.png",
+      "remoteSha256": "d8a1e76fff10f2eb93107dfcfb9fc11324b5d59f474ffe09a9240d0ea5cb4fee",
+      "localSha256": "d8a1e76fff10f2eb93107dfcfb9fc11324b5d59f474ffe09a9240d0ea5cb4fee",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/04-management.png",
+      "remoteSha256": "93d8ed1911fb9f08f05d963f16c9241a75eaa6ff57652356d6be97f3cfa04783",
+      "localSha256": "93d8ed1911fb9f08f05d963f16c9241a75eaa6ff57652356d6be97f3cfa04783",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/05-kpi-settings.png",
+      "remoteSha256": "0956155289ba13176b9bdcbfe61171491dacab4abfb2e14fff5b00ff1d5a010a",
+      "localSha256": "0956155289ba13176b9bdcbfe61171491dacab4abfb2e14fff5b00ff1d5a010a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/06-mobile.png",
+      "remoteSha256": "0991f01d3f5c0935a8d1ad1edb54a37657b55d4a6464d19c48200ebcb8290403",
+      "localSha256": "0991f01d3f5c0935a8d1ad1edb54a37657b55d4a6464d19c48200ebcb8290403",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.4/screenshots/07-public-references.png",
+      "remoteSha256": "d3103d0520fd671b69ddaf9574f0308bf023cab30b899836c616435ee3be657e",
+      "localSha256": "d3103d0520fd671b69ddaf9574f0308bf023cab30b899836c616435ee3be657e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/README.md",
+      "remoteSha256": "951cd06dc840b19c9b8c9bf192aaf3f58d49b7aaff692b671ee4850096d0502f",
+      "localSha256": "951cd06dc840b19c9b8c9bf192aaf3f58d49b7aaff692b671ee4850096d0502f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/browser-interaction-evidence.json",
+      "remoteSha256": "3afa87cc936bff4b0f39fa438239f6e82294a38b48c78bca173f369a711c0942",
+      "localSha256": "3afa87cc936bff4b0f39fa438239f6e82294a38b48c78bca173f369a711c0942",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/local-test-evidence.json",
+      "remoteSha256": "33a6d3e1e2b0c24340c0e87f645170ae51212b1d5f96eaf8d37c6cc19b10f99d",
+      "localSha256": "33a6d3e1e2b0c24340c0e87f645170ae51212b1d5f96eaf8d37c6cc19b10f99d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/publication-audit.json",
+      "remoteSha256": "f719e291b35b40735573711c22f593cecc3ae877ea0f4917f989021430718dc1",
+      "localSha256": "f719e291b35b40735573711c22f593cecc3ae877ea0f4917f989021430718dc1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/01-overview.png",
+      "remoteSha256": "31638a4c042d2a384743db6bf99230964b80fc4e29f8d763652a77fe9f5fb29a",
+      "localSha256": "31638a4c042d2a384743db6bf99230964b80fc4e29f8d763652a77fe9f5fb29a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/02-material.png",
+      "remoteSha256": "183f4ed30d4d72d7563b39fcefe27a5ffe7302a7b50d864eaf17df1378b153b4",
+      "localSha256": "183f4ed30d4d72d7563b39fcefe27a5ffe7302a7b50d864eaf17df1378b153b4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/03-verification.png",
+      "remoteSha256": "fd88a04ad3a88ad2314ca77db13a31444511af07cff0977fa40e5a4d1c7cad74",
+      "localSha256": "fd88a04ad3a88ad2314ca77db13a31444511af07cff0977fa40e5a4d1c7cad74",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/04-management.png",
+      "remoteSha256": "14e64b1efa1278f5a2e0b896e487d71798d8a0f9b4cee0e304858760bdf3a3f1",
+      "localSha256": "14e64b1efa1278f5a2e0b896e487d71798d8a0f9b4cee0e304858760bdf3a3f1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/05-kpi-library.png",
+      "remoteSha256": "a21ff390bed824714af7deb42cc430e9864aea6ca1af5f1349bbddfc7d1da8e1",
+      "localSha256": "a21ff390bed824714af7deb42cc430e9864aea6ca1af5f1349bbddfc7d1da8e1",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/06-expanded-sidebar.png",
+      "remoteSha256": "d6711e33e88b5e3e0819b2f1bab5e0e20f1e577830e27d838f5a03e6e174904f",
+      "localSha256": "d6711e33e88b5e3e0819b2f1bab5e0e20f1e577830e27d838f5a03e6e174904f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/07-full-material-data.png",
+      "remoteSha256": "46c6314034a544d9b05ceb953986bcb78fd611618cbca39b7fea8c82c9a6d716",
+      "localSha256": "46c6314034a544d9b05ceb953986bcb78fd611618cbca39b7fea8c82c9a6d716",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/08-mobile-library.png",
+      "remoteSha256": "8b9e9819147f3fa0d488552f24dc59f3df3f0bd0907c561dca07fb335d80fced",
+      "localSha256": "8b9e9819147f3fa0d488552f24dc59f3df3f0bd0907c561dca07fb335d80fced",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.5/screenshots/09-registry-source-values.png",
+      "remoteSha256": "3fa1ed4306f6e3faf8680fa52989a1b1ec24cbb41294119313a1187bf8d73e03",
+      "localSha256": "3fa1ed4306f6e3faf8680fa52989a1b1ec24cbb41294119313a1187bf8d73e03",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/README.md",
+      "remoteSha256": "0253201b951f7c774935ebc10fd703a81ee7b6c900f7bb2f6b5faaffabd4e7c8",
+      "localSha256": "0253201b951f7c774935ebc10fd703a81ee7b6c900f7bb2f6b5faaffabd4e7c8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/browser-interaction-evidence.json",
+      "remoteSha256": "d805d32bf70ce661840dc947cc2bb0aacf71902b6f7a4fee81ec84fe8e84693a",
+      "localSha256": "d805d32bf70ce661840dc947cc2bb0aacf71902b6f7a4fee81ec84fe8e84693a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/final-evidence-publication-audit.json",
+      "remoteSha256": "45a4a27fe4cf42f8a1a1686a2edaf4b201f3f0c3f1700e0f57171ee29ecaf8c9",
+      "localSha256": "45a4a27fe4cf42f8a1a1686a2edaf4b201f3f0c3f1700e0f57171ee29ecaf8c9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/local-test-evidence.json",
+      "remoteSha256": "13b78c8e7d0c549d6ef6c696e519b6f10b70ea8f789c22f639b687844fa8aab6",
+      "localSha256": "13b78c8e7d0c549d6ef6c696e519b6f10b70ea8f789c22f639b687844fa8aab6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/publication-audit.json",
+      "remoteSha256": "37c3866f49b2591bdf2f7f47f180a13422c791848fe759cee329510cfc2f6b92",
+      "localSha256": "37c3866f49b2591bdf2f7f47f180a13422c791848fe759cee329510cfc2f6b92",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/01-overview.png",
+      "remoteSha256": "f1ef162d66748f3f1069b054f7b1b1128ddaa0250b493d1fea6d5ff09414c7b6",
+      "localSha256": "f1ef162d66748f3f1069b054f7b1b1128ddaa0250b493d1fea6d5ff09414c7b6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/02-material.png",
+      "remoteSha256": "3dfb4749e9ccd318923d73ce41bdeac5cdddcd2cebc2990e64cecb2d025caf33",
+      "localSha256": "3dfb4749e9ccd318923d73ce41bdeac5cdddcd2cebc2990e64cecb2d025caf33",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/03-verification.png",
+      "remoteSha256": "e9ca63e830d37e28c2b081bfeb70bc6844b3247fc96b40eb799f6cbc8d782f71",
+      "localSha256": "e9ca63e830d37e28c2b081bfeb70bc6844b3247fc96b40eb799f6cbc8d782f71",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/04-management.png",
+      "remoteSha256": "e5edbc80f1b53ada9f24ed53ce43aab758a32777ba0cfcc8e5024797e9d304df",
+      "localSha256": "e5edbc80f1b53ada9f24ed53ce43aab758a32777ba0cfcc8e5024797e9d304df",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/05-full-material-view.png",
+      "remoteSha256": "dd114d9fdc4be8f43e0e58ca3203eeda3f89184151c8a1ec80af43ff426cc116",
+      "localSha256": "dd114d9fdc4be8f43e0e58ca3203eeda3f89184151c8a1ec80af43ff426cc116",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/06-expanded-sidebar.png",
+      "remoteSha256": "23690b2d77e7e4e64936905eabbbb79a030c5ab81b2fd187ab5245f93db698de",
+      "localSha256": "23690b2d77e7e4e64936905eabbbb79a030c5ab81b2fd187ab5245f93db698de",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/07-mobile-toolbar.png",
+      "remoteSha256": "a977d51c4297a372f2716e7a17557ecea2f341d6a8457e5d346b12d775aa0a57",
+      "localSha256": "a977d51c4297a372f2716e7a17557ecea2f341d6a8457e5d346b12d775aa0a57",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/08-overview-right-panel.png",
+      "remoteSha256": "0568b74d2049589422a3464def7da8484eaa296a59588fade26a489ae3514ec8",
+      "localSha256": "0568b74d2049589422a3464def7da8484eaa296a59588fade26a489ae3514ec8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.6/screenshots/09-left-entry-library.png",
+      "remoteSha256": "f63bdfecbd4dfa75eff67af418e6657f36941ae41cb9b1f8da8f7b7b0d783843",
+      "localSha256": "f63bdfecbd4dfa75eff67af418e6657f36941ae41cb9b1f8da8f7b7b0d783843",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/README.md",
+      "remoteSha256": "805cd5fc3c3f94af66776c80dd75b0c6caab6871ec6972a1a487d06769c6e53e",
+      "localSha256": "805cd5fc3c3f94af66776c80dd75b0c6caab6871ec6972a1a487d06769c6e53e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/deployment-incident-evidence.json",
+      "remoteSha256": "4781d65c4515728e407c4d38450695a1383b9cc85a2e4869900999861ed443ab",
+      "localSha256": "4781d65c4515728e407c4d38450695a1383b9cc85a2e4869900999861ed443ab",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/incident-publication-audit.json",
+      "remoteSha256": "2830e9589dde2829b59401132e77b0b44099b1a78cb1474e1375881222911a29",
+      "localSha256": "2830e9589dde2829b59401132e77b0b44099b1a78cb1474e1375881222911a29",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/local-brand-alignment.png",
+      "remoteSha256": "cdd7f3b2d8ef0328862ffaf01fcee23f7af687ac83e633cf844f057fa808fde4",
+      "localSha256": "cdd7f3b2d8ef0328862ffaf01fcee23f7af687ac83e633cf844f057fa808fde4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/local-test-evidence.json",
+      "remoteSha256": "0658e5c8a37b2f22bbcd8db4235c59c5eaf42154defc79da40d4a83b70178c9a",
+      "localSha256": "0658e5c8a37b2f22bbcd8db4235c59c5eaf42154defc79da40d4a83b70178c9a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/local-test-first-attempt.json",
+      "remoteSha256": "7671779c3c47cc17a690ec3485dcacc2e10c3c7a81e5a2ce3345eea950c27d2e",
+      "localSha256": "7671779c3c47cc17a690ec3485dcacc2e10c3c7a81e5a2ce3345eea950c27d2e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.7/publication-audit.json",
+      "remoteSha256": "e8dda0fb38327d785c85541d15017c76db9ddac11e995cbf2c613eb94f0da20e",
+      "localSha256": "e8dda0fb38327d785c85541d15017c76db9ddac11e995cbf2c613eb94f0da20e",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/README.md",
+      "remoteSha256": "27567244801705bee9a825498493530564ee210a58753cf23ffb6cc1445e102a",
+      "localSha256": "27567244801705bee9a825498493530564ee210a58753cf23ffb6cc1445e102a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/browser-interaction-evidence.json",
+      "remoteSha256": "5b865246b7819e4a40898a9540127869647416f7481048330f3be2b1ea6499e4",
+      "localSha256": "5b865246b7819e4a40898a9540127869647416f7481048330f3be2b1ea6499e4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/detail-65-percent.png",
+      "remoteSha256": "5987a2f63dbf94e1533624101871d931cbf07c40506e192dbeb669a81ddb2a2c",
+      "localSha256": "5987a2f63dbf94e1533624101871d931cbf07c40506e192dbeb669a81ddb2a2c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/handoff-publication-audit.json",
+      "remoteSha256": "f6ee4cab24264ef14a61eb14c72390b28d71073003ff971b8ddf79c4dd48951d",
+      "localSha256": "f6ee4cab24264ef14a61eb14c72390b28d71073003ff971b8ddf79c4dd48951d",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/led-kpi-preview.png",
+      "remoteSha256": "5d8e97c93039d52748edbb3d40e7c4f15e46e42657e5b07053523690fc65887c",
+      "localSha256": "5d8e97c93039d52748edbb3d40e7c4f15e46e42657e5b07053523690fc65887c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/local-test-evidence.json",
+      "remoteSha256": "63eefbae1c7254d703bd279e6edd6ffe596e302c978e30b99101f9e35733545c",
+      "localSha256": "63eefbae1c7254d703bd279e6edd6ffe596e302c978e30b99101f9e35733545c",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/local-test-final-evidence.json",
+      "remoteSha256": "85245860abff3e4444d16769e7d6b702c904bd8442eb24408f8ebfde81e3e005",
+      "localSha256": "85245860abff3e4444d16769e7d6b702c904bd8442eb24408f8ebfde81e3e005",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/material-flow-final.png",
+      "remoteSha256": "81e27197680ccb66122589dfc8f45e021b57c39cdd440701e0a31db6dca7efff",
+      "localSha256": "81e27197680ccb66122589dfc8f45e021b57c39cdd440701e0a31db6dca7efff",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/material-flow-preview.png",
+      "remoteSha256": "7d118afab4ad14a24a7b6853b68b546aa2782e677c0fab507d29df80319d80e9",
+      "localSha256": "7d118afab4ad14a24a7b6853b68b546aa2782e677c0fab507d29df80319d80e9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/mobile-detail.png",
+      "remoteSha256": "bd036479247ec5c86ab77e50f2acc44a402eabef8f5896039327867f5456b9b8",
+      "localSha256": "bd036479247ec5c86ab77e50f2acc44a402eabef8f5896039327867f5456b9b8",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.8/publication-audit.json",
+      "remoteSha256": "7dd9aaf9f0fec7b234f21ef4cc33676de043c228ee4186bdc0e7e16d14f0e931",
+      "localSha256": "7dd9aaf9f0fec7b234f21ef4cc33676de043c228ee4186bdc0e7e16d14f0e931",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/README.md",
+      "remoteSha256": "44fa482d67e0b06604b27db87d1cf0dd0dbbf7f851c3bceaab9722b6ccd8a92a",
+      "localSha256": "44fa482d67e0b06604b27db87d1cf0dd0dbbf7f851c3bceaab9722b6ccd8a92a",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/browser-interaction-evidence.json",
+      "remoteSha256": "60e7d5276fbb3f1923917a6fca05889edbfcbb9efb6798c38e648ca155f6cd34",
+      "localSha256": "60e7d5276fbb3f1923917a6fca05889edbfcbb9efb6798c38e648ca155f6cd34",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/extended-detail.png",
+      "remoteSha256": "005732cd112def58d1ba2a179e61d0b426e319ceae1451d9366d085104c7afab",
+      "localSha256": "005732cd112def58d1ba2a179e61d0b426e319ceae1451d9366d085104c7afab",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/handoff-publication-audit.json",
+      "remoteSha256": "eb9d2ed1220427b649ebbf21bca6539d6eef8fcbb150fa108da25a63725e405f",
+      "localSha256": "eb9d2ed1220427b649ebbf21bca6539d6eef8fcbb150fa108da25a63725e405f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/library-dashboard-cards.png",
+      "remoteSha256": "ad990e26ddfd5c1d35b46f09c4aad70b40d2e8b054a2f414faf29b69f8c7f1ae",
+      "localSha256": "ad990e26ddfd5c1d35b46f09c4aad70b40d2e8b054a2f414faf29b69f8c7f1ae",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/library-dashboard-editor.png",
+      "remoteSha256": "21c30557c1a339130b8ccea73deae63d0ce0a2299653c99e294ee90aec8c00d2",
+      "localSha256": "21c30557c1a339130b8ccea73deae63d0ce0a2299653c99e294ee90aec8c00d2",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/local-test-evidence.json",
+      "remoteSha256": "fe594c765c44ec224b27f70dea7d4f02457c4bfa936215c9edd048c17efd1518",
+      "localSha256": "fe594c765c44ec224b27f70dea7d4f02457c4bfa936215c9edd048c17efd1518",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/local-test-final-evidence.json",
+      "remoteSha256": "7e1f8b8bb2e2fdbcfdf8af20aedca800b406b192a81cb2c725f3f98a95851199",
+      "localSha256": "7e1f8b8bb2e2fdbcfdf8af20aedca800b406b192a81cb2c725f3f98a95851199",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/mobile-detail.png",
+      "remoteSha256": "8565882e76477c8441ed3a6637f4a9be83ed0d045ec038bc1da4b6dfc4d693a9",
+      "localSha256": "8565882e76477c8441ed3a6637f4a9be83ed0d045ec038bc1da4b6dfc4d693a9",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/revisions/v1.9/publication-audit.json",
+      "remoteSha256": "8fbeaf34a17693164d5dbcc90ff927b7bf1a2af111ee772afa980e02c8c31485",
+      "localSha256": "8fbeaf34a17693164d5dbcc90ff927b7bf1a2af111ee772afa980e02c8c31485",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/screenshots/01-Overview-Center.jpg",
+      "remoteSha256": "7e9eb8bbc2e6546e2074471d079c80e8c55d5b1d8835edd43fb2e17436235bab",
+      "localSha256": "7e9eb8bbc2e6546e2074471d079c80e8c55d5b1d8835edd43fb2e17436235bab",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/screenshots/02-Material-Center.jpg",
+      "remoteSha256": "6b240fb23ad78bca9e5b07a4af2a5b3c4a01c3e9ccc79f30acc5818d31ebe1a3",
+      "localSha256": "6b240fb23ad78bca9e5b07a4af2a5b3c4a01c3e9ccc79f30acc5818d31ebe1a3",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/screenshots/03-Verification-Center.jpg",
+      "remoteSha256": "7dda30956e6c64a72b4ecc4c9c3a9918a13ce4669781fd018160e6ba085678f3",
+      "localSha256": "7dda30956e6c64a72b4ecc4c9c3a9918a13ce4669781fd018160e6ba085678f3",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/screenshots/04-Management-Center.jpg",
+      "remoteSha256": "35e0bd61abf2a82cbfd0a0c84cc1b505ba8cb5aedceeea7eed5c59b1b208de61",
+      "localSha256": "35e0bd61abf2a82cbfd0a0c84cc1b505ba8cb5aedceeea7eed5c59b1b208de61",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/server.mjs",
+      "remoteSha256": "9ce3e5b001e00fe03435755fc1040be12e8eb92129253543ebf09a777e1e3305",
+      "localSha256": "9ce3e5b001e00fe03435755fc1040be12e8eb92129253543ebf09a777e1e3305",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/sidebar.css",
+      "remoteSha256": "264e62856555a05e831a568406432f63e1bde23807f7a04a7a265cb11948ccb4",
+      "localSha256": "264e62856555a05e831a568406432f63e1bde23807f7a04a7a265cb11948ccb4",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/sidebar.js",
+      "remoteSha256": "22057cbbe810e01cceecaa530889c4921150c953fdcd5e1914c0528c8de1825b",
+      "localSha256": "22057cbbe810e01cceecaa530889c4921150c953fdcd5e1914c0528c8de1825b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/tsmc-reference-data.js",
+      "remoteSha256": "d6cbab44e7b372d318162eea09fe5a22545141a6d5cdc0b25e969e791c796666",
+      "localSha256": "d6cbab44e7b372d318162eea09fe5a22545141a6d5cdc0b25e969e791c796666",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/tsmc-sustainability.js",
+      "remoteSha256": "17320b3a7fda1ce2401ec5232865fbccbba373fd6afab0049c0b47d194ee82e2",
+      "localSha256": "17320b3a7fda1ce2401ec5232865fbccbba373fd6afab0049c0b47d194ee82e2",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/vendor/NOTICE.md",
+      "remoteSha256": "76d805ef0b8173a76354828e17a48e53597474febe426cb64f72c59406bdb4a6",
+      "localSha256": "76d805ef0b8173a76354828e17a48e53597474febe426cb64f72c59406bdb4a6",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/vendor/eva-genie-r51-rev2.original.js",
+      "remoteSha256": "4299723d498a61b481acde8f048548ba8c95840e0140e963584d34c13b84698b",
+      "localSha256": "4299723d498a61b481acde8f048548ba8c95840e0140e963584d34c13b84698b",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/workspace-refinement.css",
+      "remoteSha256": "e840c3b774f7dbb34ea835e3b1e808e6092257cf39cd841ec825d3ee7200112f",
+      "localSha256": "e840c3b774f7dbb34ea835e3b1e808e6092257cf39cd841ec825d3ee7200112f",
+      "status": "PASS"
+    },
+    {
+      "file": "preview/展示包說明.md",
+      "remoteSha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d",
+      "localSha256": "d21f7a36deb9455cd73293c2459595079ce8d653ea02d2a7c55bc2e4fe4f424d",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/audit-staged.mjs",
+      "remoteSha256": "ec4517c2d5563f7bc17e4dd0a5d6d1b6a6f8d91b8175d205cbe4a41636154fcf",
+      "localSha256": "ec4517c2d5563f7bc17e4dd0a5d6d1b6a6f8d91b8175d205cbe4a41636154fcf",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/build-vercel-preview.mjs",
+      "remoteSha256": "0f8038f6f3dc85fbface98acd068487713d7e790d6410953893a86ab43eedae5",
+      "localSha256": "0f8038f6f3dc85fbface98acd068487713d7e790d6410953893a86ab43eedae5",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/generate-presentation-demo.mjs",
+      "remoteSha256": "1e19fec1905dafa05071959263b1f3a81de60dd6c5be76ea95dc4d1506f0979a",
+      "localSha256": "1e19fec1905dafa05071959263b1f3a81de60dd6c5be76ea95dc4d1506f0979a",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/merge-demo-data.mjs",
+      "remoteSha256": "068ef1e33cbd253b49f14ba58ec01427357a7cc81f9d2cd054e0acac8ba64790",
+      "localSha256": "068ef1e33cbd253b49f14ba58ec01427357a7cc81f9d2cd054e0acac8ba64790",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-brand-alignment.mjs",
+      "remoteSha256": "93c285835d775946ab67790a5bf8fab2450bb2c8fb135711f27a9fcac026737c",
+      "localSha256": "93c285835d775946ab67790a5bf8fab2450bb2c8fb135711f27a9fcac026737c",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-center-bindings.mjs",
+      "remoteSha256": "59ff5aadc01124c6e92a8e32b92603193de4746d2e476fbd7e668a00a16f2c52",
+      "localSha256": "59ff5aadc01124c6e92a8e32b92603193de4746d2e476fbd7e668a00a16f2c52",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-chart-motion.mjs",
+      "remoteSha256": "bc64e128d9aeb401f632782993657f36b9e3889febb389ccb0780538f8eca23c",
+      "localSha256": "bc64e128d9aeb401f632782993657f36b9e3889febb389ccb0780538f8eca23c",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-full-data-view.mjs",
+      "remoteSha256": "142fd061c360d367302a90f0a4660d37c238026e93b2b2daca96e6db4ea9e461",
+      "localSha256": "142fd061c360d367302a90f0a4660d37c238026e93b2b2daca96e6db4ea9e461",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.10.mjs",
+      "remoteSha256": "6fc3b58c615bcbf63ba303603eb759af90572aee81a21d27e75543df15cf4bcc",
+      "localSha256": "6fc3b58c615bcbf63ba303603eb759af90572aee81a21d27e75543df15cf4bcc",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.11.mjs",
+      "remoteSha256": "e7d6fe38dd257da014f34e2b5bf16007d3de0acf987abbff14684d6dd32ad7bd",
+      "localSha256": "e7d6fe38dd257da014f34e2b5bf16007d3de0acf987abbff14684d6dd32ad7bd",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.12.mjs",
+      "remoteSha256": "0de665882c993410ba29e58f966ee5dbe0882c8c52bbab24034792655759c724",
+      "localSha256": "0de665882c993410ba29e58f966ee5dbe0882c8c52bbab24034792655759c724",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.8.mjs",
+      "remoteSha256": "850f375e7718f4db173c53de7ec02f9826f92dbe56f25f02eeb5f720f4d53a02",
+      "localSha256": "850f375e7718f4db173c53de7ec02f9826f92dbe56f25f02eeb5f720f4d53a02",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-interaction-refinement-v1.9.mjs",
+      "remoteSha256": "e87d9b7f1a05f52af86a4d8677c53ecb47e46cda51628e98f041e85f9d2db4fc",
+      "localSha256": "e87d9b7f1a05f52af86a4d8677c53ecb47e46cda51628e98f041e85f9d2db4fc",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-catalog.mjs",
+      "remoteSha256": "e80d1d6941939e307ef40bc4444a20df81f86d7483f68bf548572350bb4cdfc5",
+      "localSha256": "e80d1d6941939e307ef40bc4444a20df81f86d7483f68bf548572350bb4cdfc5",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-dashboard-drag.mjs",
+      "remoteSha256": "a04395e0f3831e7b47845d1ffbc3c9b2cc40b87c3c7587ffe6397664cd560e17",
+      "localSha256": "a04395e0f3831e7b47845d1ffbc3c9b2cc40b87c3c7587ffe6397664cd560e17",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-editor-integration.mjs",
+      "remoteSha256": "1a93a28dbefb7791537d0f61a26cc17ed277ab474727aa504a0d549234d5ebf6",
+      "localSha256": "1a93a28dbefb7791537d0f61a26cc17ed277ab474727aa504a0d549234d5ebf6",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-library-data.mjs",
+      "remoteSha256": "60ee21948eaf22b0021bed5f14942ca2bd687bb250a5ab5bfd67ca357bf77e2b",
+      "localSha256": "60ee21948eaf22b0021bed5f14942ca2bd687bb250a5ab5bfd67ca357bf77e2b",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-library-integration.mjs",
+      "remoteSha256": "efbdaaddf85fa7b98772b382d769bb7bcda87c1251fe403886099232a75368ee",
+      "localSha256": "efbdaaddf85fa7b98772b382d769bb7bcda87c1251fe403886099232a75368ee",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-library-ui.mjs",
+      "remoteSha256": "390391231def556255e56a33593acfe87e847015eac3a99c3b321b90741f097c",
+      "localSha256": "390391231def556255e56a33593acfe87e847015eac3a99c3b321b90741f097c",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-kpi-settings.mjs",
+      "remoteSha256": "6827a60ecda50d0e42f46cfceb9d5124dc01eec263114a8ef83180ea3254b65b",
+      "localSha256": "6827a60ecda50d0e42f46cfceb9d5124dc01eec263114a8ef83180ea3254b65b",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-material-flow-integration.mjs",
+      "remoteSha256": "070aea90cc37df1e94398a3f10a85382d7431b301f7b45ed7def9a159c05d2a5",
+      "localSha256": "070aea90cc37df1e94398a3f10a85382d7431b301f7b45ed7def9a159c05d2a5",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-material-flow.mjs",
+      "remoteSha256": "b1c6fffd36f29ed547e560e76cf2a9f42a8640e3332a15bad37dcdc6fc313827",
+      "localSha256": "b1c6fffd36f29ed547e560e76cf2a9f42a8640e3332a15bad37dcdc6fc313827",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-panel-motion.mjs",
+      "remoteSha256": "dd1ea96e486d6ff13123132cf79d1a0f448f2e0b508a92202df1c4cc3b1e1cd7",
+      "localSha256": "dd1ea96e486d6ff13123132cf79d1a0f448f2e0b508a92202df1c4cc3b1e1cd7",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-presentation-demo.mjs",
+      "remoteSha256": "6c11c5a1bbfe73a7cd9655586a2f4415546b522e366b42bc390ec6ee36fbfb30",
+      "localSha256": "6c11c5a1bbfe73a7cd9655586a2f4415546b522e366b42bc390ec6ee36fbfb30",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-preview-integration.mjs",
+      "remoteSha256": "59cdf4928683abdd1135377d1ccbeb4e47a2d0381ef6665cde03fbb4217b80c0",
+      "localSha256": "59cdf4928683abdd1135377d1ccbeb4e47a2d0381ef6665cde03fbb4217b80c0",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-responsive.mjs",
+      "remoteSha256": "87b1047596af3119fee96b2e2ddab2feb36844130670236c6b1c7d42f29b99e4",
+      "localSha256": "87b1047596af3119fee96b2e2ddab2feb36844130670236c6b1c7d42f29b99e4",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-sidebar.mjs",
+      "remoteSha256": "6a741993418b996f4423d7ca62c7e315178a0ffb01f67bc0be53cd53c3f35393",
+      "localSha256": "6a741993418b996f4423d7ca62c7e315178a0ffb01f67bc0be53cd53c3f35393",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-tsmc-sustainability.mjs",
+      "remoteSha256": "571a92fc194266e4e851f420df684415a75f7769f118319be1c66629ceea1f35",
+      "localSha256": "571a92fc194266e4e851f420df684415a75f7769f118319be1c66629ceea1f35",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-tsmc-ui-integration.mjs",
+      "remoteSha256": "81fe86ac7cdcca4cf030b9dec92e27ab40ca8435271e7eecff71e2560308aedc",
+      "localSha256": "81fe86ac7cdcca4cf030b9dec92e27ab40ca8435271e7eecff71e2560308aedc",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-vercel-preview.mjs",
+      "remoteSha256": "ee794bed85167ce603d710032257dd2b8bb7b97853f087639bffd088c8cd76bf",
+      "localSha256": "ee794bed85167ce603d710032257dd2b8bb7b97853f087639bffd088c8cd76bf",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/test-workspace-refinement.mjs",
+      "remoteSha256": "87144802691651aee65d619f36e32388f909ed0117060a03730b3736b0ed66b1",
+      "localSha256": "87144802691651aee65d619f36e32388f909ed0117060a03730b3736b0ed66b1",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/verify-github.mjs",
+      "remoteSha256": "06fe5f211d780d88c977a696f4a9cfd7e871b89c4c7197f452842e93deb9cd69",
+      "localSha256": "06fe5f211d780d88c977a696f4a9cfd7e871b89c4c7197f452842e93deb9cd69",
+      "status": "PASS"
+    },
+    {
+      "file": "scripts/verify-local.mjs",
+      "remoteSha256": "95d9ff0a21102bd2455cf3bde12c2fc95f0f03f6386d7bcc5324cc6863ee68fb",
+      "localSha256": "95d9ff0a21102bd2455cf3bde12c2fc95f0f03f6386d7bcc5324cc6863ee68fb",
+      "status": "PASS"
+    },
+    {
+      "file": "v1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json",
+      "remoteSha256": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "localSha256": "c19d3c335fa0c038b8fb3001cd6397260af5d5c33663c413a56be0b4c7565e2b",
+      "status": "PASS"
+    },
+    {
+      "file": "v1.0/rrcc_hantang_demo_v1_OFFLINE.html",
+      "remoteSha256": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "localSha256": "100c3a4770d5a2505c2fd30144bd9b1618c69e1702c1f97374539f99bdaf0bd2",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/RRCC_Hantang_Embedded_Demo_Data.json",
+      "remoteSha256": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "localSha256": "9c2b53273c43c731d1e33d0b9aecd3a6a031fdd3aa990217ccd613b835bf8514",
+      "status": "PASS"
+    },
+    {
+      "file": "v2.0/rrcc_hantang_dashboard_v2_OFFLINE.html",
+      "remoteSha256": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "localSha256": "e9c48862848a52dc50fb8f96c8d223ec1328bbfd0dd5a21bf5f63a5d9f496a7d",
+      "status": "PASS"
+    },
+    {
+      "file": "vercel.json",
+      "remoteSha256": "c22d736c1cb9034b638e843d800f0b45ecc86420a3ea8cf212b4a562798da14e",
+      "localSha256": "c22d736c1cb9034b638e843d800f0b45ecc86420a3ea8cf212b4a562798da14e",
+      "status": "PASS"
+    }
+  ],
+  "scope": "Authenticated GitHub API metadata plus freshly fetched Git blobs, SHA-256 compared with exact local publication files. No merge or deployment performed; no claim about unrelated hosting accounts."
+}

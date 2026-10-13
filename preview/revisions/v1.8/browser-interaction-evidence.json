@@ -1,0 +1,551 @@
+{
+  "revision": "v1.8",
+  "scope": "Local browser only; no deployment",
+  "checks": [
+    {
+      "name": "July A percent",
+      "result": [
+        "82.2%",
+        "7.2%",
+        "2.8%",
+        "3.3%",
+        "4.6%"
+      ]
+    },
+    {
+      "name": "65 percent detail full table",
+      "result": {
+        "columns": 19,
+        "height": 701.9957275390625,
+        "heightRatio": 0.6499960440176504,
+        "rows": 6,
+        "summary": "投入使用：70,813 kg完整 6 筆批次 · 當月進料占比 82.2%數量閉合差額：0 kgV2 原始離線 Demo · 非漢唐實際營運資料；「合規回收」為原版路由名稱，非正式合規驗證結論。",
+        "width": 1247.9970703125,
+        "widthRatio": 0.6499984741210938
+      }
+    },
+    {
+      "name": "Flow row source",
+      "result": {
+        "batch": true,
+        "canonical": true,
+        "raw": true,
+        "title": "V2 工程物料流向 · 原始來源"
+      }
+    },
+    {
+      "name": "Flow full data search",
+      "result": "完整資料 18 列 · 19 個原始欄位 · 符合搜尋 3 列"
+    },
+    {
+      "name": "KPI LED animation",
+      "result": {
+        "angle": "55.6786deg",
+        "animation": "rrcc-led-orbit",
+        "bg": "linear-gradient(120deg, rgb(0, 157, 122), rgb(19, 175, 142))",
+        "duration": "2.8s",
+        "iterations": "infinite",
+        "mask": "exclude, exclude",
+        "pointerEvents": "none",
+        "rightWidth": 589.3536987304688,
+        "selected": "kpi-material-0"
+      }
+    },
+    {
+      "name": "LED angle changes",
+      "result": {
+        "angle": "212.296deg",
+        "id": "kpi-material-0"
+      }
+    },
+    {
+      "name": "Genie KPI switch",
+      "result": {
+        "fixed": "right-panel",
+        "genieEdge": "left",
+        "lastFlight": "{\"id\":1,\"element\":\"right-panel\",\"edge\":\"left\",\"target\":{\"x\":280.9232864379883,\"y\":397.37925720214844},\"duration\":1171,\"renderer\":\"webgl-mesh\",\"frames\":72,\"meanRenderMs\":1.1097222231328487,\"maxRenderMs\":2.2999999970197678,\"preparationMs\":52,\"completed\":true,\"cancelled\":false,\"segments\":48,\"progress\":1}",
+        "lastSource": "kpi-material-0",
+        "metric": "1",
+        "motion": "open",
+        "pending": "",
+        "region": "right",
+        "renderer": "webgl-mesh",
+        "returnX": "280.9232864379883",
+        "returnY": "397.37925720214844",
+        "selected": 1,
+        "source": "kpi-material-1",
+        "sourceTitle": "待申報材料 · /data/declarations"
+      }
+    },
+    {
+      "name": "65 percent search",
+      "result": {
+        "heightRatio": 0.6499960440176504,
+        "widthRatio": 0.6499984741210938
+      }
+    },
+    {
+      "name": "65 percent KPI Library",
+      "result": {
+        "cards": 19,
+        "heightRatio": 0.6499960440176504,
+        "widthRatio": 0.6499984741210938
+      }
+    },
+    {
+      "name": "v1.8 header geometry",
+      "result": {
+        "header": {
+          "height": 99.8366470336914,
+          "width": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "nav": {
+          "height": 62.32244110107422,
+          "width": 1108.0184326171875,
+          "x": 406.40625,
+          "y": 37.59943008422851
+        },
+        "tab": {
+          "height": 61.41334915161133,
+          "width": 276.54827880859375,
+          "x": 407.3153381347656,
+          "y": 38.508522033691406
+        }
+      }
+    },
+    {
+      "name": "v1.7 header geometry comparison",
+      "result": {
+        "header": {
+          "height": 90,
+          "width": 1265,
+          "x": 0,
+          "y": 0
+        },
+        "nav": {
+          "height": 66.81817626953125,
+          "width": 848.046875,
+          "x": 258.8707275390625,
+          "y": 21.27840805053711
+        },
+        "tab": {
+          "height": 66.81817626953125,
+          "width": 204.68038940429688,
+          "x": 258.8707275390625,
+          "y": 21.27840805053711
+        }
+      },
+      "note": "Different default viewport; not used for size-reduction assertion."
+    },
+    {
+      "name": "v1.7 comparable 1920 header",
+      "result": {
+        "header": {
+          "height": 99.8366470336914,
+          "width": 1904.9998779296875,
+          "x": 0,
+          "y": 0
+        },
+        "nav": {
+          "height": 74.19033813476562,
+          "width": 1230.9375,
+          "x": 365.4332275390625,
+          "y": 23.742897033691406
+        },
+        "tab": {
+          "height": 74.19033813476562,
+          "width": 298.6860656738281,
+          "x": 365.4332275390625,
+          "y": 23.742897033691406
+        },
+        "viewport": [
+          1920,
+          1080
+        ]
+      }
+    },
+    {
+      "name": "Four-center regression overview",
+      "result": {
+        "center": "overview",
+        "kpis": [
+          "案場數量",
+          "材料總數",
+          "待驗證案件",
+          "申報完成率",
+          "已驗證案件",
+          "供應商數量"
+        ],
+        "led": "rrcc-led-orbit",
+        "phase": "open",
+        "right": "案場數量",
+        "selected": 1,
+        "sidebar": [
+          "總覽儀表板",
+          "案場總覽",
+          "材料與供應鏈",
+          "申報進度",
+          "驗證概況",
+          "異常追蹤",
+          "管理報表"
+        ],
+        "table": "進行中工程案",
+        "trend": "材料申報趨勢"
+      }
+    },
+    {
+      "name": "Four-center regression material",
+      "result": {
+        "center": "material",
+        "kpis": [
+          "材料總數",
+          "待申報材料",
+          "供應商數量",
+          "申報完成率",
+          "已申報材料",
+          "材料文件數量"
+        ],
+        "led": "rrcc-led-orbit",
+        "phase": "open",
+        "right": "材料總數",
+        "selected": 1,
+        "sidebar": [
+          "材料清單",
+          "供應商管理",
+          "材料申報",
+          "文件管理",
+          "材料分類",
+          "異常處理",
+          "報表分析"
+        ],
+        "table": "最近材料申報",
+        "trend": "工程物料流向圖"
+      }
+    },
+    {
+      "name": "Four-center regression verification",
+      "result": {
+        "center": "verification",
+        "kpis": [
+          "待驗證案件",
+          "已驗證案件",
+          "退件／異常",
+          "驗證完成率",
+          "退件補正",
+          "驗證異常"
+        ],
+        "led": "rrcc-led-orbit",
+        "phase": "open",
+        "right": "待驗證案件",
+        "selected": 1,
+        "sidebar": [
+          "待驗證",
+          "驗證案件",
+          "文件審查",
+          "退件管理",
+          "異常追蹤",
+          "驗證紀錄",
+          "報表分析"
+        ],
+        "table": "待驗證案件",
+        "trend": "驗證案件趨勢"
+      }
+    },
+    {
+      "name": "Four-center regression management",
+      "result": {
+        "center": "management",
+        "kpis": [
+          "使用者數量",
+          "組織／供應商",
+          "權限提醒",
+          "系統可用率",
+          "供應商數量",
+          "管理待辦"
+        ],
+        "led": "rrcc-led-orbit",
+        "phase": "open",
+        "right": "使用者數量",
+        "selected": 1,
+        "sidebar": [
+          "使用者管理",
+          "組織管理",
+          "供應商管理",
+          "角色與權限",
+          "規則設定",
+          "系統設定",
+          "報表中心"
+        ],
+        "table": "最近管理活動",
+        "trend": "使用者／供應商趨勢"
+      }
+    },
+    {
+      "name": "Oct D no fallback",
+      "result": {
+        "flow": {
+          "flowMode": "amount",
+          "flowPeriod": "2026-10",
+          "flowProject": "D",
+          "flowStatus": "NO_DATA",
+          "materialFlow": ""
+        },
+        "mode": "demo",
+        "notice": "此月份／案場未有 V2 批次資料。可切換 2026-07、2026-08、2026-09；未使用合成數據補值。檢視 V2 最新來源月份",
+        "period": "2026-10",
+        "scope": "高雄 D 案",
+        "values": [
+          "未有資料",
+          "未有資料",
+          "未有資料",
+          "未有資料",
+          "未有資料"
+        ]
+      }
+    },
+    {
+      "name": "Explicit V2 source switch",
+      "result": {
+        "flow": {
+          "flowMode": "amount",
+          "flowPeriod": "2026-09",
+          "flowProject": "all",
+          "flowStatus": "READY",
+          "materialFlow": ""
+        },
+        "intake": "267,530 kg",
+        "mode": "source",
+        "period": "2026-09",
+        "scope": "全部案場"
+      }
+    },
+    {
+      "name": "Correct V2 CSV",
+      "result": {
+        "downloadPath": "C:\\Users\\Lucky_Unicorn\\Downloads\\RRCC_material_all_2026-09_SOURCE_V2_DEMO.csv",
+        "summary": "完整資料 18 列 · 19 個原始欄位 · 符合搜尋 18 列"
+      }
+    },
+    {
+      "name": "1280 desktop flow modal",
+      "result": {
+        "docOverflow": false,
+        "flowScrollWidth": 770,
+        "flowViewportWidth": 770,
+        "heightRatio": 0.65,
+        "viewport": [
+          1280,
+          800
+        ],
+        "widthRatio": 0.6499966621398926
+      }
+    },
+    {
+      "name": "375 responsive frame",
+      "result": {
+        "docWidth": 375,
+        "flowScroll": 640,
+        "flowViewport": 246,
+        "navWidth": 322.56390380859375,
+        "tabText": [
+          {
+            "clientWidth": 79,
+            "scrollWidth": 79,
+            "text": "總覽中心",
+            "width": 80.18465423583984
+          },
+          {
+            "clientWidth": 79,
+            "scrollWidth": 79,
+            "text": "材料中心",
+            "width": 80.18465423583984
+          },
+          {
+            "clientWidth": 79,
+            "scrollWidth": 79,
+            "text": "驗證中心",
+            "width": 80.18465423583984
+          },
+          {
+            "clientWidth": 80,
+            "scrollWidth": 80,
+            "text": "管理中心",
+            "width": 80.19175720214844
+          }
+        ],
+        "viewport": [
+          375,
+          812
+        ]
+      }
+    },
+    {
+      "name": "375 readable detail modal",
+      "result": {
+        "bodyFont": "16px",
+        "columns": 19,
+        "height": 763.52978515625,
+        "overflow": "auto",
+        "viewport": [
+          375,
+          812
+        ],
+        "width": 360.9942932128906
+      }
+    },
+    {
+      "name": "Packaged artifact material view",
+      "result": {
+        "closure": "數量閉合 · 差額 0 kg",
+        "externalScripts": 0,
+        "externalStyles": 0,
+        "intake": "86,110 kg",
+        "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+        "trend": "工程物料流向圖",
+        "url": "http://127.0.0.1:46870/preview/RRCC-Hantang-4-Center-Preview-v1.8.html?data-mode=source#material",
+        "values": [
+          "70,813 kg",
+          "6,193 kg",
+          "2,372 kg",
+          "2,799 kg",
+          "3,933 kg"
+        ]
+      }
+    },
+    {
+      "name": "Browser error log",
+      "result": []
+    },
+    {
+      "name": "Flow initial reading lifecycle",
+      "result": {
+        "busy": "true",
+        "phase": "reading",
+        "value": "82.2%"
+      }
+    },
+    {
+      "name": "Flow left-to-right timing",
+      "result": {
+        "phase": "ready",
+        "stages": [
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-source material-flow-node",
+            "delay": "0s",
+            "duration": "0.16s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-trunk material-flow-path",
+            "delay": "0.05s",
+            "duration": "0.18s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-router material-flow-node",
+            "delay": "0.16s",
+            "duration": "0.16s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-path material-flow-branch-path",
+            "delay": "0.28s",
+            "duration": "0.2s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-lane material-flow-node",
+            "delay": "0.46s",
+            "duration": "0.12s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-path material-flow-branch-path",
+            "delay": "0.315s",
+            "duration": "0.2s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-lane material-flow-node",
+            "delay": "0.495s",
+            "duration": "0.12s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-path material-flow-branch-path",
+            "delay": "0.35s",
+            "duration": "0.2s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-lane material-flow-node",
+            "delay": "0.53s",
+            "duration": "0.12s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-path material-flow-branch-path",
+            "delay": "0.385s",
+            "duration": "0.2s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-lane material-flow-node",
+            "delay": "0.565s",
+            "duration": "0.12s",
+            "opacity": "1"
+          },
+          {
+            "animation": "rrcc-flow-read",
+            "class": "material-flow-path material-flow-branch-path",
+            "delay": "0.42s",
+            "duration": "0.2s",
+            "opacity": "0.76"
+          },
+          {
+            "animation": "rrcc-flow-node",
+            "class": "material-flow-lane material-flow-node",
+            "delay": "0.6s",
+            "duration": "0.12s",
+            "opacity": "1"
+          }
+        ],
+        "values": [
+          "82.2%",
+          "7.2%",
+          "2.8%",
+          "3.3%",
+          "4.6%"
+        ]
+      }
+    }
+  ],
+  "verifiedAt": "2026-10-12T21:10:18.338Z",
+  "limits": [
+    "Local browser only. No Vercel retry or online acceptance.",
+    "OS reduced-motion/native hover/drag/real touch not exercised; CSS and unit safeguards only.",
+    "First full-row click failed because wide table action center was outside viewport; visible first cell opened row successfully.",
+    "Initial search attempted textbox instead of searchbox; corrected to accessible label and passed.",
+    "Original packaged source project label is 南科示範案場 A, presentation fixture label 台南 A 案; flow scope identity is A, not real project equivalence."
+  ],
+  "csv": {
+    "rows": 18,
+    "columns": 19,
+    "receivedKg": 267530,
+    "usedKg": 221338,
+    "sha256": "e28f30f7b4493b1a36c39a1accc1dd012784a0cf17ba8b2a0779950fad433d68"
+  }
+}

@@ -1,0 +1,176 @@
+/* Incremental overlay navigation; only the slide-out width changes in v1.5. */
+#stage.sidebar-refined .workspace {
+  left: 64px;
+}
+
+#stage.sidebar-refined .sidebar {
+  width: 64px;
+  padding: 16px 10px;
+  z-index: 6;
+  transition: width 220ms cubic-bezier(.2, .7, .2, 1), padding 220ms cubic-bezier(.2, .7, .2, 1), box-shadow 220ms ease;
+  overscroll-behavior: contain;
+}
+
+#stage.sidebar-refined .sidebar.sidebar-expanded {
+  width: min(var(--sidebar-overlay-width, 320px), calc(100vw - 16px));
+  padding-right: 16px;
+  padding-left: 16px;
+  box-shadow: 14px 0 28px rgb(32 77 126 / 12%), 1px 0 0 rgb(177 207 239 / 65%);
+}
+
+#stage.sidebar-refined .sidebar-expanded .nav-label {
+  min-width: 0;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  line-height: 1.45;
+}
+
+#stage.sidebar-refined .sidebar[data-interaction="initial"] { transition: none; }
+
+.sidebar-center-marker {
+  position: relative;
+  z-index: 1;
+  min-height: 32px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  color: #4f7295;
+  background: #dfedfb;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .6px;
+  cursor: default;
+  touch-action: manipulation;
+}
+
+.sidebar-center-marker:focus-visible {
+  outline: 3px solid #1875dc;
+  outline-offset: 3px;
+}
+
+.rail-center-number,
+.rail-center-name {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.sidebar-expanded .sidebar-center-marker {
+  justify-content: flex-start;
+  gap: 9px;
+  padding: 0 12px;
+  background: transparent;
+  color: #527597;
+}
+
+.sidebar-expanded .rail-center-short {
+  display: none;
+}
+
+.sidebar-expanded .rail-center-number,
+.sidebar-expanded .rail-center-name {
+  position: static;
+  width: auto;
+  height: auto;
+  clip-path: none;
+}
+
+.sidebar-expanded .rail-center-number {
+  color: #247ecf;
+  font-size: 10px;
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .project-selector,
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .sidebar-heading {
+  display: none;
+}
+
+#stage.sidebar-refined .sidebar-expanded .sidebar-heading {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#stage.sidebar-refined .business-nav,
+#stage.sidebar-refined .common-nav {
+  gap: 4px;
+}
+
+#stage.sidebar-refined .business-nav button,
+#stage.sidebar-refined .common-nav button {
+  min-height: 42px;
+  position: relative;
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .business-nav button,
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .common-nav button {
+  width: 44px;
+  padding: 0 12px;
+  gap: 0;
+  font-size: 0;
+  overflow: visible;
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .nav-label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .nav-count,
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .count {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  min-width: 15px;
+  height: 15px;
+  padding: 0 3px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #edf6ff;
+  border-radius: 5px;
+  font-size: 9px;
+  line-height: 1;
+  letter-spacing: -.3px;
+}
+
+#stage.sidebar-refined .sidebar-separator {
+  margin: 18px 7px 12px;
+}
+
+#stage.sidebar-refined .sidebar-expanded .common-heading {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+#stage.sidebar-refined .sidebar-bottom {
+  left: 16px;
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .rrcc-signature > div,
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .preview-label,
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .sidebar-bottom > p {
+  display: none;
+}
+
+#stage.sidebar-refined .sidebar:not(.sidebar-expanded) .signature-mark {
+  grid-template-columns: repeat(2, 14px);
+  grid-template-rows: repeat(2, 14px);
+}
+
+#stage.sidebar-refined .sidebar button:focus-visible {
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #stage.sidebar-refined .sidebar {
+    transition: none;
+  }
+}

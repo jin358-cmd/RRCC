@@ -1,0 +1,171 @@
+{
+  "version": "v1.13",
+  "url": "https://rrcc-dylgc54xe-tjc1.vercel.app/",
+  "deploymentId": "dpl_5MeqDG8KypFZB3qPiFdUfXMKyMpQ",
+  "commit": "ccfcab516029c7d7a82388bdef42ee19c492ec60",
+  "observedAt": "2026-10-13T00:59:59.550Z",
+  "tier": "Actual pointer activation of four Centers and read-only computed DOM; Owner visual acceptance separate",
+  "observations": [
+    {
+      "bannerCount": 0,
+      "center": "overview",
+      "kpiCount": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(145deg, rgb(69, 157, 246), rgb(33, 126, 219))",
+          "color": "rgb(255, 255, 255)",
+          "current": "page",
+          "iconColor": "rgb(255, 255, 255)",
+          "label": "總覽中心",
+          "shadow": "rgb(164, 216, 255) 0px 1px 0px 0px inset, rgb(30, 115, 196) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "title": "Overview Center 總覽全局"
+    },
+    {
+      "bannerCount": 0,
+      "center": "material",
+      "kpiCount": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(145deg, rgb(69, 157, 246), rgb(33, 126, 219))",
+          "color": "rgb(255, 255, 255)",
+          "current": "page",
+          "iconColor": "rgb(255, 255, 255)",
+          "label": "材料中心",
+          "shadow": "rgb(164, 216, 255) 0px 1px 0px 0px inset, rgb(30, 115, 196) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "title": "Material Center 材料生命週期"
+    },
+    {
+      "bannerCount": 0,
+      "center": "verification",
+      "kpiCount": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(145deg, rgb(69, 157, 246), rgb(33, 126, 219))",
+          "color": "rgb(255, 255, 255)",
+          "current": "page",
+          "iconColor": "rgb(255, 255, 255)",
+          "label": "驗證中心",
+          "shadow": "rgb(164, 216, 255) 0px 1px 0px 0px inset, rgb(30, 115, 196) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "title": "Verification Center 驗證與合規"
+    },
+    {
+      "bannerCount": 0,
+      "center": "management",
+      "kpiCount": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(145deg, rgb(69, 157, 246), rgb(33, 126, 219))",
+          "color": "rgb(255, 255, 255)",
+          "current": "page",
+          "iconColor": "rgb(255, 255, 255)",
+          "label": "管理中心",
+          "shadow": "rgb(164, 216, 255) 0px 1px 0px 0px inset, rgb(30, 115, 196) 0px -3px 0px 0px inset"
+        }
+      ],
+      "title": "Management Center 平台治理管理"
+    }
+  ],
+  "logs": []
+}

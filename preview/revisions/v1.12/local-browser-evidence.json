@@ -1,0 +1,261 @@
+{
+  "version": "v1.12",
+  "observedAt": "2026-10-13T00:43:58.001Z",
+  "scope": "Actual UI inputs and read-only DOM; not Owner acceptance",
+  "observations": [
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "bodyWidth": 1920,
+      "center": "overview",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgb(85, 113, 142) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "table": "進行中工程案",
+      "title": "Overview Center 總覽全局",
+      "trend": "材料申報趨勢",
+      "viewport": 1920
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "bodyWidth": 1920,
+      "center": "material",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgb(85, 113, 142) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理48",
+        "材料申報86",
+        "文件管理",
+        "材料分類",
+        "異常處理7",
+        "報表分析"
+      ],
+      "table": "最近材料申報",
+      "title": "Material Center 材料生命週期",
+      "trend": "工程物料流向圖",
+      "viewport": 1920
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "bodyWidth": 1920,
+      "center": "verification",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgb(85, 113, 142) 0px -3px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        }
+      ],
+      "sidebar": [
+        "待驗證32",
+        "驗證案件",
+        "文件審查2400",
+        "退件管理6",
+        "異常追蹤3",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "table": "待驗證案件",
+      "title": "Verification Center 驗證與合規",
+      "trend": "驗證案件趨勢",
+      "viewport": 1920
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "bodyWidth": 1920,
+      "center": "management",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心",
+          "shadow": "rgba(255, 255, 255, 0.7) 0px 1px 0px 0px inset"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心",
+          "shadow": "rgb(255, 255, 255) 0px 1px 0px 0px inset, rgb(85, 113, 142) 0px -3px 0px 0px inset"
+        }
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限2",
+        "規則設定",
+        "系統設定4",
+        "報表中心"
+      ],
+      "table": "最近管理活動",
+      "title": "Management Center 平台治理管理",
+      "trend": "使用者／供應商趨勢",
+      "viewport": 1920
+    },
+    {
+      "banner": false,
+      "case": "public-scope-retained",
+      "kpis": "製程水回收率\n86.2%\n2025 年度實績\n台積電公開數據\n↗\n回收水量\n318.94百萬 m³\n2025 年度實績\n台積電公開數據\n↗\n重大供應商\n594家\n2025 年度實績\n台積電公開數據\n↗\n重大高風險供應商\n123家\n2025 年度實績\n台積電公開數據\n↗\n單位產品耗水\n153.3L／十二吋晶圓當量—光罩數\n2025 年度實績\n台積電公開數據\n↗\n第一階重大供應商\n396家\n2025 年度實績\n台積電公開數據\n↗",
+      "options": [
+        "2024 年度",
+        "2025 年度"
+      ],
+      "periodLabel": "選擇公開報告年度",
+      "scope": "台積電永續公開數據"
+    },
+    {
+      "case": "source-scope-options",
+      "options": [
+        "全部案場✓",
+        "南科示範案場 A",
+        "高雄示範案場 B",
+        "竹科示範案場 C",
+        "台積電永續公開數據"
+      ]
+    },
+    {
+      "banner": false,
+      "case": "source-A",
+      "kpis": "來源案場數量\n1案場\n示範來源\n2026-09\n↗\n材料主檔類型\n6類\n示範來源\n2026-09\n↗\n當月材料批次\n6筆\n示範來源\n2026-09\n↗\n當月廠務紀錄\n1筆\n示範來源\n2026-09\n↗\n參考｜製程水回收率\n88.1%\n台積電 · 2024\n公開參考 · 非平台值\n↗\n參考｜回收水量\n284.6百萬 m³\n台積電 · 2024\n公開參考 · 非平台值\n↗",
+      "period": "2026-09",
+      "scope": "南科示範案場 A"
+    },
+    {
+      "case": "kpi-open",
+      "motion": "open",
+      "text": "KPI 詳細資訊\n案場數量\n摘要\n分類分布\n異常分析\n展示資料來源\n當前數值\n8案場\n↑ 0\nvs. 上月\n本期納管案場\n8 案場\n目標達成率\n100.0%\n讀取資料…\n近四個月趨勢\n2026\n7月\n8月\n9月\n10月\n讀取資料…\n業務重點\n8 個工程案場進行中；案場進度依同一份資料篩選。\n合成展示資料（Demo）｜非漢唐實際營運資料。\n資料來源：data/"
+    },
+    {
+      "case": "kpi-close",
+      "motion": "closing"
+    }
+  ],
+  "logs": []
+}

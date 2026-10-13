@@ -1,0 +1,291 @@
+{
+  "revision": "v1.9",
+  "evidenceTier": "REAL_BROWSER_KEYBOARD_DOM_GEOMETRY_NOT_NATIVE_POINTER_DRAG",
+  "before": {
+    "cross": "matrix(1, 0, 0, 1, 0, -3.56352)",
+    "rect": {
+      "bottom": 55.4776725769043,
+      "height": 38.977272033691406,
+      "left": 124.61647033691406,
+      "right": 165.61078643798828,
+      "top": 16.50040054321289,
+      "width": 40.99431610107422,
+      "x": 124.61647033691406,
+      "y": 16.50040054321289
+    },
+    "viewport": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "checks": [
+    {
+      "name": "Real Dashboard to Library keyboard move",
+      "result": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "name": "Canonical card keyboard reserve to real Dashboard and back, visible focus and save",
+      "status": "PASS",
+      "ids": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5",
+        "RRCC-KPI-001"
+      ]
+    },
+    {
+      "name": "Save reload persistence and unsaved center switch rollback",
+      "status": "PASS"
+    },
+    {
+      "name": "Cancel restores original IDs and order",
+      "status": "PASS"
+    },
+    {
+      "name": "Desktop/mobile scope changes and responsive dialogs",
+      "status": "PASS"
+    },
+    {
+      "name": "Narrow viewport click fallback removes selected card without overflow",
+      "status": "PASS"
+    }
+  ],
+  "afterBrand": {
+    "cross": "matrix(1, 0, 0, 1, 0, -6.56352)",
+    "rect": {
+      "bottom": 52.4776725769043,
+      "height": 38.977272033691406,
+      "left": 124.61647033691406,
+      "right": 165.61078643798828,
+      "top": 13.50040054321289,
+      "width": 40.99431610107422,
+      "x": 124.61647033691406,
+      "y": 13.50040054321289
+    }
+  },
+  "dialog": {
+    "rect": {
+      "bottom": 978.7499389648438,
+      "height": 877.4999389648438,
+      "left": 336.00140380859375,
+      "right": 1583.9984741210938,
+      "top": 101.25,
+      "width": 1247.9970703125,
+      "x": 336.00140380859375,
+      "y": 101.25
+    },
+    "viewport": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "libraryDialog": {
+    "height": 1080,
+    "rect": {
+      "bottom": 978.7499389648438,
+      "height": 877.4999389648438,
+      "left": 336.00140380859375,
+      "right": 1583.9984741210938,
+      "top": 101.25,
+      "width": 1247.9970703125,
+      "x": 336.00140380859375,
+      "y": 101.25
+    },
+    "width": 1920
+  },
+  "originalIds": [
+    "material-0",
+    "material-1",
+    "material-2",
+    "material-3",
+    "material-4",
+    "material-5"
+  ],
+  "centers": [
+    {
+      "center": "overview",
+      "editing": false,
+      "ids": [
+        "overview-0",
+        "overview-1",
+        "overview-2",
+        "overview-3",
+        "overview-4",
+        "overview-5"
+      ],
+      "sidebar": "總覽儀表板案場總覽材料與供應鏈申報進度驗證概況異常追蹤管理報表",
+      "title": "Overview Center 總覽全局",
+      "right": "來源與 KPI 詳細資訊\n來源案場數量\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n3案場\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n讀取資料…\n計算與來源限制\n計算：所選範圍 /data/projects 唯一 id 數；不是在建工程案件數。\n月份趨勢依各月材料批次的唯一 project 數。\nJSON Pointer：/data/projects/0；/data/projects/1；共 57 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出案場來源摘要\n檢視來源案場\n開啟驗證來源概況\n查看資料來源索引",
+      "initialIds": [
+        "overview-0",
+        "overview-1",
+        "overview-2",
+        "overview-3",
+        "overview-4",
+        "overview-5"
+      ],
+      "draftCount": 5
+    },
+    {
+      "center": "material",
+      "editing": false,
+      "ids": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5",
+        "RRCC-KPI-001"
+      ],
+      "sidebar": "材料清單供應商管理材料申報文件管理材料分類異常處理報表分析",
+      "title": "Material Center 材料生命週期",
+      "right": "來源與 KPI 詳細資訊\n當月收料總量\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n267,530kg\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n讀取資料…\n計算與來源限制\n計算：僅 kg 且數值完整的當月 received 欄位相加。\nJSON Pointer：/data/rows/36/received；/data/rows/36/unit；共 108 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出材料批次來源\n檢視材料批次\n檢視材料主檔\n查看資料來源索引",
+      "initialIds": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5",
+        "RRCC-KPI-001"
+      ],
+      "draftCount": 5
+    },
+    {
+      "center": "verification",
+      "editing": false,
+      "ids": [
+        "verification-0",
+        "verification-1",
+        "verification-2",
+        "verification-3",
+        "verification-4",
+        "verification-5"
+      ],
+      "sidebar": "待驗證驗證案件文件審查退件管理異常追蹤驗證紀錄報表分析",
+      "title": "Verification Center 驗證與合規",
+      "right": "來源與 KPI 詳細資訊\n追溯率樣本平均\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n94%\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n讀取資料…\n計算與來源限制\n計算：traceRate 有效原始樣本算術平均 × 100，n=18。\n不加權；不是已驗證案件數、通過率或驗證完成率。\nJSON Pointer：/data/rows/36/traceRate；/data/rows/37/traceRate；共 54 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n檢視驗證案件（NO DATA）\n檢視率欄位樣本\n檢視來源欄位限制\n匯出驗證來源摘要",
+      "initialIds": [
+        "verification-0",
+        "verification-1",
+        "verification-2",
+        "verification-3",
+        "verification-4",
+        "verification-5"
+      ],
+      "draftCount": 5
+    },
+    {
+      "center": "management",
+      "editing": false,
+      "ids": [
+        "management-0",
+        "management-1",
+        "management-2",
+        "management-3",
+        "management-4",
+        "management-5"
+      ],
+      "sidebar": "使用者管理組織管理供應商管理角色與權限規則設定系統設定報表中心",
+      "title": "Management Center 平台治理管理",
+      "right": "公開產業參考｜非本平台營運值\n參考｜重大供應商\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n原「使用者數量」的 RRCC 業務紀錄仍未提供。此卡改用明確標名的外部報告指標，並非補造原始營運數字。\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n重大供應商\n609 家\n\n台積電 · 2024\n台積電 2024 評估辨識之重大供應商，含 387 家第一階重大供應商及 222 家非第一階冶煉廠；不是全部供應商數。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗",
+      "initialIds": [
+        "management-0",
+        "management-1",
+        "management-2",
+        "management-3",
+        "management-4",
+        "management-5"
+      ],
+      "draftCount": 5
+    }
+  ],
+  "mediumDialog": {
+    "docWidth": 1280,
+    "height": 720,
+    "rect": {
+      "bottom": 652.5,
+      "height": 585,
+      "left": 223.99856567382812,
+      "right": 1055.9942932128906,
+      "top": 67.5,
+      "width": 831.9957275390625,
+      "x": 223.99856567382812,
+      "y": 67.5
+    },
+    "width": 1280
+  },
+  "mobileDialog": {
+    "docWidth": 375,
+    "height": 812,
+    "rect": {
+      "bottom": 787.8976821899414,
+      "height": 763.52978515625,
+      "left": 7.002840518951416,
+      "right": 367.9971337318421,
+      "top": 24.367897033691406,
+      "width": 360.9942932128906,
+      "x": 7.002840518951416,
+      "y": 24.367897033691406
+    },
+    "width": 375
+  },
+  "mobileDock": {
+    "chips": "主介面 6 / 6 張拖曳到左側加入，拖回此櫃移除；觸控可勾選加入，或點下方卡名移回。材料主檔類型 ×當月收料總量 ×當月使用總量 ×當月材料批次 ×參考｜製程水回收率 ×參考｜回收水量 ×",
+    "docWidth": 375,
+    "dock": {
+      "bottom": 805.2769775390625,
+      "height": 373.6434631347656,
+      "left": 6.995738506317139,
+      "right": 367.99003171920776,
+      "top": 431.6335144042969,
+      "width": 360.9942932128906,
+      "x": 6.995738506317139,
+      "y": 431.6335144042969
+    },
+    "editing": true,
+    "viewport": {
+      "height": 812,
+      "width": 375
+    }
+  },
+  "finalDock": {
+    "ids": [
+      "material-0",
+      "material-1",
+      "material-2",
+      "material-3",
+      "material-4",
+      "material-5"
+    ],
+    "modal": false,
+    "rect": {
+      "bottom": 978.7499389648438,
+      "height": 877.4999389648438,
+      "left": 1474.005615234375,
+      "right": 1904.0055847167969,
+      "top": 101.25,
+      "width": 429.9999694824219,
+      "x": 1474.005615234375,
+      "y": 101.25
+    },
+    "viewport": {
+      "height": 1080,
+      "width": 1920
+    }
+  },
+  "browserErrors": [],
+  "limitations": [
+    "Native OS mouse drag not exercised by DOM-only browser tools; synthetic HTML5 event paths are separately tested.",
+    "375px viewport click path is not physical touch-device verification.",
+    "Owner visual acceptance pending; no hosting deployment attempted."
+  ],
+  "verifiedAt": "2026-10-12T21:25:06.181Z"
+}

@@ -1,0 +1,100 @@
+/* v1.11: four scoped Owner adjustments. Prior styles and data remain intact. */
+
+/* A crisp lower edge and restrained cast shadow give the joined center frame
+   depth. Do not reuse its ::before/::after: those carry the v1.10 top LED. */
+.header .center-nav {
+  box-shadow: inset 0 1px 0 #ffffff, inset 0 -1px 0 #497ba64d,
+    0 2px 1px #315b7d33, 0 6px 9px -6px #24496d66;
+}
+
+/* Owner correction: yellow numerals/units sit directly on the existing green
+   card, without v1.10's local dark backing or a replacement opaque surface. */
+.kpi-card.selected .kpi-value,
+.kpi-card.selected .kpi-unit {
+  color: #fff176;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+.kpi-card.selected .kpi-value {
+  padding: 0;
+  margin-inline-start: 0;
+}
+
+/* The indicator occupies only the bottom 3px, leaving labels and red counters
+   unobscured. Its left edge is fixed while its right edge extends and returns. */
+#stage.sidebar-refined .sidebar :is(.business-nav button, .common-nav button, #kpi-settings-button)::after {
+  content: '';
+  position: absolute;
+  inset-inline: 8px;
+  inset-block-end: 3px;
+  height: 3px;
+  border-radius: 3px;
+  background: #f3cf38;
+  box-shadow: 0 1px 3px #f3cf3833;
+  pointer-events: none;
+  transform-origin: left center;
+  transform: scaleX(0);
+  opacity: 0;
+}
+#stage.sidebar-refined .sidebar :is(.business-nav button, .common-nav button, #kpi-settings-button):is(:hover, :focus-visible) {
+  box-shadow: inset 0 1px 0 #ffffff80;
+}
+#stage.sidebar-refined .sidebar :is(.business-nav button, .common-nav button, #kpi-settings-button):is(:hover, :focus-visible)::after {
+  opacity: 1;
+  animation: rrcc-sidebar-yellow-sweep 1.55s ease-in-out infinite;
+}
+@keyframes rrcc-sidebar-yellow-sweep {
+  0%, 100% { transform: scaleX(.08); }
+  50% { transform: scaleX(1); }
+}
+
+/* Existing desktop height 81.25dvh × 1.15 = 93.4375dvh. The viewport remains
+   centered and width remains 65vw from v1.8; this is not content scaling. */
+#detail-dialog,
+#search-dialog,
+#kpi-library-dialog,
+#kpi-settings-dialog {
+  height: 93.4375dvh;
+  max-height: min(93.4375dvh, calc(100dvh - 16px));
+}
+#kpi-library-dialog.kpi-library-docked {
+  height: 93.4375dvh;
+  max-height: min(93.4375dvh, calc(100dvh - 16px));
+}
+
+/* Small screens use safe caps instead of exceeding the viewport when the
+   earlier 92/94dvh dimensions cannot accommodate another complete 15%. */
+@media (max-width: 960px) {
+  #detail-dialog,
+  #search-dialog,
+  #kpi-library-dialog,
+  #kpi-settings-dialog {
+    height: 94dvh;
+    max-height: min(94dvh, calc(100dvh - 16px));
+  }
+}
+@media (max-width: 640px) {
+  #detail-dialog,
+  #search-dialog,
+  #kpi-library-dialog,
+  #kpi-settings-dialog {
+    height: 96dvh;
+    max-height: min(96dvh, calc(100dvh - 14px));
+  }
+  /* Keep the real Dashboard available above the non-modal mobile editing
+     dock so two-way card movement and its keyboard/touch buttons remain usable. */
+  #kpi-library-dialog.kpi-library-docked {
+    height: 46dvh;
+    max-height: 46dvh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #stage.sidebar-refined .sidebar :is(.business-nav button, .common-nav button, #kpi-settings-button):is(:hover, :focus-visible)::after {
+    animation: none;
+    transform: scaleX(1);
+    box-shadow: none;
+  }
+}

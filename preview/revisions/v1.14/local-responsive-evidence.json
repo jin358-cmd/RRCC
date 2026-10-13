@@ -1,0 +1,26 @@
+[
+  {
+    "bodyWidth": 1280,
+    "brandRight": 243.5156211853027,
+    "columns": "181.527px 181.527px 181.527px 181.527px 181.527px 181.527px",
+    "headerWidth": 1265,
+    "kpiClient": 1165,
+    "kpiScroll": 1165,
+    "profileLeft": 1141.3138427734375,
+    "profileVisible": "flex",
+    "slots": 12,
+    "width": 1280
+  },
+  {
+    "bodyWidth": 375,
+    "brandRight": 195.51845836639404,
+    "columns": "160px 160px 160px 160px 160px 160px",
+    "headerWidth": 360,
+    "kpiClient": 272,
+    "kpiScroll": 1026,
+    "profileLeft": 272.0028381347656,
+    "profileVisible": "flex",
+    "slots": 12,
+    "width": 375
+  }
+]
