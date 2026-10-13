@@ -1,0 +1,24 @@
+{
+  "checkedAt": "2026-10-13T00:32:10.302Z",
+  "url": "https://rrcc-6c2lf094l-tjc1.vercel.app/",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8",
+  "bytes": 11805297,
+  "sha256": "b225db7e18e903ac45677a16f7efbcf9b2c7e83b546a5529a07120a078a09079",
+  "expectedSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+  "expectedBytes": 11805134,
+  "authentication": "Existing temporary access returned by the connected Vercel tool; no credential persisted",
+  "redirects": [
+    {
+      "status": 307,
+      "host": "rrcc-6c2lf094l-tjc1.vercel.app"
+    },
+    {
+      "status": 200,
+      "host": "rrcc-6c2lf094l-tjc1.vercel.app"
+    }
+  ],
+  "protectionUnchanged": true,
+  "note": "Authentication URL and cookies intentionally omitted",
+  "pass": false
+}

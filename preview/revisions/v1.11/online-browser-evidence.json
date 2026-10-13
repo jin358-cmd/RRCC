@@ -1,0 +1,1568 @@
+{
+  "version": "v1.11",
+  "deploymentId": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+  "url": "https://rrcc-6c2lf094l-tjc1.vercel.app/",
+  "observedAt": "2026-10-13T00:34:57.347Z",
+  "scope": "Actual browser interactions on immutable Preview URL with read-only DOM observations; no synthetic app events",
+  "observations": [
+    {
+      "case": "overview-first-open",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "案場數量 8 案場，查看詳細資訊",
+        "材料總數 2,486 項，查看詳細資訊",
+        "待驗證案件 32 件，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊"
+      ],
+      "main": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "panel": "open",
+      "selected": [
+        "案場數量 8 案場，查看詳細資訊"
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"overview\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "overview-swap-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "案場數量 8 案場，查看詳細資訊",
+        "材料總數 2,486 項，查看詳細資訊",
+        "待驗證案件 32 件，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊"
+      ],
+      "main": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "panel": "closing",
+      "selected": [
+        "案場數量 8 案場，查看詳細資訊"
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"overview\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "overview-swap-finished",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "案場數量 8 案場，查看詳細資訊",
+        "材料總數 2,486 項，查看詳細資訊",
+        "待驗證案件 32 件，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊"
+      ],
+      "main": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "panel": "open",
+      "selected": [
+        "材料總數 2,486 項，查看詳細資訊"
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"overview\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "overview-panel-inside-keeps-open",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "案場數量 8 案場，查看詳細資訊",
+        "材料總數 2,486 項，查看詳細資訊",
+        "待驗證案件 32 件，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊"
+      ],
+      "main": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "panel": "open",
+      "selected": [
+        "材料總數 2,486 項，查看詳細資訊"
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"overview\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "overview-blank-close-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "案場數量 8 案場，查看詳細資訊",
+        "材料總數 2,486 項，查看詳細資訊",
+        "待驗證案件 32 件，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊"
+      ],
+      "main": [
+        "材料申報趨勢",
+        "工程案場類型分布",
+        "進行中工程案",
+        "近期異常案件",
+        "管理待辦事項"
+      ],
+      "panel": "closing",
+      "selected": [
+        "材料總數 2,486 項，查看詳細資訊"
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"overview\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "material-demo-open",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "材料總數 2,486 項，查看詳細資訊",
+        "待申報材料 86 項，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊",
+        "申報完成率 96.5% ，查看詳細資訊",
+        "已申報材料 2,400 項，查看詳細資訊",
+        "材料文件數量 2,400 份，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "材料類別分布",
+        "最近材料申報",
+        "供應商申報狀態",
+        "材料異常追蹤"
+      ],
+      "panel": "opening",
+      "selected": [
+        "材料總數 2,486 項，查看詳細資訊"
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理48",
+        "材料申報86",
+        "文件管理",
+        "材料分類",
+        "異常處理7",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢唐集",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "verification-demo-open",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "待驗證案件 32 件，查看詳細資訊",
+        "已驗證案件 428 件，查看詳細資訊",
+        "退件／異常 9 件，查看詳細資訊",
+        "驗證完成率 91.3% ，查看詳細資訊",
+        "退件補正 6 件，查看詳細資訊",
+        "驗證異常 3 件，查看詳細資訊"
+      ],
+      "main": [
+        "驗證案件趨勢",
+        "驗證結果分布",
+        "待驗證案件",
+        "最近驗證紀錄",
+        "退件與異常追蹤"
+      ],
+      "panel": "opening",
+      "selected": [
+        "待驗證案件 32 件，查看詳細資訊"
+      ],
+      "sidebar": [
+        "待驗證32",
+        "驗證案件",
+        "文件審查2400",
+        "退件管理6",
+        "異常追蹤3",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"verification\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC ×",
+      "title": "驗證中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "management-demo-open",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "使用者數量 186 人，查看詳細資訊",
+        "組織／供應商 56 個，查看詳細資訊",
+        "權限提醒 2 件，查看詳細資訊",
+        "系統可用率 99.98% ，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊",
+        "管理待辦 4 項，查看詳細資訊"
+      ],
+      "main": [
+        "使用者／供應商趨勢",
+        "權限角色分布",
+        "最近管理活動",
+        "系統事件",
+        "管理待辦事項"
+      ],
+      "panel": "opening",
+      "selected": [
+        "使用者數量 186 人，查看詳細資訊"
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限2",
+        "規則設定",
+        "系統設定4",
+        "報表中心"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"management\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "管理中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "management-close-button-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "使用者數量 186 人，查看詳細資訊",
+        "組織／供應商 56 個，查看詳細資訊",
+        "權限提醒 2 件，查看詳細資訊",
+        "系統可用率 99.98% ，查看詳細資訊",
+        "供應商數量 48 家，查看詳細資訊",
+        "管理待辦 4 項，查看詳細資訊"
+      ],
+      "main": [
+        "使用者／供應商趨勢",
+        "權限角色分布",
+        "最近管理活動",
+        "系統事件",
+        "管理待辦事項"
+      ],
+      "panel": "closing",
+      "selected": [
+        "使用者數量 186 人，查看詳細資訊"
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限2",
+        "規則設定",
+        "系統設定4",
+        "報表中心"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"management\" data-data-mode=\"demo\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "管理中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "material-flow-ratio",
+      "text": "2026-09 / 全部案場 · 18 筆 V2 批次\n公斤流向\n比例\n材料進料\n100.0%\n18 筆篩選批次\nRCOS\n資源路由\n投入使用\n82.7%\n實際領用／安裝\n期內待用\n7.5%\n可用庫存\n跨案調撥\n2.7%\n可再分配資源\n合規回收\n3.8%\nV2 路由分類，憑證仍需驗證\n最終處置\n3.3%\n減量與追蹤\n投入使用\n期內待用\n跨案調撥\n合規回收\n最終處置\n流量結構\n數量閉合 · 差額 0 kg\n進料 = 投入使用 + 期內待用 + 跨案調撥 + 合規回收 + 最終處置\n\nV2 原始離線 Demo · 非漢唐實際營運資料；「合規回收」為原版路由名稱，非正式合規驗證結論。\n來源：v2.0/RRCC_Hantang_Embedded_Demo_Data.json · 合併批次已去重，未將 V1／V2 加總。 SHA-256 9c2b53273c43c731…\n\n完整批次與欄位\n讀取資料…"
+    },
+    {
+      "case": "library-all",
+      "counts": "19 張 Master Registry",
+      "registry": [],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-material-nine",
+      "counts": "19 張 Master Registry",
+      "registry": [],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-verification-three",
+      "counts": "19 張 Master Registry",
+      "registry": [],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-search-one",
+      "counts": "19 張 Master Registry",
+      "registry": [],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-search-confirmed",
+      "counts": "1 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        }
+      ],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-material-after-action-timeout",
+      "counts": "19 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-001"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-002"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-003"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-004"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-005"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-006"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-007"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-008"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-010"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-011"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-012"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-013"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-014"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-015"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-016"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-017"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-018"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-019"
+        }
+      ],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-material-nine-verified",
+      "counts": "9 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-001"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-002"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-003"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-004"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-005"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-006"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-007"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-008"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-012"
+        }
+      ],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-verification-three-verified",
+      "counts": "3 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-010"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-011"
+        }
+      ],
+      "selected": [
+        "material-0",
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-remove-existing",
+      "counts": "19 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-001"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-002"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-003"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-004"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-005"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-006"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-007"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-008"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-010"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-011"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-012"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-013"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-014"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-015"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-016"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-017"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-018"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-019"
+        }
+      ],
+      "selected": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-add-master",
+      "counts": "19 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": true,
+          "disabled": false,
+          "id": "RRCC-KPI-001"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-002"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-003"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-004"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-005"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-006"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-007"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-008"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-010"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-011"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-012"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-013"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-014"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-015"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-016"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-017"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-018"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-019"
+        }
+      ],
+      "selected": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "material-5",
+        "RRCC-KPI-001"
+      ]
+    },
+    {
+      "case": "library-keyboard-sort",
+      "counts": "19 / 19 張 Registry",
+      "registry": [
+        {
+          "checked": true,
+          "disabled": false,
+          "id": "RRCC-KPI-001"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-002"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-003"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-004"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-005"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-006"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-007"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-008"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-009"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-010"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-011"
+        },
+        {
+          "checked": false,
+          "disabled": false,
+          "id": "RRCC-KPI-012"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-013"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-014"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-015"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-016"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-017"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-018"
+        },
+        {
+          "checked": false,
+          "disabled": true,
+          "id": "RRCC-KPI-019"
+        }
+      ],
+      "selected": [
+        "material-1",
+        "material-2",
+        "material-3",
+        "material-4",
+        "RRCC-KPI-001",
+        "material-5"
+      ]
+    },
+    {
+      "case": "library-applied-six",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "closed",
+      "selected": [],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "library-persisted-after-reload",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "closed",
+      "selected": [],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "verification-config-isolated",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "追溯率樣本平均 94% ，查看詳細資訊",
+        "等級率樣本平均 91% ，查看詳細資訊",
+        "合規率樣本平均 96.1% ，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜重大供應商 609 家，查看詳細資訊"
+      ],
+      "main": [
+        "來源率樣本算術平均（非完成率）",
+        "有效率欄位值分布（非驗證結果）",
+        "驗證案件 · NO DATA",
+        "率欄位原始樣本（非驗證結果）",
+        "驗證來源缺口"
+      ],
+      "panel": "closed",
+      "selected": [],
+      "sidebar": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"verification\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC",
+      "title": "驗證中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "verification-source-right",
+      "center": "verification",
+      "kpis": [
+        "追溯率樣本平均 94% ，查看詳細資訊",
+        "等級率樣本平均 91% ，查看詳細資訊",
+        "合規率樣本平均 96.1% ，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜重大供應商 609 家，查看詳細資訊"
+      ],
+      "main": [
+        "來源率樣本算術平均（非完成率）",
+        "有效率欄位值分布（非驗證結果）",
+        "驗證案件 · NO DATA",
+        "率欄位原始樣本（非驗證結果）",
+        "驗證來源缺口"
+      ],
+      "mode": "source",
+      "panel": "opening",
+      "right": "來源與 KPI 詳細資訊\n追溯率樣本平均\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n94%\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n本機資料已讀取\n計算與來源限制\n計算：traceRate 有效原始樣本算術平均 × 100，n=18。\n不加權；不是已驗證案件數、通過率或驗證完成率。\nJSON Pointer：/data/rows/36/traceRate；/data/rows/37/traceRate；共 54 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n檢視驗證案件（NO DATA）\n檢視率欄位樣本\n檢視來源欄位限制\n匯出",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "title": "驗證中心｜RRCC × 漢唐集成 4-Center Preview"
+    },
+    {
+      "case": "management-source-right",
+      "center": "management",
+      "kpis": [
+        "參考｜重大供應商 609 家，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜第一階重大供應商 387 家，查看詳細資訊",
+        "參考｜非第一階重大供應商冶煉廠 222 家，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊"
+      ],
+      "main": [
+        "資料月份覆蓋概況（非使用者趨勢）",
+        "所選範圍來源集合分布",
+        "資料來源索引（非管理活動）",
+        "跨版完全相同紀錄去重",
+        "管理資料覆蓋缺口"
+      ],
+      "mode": "source",
+      "panel": "opening",
+      "right": "公開產業參考｜非本平台營運值\n參考｜重大供應商\n摘要\n範疇定義\n原始缺口\n官方來源\n公開報告參考值\n\n原「使用者數量」的 RRCC 業務紀錄仍未提供。此卡改用明確標名的外部報告指標，並非補造原始營運數字。\n\n公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。\n\n重大供應商\n609 家\n\n台積電 · 2024 · 報告印刷 p.91\n台積電 2024 評估辨識之重大供應商，含 387 家第一階重大供應商及 222 家非第一階冶煉廠；不是全部供應商數。\n\n官方來源 ↗\n查看全部公開參考與口徑 ↗",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限",
+        "規則設定",
+        "系統設定",
+        "報表中心"
+      ],
+      "title": "管理中心｜RRCC × 漢唐集成 4-Center Preview"
+    },
+    {
+      "case": "overview-source-right",
+      "center": "overview",
+      "kpis": [
+        "來源案場數量 3 案場，查看詳細資訊",
+        "材料主檔類型 6 類，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "當月廠務紀錄 3 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "來源月份紀錄數（非營運案件）",
+        "當月案場收料重量分布",
+        "案場來源與當月材料概況",
+        "當月廠務來源紀錄",
+        "材料主檔來源"
+      ],
+      "mode": "source",
+      "panel": "opening",
+      "right": "來源與 KPI 詳細資訊\n來源案場數量\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n3案場\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n讀取資料…\n計算與來源限制\n計算：所選範圍 /data/projects 唯一 id 數；不是在建工程案件數。\n月份趨勢依各月材料批次的唯一 project 數。\nJSON Pointer：/data/projects/0；/data/projects/1；共 57 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出案場來源摘要\n檢視來源案場\n開啟驗證來源概況\n查看資料來源索引",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況",
+        "異常追蹤",
+        "管理報表"
+      ],
+      "title": "總覽中心｜RRCC × 漢唐集成 4-Center Preview"
+    },
+    {
+      "case": "material-source-right",
+      "center": "material",
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "mode": "source",
+      "panel": "opening",
+      "right": "來源與 KPI 詳細資訊\n當月收料總量\n摘要\n來源分布\n資料限制\n來源索引\n當前數值\n267,530kg\nV1 + V2\n來源標記，非同比\n未定義管理目標\n原始來源未列目標\n資料來源\nV1 + V2\n來源月份趨勢（2026-07–09）\n2026\n7月\n8月\n9月\n讀取資料…\n計算與來源限制\n計算：僅 kg 且數值完整的當月 received 欄位相加。\nJSON Pointer：/data/rows/36/received；/data/rows/36/unit；共 108 個來源位置\n完全離線示範資料｜非漢唐實際營運資料\n資料來源資訊（非即時活動）\n查看全部 ›\nV1 JSON 來源（示範）\nv1.0/RRCC_Hantang_V1_Embedded_Demo_Data.json · SHA256 c19d3c335fa0\n2026-10-11\nV2 JSON 來源（示範）\nv2.0/RRCC_Hantang_Embedded_Demo_Data.json · SHA256 9c2b53273c43\nNO DATA\n示範來源範圍\n\n目前資料月份 2026-09；缺少單位定義的 factor、price、base 不用於碳排或金額推算。\n\n來源檢視操作\n匯出材料批次來源\n檢視材料批次\n檢視材料主檔\n查看資料來源索引",
+      "selected": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "color": "rgb(255, 241, 118)"
+        }
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview"
+    },
+    {
+      "case": "material-rapid-switch-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "closing",
+      "selected": [
+        "當月收料總量 267,530 kg，查看詳細資訊"
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "material-rapid-switch-final",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "open",
+      "selected": [
+        "當月材料批次 18 筆，查看詳細資訊"
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "material-blank-close-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "材料需求 269,311 kg，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "closing",
+      "selected": [
+        "當月材料批次 18 筆，查看詳細資訊"
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "verification-blank-close-start",
+      "canvases": [
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        },
+        {
+          "class": "",
+          "height": 900,
+          "width": 1600
+        }
+      ],
+      "dialog": [],
+      "kpis": [
+        "追溯率樣本平均 94% ，查看詳細資訊",
+        "等級率樣本平均 91% ，查看詳細資訊",
+        "合規率樣本平均 96.1% ，查看詳細資訊",
+        "參考｜供應商稽核缺失結案率 93 %，查看詳細資訊",
+        "參考｜重大高風險供應商 112 家，查看詳細資訊",
+        "參考｜重大供應商 609 家，查看詳細資訊"
+      ],
+      "main": [
+        "來源率樣本算術平均（非完成率）",
+        "有效率欄位值分布（非驗證結果）",
+        "驗證案件 · NO DATA",
+        "率欄位原始樣本（非驗證結果）",
+        "驗證來源缺口"
+      ],
+      "panel": "closing",
+      "selected": [
+        "追溯率樣本平均 94% ，查看詳細資訊"
+      ],
+      "sidebar": [
+        "待驗證",
+        "驗證案件",
+        "文件審查",
+        "退件管理",
+        "異常追蹤",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"verification\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC",
+      "title": "驗證中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "material-default-restored",
+      "canvases": [],
+      "dialog": [],
+      "kpis": [
+        "材料主檔類型 6 類，查看詳細資訊",
+        "當月收料總量 267,530 kg，查看詳細資訊",
+        "當月使用總量 221,338 kg，查看詳細資訊",
+        "當月材料批次 18 筆，查看詳細資訊",
+        "參考｜製程水回收率 88.1 %，查看詳細資訊",
+        "參考｜回收水量 284.6 百萬 m³，查看詳細資訊"
+      ],
+      "main": [
+        "工程物料流向圖",
+        "當月材料收料重量分布",
+        "材料批次來源紀錄",
+        "材料主檔來源",
+        "當月廠務來源紀錄"
+      ],
+      "panel": "closed",
+      "selected": [],
+      "sidebar": [
+        "材料清單",
+        "供應商管理",
+        "材料申報",
+        "文件管理",
+        "材料分類",
+        "異常處理",
+        "報表分析"
+      ],
+      "stage": "<div id=\"stage\" data-center=\"material\" data-data-mode=\"source\" class=\"sidebar-refined\">\n      <header class=\"header\" data-fixed=\"header\">\n        <a class=\"brand\" href=\"#overview\" aria-label=\"RRCC × 漢",
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview",
+      "width": 1280
+    },
+    {
+      "case": "full-table-page-one",
+      "page": "第 1 / 50 頁",
+      "range": "顯示第 1–50 列，共 2,486 列",
+      "rect": {
+        "bottom": 696.3706932067871,
+        "height": 672.74853515625,
+        "left": 223.99856567382812,
+        "right": 1055.9942932128906,
+        "top": 23.62215805053711,
+        "width": 831.9957275390625,
+        "x": 223.99856567382812,
+        "y": 23.62215805053711
+      },
+      "rows": 50,
+      "search": "",
+      "title": "最近材料申報"
+    },
+    {
+      "case": "full-table-page-two",
+      "page": "第 2 / 50 頁",
+      "range": "顯示第 51–100 列，共 2,486 列",
+      "rect": {
+        "bottom": 696.3706932067871,
+        "height": 672.74853515625,
+        "left": 223.99856567382812,
+        "right": 1055.9942932128906,
+        "top": 23.62215805053711,
+        "width": 831.9957275390625,
+        "x": 223.99856567382812,
+        "y": 23.62215805053711
+      },
+      "rows": 50,
+      "search": "",
+      "title": "最近材料申報"
+    },
+    {
+      "case": "full-table-page-size-100",
+      "page": "第 1 / 25 頁",
+      "range": "顯示第 1–100 列，共 2,486 列",
+      "rect": {
+        "bottom": 696.3706932067871,
+        "height": 672.74853515625,
+        "left": 223.99856567382812,
+        "right": 1055.9942932128906,
+        "top": 23.62215805053711,
+        "width": 831.9957275390625,
+        "x": 223.99856567382812,
+        "y": 23.62215805053711
+      },
+      "rows": 100,
+      "search": "",
+      "title": "最近材料申報"
+    },
+    {
+      "case": "full-table-search-one",
+      "page": "第 1 / 1 頁",
+      "range": "顯示第 1–1 列，共 1 列",
+      "rect": {
+        "bottom": 696.3706932067871,
+        "height": 672.74853515625,
+        "left": 223.99856567382812,
+        "right": 1055.9942932128906,
+        "top": 23.62215805053711,
+        "width": 831.9957275390625,
+        "x": 223.99856567382812,
+        "y": 23.62215805053711
+      },
+      "rows": 1,
+      "search": "MAT-00171",
+      "title": "最近材料申報"
+    },
+    {
+      "case": "global-search",
+      "results": "材料中心 · Material Center\n材料中心 ↵"
+    },
+    {
+      "case": "sidebar-keyboard",
+      "expandedOnFocus": true,
+      "focusedBusiness": "材料清單",
+      "yellowIndicatorAnimation": "rrcc-sidebar-yellow-sweep",
+      "color": "rgb(243, 207, 56)",
+      "collapsedAfterEscapeAndOutside": true,
+      "nativeHoverNotIndependentlyAccepted": true
+    },
+    {
+      "case": "tsmc-public-filter",
+      "center": "material",
+      "kpis": [
+        "回收水量 318.94 百萬 m³，查看詳細資訊",
+        "製程水回收率 86.2 %，查看詳細資訊",
+        "單位產品耗水 153.3 L／十二吋晶圓當量—光罩數，查看詳細資訊",
+        "第一階重大供應商 396 家，查看詳細資訊",
+        "非第一階重大供應商冶煉廠 198 家，查看詳細資訊",
+        "重大供應商 594 家，查看詳細資訊"
+      ],
+      "main": [
+        "年度回收水量趨勢（2021–2025）",
+        "2025 重大供應商組成",
+        "2025 廠務用水公開數據",
+        "2025 供應商公開分類",
+        "2025 口徑、來源與資料界線"
+      ],
+      "mode": "public-reference",
+      "panel": "closed",
+      "right": "台積電公開年度 KPI 詳細資訊第一階重大供應商摘要範疇定義資料界線官方來源公開報告參考值公開產業參考，非 RRCC／漢唐營運數據。年度、單位與報告範圍不同，不與本平台材料、帳號、驗證案件相加，也不代表本平台實績。第一階重大供應商396 家台積電 · 2025 · 報告印刷 p.77台積電 2025 年第一階重大供應商，是 594 家重大供應商的組成項。官方來源 ↗ 2025 報告主檔 ↗查看全部公開參考與口徑 ↗材料中心選擇上方 KPI 以查看詳細資訊展開詳細資訊",
+      "selected": [],
+      "sidebar": [
+        "水資源與採購",
+        "廠務用水公開數據",
+        "供應商分類",
+        "年度公開指標",
+        "口徑與資料界線",
+        "年度趨勢",
+        "官方來源"
+      ],
+      "title": "材料中心｜RRCC × 漢唐集成 4-Center Preview"
+    }
+  ],
+  "consoleLogs": [],
+  "limitations": [
+    "Native pointer hover/drag, physical touch, reduced-motion/WebGL-fallback browser overrides not independently repeated online.",
+    "Sidebar button initial pointer attempt expanded sidebar and focused project select; keyboard activation passed. Native pointer acceptance remains Owner verification.",
+    "Library category mouse automation timed out; fresh readback then keyboard operation passed; recorded as tooling limitation, not silently counted as pointer pass.",
+    "A browser JSON metadata navigation was blocked by client; authenticated Vercel readback HTTP 200 passed.",
+    "Dashboard screenshot capture unavailable in this browser session; Vercel selection and READY screenshots retained.",
+    "Owner visual acceptance and production deployment are separate gates."
+  ]
+}

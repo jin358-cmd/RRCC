@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-10-13T00:33:04.532Z",
+  "url": "https://rrcc-6c2lf094l-tjc1.vercel.app/",
+  "status": 200,
+  "contentType": "text/html; charset=utf-8",
+  "bytes": 11805134,
+  "sha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+  "expectedBytes": 11805134,
+  "expectedSha256": "ad3ecca3ace81f7fa7e57d71cb5d7471fe67e199969d283854cd522a2b7c7413",
+  "requestHeader": {
+    "x-vercel-skip-toolbar": "1"
+  },
+  "documentation": "https://vercel.com/docs/vercel-toolbar/managing-toolbar",
+  "protectionUnchanged": true,
+  "projectSettingsUnchanged": true,
+  "noCredentialsPersisted": true,
+  "pass": true
+}

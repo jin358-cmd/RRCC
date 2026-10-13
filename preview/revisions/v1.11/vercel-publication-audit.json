@@ -1,0 +1,75 @@
+{
+  "verifiedAt": "2026-10-13T00:37:12.932Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 13,
+  "textFiles": 10,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "docs/verification/vercel-preview-v1.11-attempt-01.md",
+      "bytes": 3461,
+      "sha256": "642654d913935ea46f9f0066e3dbed17833133f6cb03adb9ec8e6af6075db307"
+    },
+    {
+      "file": "docs/verification/vercel-preview-v1.11-attempt-02.md",
+      "bytes": 7577,
+      "sha256": "eb20ea2065699f4cbe26325d60b52c94646b3c0d1089e200d6f4e81985a96bc8"
+    },
+    {
+      "file": "preview/revisions/v1.11/VERCEL-PREVIEW.md",
+      "bytes": 703,
+      "sha256": "c46eabb26c10056118c08c7713d631c308dcaa8a43e83d5d62f9742ddfb32808"
+    },
+    {
+      "file": "preview/revisions/v1.11/online-browser-evidence.json",
+      "bytes": 51519,
+      "sha256": "de017c7dc6e09f4ef7814735d96fe1387c351d570844060adf3e8c806bd81815"
+    },
+    {
+      "file": "preview/revisions/v1.11/online-csv-evidence.json",
+      "bytes": 784,
+      "sha256": "c91202b2a553f3d900a48740e3eda6ca9975642ff300c53c9fea7935d266016d"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-01.json",
+      "bytes": 3224,
+      "sha256": "7e9402c18d4655c022b32677ddb87fb0731da36535464eaf9d4a0049cd6cdec6"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-http-exact.json",
+      "bytes": 632,
+      "sha256": "8e89e8f37ad44cea6789fc739b1a4db6a56b880f0f3c6c4f5594fca7b01016d1"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-http-index.json",
+      "bytes": 787,
+      "sha256": "cc9804e1c80f8e66c30c0ae47f55af6fd8fd8e26884d3c268badcd6dee734ecc"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-preview-selection.png",
+      "bytes": 39477,
+      "sha256": "486d6211f542dcc820c0a3c63c986589bc2a0930c4b1bf3c4796eeefb8f4e807"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-readback.json",
+      "bytes": 12337,
+      "sha256": "a1d279fc2a5c32938f2a57d53edcffeb1e8fbcfa0e6bf922555acdea6c038614"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-ready.png",
+      "bytes": 48514,
+      "sha256": "9818aa43fdd11ef5bffffc1e9364c4234dc4e6f4bb34ef1e29a1f1c71e31f16b"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-attempt-02-transport-diff.json",
+      "bytes": 671,
+      "sha256": "f2c9e31ddd361b55d86edd7e7519d1880f51d0dc97da12e6b88428c2063f6599"
+    },
+    {
+      "file": "preview/revisions/v1.11/vercel-login-handoff.png",
+      "bytes": 33040,
+      "sha256": "6441ffed47dbc740c5e1859beac92edf853a3288f39eb4ec9b9afa3967303ffc"
+    }
+  ]
+}
