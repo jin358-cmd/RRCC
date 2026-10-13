@@ -29,3 +29,17 @@ Owner requested aligned rail icons/Chinese drawer labels; removal of the left sc
 ## Resolution / Gates
 
 Local scoped flows PASS. GitHub source/readback and explicit Vercel Preview evidence will be appended after publication. Owner visual verification REQUIRED. No main merge, Production deployment, promotion, domain/security changes or unrelated project mutations. All prior evidence, including canceled Production history, remains preserved.
+
+## Publication / Online Readback
+
+- Source commit: `2ad854968754fbd63003a3248053e337c96bb182`; same Feature Branch and PR #1, OPEN/unmerged. Authenticated GitHub readback matches 360/360 files and eleven current repository/branch/source gates. The historical `githubDeploymentRecordsPreviewOnly` gate remains false because prior Production history is preserved; overall historical audit is not relabeled PASS.
+- Existing Team TJC / `tjc1`, project `rrcc` / `prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN`. Explicit Dashboard **Create Preview Deployment** selected this exact commit; no omitted-target API was used. One pointer click attempt found an empty/disabled form and created zero deployments; input was revalidated and the semantic Enter submission created exactly one Preview.
+- Preview: https://rrcc-eeuuwfhyl-tjc1.vercel.app/ ; deployment `dpl_7McdFEumnSPK85eeFd2EnbqBfseP`, READY at 2026-10-13 16:32:47 +08:00, target null (Preview), Git source/branch/SHA exact.
+- HTTP 200; 11,847,060 bytes; SHA-256 `5a1a2d785ae438262682ff5a0453ec2e898e73ca74177dc310545b6f5a4e6752`, byte-identical to the tested offline artifact. Deployment metadata matches the source SHA and Preview-only environment. Existing Vercel authentication was used; temporary access/cookies stayed in memory and were cleared. The single-request skip-toolbar header omitted injected toolbar bytes for exact comparison; project protection was not changed.
+- Online four Centers: twelve slots/two rows; chart document-Y unchanged on KPI overlay; correct business menus. Rail/drawer rows have zero Y offset, scope hidden left, red backgrounds transparent, controls left-leading. Default month 2026-09.
+- Online Library: two editable pending positions, twelve confirmed recommendation definitions, stroke 3.4 arrows and bottom notices. Unsaved input survives down-arrow redraw, then is canceled without changing saved layout.
+- Online complete-data modal: source footer last, eight projects; search yields one row. Downloaded CSV is 606 bytes with all eight projects, even while search is filtered. User-management first and second pages each render fifty rows, page 2/4 of 174, footer remains last. First rail activation opens drawer with zero dialogs; second opens the full viewer.
+- KPI A→B runs 48-segment WebGL mesh, completes in 1166ms to A's measured anchor `(234.3075180053711,307.5816650390625)`, then B opens with one selected card. No captured online warning/error. Native-pointer hover/drag, fallback/reduced-motion and Owner animation-quality acceptance remain outside this scoped reacceptance.
+- Final project readback: `live:false`; domains and SSO `all_except_custom_domains` unchanged. No main merge, Production deployment/promotion, domain or security change. EIPP means the supplied integration preflight checklist only; no separate standard was supplied.
+
+Current scoped Preview deployment/readback and interaction checks PASS. Owner visual approval remains REQUIRED. Historical audit exception and all prior evidence remain intact; evidence-only follow-up commit is distinct from the deployed source commit.

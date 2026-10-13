@@ -1,0 +1,80 @@
+{
+  "verifiedAt": "2026-10-13T08:38:43.215Z",
+  "scope": "Explicit staged publication assets; common credential patterns, not a complete security certification; values deliberately omitted",
+  "status": "PASS",
+  "fileCount": 14,
+  "textFiles": 12,
+  "findings": [],
+  "manifest": [
+    {
+      "file": "README.md",
+      "bytes": 5048,
+      "sha256": "a4020ae704b7ef4468d5a4a79484c1479b3b18203f1321bd3b2a93df9f94dc5e"
+    },
+    {
+      "file": "docs/records/ui-v1.15-event.md",
+      "bytes": 510,
+      "sha256": "f877141547b2ead0a632d9cd444e8cd0ac6a0726afc65562dc6c46140003cca8"
+    },
+    {
+      "file": "docs/records/ui-v1.15-evidence.md",
+      "bytes": 874,
+      "sha256": "14dfd6e12ff119f81ada053aded2f7877316aad582e1b69399368e0090ed934a"
+    },
+    {
+      "file": "docs/records/ui-v1.15-resolution.md",
+      "bytes": 652,
+      "sha256": "bbffaf8ee2521734c5270332fbf9c79db42444d049f70cbb7676489562e9cdbe"
+    },
+    {
+      "file": "docs/records/ui-v1.15-verification.md",
+      "bytes": 796,
+      "sha256": "785e851dd0faa94ee97e830c90b108513ff7cb4504233cb4fc1f0ae73c704dc1"
+    },
+    {
+      "file": "docs/verification/github-readback-v1.15-implementation.json",
+      "bytes": 100263,
+      "sha256": "13ba15cda5c05697072dab6be4323f7f93ba706c152ababff10f78c6292705e5"
+    },
+    {
+      "file": "docs/verification/owner-v1.15.md",
+      "bytes": 7908,
+      "sha256": "5e4188d6c68082c12bb615d209a5bbdf79943fe8c7dabea90f787eee3a4f0db9"
+    },
+    {
+      "file": "preview/revisions/v1.15/VERCEL-PREVIEW.md",
+      "bytes": 1238,
+      "sha256": "95f9f4cfb516372cb483d698802fb9d2fa17ae1d8b4c996bfedfd7eeb89f98f8"
+    },
+    {
+      "file": "preview/revisions/v1.15/browser-online.json",
+      "bytes": 6478,
+      "sha256": "31af0b903112aa97210c4f13e71e29247daf2810d3f98a0ec4f3daf1156e3237"
+    },
+    {
+      "file": "preview/revisions/v1.15/http-readback.json",
+      "bytes": 1127,
+      "sha256": "d596f6737d4cef30cd7d571b1a118bcd2ca7ed198f0d7f591a9b5c0be5226844"
+    },
+    {
+      "file": "preview/revisions/v1.15/overview-online.jpg",
+      "bytes": 161239,
+      "sha256": "16e077d0e1c888dac6f3526cf7ed75eb196e5bfcd34c03a1cad53933fdba0de3"
+    },
+    {
+      "file": "preview/revisions/v1.15/project-final-readback.json",
+      "bytes": 543,
+      "sha256": "90594e87c3a4d4a80c26bf531b9831431869bc813dc1f6aa8380f1c5e8eeca31"
+    },
+    {
+      "file": "preview/revisions/v1.15/vercel-deployment.json",
+      "bytes": 1090,
+      "sha256": "0b7fa535b506b71710a9ab5d41b0ad82815986f1389b2a6417c7ea3754e47a74"
+    },
+    {
+      "file": "preview/revisions/v1.15/vercel-preview-selection.jpg",
+      "bytes": 40512,
+      "sha256": "7b4117f35cbe8e2eba5aa8bb70709806bdfcffe26d8cd4dc20c63fe1941408c9"
+    }
+  ]
+}

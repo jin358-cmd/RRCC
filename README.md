@@ -8,6 +8,8 @@ Enterprise Management Platform · 4-Center Demonstration Preview.
 
 以下保留歷史交付紀錄；歷史部署事故狀態不是目前最新版狀態。
 
+目前 [v1.15 線上 Preview](https://rrcc-eeuuwfhyl-tjc1.vercel.app/) 已 READY，來源 `2ad8549`；HTTP 檔案逐位元一致及主要互動讀回完成，Owner 視覺驗收仍需確認。main／Production／網域／SSO 未異動，歷史稽核例外仍保留於報告。
+
 最新版為 [v1.11 完整離線 Preview](preview/RRCC-Hantang-4-Center-Preview-v1.11.html)：四中心按鍵下緣立體陰影、選中 KPI 黃色數字與單位改為透明襯底、左側項目黃色水平伸縮指示條，以及第二層視窗再增加 15% 高度。見 [v1.11 Review Guide](preview/revisions/v1.11/README.md)／[Owner Report](docs/verification/owner-v1.11.md)。[v1.10](preview/revisions/v1.10/README.md) 的放大文字、頂部往返 LED、範圍／日期順序及原三示範場與台積電獨立年度資料均保留；資料不跨口徑加總。[v1.9](preview/revisions/v1.9/README.md) 的雙向卡片配置與原檔亦保留。
 
 歷史 `preview/RRCC-Hantang-4-Center-Preview-v1.8.html` 保留：材料中心採用 V2 工程物料流向、公斤／比例切換與左至右讀取，詳情／設定彈窗在桌機為 65%，選定 KPI 加入淺綠 LED 邊環，頂部四中心整合為較窄低的共用框架。[v1.8 Review Guide](preview/revisions/v1.8/README.md) 與 [Owner Report](docs/verification/owner-v1.8.md) 記錄實作及本機驗證界線。[v1.7 Review Guide](preview/revisions/v1.7/README.md) 保留品牌藍色 × 調整與部署紀錄。[v1.6 Review Guide](preview/revisions/v1.6/README.md) 保留最新動態工作列、左側 KPI 卡片櫃及綠色環境背景說明；原完整資料視窗、19 槽位卡片櫃、每中心配置及 Genie 互動保留。[v1.5 Review Guide](preview/revisions/v1.5/README.md)、[v1.4 Review Guide](preview/revisions/v1.4/README.md)、[v1.3 正常數值預覽](preview/revisions/v1.3/README.md) 與 [v1.2 原始來源交付](preview/revisions/v1.2/README.md) 保留，不覆寫歷史。
