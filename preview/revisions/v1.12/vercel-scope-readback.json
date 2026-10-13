@@ -1,0 +1,37 @@
+{
+  "observedAt": "2026-10-13T00:47:13.863Z",
+  "projectId": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+  "name": "rrcc",
+  "live": false,
+  "domains": [
+    "rrcc-tjc1.vercel.app",
+    "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+  ],
+  "ssoProtection": {
+    "enabled": true,
+    "deploymentType": "all_except_custom_domains"
+  },
+  "deployments": [
+    {
+      "id": "dpl_6XGJuw9qMSnqfFmfLwnJqqcMq9Q6",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-5g204rz1d-tjc1.vercel.app",
+      "sha": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428"
+    },
+    {
+      "id": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-6c2lf094l-tjc1.vercel.app",
+      "sha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0"
+    },
+    {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "state": "CANCELED",
+      "target": "production",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "sha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e"
+    }
+  ]
+}

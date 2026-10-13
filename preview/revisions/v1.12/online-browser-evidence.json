@@ -1,0 +1,219 @@
+{
+  "version": "v1.12",
+  "url": "https://rrcc-5g204rz1d-tjc1.vercel.app/",
+  "deploymentId": "dpl_6XGJuw9qMSnqfFmfLwnJqqcMq9Q6",
+  "sourceCommit": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428",
+  "observedAt": "2026-10-13T00:46:31.606Z",
+  "scope": "Actual Center click inputs and read-only DOM; Owner visual acceptance separate",
+  "observations": [
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "center": "overview",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心"
+        }
+      ],
+      "sidebar": [
+        "總覽儀表板",
+        "案場總覽8",
+        "材料與供應鏈",
+        "申報進度",
+        "驗證概況32",
+        "異常追蹤3",
+        "管理報表"
+      ],
+      "table": "進行中工程案",
+      "title": "Overview Center 總覽全局",
+      "trend": "材料申報趨勢"
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "center": "material",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心"
+        }
+      ],
+      "sidebar": [
+        "材料清單",
+        "供應商管理48",
+        "材料申報86",
+        "文件管理",
+        "材料分類",
+        "異常處理7",
+        "報表分析"
+      ],
+      "table": "最近材料申報",
+      "title": "Material Center 材料生命週期",
+      "trend": "工程物料流向圖"
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "center": "verification",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心"
+        }
+      ],
+      "sidebar": [
+        "待驗證32",
+        "驗證案件",
+        "文件審查2400",
+        "退件管理6",
+        "異常追蹤3",
+        "驗證紀錄",
+        "報表分析"
+      ],
+      "table": "待驗證案件",
+      "title": "Verification Center 驗證與合規",
+      "trend": "驗證案件趨勢"
+    },
+    {
+      "bannerCount": 0,
+      "bannerText": false,
+      "center": "management",
+      "kpis": 6,
+      "nav": [
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "總覽中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "材料中心"
+        },
+        {
+          "background": "linear-gradient(rgb(241, 242, 244), rgb(228, 231, 235))",
+          "color": "rgb(38, 59, 85)",
+          "current": "false",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "驗證中心"
+        },
+        {
+          "background": "linear-gradient(rgb(227, 231, 236), rgb(209, 216, 224))",
+          "color": "rgb(38, 59, 85)",
+          "current": "page",
+          "iconColor": "rgb(38, 59, 85)",
+          "label": "管理中心"
+        }
+      ],
+      "sidebar": [
+        "使用者管理",
+        "組織管理",
+        "供應商管理",
+        "角色與權限2",
+        "規則設定",
+        "系統設定4",
+        "報表中心"
+      ],
+      "table": "最近管理活動",
+      "title": "Management Center 平台治理管理",
+      "trend": "使用者／供應商趨勢"
+    },
+    {
+      "bannerCount": 0,
+      "bodyWidth": 1280,
+      "case": "responsive",
+      "kpiCount": 6,
+      "navCount": 4,
+      "width": 1280
+    },
+    {
+      "bannerCount": 0,
+      "bodyWidth": 375,
+      "case": "responsive",
+      "kpiCount": 6,
+      "navCount": 4,
+      "width": 375
+    }
+  ],
+  "logs": []
+}
