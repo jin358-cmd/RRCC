@@ -1,0 +1,89 @@
+{
+  "observedAt": "2026-10-13T08:06:05.362Z",
+  "deployment": {
+    "id": "dpl_2NLSH6KMHAkfv9DyJRDrq8gpesdB",
+    "name": "rrcc",
+    "url": "rrcc-99obrlar0-tjc1.vercel.app",
+    "type": "LAMBDAS",
+    "state": "READY",
+    "createdAt": 1791878393498,
+    "creator": {
+      "uid": "pXMPf3rmfPM3uK7z4vZe4JMc",
+      "username": "jin358-6510"
+    },
+    "project": {
+      "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+      "name": "rrcc",
+      "framework": null
+    },
+    "meta": {
+      "githubCommitRef": "feature/rrcc-hantang-ui-refinement-20261013",
+      "githubCommitSha": "be6b4a4c518e71cb2fdd70b98fb86da63bec3c7e",
+      "githubCommitMessage": "feat: compact Hantang workspace with fixed twelve KPI slots and overlay navigation",
+      "githubRepo": "RRCC",
+      "githubOrg": "jin358-cmd"
+    },
+    "alias": [
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "target": null,
+    "regions": [
+      "iad1"
+    ],
+    "buildingAt": 1791878396847,
+    "ready": 1791878408871,
+    "readyState": "READY",
+    "source": "git",
+    "aliasError": null
+  },
+  "project": {
+    "id": "prj_MfAcRH81aAQDK9IW9kcA9FDAY1FN",
+    "name": "rrcc",
+    "live": false,
+    "domains": [
+      "rrcc-tjc1.vercel.app",
+      "rrcc-git-feature-rrcc-hantang-ui-refinement-20261013-tjc1.vercel.app"
+    ],
+    "ssoProtection": {
+      "enabled": true,
+      "deploymentType": "all_except_custom_domains"
+    }
+  },
+  "deployments": [
+    {
+      "id": "dpl_2NLSH6KMHAkfv9DyJRDrq8gpesdB",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-99obrlar0-tjc1.vercel.app",
+      "sha": "be6b4a4c518e71cb2fdd70b98fb86da63bec3c7e"
+    },
+    {
+      "id": "dpl_5MeqDG8KypFZB3qPiFdUfXMKyMpQ",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-dylgc54xe-tjc1.vercel.app",
+      "sha": "ccfcab516029c7d7a82388bdef42ee19c492ec60"
+    },
+    {
+      "id": "dpl_6XGJuw9qMSnqfFmfLwnJqqcMq9Q6",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-5g204rz1d-tjc1.vercel.app",
+      "sha": "5ef3efc05405ed06bbe4a59c90b96f0fac0e8428"
+    },
+    {
+      "id": "dpl_CXW3hJRPPHo8KtkxKmwKVQXGcuDW",
+      "state": "READY",
+      "target": null,
+      "url": "rrcc-6c2lf094l-tjc1.vercel.app",
+      "sha": "d36672ccd1b102c98b225c65f6fd1d0f21ca97f0"
+    },
+    {
+      "id": "dpl_GJQfkqhiwHE9gHPBEg54BZRaQaCp",
+      "state": "CANCELED",
+      "target": "production",
+      "url": "rrcc-3kt0l54rp-tjc1.vercel.app",
+      "sha": "7895fedeb16c2a7f5bf4290eff32c445a785d05e"
+    }
+  ]
+}
