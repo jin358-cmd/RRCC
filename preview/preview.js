@@ -51,7 +51,9 @@
     {id:'management',label:'管理中心',icon:'settings',number:'04'}
   ];
   const defaults = {overview:0,material:3,verification:3,management:3};
-  const state = {center:'overview',metric:0,sidebar:0,rightTab:'summary',period:window.RRCC_DATA_MONTHS?.at(-1)||'2026-09',project:'all',materialFlowMode:'amount'};
+  // Owner-approved default: newest month shared by source material rows and Demo data.
+  const initialPeriod=[...new Set((window.RRCC_MERGED?.data.rows||[]).map(row=>row.month))].filter(period=>window.RRCC_DATA_MONTHS?.includes(period)).sort().at(-1)||window.RRCC_DATA_MONTHS?.at(-1)||'2026-09';
+  const state = {center:'overview',metric:0,sidebar:0,rightTab:'summary',period:initialPeriod,project:'all',materialFlowMode:'amount'};
   const projectNames = window.RRCC_PROJECT_NAMES||{all:'全部案場'};
   let toastTimer,externalTable,detailProvenance;
   function toast(message) { $('toast').textContent=message; $('toast').classList.add('visible'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>$('toast').classList.remove('visible'),3100); }
@@ -232,12 +234,11 @@
     $('period-select').value=state.period;$('project-select').value=state.project;
     const modeButton=$('data-mode-toggle');if(modeButton){modeButton.textContent=isTsmc()?'台積電年度公開資料 · 返回三案場來源':isPresentation()?'DEMO 合成展示資料 · 切換來源':'V1／V2 原始來源 · 切換展示';modeButton.setAttribute('aria-pressed',String(isPresentation()&&!isTsmc()));}
     $('center-nav').innerHTML=centers.map(c=>`<a href="#${c.id}" class="center-tab ${c.id===state.center?'active':''}" data-center="${c.id}" aria-current="${c.id===state.center?'page':'false'}" aria-label="${c.label} ${window.CENTER_DATA[c.id].en}">${centerIcon(c.id)}<span>${c.label}</span></a>`).join('');
-    $('center-title').innerHTML=`${escape(data.en)} <span class="zh-title">${escape(data.title)}</span>`;
-    $('center-subtitle').textContent='— '+data.subtitle;
     $('sidebar-label').textContent=data.sectionLabel;$('sidebar-code').textContent=meta.number;
     $('business-nav').innerHTML=data.sidebar.map((s,i)=>`<button data-sidebar="${i}" class="${state.sidebar===i?'active':''}" aria-current="${state.sidebar===i?'page':'false'}">${icon(s.icon)}<span class="nav-label">${escape(s.label)}</span>${s.count?`<span class="nav-count">${s.count}</span>`:''}</button>`).join('');
-    $('kpis').style.setProperty('--kpi-count',Math.max(1,visibleMetrics.length));
-    $('kpis').innerHTML=visibleMetrics.map(i=>{const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('')||'<div class="kpi-empty">此中心尚未選取 KPI。<button class="text-link" data-open-library>開啟 KPI 卡片櫃</button></div>';
+    const kpiSlots=window.RRCC_KPI_SETTINGS?.slots?.(state.center,data.kpis,layoutMode())||Array.from({length:12},(_,index)=>visibleMetrics[index]??null);
+    $('kpis').style.setProperty('--kpi-count',12);
+    $('kpis').innerHTML=kpiSlots.map((i,slot)=>{if(i===null)return `<div class="kpi-slot-empty" data-kpi-slot="${slot+1}" aria-label="KPI 位置 ${slot+1}，尚未選取卡片"><span>位置 ${slot+1}</span><strong>待加入 KPI</strong><button class="text-link" data-open-library>開啟 KPI 卡片櫃</button></div>`;const k=data.kpis[i];return `<button id="kpi-${state.center}-${i}" class="kpi-card ${i===state.metric?'selected':''}" data-kpi-slot="${slot+1}" data-metric="${i}" data-metric-id="${escape(k.metricId||i)}" aria-label="${escape(k.label)} ${escape(k.value)} ${escape(k.unit)}，查看詳細資訊"><span class="kpi-icon ${escape(k.color)}">${icon(k.icon)}</span><div class="kpi-body"><div class="kpi-name">${escape(k.label).replace('（範疇三）','<br>（範疇三）')}</div><div class="kpi-value ${k.color==='orange'?'orange':''}">${escape(k.value)}${k.unit?`<span class="kpi-unit">${escape(k.unit)}</span>`:''}</div><div class="kpi-foot"><span class="delta ${k.deltaType==='bad'?'bad':k.deltaType==='neutral'?'neutral':''}">${escape(k.delta)}</span><span>${escape(k.foot)}</span></div></div><span class="kpi-open">↗</span></button>`;}).join('');
     $('right-panel-trigger').disabled=!visibleMetrics.length||document.body.classList.contains('kpi-layout-editing');
     if(state.center==='material'&&!isTsmc()&&window.RRCC_MATERIAL_FLOW)renderMaterialFlow();
     else {
@@ -442,7 +443,7 @@
   });
   $('search-button').addEventListener('click',openSearch);$('search-input').addEventListener('input',e=>search(e.target.value));$('search-close').addEventListener('click',()=>$('search-dialog').close());
   $('notification-button').addEventListener('click',openActivity);
-  $('profile-button').addEventListener('click',()=>dialog('Jin Chen · 漢唐集成',`<div class="action-step"><span>JC</span><div><strong>Baseline 展示身分</strong><p>此身分為既有設計識別，尚未串接實際帳號服務。</p></div></div><div class="dialog-metrics"><div><small>工作中心</small><strong>4</strong></div><div><small>${isTsmc()?'公開資料組織':isPresentation()?'展示案場':'來源案場'}</small><strong>${isTsmc()?'台積電':(window.RRCC_ACTIVE_DATASET||window.RRCC_MERGED).data.projects.length}</strong></div><div><small>${isTsmc()?'報告年度':isPresentation()?'展示帳號':'帳號資料'}</small><strong>${isTsmc()?state.period:isPresentation()?window.CENTER_DATA.management.kpis[0].value:'未串接'}</strong></div></div>`));
+  $('profile-button').addEventListener('click',()=>dialog('Jin Chen',`<div class="action-step"><span>JC</span><div><strong>Baseline 展示身分</strong><p>此身分為既有設計識別，尚未串接實際帳號服務。</p></div></div><div class="dialog-metrics"><div><small>工作中心</small><strong>4</strong></div><div><small>${isTsmc()?'公開資料組織':isPresentation()?'展示案場':'來源案場'}</small><strong>${isTsmc()?'台積電':(window.RRCC_ACTIVE_DATASET||window.RRCC_MERGED).data.projects.length}</strong></div><div><small>${isTsmc()?'報告年度':isPresentation()?'展示帳號':'帳號資料'}</small><strong>${isTsmc()?state.period:isPresentation()?window.CENTER_DATA.management.kpis[0].value:'未串接'}</strong></div></div>`));
   $('export-button').addEventListener('click',exportCSV);
   $('scope-button').addEventListener('click',()=>dialog('選擇資料範圍',`<p>案場月度展示與台積電年度公開資料分開篩選，不加總、不冒充案場實績。</p><div style="margin-top:15px">${Object.entries(projectNames).map(([key,label])=>`<button class="search-result" data-project="${key}">${icon(window.RRCC_TSMC?.isScope(key)?'leaf':'building')}<span>${escape(label)}</span>${key===state.project?'✓':''}</button>`).join('')}</div>`));
   document.addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b){window.RRCC_KPI_LIBRARY?.cancelEditing();state.project=b.dataset.project;$('project-select').value=state.project;$('detail-dialog').close();render();toast(`檢視範圍：${projectNames[state.project]}`);}});

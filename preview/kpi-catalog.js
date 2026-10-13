@@ -104,7 +104,7 @@
     return {label, value, unit: record.unit, icon: record.category === '廠務用水' ? 'leaf' : 'shield', color: colors[index % colors.length], delta: `${record.organization} · ${record.year}`, deltaType: 'neutral', foot: '公開參考 · 非平台值', provenance: source, sourceTitle: detail.sourceTitle, series: detail.spark, seriesMonths: detail.sparkMonths, publicReference, detail};
   }
   window.RRCC_KPI_DEFAULTS = Object.fromEntries(centers.map(center => [center, Array.from({length: 6}, (_, index) => `${center}-${index}`)]));
-  window.RRCC_KPI_CATALOG = {version: 'v1.4', maxVisible: 6, availablePerCenter: 8, defaults: window.RRCC_KPI_DEFAULTS};
+  window.RRCC_KPI_CATALOG = {version: 'v1.14', maxVisible: 12, availablePerCenter: 8, defaults: window.RRCC_KPI_DEFAULTS};
   window.RRCC_BIND_DATA_BEFORE_CATALOG = previousBinder;
   window.RRCC_BIND_DATA = function(period, project = 'all') {
     const result = previousBinder(period, project);

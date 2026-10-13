@@ -1,0 +1,17 @@
+{
+  "anchor": {
+    "id": "kpi-overview-0",
+    "x": 234.3075180053711,
+    "y": 307.5816650390625
+  },
+  "result": {
+    "case": "overlay-kpi-A-to-B",
+    "metric": "1",
+    "renderer": "webgl-mesh",
+    "returnX": "234.3075180053711",
+    "returnY": "307.5816650390625",
+    "returnedSource": "kpi-overview-0",
+    "source": "kpi-overview-1",
+    "visiblePanelCount": 1
+  }
+}

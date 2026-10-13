@@ -25,12 +25,9 @@ function section(text, begin, end) {
   return text.slice(start, finish);
 }
 
-await test('All hero eyebrows are removed without leaving a missing center-number dereference', () => {
-  const hero = section(html, '<section class="hero"', '</section>');
-  assert.doesNotMatch(hero, /eyebrow|center-number|RRCC ENTERPRISE WORKSPACE/);
-  assert.doesNotMatch(app, /\$\('center-number'\)/);
-  assert.match(hero, /id="center-title"/);
-  assert.match(hero, /id="center-subtitle"/);
+await test('Owner-requested hero removal leaves no missing title or subtitle dereference', () => {
+  assert.doesNotMatch(html, /<section class="hero"|id="center-title"|id="center-subtitle"|RRCC ENTERPRISE WORKSPACE/);
+  assert.doesNotMatch(app, /\$\('center-number'\)|\$\('center-title'\)|\$\('center-subtitle'\)/);
   assert.match(html, /id="sidebar-code"/);
 });
 await test('KPI Library has exactly one dialog entry in the left function rail', () => {
@@ -67,15 +64,15 @@ await test('Project, date, export retain unique IDs in the Owner v1.10 requested
 });
 await test('Workspace CSS remains before versioned overrides in index and offline packaging', () => {
   const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-8), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
+  assert.deepEqual(styles.slice(-10), ['workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css']);
   const declared = [...packaging.match(/const stylesheetNames=\[([^\]]+)\]/)[1].matchAll(/'([^']+)'/g)].map(match => match[1]);
   assert.deepEqual(declared, styles);
-  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.13\.html/);
+  assert.match(packaging, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
   assert.match(html, /src="genie\.js" defer/);
   assert.match(html, /src="panel-motion\.js" defer/);
   assert.match(html, /src="sidebar\.js" defer/);
 });
-await test('Green photo uses a versioned local asset and is embedded into the offline artifact', async () => {
+await test('Historical green photo asset is preserved, but its entire hero presentation is removed', async () => {
   assert.match(css, /url\('\.\/assets\/green-fab-v1\.6\.png'\)/);
   assert.match(packaging, /readFile\(path\.join\(dir,'assets\/green-fab-v1\.6\.png'\)\)/);
   const embeddedPhoto = packaging.split('\n').find(line => line.includes('css.replaceAll') && line.includes('./assets/green-fab-v1.6.png'));
@@ -85,8 +82,7 @@ await test('Green photo uses a versioned local asset and is embedded into the of
   const bytes = await readFile(new URL('../preview/assets/green-fab-v1.6.png', import.meta.url));
   assert.ok(bytes.length > 1000, 'actual image bytes, not an empty placeholder');
   assert.equal(bytes.subarray(0, 8).toString('hex'), '89504e470d0a1a0a', 'PNG signature');
-  assert.match(html, /CLEAN ROOM/);
-  assert.match(html, /SUSTAINABLE TOMORROW/);
+  assert.doesNotMatch(html, /CLEAN ROOM|SUSTAINABLE TOMORROW|class="hero-photo"/);
 });
 await test('Rail badges and dark hover/selection indicators have explicit scoped CSS contracts', () => {
   const badges = section(css, '#stage.sidebar-refined .sidebar .nav-count,', '}');

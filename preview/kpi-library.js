@@ -1,8 +1,9 @@
-/* v1.9 unified KPI registry and two-way Dashboard editor. Browser-local preferences are not backend authorization. */
+/* v1.14 unified KPI registry and twelve-slot Dashboard editor. Browser-local preferences are not backend authorization. */
 (() => {
   'use strict';
-  const limit = 6;
-  const storageKey = 'rrcc-kpi-library-v1';
+  const limit = 12;
+  const storageKey = 'rrcc-kpi-library-v1.14';
+  const legacyStorageKey = 'rrcc-kpi-library-v1';
   const sessionPreferences = new Map();
   const originalSettings = window.RRCC_KPI_SETTINGS;
   const esc = value => String(value ?? '').replace(/[&<>"']/g, character => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'}[character]));
@@ -52,8 +53,8 @@
     });
   }
 
-  function storageObject() {
-    const raw = localStorage.getItem(storageKey) || '{}';
+  function storageObject(key = storageKey) {
+    const raw = localStorage.getItem(key) || '{}';
     let parsed;
     try { parsed = JSON.parse(raw); } catch { return {}; }
     return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
@@ -99,15 +100,35 @@
     return ids;
   }
 
+  function selection(center, catalog, mode, actor) {
+    const key = contextKey(center, mode, actor), stored = read(key), available = availableIds(catalog, actor);
+    if (stored !== undefined) return normalize(stored, available);
+    let legacy;
+    try { legacy = storageObject(legacyStorageKey)[key]; } catch { /* Do not broaden browser storage access. */ }
+    if (Array.isArray(legacy)) {
+      const migrated = normalize(legacy, available);
+      for (const id of available) if (migrated.length < limit && !migrated.includes(id)) migrated.push(id);
+      // A one-time migration fills the twelve-card default without altering the old key.
+      // Later v1.14 removals, including an empty Dashboard, are never auto-filled.
+      write(key, migrated);
+      return migrated;
+    }
+    return defaults(center, catalog, mode, actor);
+  }
+
   function visible(center, catalog, mode = 'demo') {
     const actor = identity();
     if (!actor.valid) return [];
     const all = catalog.map(cardId);
-    const stored = read(contextKey(center, mode, actor));
     const ids = context?.docked && context.key === contextKey(center, mode, actor) && currentContext()
       ? normalize(draft, availableIds(catalog, actor))
-      : stored === undefined ? defaults(center, catalog, mode, actor) : normalize(stored, availableIds(catalog, actor));
+      : selection(center, catalog, mode, actor);
     return ids.map(id => all.indexOf(id)).filter(index => index >= 0);
+  }
+
+  function slots(center, catalog, mode = 'demo') {
+    const indices = visible(center, catalog, mode);
+    return Array.from({length: limit}, (_, index) => indices[index] ?? null);
   }
 
   let dialog, context, draft = [], dragged = null, opener, dragSession = null, dragKind = null, session = 0;
@@ -234,7 +255,7 @@
     }
     const confirmed = registryCards().filter(definition => !pending(definition)).length;
     const legacy = context.catalog.filter((card, index) => !definitionFor(cardId(card, index)) && permitted(cardId(card, index), context.actor));
-    dialog.innerHTML = `<header class="kpi-library-heading"><div><p>RRCC × 漢唐集成 · KPI Card Library</p><h2 id="kpi-library-title">統一 KPI 卡片櫃</h2><span>${esc(context.centerLabel)} · ${confirmed} 張已確認 / ${registryCards().length - confirmed} 個待確認位置</span></div><button type="button" data-library-cancel aria-label="返回 Dashboard">返回 Dashboard ×</button></header><div class="kpi-library-scope-notice"><div><strong>同一 Card ID，同一資料來源</strong><p>材料中心 9 張、驗證中心 3 張為主要分類，其他中心可引用同一卡片。新增 7 張保留 PENDING DATA MAPPING，不補造數值。</p></div>${context.useSource ? '<button type="button" data-library-source>檢視 V1/V2 來源月份</button>' : ''}</div><p class="kpi-library-isolation-notice">此為 Preview 瀏覽器本地偏好，按 tenant / user / role / Center / 資料模式分開儲存；並非正式 SSO、RBAC 或企業資料隔離。${context.actor.valid ? '' : ` ${esc(context.actor.reason)}`}</p><div class="kpi-library-layout"><section class="kpi-library-selected-zone" data-library-zone="main" aria-label="目前中心 Dashboard"><div class="kpi-library-zone-heading"><h3>目前中心 Dashboard</h3><span>${draft.length} / ${limit}</span></div><p class="kpi-library-section-help">拖曳排序，或使用上下按鍵。移回卡片櫃不會刪除定義；最多顯示 6 張。</p><ol class="kpi-library-selected-list">${draft.map(selectedItem).join('')}</ol>${draft.length < limit ? '<div class="kpi-library-empty-slot">拖曳卡片至此，或在主櫃勾選加入。</div>' : ''}</section><section class="kpi-library-reserve-zone" data-library-zone="reserve" aria-label="卡片櫃回歸區"><div class="kpi-library-zone-heading"><h3>19 張 Master Registry</h3><span data-library-results></span></div><div class="kpi-library-toolbar"><div class="kpi-library-filters" aria-label="卡片分類">${[['all', '全部卡片'], ['material', '材料中心'], ['verification', '驗證中心'], ['shared', '跨中心共用']].map(([id, text]) => `<button type="button" data-library-category="${id}" aria-pressed="${context.category === id}">${text}</button>`).join('')}</div><label class="kpi-library-search"><span>搜尋卡片</span><input type="search" data-library-search placeholder="輸入名稱、Card ID 或單位" value="${esc(context.query)}"></label></div><div class="kpi-library-master-grid" data-library-grid></div>${legacy.length ? `<details class="kpi-library-legacy-section"><summary>既有中心展示卡（不列入 19 張 Master） <span>${legacy.length} 張</span></summary><p>保留上一版 Dashboard 的既有展示配置，不將它們自行指定為新增 7 張。數據與原始來源維持不變。</p><div class="kpi-library-legacy-grid">${legacy.map(legacyItem).join('')}</div></details>` : ''}</section></div><footer class="kpi-library-footer"><div role="status" aria-live="polite" data-library-status>${esc(message || '變更尚未套用；可保留空白配置，之後再加入卡片。')}</div><button type="button" data-library-reset>恢復既有預設</button><button type="button" data-library-cancel>取消</button><button type="button" data-library-save class="primary-button" ${context.actor.valid ? '' : 'disabled'}>套用 ${draft.length} 張卡片</button></footer>`;
+dialog.innerHTML = `<header class="kpi-library-heading"><div><p>RRCC × 漢唐集成 · KPI Card Library</p><h2 id="kpi-library-title">統一 KPI 卡片櫃</h2><span>${esc(context.centerLabel)} · ${confirmed} 張已確認 / ${registryCards().length - confirmed} 個待確認位置</span></div><button type="button" data-library-cancel aria-label="返回 Dashboard">返回 Dashboard ×</button></header><div class="kpi-library-scope-notice"><div><strong>同一 Card ID，同一資料來源</strong><p>材料中心 9 張、驗證中心 3 張為主要分類，其他中心可引用同一卡片。新增 7 張保留 PENDING DATA MAPPING，不補造數值。</p></div>${context.useSource ? '<button type="button" data-library-source>檢視 V1/V2 來源月份</button>' : ''}</div><p class="kpi-library-isolation-notice">此為 Preview 瀏覽器本地偏好，按 tenant / user / role / Center / 資料模式分開儲存；並非正式 SSO、RBAC 或企業資料隔離。${context.actor.valid ? '' : ` ${esc(context.actor.reason)}`}</p><div class="kpi-library-layout"><section class="kpi-library-selected-zone" data-library-zone="main" aria-label="目前中心 Dashboard"><div class="kpi-library-zone-heading"><h3>目前中心 Dashboard</h3><span>${draft.length} / ${limit}</span></div><p class="kpi-library-section-help">拖曳排序，或使用上下按鍵。移回卡片櫃不會刪除定義；最多顯示 12 張，上方六張、下方六張；移除後保留空位，不自動補入其他卡片。</p><ol class="kpi-library-selected-list">${draft.map(selectedItem).join('')}</ol>${draft.length < limit ? '<div class="kpi-library-empty-slot">拖曳卡片至此，或在主櫃勾選加入。</div>' : ''}</section><section class="kpi-library-reserve-zone" data-library-zone="reserve" aria-label="卡片櫃回歸區"><div class="kpi-library-zone-heading"><h3>19 張 Master Registry</h3><span data-library-results></span></div><div class="kpi-library-toolbar"><div class="kpi-library-filters" aria-label="卡片分類">${[['all', '全部卡片'], ['material', '材料中心'], ['verification', '驗證中心'], ['shared', '跨中心共用']].map(([id, text]) => `<button type="button" data-library-category="${id}" aria-pressed="${context.category === id}">${text}</button>`).join('')}</div><label class="kpi-library-search"><span>搜尋卡片</span><input type="search" data-library-search placeholder="輸入名稱、Card ID 或單位" value="${esc(context.query)}"></label></div><div class="kpi-library-master-grid" data-library-grid></div>${legacy.length ? `<details class="kpi-library-legacy-section"><summary>既有中心展示卡（不列入 19 張 Master） <span>${legacy.length} 張</span></summary><p>保留上一版 Dashboard 的既有展示配置，不將它們自行指定為新增 7 張。數據與原始來源維持不變。</p><div class="kpi-library-legacy-grid">${legacy.map(legacyItem).join('')}</div></details>` : ''}</section></div><footer class="kpi-library-footer"><div role="status" aria-live="polite" data-library-status>${esc(message || '變更尚未套用；可保留空白配置，之後再加入卡片。')}</div><button type="button" data-library-reset>恢復既有預設</button><button type="button" data-library-cancel>取消</button><button type="button" data-library-save class="primary-button" ${context.actor.valid ? '' : 'disabled'}>套用 ${draft.length} 張卡片</button></footer>`;
     drawCatalog();
     if (!context.docked) {
       const dockButton = document.createElement('button');
@@ -260,7 +281,7 @@
   function changeSelection(id, include) {
     if (!allowed(id)) { announce('Preview 身分或卡片權限已改變；請重新開啟卡片櫃。'); return false; }
     if (include && !draft.includes(id) && draft.length >= limit) {
-      draw('已達 6 張上限；請先移回一張卡片，再加入其他卡片。');
+      draw('已達 12 張上限；請先移回一張卡片，再加入其他卡片。');
       return false;
     }
     draft = move(draft, id, include ? 'main' : 'reserve');
@@ -314,7 +335,7 @@
         return;
       }
       if (button.hasAttribute('data-library-source')) { const action = context.useSource; cancelEditing(); action?.(); return; }
-      if (button.hasAttribute('data-library-reset')) { draft = defaults(context.center, context.catalog, context.mode, identity()); updateDraft('已恢復既有六張預設；請套用後才會儲存。'); return; }
+      if (button.hasAttribute('data-library-reset')) { draft = defaults(context.center, context.catalog, context.mode, identity()); updateDraft('已恢復十二張預設（上方六張、下方六張）；請套用後才會儲存。'); return; }
       if (button.hasAttribute('data-library-save')) {
         const actor = identity();
         if (!actor.valid || contextKey(context.center, context.mode, actor) !== context.key) { draw('Preview 身分已改變；請關閉並重新開啟卡片櫃。'); return; }
@@ -389,7 +410,7 @@
       const before = draft.length;
       draft = move(draft, id, zone.dataset.libraryZone, insertion < 0 ? draft.length : insertion);
       clearDrag();
-      updateDraft(zone.dataset.libraryZone === 'main' && before === limit && !draft.includes(id) ? '已達 6 張上限；請先移回一張卡片。' : '拖曳配置已更新；請套用設定。', draft.includes(id) ? id : null, host !== dialog);
+      updateDraft(zone.dataset.libraryZone === 'main' && before === limit && !draft.includes(id) ? '已達 12 張上限；請先移回一張卡片。' : '拖曳配置已更新；請套用設定。', draft.includes(id) ? id : null, host !== dialog);
     });
     host.addEventListener('dragend', clearDrag);
   }
@@ -442,6 +463,6 @@
     if (!dialog.open) dialog.showModal();
   }
 
-  window.RRCC_KPI_LIBRARY = Object.freeze({version: 'v1.9', storageKey, limit, identity, contextKey, normalize, move, filterCards, visible, open, cancelEditing, refreshDashboard});
-  if (originalSettings) window.RRCC_KPI_SETTINGS = Object.freeze({...originalSettings, visible});
+  window.RRCC_KPI_LIBRARY = Object.freeze({version: 'v1.14', storageKey, legacyStorageKey, limit, maxVisible: limit, identity, contextKey, normalize, move, filterCards, visible, slots, open, cancelEditing, refreshDashboard});
+  if (originalSettings) window.RRCC_KPI_SETTINGS = Object.freeze({...originalSettings, limit, maxVisible: limit, visible, slots});
 })();

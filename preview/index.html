@@ -25,6 +25,8 @@
   <link rel="stylesheet" href="interaction-refinement-v1.11.css">
   <link rel="stylesheet" href="interaction-refinement-v1.12.css">
   <link rel="stylesheet" href="interaction-refinement-v1.13.css">
+  <link rel="stylesheet" href="sidebar-click-v1.14.css">
+  <link rel="stylesheet" href="workspace-v1.14.css">
   <script src="center-data.js" defer></script>
   <script src="demo-data.js" defer></script>
   <script src="presentation-data.js" defer></script>
@@ -50,8 +52,8 @@
   <div id="viewport">
     <div id="stage">
       <header class="header" data-fixed="header">
-        <a class="brand" href="#overview" aria-label="RRCC × 漢唐集成 總覽中心">
-          <div class="brand-line"><strong>RRCC</strong><span class="brand-cross">×</span><strong class="hantang">漢唐集成</strong></div>
+        <a class="brand" href="#overview" aria-label="漢唐集成 × RRCC 總覽中心">
+          <div class="brand-line"><strong class="hantang">漢唐集成</strong><span class="brand-cross">×</span><strong>RRCC</strong></div>
           <span class="brand-sub">範疇三管理平台 <i></i> Scope 3 Management Platform</span>
         </a>
         <nav id="center-nav" class="center-nav" aria-label="工作中心切換" data-fixed="navigation"></nav>
@@ -60,7 +62,7 @@
           <span class="tool-divider"></span>
           <button id="notification-button" class="icon-button notification-button" aria-label="通知訊息，3 則"></button>
           <span class="tool-divider"></span>
-          <button id="profile-button" class="profile" aria-label="使用者選單"><span class="avatar">JC</span><span><strong>Jin Chen</strong><small>漢唐集成</small></span></button>
+          <button id="profile-button" class="profile" aria-label="Jin Chen 使用者選單"><span class="avatar">JC</span><span><strong>Jin Chen</strong></span></button>
         </div>
       </header>
       <aside class="sidebar" data-fixed="sidebar">
@@ -82,11 +84,6 @@
         </div>
       </aside>
       <main class="workspace">
-        <section class="hero" data-fixed="hero">
-          <div class="hero-photo" aria-hidden="true"></div>
-          <div class="hero-copy"><h1 id="center-title"></h1><p id="center-subtitle"></p></div>
-          <div class="hero-motto"><strong>CLEAN ROOM</strong><span>SUSTAINABLE TOMORROW</span></div>
-        </section>
         <section class="workspace-toolbar panel" aria-label="最新動態與報表工作列">
           <div class="toolbar-activity"><h2>最新動態</h2><div id="activity-strip" aria-label="近期活動"></div></div>
           <div class="hero-controls"><button id="scope-button" class="filter-button" aria-haspopup="dialog">全部案場<span id="scope-chevron"></span></button><label class="filter-date"><span id="calendar-icon"></span><select id="period-select" aria-label="選擇月份"><option value="2026-10">2026-10</option><option value="2026-09">2026-09</option><option value="2026-08">2026-08</option></select></label><button id="export-button" class="export-button"></button></div>

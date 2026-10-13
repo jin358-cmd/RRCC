@@ -42,12 +42,12 @@ function section(start, end) {
 
 test('The retained v1.12 base loads once before the Owner-requested v1.13 selected-state override', () => {
   const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
+  assert.deepEqual(styles.slice(-4, -2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
   assert.equal(styles.filter(name => name === 'interaction-refinement-v1.12.css').length, 1);
   const names = packager.match(/const\s+stylesheetNames\s*=\s*\[([^\]]+)\]/);
   assert.ok(names, 'Offline packaging has an explicit stylesheet order.');
   assert.deepEqual([...names[1].matchAll(/'([^']+)'/g)].map(match => match[1]), styles);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.13\.html/);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
 });
 
 test('All four center labels and active accessibility identity remain unchanged', () => {

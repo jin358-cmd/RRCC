@@ -7,7 +7,7 @@ const dir=path.dirname(fileURLToPath(import.meta.url));
 execFileSync(process.execPath,[path.join(dir,'../scripts/generate-presentation-demo.mjs')],{stdio:'inherit'});
 execFileSync(process.execPath,[path.join(dir,'../scripts/test-kpi-library-data.mjs'),'--sync-registry'],{stdio:'inherit'});
 let html=await readFile(path.join(dir,'index.html'),'utf8');
-const stylesheetNames=['preview.css','panel-motion.css','sidebar.css','presentation-mode.css','responsive.css','kpi-settings.css','chart-motion.css','full-data-view.css','kpi-library.css','kpi-library-integration.css','workspace-refinement.css','material-flow.css','interaction-refinement-v1.8.css','interaction-refinement-v1.9.css','interaction-refinement-v1.10.css','interaction-refinement-v1.11.css','interaction-refinement-v1.12.css','interaction-refinement-v1.13.css'];
+const stylesheetNames=['preview.css','panel-motion.css','sidebar.css','presentation-mode.css','responsive.css','kpi-settings.css','chart-motion.css','full-data-view.css','kpi-library.css','kpi-library-integration.css','workspace-refinement.css','material-flow.css','interaction-refinement-v1.8.css','interaction-refinement-v1.9.css','interaction-refinement-v1.10.css','interaction-refinement-v1.11.css','interaction-refinement-v1.12.css','interaction-refinement-v1.13.css','sidebar-click-v1.14.css','workspace-v1.14.css'];
 let css=(await Promise.all(stylesheetNames.map(file=>readFile(path.join(dir,file),'utf8')))).join('\n');
 const baseline=await readFile(path.join(dir,'../New/RRCC範疇三永續管理儀表板-1C.png'));
 css=css.replaceAll("url('../New/RRCC範疇三永續管理儀表板-1C.png')",`url('data:image/png;base64,${baseline.toString('base64')}')`);
@@ -28,6 +28,6 @@ html=html.replace('<link rel="stylesheet" href="preview.css">',`<style>${css}</s
 for(const file of scriptNames) html=html.replace(`  <script src="${file}" defer></script>\n`,'');
 for(const file of stylesheetNames.slice(4))html=html.replace(`  <link rel="stylesheet" href="${file}">\n`,'');
 html=html.replace('</body>',scripts.map(js=>`<script>${js.replaceAll('</script','<\\/script')}</script>`).join('\n')+'\n</body>');
-const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.13.html');
+const output=path.join(dir,'RRCC-Hantang-4-Center-Preview-v1.14.html');
 await writeFile(output,html,'utf8');
 console.log(`Self-contained offline preview: ${output}`);

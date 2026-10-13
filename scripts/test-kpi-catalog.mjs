@@ -37,7 +37,7 @@ for (const month of fixture.months) for (const project of projects) previousDemo
 vm.runInContext(referenceScript, context);
 assert.deepEqual(plain(w.RRCC_PUBLIC_REFERENCES), plain(references), 'generated reference JS faithfully embeds the separate JSON');
 vm.runInContext(catalog, context);
-assert.equal(w.RRCC_KPI_CATALOG.maxVisible, 6);
+assert.equal(w.RRCC_KPI_CATALOG.maxVisible, 12);
 assert.equal(w.RRCC_KPI_CATALOG.availablePerCenter, 8);
 const numeric = value => Number(String(value).replaceAll(',', '').replaceAll('%', ''));
 const resolve = (object, pointer) => pointer.split('/').slice(1).reduce((value, key) => value?.[key.replaceAll('~1', '/').replaceAll('~0', '~')], object);

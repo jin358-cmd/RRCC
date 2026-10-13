@@ -27,7 +27,7 @@ function declaredFiles(variable) {
 const scripts = [...html.matchAll(/<script\s+src="([^"]+)"\s+defer><\/script>/g)].map(item => item[1]);
 const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)">/g)].map(item => item[1]);
 const expectedScripts = ['center-data.js', 'demo-data.js', 'presentation-data.js', 'merged-center-data.js', 'presentation-center-data.js', 'reference-data.js', 'kpi-catalog.js', 'kpi-settings.js', 'kpi-library-data.js', 'kpi-library-binding.js', 'tsmc-reference-data.js', 'tsmc-sustainability.js', 'kpi-library.js', 'full-data-view.js', 'material-flow.js', 'chart-motion.js', 'genie.js', 'panel-motion.js', 'preview.js', 'sidebar.js'];
-const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css'];
+const expectedStyles = ['preview.css', 'panel-motion.css', 'sidebar.css', 'presentation-mode.css', 'responsive.css', 'kpi-settings.css', 'chart-motion.css', 'full-data-view.css', 'kpi-library.css', 'kpi-library-integration.css', 'workspace-refinement.css', 'material-flow.css', 'interaction-refinement-v1.8.css', 'interaction-refinement-v1.9.css', 'interaction-refinement-v1.10.css', 'interaction-refinement-v1.11.css', 'interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css', 'sidebar-click-v1.14.css', 'workspace-v1.14.css'];
 
 test('Deferred script order binds canonical/demo/reference data before catalog and UI consumers', () => {
   assert.deepEqual(scripts, expectedScripts);
@@ -40,7 +40,7 @@ test('Stylesheet order retains baseline then applies responsive, green selection
 test('Offline packaging embeds exactly the same ordered scripts and styles as index.html', () => {
   assert.deepEqual(declaredFiles('scriptNames'), scripts);
   assert.deepEqual(declaredFiles('stylesheetNames'), styles);
-  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.13\.html/);
+  assert.match(source['package-preview.mjs'], /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
 });
 test('Right-panel tab content has one complete wrapper after the persistent tab navigation', () => {
   const right = section(app, 'function renderRight()', 'function applyMetricComparison()');
@@ -93,11 +93,11 @@ test('Accessible KPI entry opens the current Center/mode Library instead of the 
 test('Legacy six-card settings implementation remains retained, not overwritten as Library evidence', () => {
   assert.match(source['kpi-settings.js'], /dialog\.setAttribute\('aria-labelledby','kpi-settings-title'\)/);
 });
-test('Default six-card presentation catalog remains retained while visible cards use stable saved IDs', () => {
-  assert.match(source['kpi-catalog.js'], /maxVisible:\s*6,\s*availablePerCenter:\s*8/);
-  assert.match(source['kpi-settings.js'], /const limit=6/);
+test('Legacy catalog remains retained while active twelve-slot cards use stable saved IDs', () => {
+  assert.match(source['kpi-catalog.js'], /maxVisible:\s*12,\s*availablePerCenter:\s*8/);
+  assert.match(source['kpi-settings.js'], /const limit=12/);
   assert.match(app, /visibleMetrics=window\.RRCC_KPI_SETTINGS\?\.visible\(state\.center,data\.kpis,layoutMode\(\)\)/);
-  assert.match(app, /\$\('kpis'\)\.innerHTML=visibleMetrics\.map\(i=>/);
+  assert.match(app, /\$\('kpis'\)\.innerHTML=kpiSlots\.map\(\(i,slot\)=>/);
   assert.match(app, /data-metric-id="\$\{escape\(k\.metricId\|\|i\)\}"/);
 });
 test('Retained legacy settings still has main/reserve, list/keyboard alternatives and its original save gate', () => {
@@ -105,7 +105,8 @@ test('Retained legacy settings still has main/reserve, list/keyboard alternative
   for (const zone of ['main', 'reserve']) assert.ok(settings.includes(`data-kpi-zone="${zone}"`));
   for (const operation of ['remove', 'add', 'up', 'down']) assert.ok(settings.includes(`data-kpi-operation="${operation}"`));
   for (const key of ['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown']) assert.ok(settings.includes(`'${key}'`));
-  assert.match(settings, /if\(draft\.length!==limit\)return;/);
+  assert.match(settings, /write\(context\.key,draft\)/);
+  assert.doesNotMatch(settings, /if\(draft\.length!==limit\)return;/);
   assert.match(settings, /key:`\$\{mode\}\/\$\{center\}`/);
 });
 test('Canonical library binding resolves one shared card per ID/scope and excludes unnamed pending definitions', () => {
@@ -187,7 +188,7 @@ test('Complete data modal has a bounded wide viewport and wraps original values 
 });
 test('An empty personalized Dashboard keeps a Library recovery entry and disables stale panel restore', () => {
   assert.match(app, /visibleMetrics\[0\]\?\?0/);
-  assert.match(app, /class="kpi-empty"[^\n]+data-open-library/);
+  assert.match(app, /class="kpi-slot-empty"[^\n]+data-open-library/);
   assert.match(app, /\$\('right-panel-trigger'\)\.disabled=!visibleMetrics\.length/);
   assert.match(app, /if\(resetPanel\|\|!visibleMetrics\.length\)panelMotion\?\.reset/);
   assert.match(app, /if\(b\.hasAttribute\('data-open-library'\)\)\{openLibrary\(\);return;\}/);

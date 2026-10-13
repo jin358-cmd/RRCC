@@ -41,12 +41,12 @@ function declaration(body, property) {
 
 test('v1.13 CSS loads once, last and after v1.12 in both authored and packaged previews', () => {
   const styles = [...html.matchAll(/<link\s+rel="stylesheet"\s+href="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(styles.slice(-2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
+  assert.deepEqual(styles.slice(-4, -2), ['interaction-refinement-v1.12.css', 'interaction-refinement-v1.13.css']);
   assert.equal(styles.filter(file => file === 'interaction-refinement-v1.13.css').length, 1);
   const packaged = packager.match(/const\s+stylesheetNames\s*=\s*\[([^\]]+)\]/);
   assert.ok(packaged, 'Packaging must retain explicit CSS ordering.');
   assert.deepEqual([...packaged[1].matchAll(/'([^']+)'/g)].map(match => match[1]), styles);
-  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.13\.html/);
+  assert.match(packager, /RRCC-Hantang-4-Center-Preview-v1\.14\.html/);
 });
 
 test('Unselected default and hovered Centers retain the v1.12 light-gray surfaces and dark text', () => {
