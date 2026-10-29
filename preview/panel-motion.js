@@ -1,9 +1,9 @@
 /* RRCC panel lifecycle. Content commits only after the previous return completes. */
 (() => {
   'use strict';
-  // Owner setting: keep Genie return-to-source animation enabled.
-  // Set false only when explicitly disabling the effect; preserve the implementation.
-  window.RRCC_GENIE_ENABLED = true;
+  // Owner setting: disable all Genie return-to-source animations by default.
+  // Set true only when the Owner explicitly requests restoring Genie; preserve the implementation.
+  window.RRCC_GENIE_ENABLED = false;
   class RightPanelMotion {
     constructor({panel,stage,layout,trigger,commit}) {
       Object.assign(this,{panel,stage,layout,trigger,commit});
