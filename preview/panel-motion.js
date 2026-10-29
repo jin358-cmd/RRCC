@@ -1,6 +1,9 @@
 /* RRCC panel lifecycle. Content commits only after the previous return completes. */
 (() => {
   'use strict';
+  // Owner setting: keep Genie implementation installed but disabled by default.
+  // Set true to restore the original suction effect without deleting its code.
+  window.RRCC_GENIE_ENABLED = false;
   class RightPanelMotion {
     constructor({panel,stage,layout,trigger,commit}) {
       Object.assign(this,{panel,stage,layout,trigger,commit});
@@ -52,7 +55,7 @@
       if(this.phase==='closing'){this.sync();return;}
       this.closeCurrent();
     }
-    prepare() {window.RRCC_GENIE?.prepare(this.panel);}
+    prepare() {if (window.RRCC_GENIE_ENABLED) window.RRCC_GENIE?.prepare(this.panel);}
     open(intent) {
       this.cancel();this.desired=null;this.metric=intent.metric;this.source=intent.source;
       this.phase='opening';this.sync();this.commit(this.metric);
@@ -77,8 +80,8 @@
         const intent=this.desired;if(intent)this.open(intent);
       };
       try {
-        if(window.RRCC_GENIE)this.returnHandle=window.RRCC_GENIE.animate(this.panel,anchor,complete);
-        else {this.panel.dataset.renderer='module-unavailable';complete();}
+        if(window.RRCC_GENIE_ENABLED && window.RRCC_GENIE)this.returnHandle=window.RRCC_GENIE.animate(this.panel,anchor,complete);
+        else {this.panel.dataset.renderer=window.RRCC_GENIE_ENABLED?'module-unavailable':'genie-disabled';complete();}
       }catch(error){this.panel.dataset.motionError=String(error);complete();}
     }
     settle() {
