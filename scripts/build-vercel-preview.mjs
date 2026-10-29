@@ -95,10 +95,10 @@ if (window.RRCC_GENIE) {
 }
 </script>`;
   const sourceHtml = sourceBytes.toString('utf8');
-  if (!/<\\/body>/i.test(sourceHtml) || !sourceHtml.includes('RRCC_GENIE')) {
+  if (!/<\/body>/i.test(sourceHtml) || !sourceHtml.includes('RRCC_GENIE')) {
     throw new Error('Genie entrypoint not found in bundled HTML; refuse silent no-op.');
   }
-  const bytes = Buffer.from(sourceHtml.replace(/<\\/body>/i, genieOff + '\\n</body>'), 'utf8');
+  const bytes = Buffer.from(sourceHtml.replace(/<\/body>/i, genieOff + '\n</body>'), 'utf8');
   validateSelfContainedHtml(bytes.toString('utf8'));
   const metadata = {
     schemaVersion: '1.0',
