@@ -78,7 +78,27 @@ export async function buildPreview({checkOnly = false} = {}) {
   const sourcePath = path.join(root, sourceFile);
   const sourceEntry = await lstat(sourcePath);
   if (!sourceEntry.isFile() || sourceEntry.isSymbolicLink()) throw new Error('Preview source must be a regular committed HTML file.');
-  const bytes = await readFile(sourcePath);
+  const sourceBytes = await readFile(sourcePath);
+  // The published Preview is a bundled standalone HTML, not preview/panel-motion.js.
+  // Keep the Genie implementation intact, but disable all of its animations
+  // at the actual published entrypoint (including switching between KPI cards).
+  const genieOff = `<script data-rrcc-genie-disabled="owner-20261029">
+window.RRCC_GENIE_ENABLED = false;
+if (window.RRCC_GENIE) {
+  window.RRCC_GENIE.cancel?.();
+  window.RRCC_GENIE.prepare = () => Promise.resolve(null);
+  window.RRCC_GENIE.animate = (_element, _anchor, done) => {
+    const task = { cancel() {}, finish() {} };
+    queueMicrotask(() => done?.());
+    return task;
+  };
+}
+</script>`;
+  const sourceHtml = sourceBytes.toString('utf8');
+  if (!/<\\/body>/i.test(sourceHtml) || !sourceHtml.includes('RRCC_GENIE')) {
+    throw new Error('Genie entrypoint not found in bundled HTML; refuse silent no-op.');
+  }
+  const bytes = Buffer.from(sourceHtml.replace(/<\\/body>/i, genieOff + '\\n</body>'), 'utf8');
   validateSelfContainedHtml(bytes.toString('utf8'));
   const metadata = {
     schemaVersion: '1.0',
