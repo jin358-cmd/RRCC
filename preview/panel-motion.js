@@ -1,9 +1,9 @@
 /* RRCC panel lifecycle. Content commits only after the previous return completes. */
 (() => {
   'use strict';
-  // Owner setting: keep Genie implementation installed but disabled by default.
-  // Set true to restore the original suction effect without deleting its code.
-  window.RRCC_GENIE_ENABLED = false;
+  // Owner setting: keep Genie return-to-source animation enabled.
+  // Set false only when explicitly disabling the effect; preserve the implementation.
+  window.RRCC_GENIE_ENABLED = true;
   class RightPanelMotion {
     constructor({panel,stage,layout,trigger,commit}) {
       Object.assign(this,{panel,stage,layout,trigger,commit});
