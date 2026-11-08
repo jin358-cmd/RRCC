@@ -82,23 +82,44 @@ export async function buildPreview({checkOnly = false} = {}) {
   // The published Preview is a bundled standalone HTML, not preview/panel-motion.js.
   // Keep the Genie implementation intact, but disable all of its animations
   // at the actual published entrypoint (including switching between KPI cards).
-  const genieOff = `<script data-rrcc-genie-disabled="owner-20261029">
-window.RRCC_GENIE_ENABLED = false;
-if (window.RRCC_GENIE) {
-  window.RRCC_GENIE.cancel?.();
-  window.RRCC_GENIE.prepare = () => Promise.resolve(null);
-  window.RRCC_GENIE.animate = (_element, _anchor, done) => {
-    const task = { cancel() {}, finish() {} };
+  const genieOff = `<script data-rrcc-effect-settings="v1">
+(() => {
+  const key = 'rrcc.genie.enabled';
+  let enabled = false;
+  try { enabled = localStorage.getItem(key) === 'true'; } catch (_) {}
+  const genie = window.RRCC_GENIE;
+  if (!genie) return;
+  const originalPrepare = genie.prepare.bind(genie);
+  const originalAnimate = genie.animate.bind(genie);
+  genie.prepare = (...args) => enabled ? originalPrepare(...args) : Promise.resolve(null);
+  genie.animate = (element, anchor, done) => {
+    if (enabled) return originalAnimate(element, anchor, done);
     queueMicrotask(() => done?.());
-    return task;
+    return { cancel() {}, finish() {} };
   };
-}
+  const button = document.createElement('button');
+  button.type = 'button'; button.textContent = '按鍵特效設定';
+  button.style.cssText = 'position:fixed;right:16px;bottom:16px;z-index:90;padding:9px 14px;border:1px solid #bed4ed;border-radius:8px;background:white;color:#164c83;cursor:pointer';
+  const dialog = document.createElement('dialog');
+  dialog.style.cssText = 'border:1px solid #cbd9e8;border-radius:12px;padding:24px;max-width:90vw;color:#18304d';
+  dialog.innerHTML = '<h2>按鍵特效設定</h2><p>控制視窗縮回按鍵的神燈特效。設定只保存在目前瀏覽器。</p><label><input type="checkbox"> 啟用神燈特效</label><p><button type="button">完成</button></p>';
+  const checkbox = dialog.querySelector('input'); checkbox.checked = enabled;
+  checkbox.addEventListener('change', () => {
+    enabled = checkbox.checked;
+    if (!enabled) genie.cancel?.();
+    try { localStorage.setItem(key, String(enabled)); } catch (_) {}
+  });
+  dialog.querySelector('button').addEventListener('click', () => dialog.close());
+  button.addEventListener('click', () => dialog.showModal());
+  document.body.append(button, dialog);
+})();
 </script>`;
   const sourceHtml = sourceBytes.toString('utf8');
   if (!/<\/body>/i.test(sourceHtml) || !sourceHtml.includes('RRCC_GENIE')) {
     throw new Error('Genie entrypoint not found in bundled HTML; refuse silent no-op.');
   }
-  const bytes = Buffer.from(sourceHtml.replace(/<\/body>/i, genieOff + '\n</body>'), 'utf8');
+  const templateControls = await readFile(path.join(root, 'scripts/rrcc-template-controls.js'), 'utf8');
+  const bytes = Buffer.from(sourceHtml.replace(/<\/body>/i, genieOff + '\n<script>' + templateControls + '</script>\n</body>'), 'utf8');
   validateSelfContainedHtml(bytes.toString('utf8'));
   const metadata = {
     schemaVersion: '1.0',
