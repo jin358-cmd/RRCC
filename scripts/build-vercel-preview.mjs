@@ -119,7 +119,8 @@ export async function buildPreview({checkOnly = false} = {}) {
     throw new Error('Genie entrypoint not found in bundled HTML; refuse silent no-op.');
   }
   const templateControls = await readFile(path.join(root, 'scripts/rrcc-template-controls.js'), 'utf8');
-  const bytes = Buffer.from(sourceHtml.replace(/<\/body>/i, genieOff + '\n<script>' + templateControls + '</script>\n</body>'), 'utf8');
+  const viewControls = await readFile(path.join(root, 'scripts/rrcc-view-controls.js'), 'utf8');
+  const bytes = Buffer.from(sourceHtml.replace(/<\/body>/i, genieOff + '\n<script>' + templateControls + '</script>\n<script>' + viewControls + '</script>\n</body>'), 'utf8');
   validateSelfContainedHtml(bytes.toString('utf8'));
   const metadata = {
     schemaVersion: '1.0',
